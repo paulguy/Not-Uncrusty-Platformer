@@ -1,0 +1,50 @@
+[gd_scene load_steps=7 format=3 uid="uid://dhi5kumatyjrx"]
+
+[ext_resource type="Script" path="res://Game.gd" id="1_r4gip"]
+[ext_resource type="PackedScene" uid="uid://b1jyu3ojxrw0o" path="res://player.tscn" id="2_g2lhd"]
+[ext_resource type="PackedScene" uid="uid://dnmiaf8mat035" path="res://start_area.tscn" id="4_dabe0"]
+[ext_resource type="Script" path="res://Screen Area.gd" id="4_dqbc6"]
+[ext_resource type="PackedScene" uid="uid://da3dj7qvritt" path="res://start_tunnel.tscn" id="7_gd3fx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b62dn"]
+size = Vector2(400, 300)
+
+[node name="Game" type="Node2D"]
+position = Vector2(0, -2)
+script = ExtResource("1_r4gip")
+
+[node name="ScreenBox" type="Polygon2D" parent="."]
+z_index = 4096
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+polygons = [PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 5, 6, 7)]
+
+[node name="Background" type="Polygon2D" parent="."]
+z_index = -1
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
+
+[node name="Screen Area" type="Area2D" parent="."]
+visible = false
+position = Vector2(-189, -167)
+collision_layer = 0
+collision_mask = 32772
+monitorable = false
+script = ExtResource("4_dqbc6")
+
+[node name="Screen Shape" type="CollisionShape2D" parent="Screen Area"]
+position = Vector2(200, 150)
+shape = SubResource("RectangleShape2D_b62dn")
+
+[node name="Start Tunnel" parent="." instance=ExtResource("7_gd3fx")]
+position = Vector2(-192, -192)
+
+[node name="Player" parent="." instance=ExtResource("2_g2lhd")]
+position = Vector2(56, -8)
+
+[node name="Start Area" parent="." instance=ExtResource("4_dabe0")]
+
+[connection signal="area_entered" from="Screen Area" to="Screen Area" method="_on_area_entered"]
+[connection signal="area_exited" from="Screen Area" to="Screen Area" method="_on_area_exited"]
+[connection signal="body_entered" from="Screen Area" to="Screen Area" method="_on_body_entered"]
+[connection signal="body_exited" from="Screen Area" to="Screen Area" method="_on_body_exited"]

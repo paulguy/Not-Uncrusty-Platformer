@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://bk13qyh8h8uqw"]
+
+[ext_resource type="Script" path="res://crawly_mob.gd" id="1_7eukr"]
+[ext_resource type="Texture2D" uid="uid://do7ox613sdjn2" path="res://enemies.png" id="2_03bhy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uuscn"]
+size = Vector2(16, 14)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7udyg"]
+atlas = ExtResource("2_03bhy")
+region = Rect2(0, 0, 16, 16)
+
+[node name="Crawly Mob" type="CharacterBody2D"]
+collision_layer = 4
+collision_mask = 3
+script = ExtResource("1_7eukr")
+speed = 6169.58
+health = 20
+
+[node name="Mob Collision" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_uuscn")
+
+[node name="Mob Sprite" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(0, -1)
+texture = SubResource("AtlasTexture_7udyg")
+
+[node name="Anim Timer" type="Timer" parent="."]
+wait_time = 0.145
+autostart = true
+
+[connection signal="timeout" from="Anim Timer" to="." method="_on_anim_timer_timeout"]
