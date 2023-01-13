@@ -10,7 +10,6 @@ extends CharacterBody2D
 var onscreen = false
 
 func deactivate():
-	print(startPos)
 	position = startPos
 	health = startHealth
 
