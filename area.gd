@@ -11,15 +11,15 @@ func _ready():
 			mobs.append(child)
 
 func on_screen():
+	onscreen = true
 	for mob in mobs:
 		mob.activate()
 		self.add_child(mob)
-	onscreen = true
 
 func off_screen(onscreenMobs):
+	onscreen = false
 	for mob in mobs:
 		if mob in onscreenMobs:
 			continue
 		self.remove_child(mob)
 		mob.deactivate()
-	onscreen = false
