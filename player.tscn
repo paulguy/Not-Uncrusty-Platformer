@@ -12,7 +12,7 @@ atlas = ExtResource("2_me054")
 region = Rect2(0, 0, 16, 16)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_lvb43"]
-radius = 8.0
+radius = 7.8
 
 [sub_resource type="Gradient" id="Gradient_rgpqy"]
 colors = PackedColorArray(0.677567, 0.677567, 0.677567, 1, 1, 1, 1, 1)
@@ -61,10 +61,10 @@ script = ExtResource("1_sifrq")
 
 [node name="Player Sprite" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_3bwnh")
+scale = Vector2(0.975, 0.975)
 texture = SubResource("AtlasTexture_egcxy")
 
 [node name="Player Main Collision" type="CollisionShape2D" parent="."]
-visible = false
 shape = SubResource("CircleShape2D_lvb43")
 
 [node name="Player Camera" type="Camera2D" parent="."]
