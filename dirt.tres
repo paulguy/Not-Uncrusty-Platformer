@@ -54,6 +54,7 @@ code = "shader_type canvas_item;
 uniform sampler2D curve_frg_2 : repeat_disable;
 uniform sampler2D curve_frg_5 : repeat_disable;
 uniform sampler2D curve_frg_6 : repeat_disable;
+uniform sampler2D screen_tex_frg_7 : hint_screen_texture;
 
 
 
@@ -85,7 +86,7 @@ void fragment() {
 
 	vec4 n_out7p0;
 // Texture2D:7
-	n_out7p0 = textureLod(SCREEN_TEXTURE, n_out8p0, 0.0);
+	n_out7p0 = texture(screen_tex_frg_7, n_out8p0);
 
 
 // VectorOp:15

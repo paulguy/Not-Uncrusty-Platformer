@@ -14,10 +14,9 @@ func _ready():
 	# bg is not needed, but just leave it around in case i want to add it back later, but remove it
 	# from the tree so it doesn't do anything weird.
 	self.remove_child(bg)
-	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	var size = get_viewport_rect().size
 	var off = -get_viewport_transform().origin
 	var zoom = 1.0

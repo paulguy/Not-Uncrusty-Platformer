@@ -14,7 +14,10 @@ func on_screen():
 	onscreen = true
 	for mob in mobs:
 		mob.activate()
-		self.add_child(mob)
+		# suppress an error, if the mob is already parented, there's nothing to
+		# do as the only parent it could ever have is this node.
+		if mob.get_parent() == null:
+			self.add_child(mob)
 
 func off_screen(onscreenMobs):
 	onscreen = false

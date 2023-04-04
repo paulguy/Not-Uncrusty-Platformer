@@ -29,13 +29,13 @@ var invincible = false
 var invinco_anim = false
 
 func _ready():
-	camera.current = true
+	camera.make_current()
 
 func _input(event):
 	if event is InputEventMouse:
 		mousepos = event.position
 
-func _process(delta):
+func _process(_delta):
 	var ang = anim_dir.angle()
 	# make the cardinal directions be halfway through a segment
 	var seg = 4
