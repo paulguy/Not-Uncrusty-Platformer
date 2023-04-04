@@ -1,14 +1,5 @@
 extends Mob
 
-# TODO: why does it randomly float up on respawn?
-
-enum MovementDirection {
-	UP,
-	DOWN,
-	LEFT,
-	RIGHT
-}
-
 @export var startDirection : MovementDirection = MovementDirection.RIGHT
 @export var clockwise : bool = true
 @export_range(0.0, 9999.0) var speed = 1500.0
@@ -109,8 +100,7 @@ func update_direction(dir_order : bool):
 				direction = MovementDirection.UP
 	self.set_sprite()
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _physics_process(delta):
 	var normal = Vector2.UP
 	var hit_player = false
 	# split velocity so movement is in smaller steps ~1.0 each
