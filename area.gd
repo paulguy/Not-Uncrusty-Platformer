@@ -9,6 +9,10 @@ func _ready():
 	for child in self.get_children():
 		if child is Mob:
 			mobs.append(child)
+	# initially mark all mobs offscreen.  After the first process, the area on
+	# screen should get a signal that it has gone on screen and then that area's
+	# mobs should be activated appropriately.
+	off_screen([])
 
 func on_screen():
 	onscreen = true
