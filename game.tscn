@@ -37,11 +37,11 @@ script = ExtResource("4_dqbc6")
 position = Vector2(200, 150)
 shape = SubResource("RectangleShape2D_b62dn")
 
+[node name="Player" parent="." instance=ExtResource("2_g2lhd")]
+position = Vector2(-415, -1445)
+
 [node name="Start Tunnel" parent="." instance=ExtResource("7_gd3fx")]
 position = Vector2(-192, -192)
-
-[node name="Player" parent="." instance=ExtResource("2_g2lhd")]
-position = Vector2(56, -8)
 
 [node name="Start Area" parent="." instance=ExtResource("4_dabe0")]
 
