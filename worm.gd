@@ -9,42 +9,69 @@ const JUMP_VELOCITY = -400.0
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 @onready var anim = get_node("AnimatedSprite2D")
 var animForward = true
+var animPlaying = false
 
 var direction = startDirection
 
 func deactivate():
 	super()
+	animForward = true
 	direction = startDirection
+	play()
+
+const _dirToName = {
+	MovementDirection.LEFT: "left",
+	MovementDirection.RIGHT: "right"
+}
+
+func pause():
+	anim.pause()
+	animPlaying = false
+
+func play():
+	var animName = _dirToName[direction]
+	if animForward:
+		anim.speed_scale = 1.0
+	else:
+		anim.speed_scale = -1.0
+		anim.frame = anim.sprite_frames.get_frame_count(animName) - 1
+		anim.frame_progress = 1.0
+	anim.play(animName)
+	animPlaying = true
+
+func unpause():
+	if not animPlaying:
+		var current_frame = anim.get_frame()
+		var current_progress = anim.get_frame_progress()
+		if animForward:
+			anim.speed_scale = 1.0
+		else:
+			anim.speed_scale = -1.0
+		anim.play(_dirToName[direction])
+		anim.set_frame_and_progress(current_frame, current_progress)
+		animPlaying = true
 
 func _physics_process(delta):
 	if is_on_wall():
 		direction = opp_dir(direction)
-		if direction == MovementDirection.LEFT:
-			anim.play("left")
-		else:
-			anim.play("right")
+		play()
 		animForward = true
 		velocity.x = 0.0
 
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y += gravity * delta
-		anim.pause()
+		pause()
 	else:
-		anim.play()
+		unpause()
 
 	move_and_slide()
 
 func _on_animated_sprite_2d_animation_finished():
-	var animName = "right"
-	if direction == MovementDirection.LEFT:
-		animName = "left"
-
 	animForward = not animForward
+	play()
 
 	if animForward:
-		anim.play(animName)
 		velocity.x = 0.0
 	else:
-		anim.play_backwards(animName)
 		velocity.x = dir_to_vec(direction).x * SPEED

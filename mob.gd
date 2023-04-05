@@ -35,7 +35,7 @@ func off_screen():
 func _ready():
 	pass
 
-var _dirVectDict = {
+const _dirVectDict = {
 	MovementDirection.UP: Vector2.UP,
 	MovementDirection.DOWN: Vector2.DOWN,
 	MovementDirection.LEFT: Vector2.LEFT,
@@ -45,7 +45,7 @@ var _dirVectDict = {
 func dir_to_vec(dir : MovementDirection) -> Vector2:
 	return _dirVectDict[dir]
 
-var _dirOppDict = {
+const _dirOppDict = {
 	MovementDirection.UP: MovementDirection.DOWN,
 	MovementDirection.DOWN: MovementDirection.UP,
 	MovementDirection.LEFT: MovementDirection.RIGHT,
