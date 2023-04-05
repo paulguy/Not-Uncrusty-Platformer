@@ -8,10 +8,20 @@ const JUMP_VELOCITY = -400.0
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 @onready var anim = get_node("AnimatedSprite2D")
+@onready var collision = get_node("Collision")
+var animFrames = 6
 var animForward = true
 var animPlaying = false
 
 var direction = startDirection
+
+const _dirToName = {
+	MovementDirection.LEFT: "left",
+	MovementDirection.RIGHT: "right"
+}
+
+func _ready():
+	animFrames = anim.sprite_frames.get_frame_count(_dirToName[MovementDirection.LEFT])
 
 func deactivate():
 	super()
@@ -19,22 +29,21 @@ func deactivate():
 	direction = startDirection
 	play()
 
-const _dirToName = {
-	MovementDirection.LEFT: "left",
-	MovementDirection.RIGHT: "right"
-}
-
 func pause():
 	anim.pause()
 	animPlaying = false
 
 func play():
+	if direction == MovementDirection.LEFT:
+		anim.position.x = 0
+	else:
+		anim.position.x = -16
 	var animName = _dirToName[direction]
 	if animForward:
 		anim.speed_scale = 1.0
 	else:
 		anim.speed_scale = -1.0
-		anim.frame = anim.sprite_frames.get_frame_count(animName) - 1
+		anim.frame = animFrames - 1
 		anim.frame_progress = 1.0
 	anim.play(animName)
 	animPlaying = true
@@ -51,6 +60,9 @@ func unpause():
 		anim.set_frame_and_progress(current_frame, current_progress)
 		animPlaying = true
 
+func start_move():
+	velocity.x = dir_to_vec(direction).x * SPEED
+
 func _physics_process(delta):
 	if is_on_wall():
 		direction = opp_dir(direction)
@@ -64,6 +76,8 @@ func _physics_process(delta):
 		pause()
 	else:
 		unpause()
+		var rot = get_floor_normal().angle() + (PI / 2)
+		anim.rotation = rot
 
 	move_and_slide()
 
@@ -74,4 +88,4 @@ func _on_animated_sprite_2d_animation_finished():
 	if animForward:
 		velocity.x = 0.0
 	else:
-		velocity.x = dir_to_vec(direction).x * SPEED
+		start_move()
