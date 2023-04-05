@@ -104,9 +104,8 @@ animations = [{
 "speed": 15.0
 }]
 
-[sub_resource type="SegmentShape2D" id="SegmentShape2D_knjka"]
-a = Vector2(0, -3)
-b = Vector2(0, 0)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hknpl"]
+size = Vector2(3, 3)
 
 [node name="Worm" type="CharacterBody2D"]
 collision_layer = 0
@@ -115,11 +114,14 @@ script = ExtResource("1_jlckj")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 material = SubResource("ShaderMaterial_vt8b7")
-position = Vector2(-16, -1.5)
+position = Vector2(0, -1.5)
 sprite_frames = SubResource("SpriteFrames_vfd7e")
 animation = &"right"
+centered = false
+offset = Vector2(-30.5, -1.5)
 
 [node name="Collision" type="CollisionShape2D" parent="."]
-shape = SubResource("SegmentShape2D_knjka")
+position = Vector2(0, -1.5)
+shape = SubResource("RectangleShape2D_hknpl")
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
