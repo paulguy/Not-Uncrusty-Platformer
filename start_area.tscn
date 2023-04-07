@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://dnmiaf8mat035"]
+[gd_scene load_steps=6 format=3 uid="uid://dnmiaf8mat035"]
 
 [ext_resource type="TileSet" uid="uid://birho3skfjhbr" path="res://world_graphics.tres" id="1_4orvn"]
+[ext_resource type="Texture2D" uid="uid://bva4eu7uh6cub" path="res://street light.png" id="4_owbu6"]
 [ext_resource type="PackedScene" uid="uid://bk13qyh8h8uqw" path="res://crawly_mob.tscn" id="6_5p8nw"]
 [ext_resource type="Script" path="res://start_area.gd" id="6_x5dqp"]
 
@@ -39,7 +40,7 @@ layer_4/modulate = Color(1, 1, 1, 0.639216)
 layer_4/y_sort_enabled = false
 layer_4/y_sort_origin = 0
 layer_4/z_index = 11
-layer_4/tile_data = PackedInt32Array()
+layer_4/tile_data = PackedInt32Array(-196604, 2, 65539, -196603, 2, 196608, -262140, 2, 65538, -262139, 2, 131075, -262138, 131074, 131074, -196602, 2, 131074, -65529, 2, 131074, 65544, 2, 131074, -131069, 2, 65538, 2, 2, 65538, 65538, 2, 65539, -65533, 2, 65539, -65534, 131074, 65538, -196605, 131074, 65538, -131066, 2, 131075, 7, 2, 131075, 8, 131074, 131074, -131065, 131074, 131074, -131067, 2, 196608, -131068, 2, 196608, -65532, 2, 196608, -65531, 2, 196608, -65530, 2, 196608, 6, 2, 196608, 5, 2, 196608, 4, 2, 196608, 3, 2, 196608, 65539, 2, 196608, 65540, 2, 196608, 65541, 2, 196608, 65542, 2, 196608, 65543, 2, 196608, 65537, 131074, 65538, 131074, 65538, 327680, 131075, 65538, 327680, 131076, 65538, 327680, 131077, 65538, 327680, 131078, 65538, 327680, 131079, 65538, 327680, 131080, 131074, 65536, 131073, 196610, 327680)
 script = ExtResource("6_x5dqp")
 
 [node name="Map Area" type="Area2D" parent="."]
@@ -54,3 +55,7 @@ shape = SubResource("RectangleShape2D_mx0sb")
 
 [node name="Crawly Mob" parent="." instance=ExtResource("6_5p8nw")]
 position = Vector2(-104, -47)
+
+[node name="lamp" type="Sprite2D" parent="."]
+position = Vector2(112, -24)
+texture = ExtResource("4_owbu6")
