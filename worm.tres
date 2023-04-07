@@ -8,7 +8,7 @@ default_input_values = [0, Vector3(0, 0, 0), 1, Vector3(0.15, 0.15, 0.15)]
 operator = 2
 
 [sub_resource type="Curve" id="Curve_m2bc2"]
-_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.552349, 0.500792), 1.03746, 1.03746, 0, 0, Vector2(1, 0.787324), 0.0, 0.0, 0, 0]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.502569, 0.179323), 1.04295, 1.04295, 0, 0, Vector2(1, 0.94281), 0.0, 0.0, 0, 0]
 point_count = 3
 
 [sub_resource type="CurveTexture" id="CurveTexture_c7hxf"]
@@ -24,7 +24,7 @@ input_name = "color"
 [sub_resource type="VisualShaderNodeVectorCompose" id="VisualShaderNodeVectorCompose_qk18q"]
 
 [sub_resource type="Curve" id="Curve_bodfp"]
-_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.620017, 0.250766), 0.924743, 0.924743, 0, 0, Vector2(1, 0.537299), 0.0, 0.0, 0, 0]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.620017, 0.250766), 0.924743, 0.924743, 0, 0, Vector2(0.994704, 0.831109), 0.320798, 0.0, 0, 0]
 point_count = 3
 
 [sub_resource type="CurveTexture" id="CurveTexture_v0xly"]
@@ -104,7 +104,7 @@ void fragment() {
 
 }
 "
-graph_offset = Vector2(-193.594, -201.969)
+graph_offset = Vector2(-136.149, -181.04)
 mode = 1
 flags/light_only = false
 nodes/fragment/0/position = Vector2(1240, -380)

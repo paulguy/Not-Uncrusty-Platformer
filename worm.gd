@@ -37,7 +37,7 @@ func play():
 	if direction == MovementDirection.LEFT:
 		anim.offset.x = -1.5
 	else:
-		anim.offset.x = -30.5
+		anim.offset.x = -14.5
 	var animName = _dirToName[direction]
 	if animForward:
 		anim.speed_scale = 1.0
