@@ -88,3 +88,24 @@ func _process(_delta):
 #	])
 	camera.zoom = Vector2(zoom, zoom)
 	area.position = off
+
+@onready var CODES = {
+	"THRUSSY": player
+}
+
+var cur_code = ""
+
+func _input(event):
+	if event is InputEventKey and event.pressed:
+		cur_code += String.chr(event.key_label)
+		var found = false
+		for code in CODES.keys():
+			if code.begins_with(cur_code):
+				found = true
+				break
+		if found:
+			if cur_code in CODES:
+				CODES[cur_code].cheat(cur_code)
+				cur_code = ""
+		else:
+			cur_code = ""

@@ -33,6 +33,7 @@ var invincible = false
 var invinco_anim = false
 var thrust_remaining = 1.0
 var thrust_depleted = false
+var thrust_cheat = false
 
 func _ready():
 	camera.make_current()
@@ -106,6 +107,8 @@ func _physics_process(delta):
 				thrust_remaining = 1.0
 
 	meter.set_thrust(thrust_remaining)
+	if thrust_cheat:
+		thrust_remaining = 1.0
 
 	# Add the gravity.
 	if not is_on_floor():
@@ -178,3 +181,7 @@ func _on_invincibility_animation_timeout():
 	if invincible:
 		self.set_invinco_color(invinco_anim)
 		invinco_anim = not invinco_anim
+
+func cheat(code):
+	if code == "THRUSSY":
+		thrust_cheat = true
