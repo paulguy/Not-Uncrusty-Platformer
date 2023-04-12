@@ -184,4 +184,4 @@ func _on_invincibility_animation_timeout():
 
 func cheat(code):
 	if code == "THRUSSY":
-		thrust_cheat = true
+		thrust_cheat = not thrust_cheat
