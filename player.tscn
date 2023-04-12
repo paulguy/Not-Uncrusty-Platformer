@@ -1,8 +1,10 @@
-[gd_scene load_steps=14 format=3 uid="uid://b1jyu3ojxrw0o"]
+[gd_scene load_steps=18 format=3 uid="uid://b1jyu3ojxrw0o"]
 
 [ext_resource type="Script" path="res://Player.gd" id="1_sifrq"]
 [ext_resource type="Texture2D" uid="uid://sbf7cwvddxjg" path="res://face.png" id="2_me054"]
 [ext_resource type="Shader" uid="uid://n3k0v4jglej7" path="res://player.tres" id="2_vdajv"]
+[ext_resource type="Script" path="res://Thrust Meter.gd" id="4_svhw4"]
+[ext_resource type="Texture2D" uid="uid://mw4c4o3qna0p" path="res://health bar.png" id="5_26ssj"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_3bwnh"]
 shader = ExtResource("2_vdajv")
@@ -54,6 +56,12 @@ color_ramp = SubResource("GradientTexture1D_nwlrj")
 color_initial_ramp = SubResource("GradientTexture1D_l75kj")
 attractor_interaction_enabled = false
 
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_uqxoj"]
+blend_mode = 1
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_xfpwg"]
+blend_mode = 1
+
 [node name="Player" type="CharacterBody2D"]
 z_index = 10
 collision_layer = 2
@@ -81,6 +89,23 @@ one_shot = true
 
 [node name="Invincibility Animation" type="Timer" parent="."]
 wait_time = 0.033
+
+[node name="Thrust Meter" type="Node2D" parent="."]
+script = ExtResource("4_svhw4")
+
+[node name="Ring" type="Sprite2D" parent="Thrust Meter"]
+material = SubResource("CanvasItemMaterial_uqxoj")
+texture = ExtResource("5_26ssj")
+offset = Vector2(0, -24)
+region_enabled = true
+region_rect = Rect2(0, 0, 24, 24)
+
+[node name="Pie" type="Sprite2D" parent="Thrust Meter"]
+material = SubResource("CanvasItemMaterial_xfpwg")
+texture = ExtResource("5_26ssj")
+offset = Vector2(0, -24)
+region_enabled = true
+region_rect = Rect2(0, 24, 24, 24)
 
 [connection signal="timeout" from="Invincibility Time" to="." method="_on_invincibility_time_timeout"]
 [connection signal="timeout" from="Invincibility Animation" to="." method="_on_invincibility_animation_timeout"]

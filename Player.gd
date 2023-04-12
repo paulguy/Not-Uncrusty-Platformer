@@ -2,7 +2,7 @@ class_name Player
 extends CharacterBody2D
 
 const SPEED = 500.0
-const JUMP_VELOCITY = -300.0
+const JUMP_VELOCITY = 300.0
 const THRUST = Vector2(500, 1700)
 const AIR_DAMP = Vector2(1, 1)
 const FLOOR_DAMP = Vector2(3, 0)
@@ -10,6 +10,9 @@ const MAX_SPEED = 800.0
 const MAX_ANIM_TIME = 0.15
 const ACTOR_COLLISION_LAYER = 2
 const KNOCK_BACK = Vector2(200, -120)
+const THRUST_PER_SECOND = 1.0
+const THRUST_RECHARGE_FACTOR = 0.8
+const THRUST_DEPLETED_RECHARGE_FACTOR = 0.6
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -21,12 +24,15 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 @onready var invinco_anim_timer = self.get_node("Invincibility Animation")
 @onready var orig_material = sprite.material
 @onready var invinco_material = preload("res://white_material.tres")
+@onready var meter = self.get_node("Thrust Meter")
 
 var mousepos = Vector2.ZERO
 var tween = null
 var anim_dir = Vector2.ZERO
 var invincible = false
 var invinco_anim = false
+var thrust_remaining = 1.0
+var thrust_depleted = false
 
 func _ready():
 	camera.make_current()
@@ -70,11 +76,36 @@ func _physics_process(delta):
 	var thrust = Vector2.ZERO
 
 	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
-		var zoom = camera.zoom
-		var voffset = position - (-self.get_viewport_transform().origin / zoom)
-		var diff = mousepos / zoom - voffset
-		thrust = diff.normalized() * THRUST * delta
-		addVel += thrust
+		if not thrust_depleted:
+			if thrust_remaining > 0:
+				var thrust_dec = THRUST_PER_SECOND * delta
+				thrust_remaining -= thrust_dec
+				if thrust_remaining < 0:
+					thrust_dec = -thrust_remaining
+					thrust_depleted = true
+
+				var zoom = camera.zoom
+				var voffset = position - (-self.get_viewport_transform().origin / zoom)
+				var diff = mousepos / zoom - voffset
+				thrust = diff.normalized() * THRUST * thrust_dec
+				addVel += thrust
+		else:
+			thrust_remaining += THRUST_DEPLETED_RECHARGE_FACTOR * delta
+			if thrust_remaining >= 1.0:
+				thrust_remaining = 1.0
+				thrust_depleted = false
+	else:
+		if thrust_depleted:
+			thrust_remaining += THRUST_DEPLETED_RECHARGE_FACTOR * delta
+			if thrust_remaining >= 1.0:
+				thrust_remaining = 1.0
+				thrust_depleted = false
+		else:
+			thrust_remaining += THRUST_RECHARGE_FACTOR * delta
+			if thrust_remaining >= 1.0:
+				thrust_remaining = 1.0
+
+	meter.set_thrust(thrust_remaining)
 
 	# Add the gravity.
 	if not is_on_floor():
@@ -84,8 +115,8 @@ func _physics_process(delta):
 
 		# Handle Jump.
 		if Input.is_action_just_pressed("jump"):
-			addVel += Vector2(0, JUMP_VELOCITY)
-			thrust += Vector2(0, 1)
+			addVel += Vector2.UP * JUMP_VELOCITY
+			thrust += Vector2.UP
 
 		# Get the input direction and handle the movement/deceleration.
 		# As good practice, you should replace UI actions with custom gameplay actions.
