@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=117 format=3 uid="uid://birho3skfjhbr"]
+[gd_resource type="TileSet" load_steps=161 format=3 uid="uid://birho3skfjhbr"]
 
 [ext_resource type="Shader" path="res://bg blend.gdshader" id="1_3nnjc"]
 [ext_resource type="Shader" uid="uid://dkopu1grc0cvh" path="res://dirt.tres" id="1_dqr2m"]
@@ -10,9 +10,49 @@
 [ext_resource type="Shader" uid="uid://dudn24b4mmhpj" path="res://brown dirt edge.tres" id="5_fyq7c"]
 [ext_resource type="Texture2D" uid="uid://4qvqwgv6nq7p" path="res://lighting.png" id="5_piray"]
 [ext_resource type="Shader" uid="uid://ch6j13ghbsxxy" path="res://grass.tres" id="7_b0yap"]
+[ext_resource type="Shader" uid="uid://c7g1bgs8h57ja" path="res://sand.tres" id="7_por6k"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_1iu5h"]
 tile_data = PackedInt32Array(0, 0, 131072, 1, 65536, 131072)
+
+[sub_resource type="TileMapPattern" id="TileMapPattern_ydlng"]
+tile_data = PackedInt32Array(0, 196608, 131078, 65536, 196608, 131079, 1, 131072, 131078, 65537, 131072, 131079)
+
+[sub_resource type="TileMapPattern" id="TileMapPattern_stn1x"]
+tile_data = PackedInt32Array(0, 0, 65543, 65536, 196608, 131079, 1, 65536, 65543, 65537, 131072, 131079, 65538, 458752, 131078, 131074, 327680, 65543, 65539, 458752, 131079, 131075, 393216, 65543)
+
+[sub_resource type="TileMapPattern" id="TileMapPattern_gy8ys"]
+tile_data = PackedInt32Array(65536, 458752, 65543, 131072, 393216, 131079, 65537, 458752, 65542, 131073, 327680, 131079, 2, 393216, 65541, 65538, 393216, 131079, 3, 458752, 65541, 65539, 327680, 131079)
+
+[sub_resource type="TileMapPattern" id="TileMapPattern_mk12e"]
+tile_data = PackedInt32Array(65536, 458752, 65543, 131072, 393216, 131079, 65537, 458752, 65542, 131073, 327680, 131079, 2, 65536, 131079, 65538, 393216, 131079, 3, 0, 131079, 65539, 327680, 131079)
+
+[sub_resource type="TileMapPattern" id="TileMapPattern_ooghw"]
+tile_data = PackedInt32Array(0, 458752, 131077, 65536, 196608, 131079, 1, 393216, 131077, 65537, 131072, 131079, 65538, 458752, 131078, 131074, 327680, 65543, 65539, 458752, 131079, 131075, 393216, 65543)
+
+[sub_resource type="TileMapPattern" id="TileMapPattern_fi1t7"]
+tile_data = PackedInt32Array(0, 327680, 65542, 65536, 327680, 65543, 1, 393216, 65542, 65537, 393216, 65543)
+
+[sub_resource type="TileMapPattern" id="TileMapPattern_foohr"]
+tile_data = PackedInt32Array(0, 131072, 65542, 65536, 131072, 65543, 1, 196608, 65542, 65537, 196608, 65543)
+
+[sub_resource type="TileMapPattern" id="TileMapPattern_lwcw3"]
+tile_data = PackedInt32Array(0, 393216, 131078, 65536, 393216, 131079, 1, 327680, 131078, 65537, 327680, 131079)
+
+[sub_resource type="TileMapPattern" id="TileMapPattern_mhbyb"]
+tile_data = PackedInt32Array(0, 0, 65543, 1, 65536, 65543)
+
+[sub_resource type="TileMapPattern" id="TileMapPattern_sxyqa"]
+tile_data = PackedInt32Array(0, 65536, 131079, 1, 0, 131079)
+
+[sub_resource type="TileMapPattern" id="TileMapPattern_luqln"]
+tile_data = PackedInt32Array(0, 393216, 65541, 1, 458752, 65541)
+
+[sub_resource type="TileMapPattern" id="TileMapPattern_cptuc"]
+tile_data = PackedInt32Array(0, 458752, 131077, 1, 393216, 131077)
+
+[sub_resource type="TileMapPattern" id="TileMapPattern_juina"]
+tile_data = PackedInt32Array(0, 262144, 65542, 65536, 262144, 65543)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_bufin"]
 shader = ExtResource("1_3nnjc")
@@ -88,6 +128,12 @@ shader = ExtResource("4_dn83p")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_b4run"]
 shader = ExtResource("5_fyq7c")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_v7oh5"]
+shader = ExtResource("7_por6k")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_67g0n"]
+shader = ExtResource("7_por6k")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_rjlgm"]
 shader = ExtResource("1_3nnjc")
@@ -188,17 +234,65 @@ shader = ExtResource("4_dn83p")
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_5uauc"]
 shader = ExtResource("5_fyq7c")
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7ypge"]
+shader = ExtResource("7_por6k")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_s82jf"]
+shader = ExtResource("7_por6k")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_5qcfy"]
+shader = ExtResource("7_por6k")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_0osv2"]
+shader = ExtResource("7_por6k")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qf0cq"]
+shader = ExtResource("7_por6k")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_odvtg"]
+shader = ExtResource("7_por6k")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_mb2dx"]
+shader = ExtResource("7_por6k")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_h2cio"]
+shader = ExtResource("7_por6k")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_6pyby"]
+shader = ExtResource("7_por6k")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_np8q8"]
+shader = ExtResource("7_por6k")
+
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_7phcc"]
 shader = ExtResource("7_b0yap")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_7qtv3"]
 shader = ExtResource("7_b0yap")
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_rvke1"]
+shader = ExtResource("7_por6k")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ksdik"]
+shader = ExtResource("7_por6k")
+
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_lamc1"]
 shader = ExtResource("7_b0yap")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_wqb1h"]
 shader = ExtResource("7_b0yap")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_h4leh"]
+shader = ExtResource("7_por6k")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_l3puk"]
+shader = ExtResource("7_por6k")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ry6nk"]
+shader = ExtResource("7_por6k")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_x0euw"]
+shader = ExtResource("7_por6k")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_lgpfk"]
 shader = ExtResource("7_b0yap")
@@ -212,6 +306,24 @@ shader = ExtResource("7_b0yap")
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_b7xxb"]
 shader = ExtResource("7_b0yap")
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_dyp7p"]
+shader = ExtResource("7_por6k")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qau6b"]
+shader = ExtResource("7_por6k")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3g0gn"]
+shader = ExtResource("7_por6k")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_xc5d4"]
+shader = ExtResource("7_por6k")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_g6p7y"]
+shader = ExtResource("7_por6k")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1fjyq"]
+shader = ExtResource("7_por6k")
+
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_qdae4"]
 shader = ExtResource("7_b0yap")
 
@@ -223,6 +335,24 @@ shader = ExtResource("7_b0yap")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_puxqu"]
 shader = ExtResource("7_b0yap")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_dd6ox"]
+shader = ExtResource("7_por6k")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_a74gq"]
+shader = ExtResource("7_por6k")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8tqqv"]
+shader = ExtResource("7_por6k")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2t6g2"]
+shader = ExtResource("7_por6k")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_twp6c"]
+shader = ExtResource("7_por6k")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_642jm"]
+shader = ExtResource("7_por6k")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3m074"]
 texture = ExtResource("3_1wx5q")
@@ -887,6 +1017,204 @@ texture = ExtResource("3_1wx5q")
 7:4/1/material = SubResource("ShaderMaterial_puxqu")
 7:4/1/physics_layer_0/linear_velocity = Vector2(0, 0)
 7:4/1/physics_layer_0/angular_velocity = 0.0
+6:5/next_alternative_id = 3
+6:5/0 = 0
+6:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+6:5/0/physics_layer_0/angular_velocity = 0.0
+6:5/1 = 1
+6:5/1/material = SubResource("ShaderMaterial_dyp7p")
+6:5/1/physics_layer_0/linear_velocity = Vector2(0, 0)
+6:5/1/physics_layer_0/angular_velocity = 0.0
+6:5/2 = 2
+6:5/2/flip_h = true
+6:5/2/material = SubResource("ShaderMaterial_qau6b")
+6:5/2/physics_layer_0/linear_velocity = Vector2(0, 0)
+6:5/2/physics_layer_0/angular_velocity = 0.0
+7:5/next_alternative_id = 3
+7:5/0 = 0
+7:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+7:5/0/physics_layer_0/angular_velocity = 0.0
+7:5/1 = 1
+7:5/1/material = SubResource("ShaderMaterial_dd6ox")
+7:5/1/physics_layer_0/linear_velocity = Vector2(0, 0)
+7:5/1/physics_layer_0/angular_velocity = 0.0
+7:5/2 = 2
+7:5/2/flip_h = true
+7:5/2/material = SubResource("ShaderMaterial_a74gq")
+7:5/2/physics_layer_0/linear_velocity = Vector2(0, 0)
+7:5/2/physics_layer_0/angular_velocity = 0.0
+2:6/next_alternative_id = 3
+2:6/0 = 0
+2:6/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:6/0/physics_layer_0/angular_velocity = 0.0
+2:6/1 = 1
+2:6/1/material = SubResource("ShaderMaterial_5qcfy")
+2:6/1/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:6/1/physics_layer_0/angular_velocity = 0.0
+2:6/2 = 2
+2:6/2/flip_h = true
+2:6/2/material = SubResource("ShaderMaterial_0osv2")
+2:6/2/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:6/2/physics_layer_0/angular_velocity = 0.0
+3:6/next_alternative_id = 3
+3:6/0 = 0
+3:6/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:6/0/physics_layer_0/angular_velocity = 0.0
+3:6/1 = 1
+3:6/1/material = SubResource("ShaderMaterial_mb2dx")
+3:6/1/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:6/1/physics_layer_0/angular_velocity = 0.0
+3:6/2 = 2
+3:6/2/flip_h = true
+3:6/2/material = SubResource("ShaderMaterial_h2cio")
+3:6/2/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:6/2/physics_layer_0/angular_velocity = 0.0
+4:6/next_alternative_id = 2
+4:6/0 = 0
+4:6/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+4:6/0/physics_layer_0/angular_velocity = 0.0
+4:6/1 = 1
+4:6/1/material = SubResource("ShaderMaterial_rvke1")
+4:6/1/physics_layer_0/linear_velocity = Vector2(0, 0)
+4:6/1/physics_layer_0/angular_velocity = 0.0
+5:6/next_alternative_id = 3
+5:6/0 = 0
+5:6/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+5:6/0/physics_layer_0/angular_velocity = 0.0
+5:6/1 = 1
+5:6/1/material = SubResource("ShaderMaterial_h4leh")
+5:6/1/physics_layer_0/linear_velocity = Vector2(0, 0)
+5:6/1/physics_layer_0/angular_velocity = 0.0
+5:6/2 = 2
+5:6/2/flip_h = true
+5:6/2/material = SubResource("ShaderMaterial_l3puk")
+5:6/2/physics_layer_0/linear_velocity = Vector2(0, 0)
+5:6/2/physics_layer_0/angular_velocity = 0.0
+6:6/next_alternative_id = 3
+6:6/0 = 0
+6:6/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+6:6/0/physics_layer_0/angular_velocity = 0.0
+6:6/1 = 1
+6:6/1/material = SubResource("ShaderMaterial_3g0gn")
+6:6/1/physics_layer_0/linear_velocity = Vector2(0, 0)
+6:6/1/physics_layer_0/angular_velocity = 0.0
+6:6/2 = 2
+6:6/2/flip_h = true
+6:6/2/material = SubResource("ShaderMaterial_xc5d4")
+6:6/2/physics_layer_0/linear_velocity = Vector2(0, 0)
+6:6/2/physics_layer_0/angular_velocity = 0.0
+0:7/next_alternative_id = 3
+0:7/0 = 0
+0:7/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:7/0/physics_layer_0/angular_velocity = 0.0
+0:7/1 = 1
+0:7/1/material = SubResource("ShaderMaterial_v7oh5")
+0:7/1/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:7/1/physics_layer_0/angular_velocity = 0.0
+0:7/2 = 2
+0:7/2/flip_h = true
+0:7/2/material = SubResource("ShaderMaterial_67g0n")
+0:7/2/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:7/2/physics_layer_0/angular_velocity = 0.0
+1:7/next_alternative_id = 3
+1:7/0 = 0
+1:7/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:7/0/physics_layer_0/angular_velocity = 0.0
+1:7/1 = 1
+1:7/1/material = SubResource("ShaderMaterial_7ypge")
+1:7/1/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:7/1/physics_layer_0/angular_velocity = 0.0
+1:7/2 = 2
+1:7/2/flip_h = true
+1:7/2/material = SubResource("ShaderMaterial_s82jf")
+1:7/2/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:7/2/physics_layer_0/angular_velocity = 0.0
+2:7/next_alternative_id = 3
+2:7/0 = 0
+2:7/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:7/0/physics_layer_0/angular_velocity = 0.0
+2:7/1 = 1
+2:7/1/material = SubResource("ShaderMaterial_qf0cq")
+2:7/1/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:7/1/physics_layer_0/angular_velocity = 0.0
+2:7/2 = 2
+2:7/2/flip_h = true
+2:7/2/material = SubResource("ShaderMaterial_odvtg")
+2:7/2/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:7/2/physics_layer_0/angular_velocity = 0.0
+3:7/next_alternative_id = 3
+3:7/0 = 0
+3:7/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:7/0/physics_layer_0/angular_velocity = 0.0
+3:7/1 = 1
+3:7/1/material = SubResource("ShaderMaterial_6pyby")
+3:7/1/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:7/1/physics_layer_0/angular_velocity = 0.0
+3:7/2 = 2
+3:7/2/flip_h = true
+3:7/2/material = SubResource("ShaderMaterial_np8q8")
+3:7/2/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:7/2/physics_layer_0/angular_velocity = 0.0
+4:7/next_alternative_id = 2
+4:7/0 = 0
+4:7/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+4:7/0/physics_layer_0/angular_velocity = 0.0
+4:7/1 = 1
+4:7/1/material = SubResource("ShaderMaterial_ksdik")
+4:7/1/physics_layer_0/linear_velocity = Vector2(0, 0)
+4:7/1/physics_layer_0/angular_velocity = 0.0
+5:7/next_alternative_id = 3
+5:7/0 = 0
+5:7/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+5:7/0/physics_layer_0/angular_velocity = 0.0
+5:7/1 = 1
+5:7/1/material = SubResource("ShaderMaterial_ry6nk")
+5:7/1/physics_layer_0/linear_velocity = Vector2(0, 0)
+5:7/1/physics_layer_0/angular_velocity = 0.0
+5:7/2 = 2
+5:7/2/flip_h = true
+5:7/2/material = SubResource("ShaderMaterial_x0euw")
+5:7/2/physics_layer_0/linear_velocity = Vector2(0, 0)
+5:7/2/physics_layer_0/angular_velocity = 0.0
+6:7/next_alternative_id = 3
+6:7/0 = 0
+6:7/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+6:7/0/physics_layer_0/angular_velocity = 0.0
+6:7/1 = 1
+6:7/1/material = SubResource("ShaderMaterial_g6p7y")
+6:7/1/physics_layer_0/linear_velocity = Vector2(0, 0)
+6:7/1/physics_layer_0/angular_velocity = 0.0
+6:7/2 = 2
+6:7/2/flip_h = true
+6:7/2/material = SubResource("ShaderMaterial_1fjyq")
+6:7/2/physics_layer_0/linear_velocity = Vector2(0, 0)
+6:7/2/physics_layer_0/angular_velocity = 0.0
+7:6/next_alternative_id = 3
+7:6/0 = 0
+7:6/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+7:6/0/physics_layer_0/angular_velocity = 0.0
+7:6/1 = 1
+7:6/1/material = SubResource("ShaderMaterial_8tqqv")
+7:6/1/physics_layer_0/linear_velocity = Vector2(0, 0)
+7:6/1/physics_layer_0/angular_velocity = 0.0
+7:6/2 = 2
+7:6/2/flip_h = true
+7:6/2/material = SubResource("ShaderMaterial_2t6g2")
+7:6/2/physics_layer_0/linear_velocity = Vector2(0, 0)
+7:6/2/physics_layer_0/angular_velocity = 0.0
+7:7/next_alternative_id = 3
+7:7/0 = 0
+7:7/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+7:7/0/physics_layer_0/angular_velocity = 0.0
+7:7/1 = 1
+7:7/1/material = SubResource("ShaderMaterial_twp6c")
+7:7/1/physics_layer_0/linear_velocity = Vector2(0, 0)
+7:7/1/physics_layer_0/angular_velocity = 0.0
+7:7/2 = 2
+7:7/2/flip_h = true
+7:7/2/material = SubResource("ShaderMaterial_642jm")
+7:7/2/physics_layer_0/linear_velocity = Vector2(0, 0)
+7:7/2/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_tli76"]
 shader = ExtResource("4_7p287")
@@ -1309,3 +1637,16 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_3m074")
 sources/2 = SubResource("TileSetAtlasSource_1lexl")
 pattern_0 = SubResource("TileMapPattern_1iu5h")
+pattern_1 = SubResource("TileMapPattern_ydlng")
+pattern_2 = SubResource("TileMapPattern_fi1t7")
+pattern_3 = SubResource("TileMapPattern_foohr")
+pattern_4 = SubResource("TileMapPattern_lwcw3")
+pattern_5 = SubResource("TileMapPattern_mhbyb")
+pattern_6 = SubResource("TileMapPattern_sxyqa")
+pattern_7 = SubResource("TileMapPattern_luqln")
+pattern_8 = SubResource("TileMapPattern_cptuc")
+pattern_9 = SubResource("TileMapPattern_juina")
+pattern_10 = SubResource("TileMapPattern_stn1x")
+pattern_11 = SubResource("TileMapPattern_gy8ys")
+pattern_12 = SubResource("TileMapPattern_mk12e")
+pattern_13 = SubResource("TileMapPattern_ooghw")
