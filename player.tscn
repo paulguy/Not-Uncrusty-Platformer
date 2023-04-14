@@ -91,6 +91,8 @@ one_shot = true
 wait_time = 0.033
 
 [node name="Thrust Meter" type="Node2D" parent="."]
+z_index = 999
+z_as_relative = false
 script = ExtResource("4_svhw4")
 
 [node name="Ring" type="Sprite2D" parent="Thrust Meter"]
