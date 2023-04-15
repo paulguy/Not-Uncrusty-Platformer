@@ -26,7 +26,6 @@ color = Color(0, 0, 0, 1)
 polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
 
 [node name="Screen Area" type="Area2D" parent="."]
-visible = false
 position = Vector2(-189, -167)
 collision_layer = 0
 collision_mask = 32772
@@ -38,7 +37,7 @@ position = Vector2(200, 150)
 shape = SubResource("RectangleShape2D_b62dn")
 
 [node name="Player" parent="." instance=ExtResource("2_g2lhd")]
-position = Vector2(184, -2160)
+position = Vector2(2627, -1730)
 
 [node name="Start Tunnel" parent="." instance=ExtResource("7_gd3fx")]
 position = Vector2(-192, -192)

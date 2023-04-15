@@ -1,7 +1,6 @@
 extends Mob
 
 const SPEED = 30.0
-const JUMP_VELOCITY = -400.0
 
 @export var startDirection : MovementDirection = MovementDirection.RIGHT
 
