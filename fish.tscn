@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://wvpa0pvyksvb"]
+[gd_scene load_steps=10 format=3 uid="uid://wvpa0pvyksvb"]
 
 [ext_resource type="Texture2D" uid="uid://do7ox613sdjn2" path="res://enemies.png" id="1_38kmq"]
 [ext_resource type="Script" path="res://fish.gd" id="2_7ohg0"]
@@ -25,8 +25,27 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_8prtq"]
-size = Vector2(16, 8)
+[sub_resource type="CircleShape2D" id="CircleShape2D_hg1qm"]
+radius = 4.0
+
+[sub_resource type="Gradient" id="Gradient_mr2ij"]
+interpolation_mode = 2
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_y1lkk"]
+gradient = SubResource("Gradient_mr2ij")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_qa2y3"]
+lifetime_randomness = 0.25
+particle_flag_disable_z = true
+direction = Vector3(0, -1, 0)
+spread = 25.14
+gravity = Vector3(0, -20, 0)
+initial_velocity_min = 13.79
+initial_velocity_max = 27.59
+orbit_velocity_min = 0.0
+orbit_velocity_max = 0.0
+color_ramp = SubResource("GradientTexture1D_y1lkk")
 
 [node name="Fish" type="CharacterBody2D"]
 collision_layer = 4
@@ -35,9 +54,15 @@ motion_mode = 1
 script = ExtResource("2_7ohg0")
 
 [node name="Animation" type="AnimatedSprite2D" parent="."]
+position = Vector2(4, 0)
 sprite_frames = SubResource("SpriteFrames_fh1xc")
 autoplay = "default"
 frame_progress = 0.211111
 
 [node name="Collision" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_8prtq")
+shape = SubResource("CircleShape2D_hg1qm")
+
+[node name="Bubbles" type="GPUParticles2D" parent="."]
+position = Vector2(-4, 0)
+amount = 5
+process_material = SubResource("ParticleProcessMaterial_qa2y3")

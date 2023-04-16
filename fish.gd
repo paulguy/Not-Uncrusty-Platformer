@@ -1,4 +1,3 @@
-class_name Fish
 extends Mob
 
 const MIN_SPEED = 500.0
@@ -10,6 +9,7 @@ const MAX_VERT_WANDER = PI / 4.0
 @export var startDirection : MovementDirection = MovementDirection.RIGHT
 
 @onready var sprite = get_node("Animation")
+@onready var particles = get_node("Bubbles")
 
 var direction = startDirection
 var dirVector = Vector2.ZERO
@@ -33,8 +33,12 @@ func set_dir(dir, top_open, bottom_open):
 	dirVector = dir_to_vec(direction).rotated(randf_range(min_ang, max_ang))
 	if direction == MovementDirection.LEFT:
 		sprite.scale.x = 1.0
+		sprite.position.x = 4
+		particles.position.x = -4
 	else:
 		sprite.scale.x = -1.0
+		sprite.position.x = -4
+		particles.position.x = 4
 
 func update_dir(colls):
 	var openSides = {
