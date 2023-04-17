@@ -97,7 +97,7 @@ var cur_code = ""
 
 func _input(event):
 	if event is InputEventKey and event.pressed:
-		cur_code += String.chr(event.key_label)
+		cur_code += String.chr(event.unicode).to_upper()
 		var found = false
 		for code in CODES.keys():
 			if code.begins_with(cur_code):
