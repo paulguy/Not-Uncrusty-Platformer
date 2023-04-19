@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ctpmcoe01swn0"
-path="res://.godot/imported/water anim.png-58e971a57ca9ac73b25bd78c89ea7f7e.ctex"
+uid="uid://bhfb002g3j2a"
+path="res://.godot/imported/worm.png-e4ace7e1dd0a7b264279864e5e039bdb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://water anim.png"
-dest_files=["res://.godot/imported/water anim.png-58e971a57ca9ac73b25bd78c89ea7f7e.ctex"]
+source_file="res://Mobs/worm.png"
+dest_files=["res://.godot/imported/worm.png-e4ace7e1dd0a7b264279864e5e039bdb.ctex"]
 
 [params]
 

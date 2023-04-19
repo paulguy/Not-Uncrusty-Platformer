@@ -1,14 +1,14 @@
 [gd_scene load_steps=10 format=3 uid="uid://wvpa0pvyksvb"]
 
-[ext_resource type="Texture2D" uid="uid://do7ox613sdjn2" path="res://enemies.png" id="1_38kmq"]
-[ext_resource type="Script" path="res://fish.gd" id="2_7ohg0"]
+[ext_resource type="Script" path="res://Mobs/fish.gd" id="1_4slqx"]
+[ext_resource type="Texture2D" uid="uid://do7ox613sdjn2" path="res://Mobs/enemies.png" id="2_84bqo"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_leptc"]
-atlas = ExtResource("1_38kmq")
+atlas = ExtResource("2_84bqo")
 region = Rect2(0, 16, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_som5j"]
-atlas = ExtResource("1_38kmq")
+atlas = ExtResource("2_84bqo")
 region = Rect2(16, 16, 16, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_fh1xc"]
@@ -51,7 +51,7 @@ color_ramp = SubResource("GradientTexture1D_y1lkk")
 collision_layer = 4
 collision_mask = 5
 motion_mode = 1
-script = ExtResource("2_7ohg0")
+script = ExtResource("1_4slqx")
 
 [node name="Animation" type="AnimatedSprite2D" parent="."]
 position = Vector2(4, 0)

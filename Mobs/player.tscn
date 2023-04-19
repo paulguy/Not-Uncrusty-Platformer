@@ -1,16 +1,16 @@
-[gd_scene load_steps=18 format=3 uid="uid://b1jyu3ojxrw0o"]
+[gd_scene load_steps=18 format=3 uid="uid://bth8beo6h5ybm"]
 
-[ext_resource type="Script" path="res://Player.gd" id="1_sifrq"]
-[ext_resource type="Texture2D" uid="uid://sbf7cwvddxjg" path="res://face.png" id="2_me054"]
-[ext_resource type="Shader" uid="uid://n3k0v4jglej7" path="res://player.tres" id="2_vdajv"]
-[ext_resource type="Script" path="res://Thrust Meter.gd" id="4_svhw4"]
-[ext_resource type="Texture2D" uid="uid://mw4c4o3qna0p" path="res://health bar.png" id="5_26ssj"]
+[ext_resource type="Script" path="res://Mobs/Player.gd" id="1_5ojl5"]
+[ext_resource type="Shader" uid="uid://n3k0v4jglej7" path="res://Mobs/player.tres" id="2_weu2e"]
+[ext_resource type="Texture2D" uid="uid://sbf7cwvddxjg" path="res://Mobs/face.png" id="3_gqc0m"]
+[ext_resource type="Script" path="res://Mobs/Thrust Meter.gd" id="4_u3g7v"]
+[ext_resource type="Texture2D" uid="uid://mw4c4o3qna0p" path="res://Mobs/health bar.png" id="5_b5i8q"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_3bwnh"]
-shader = ExtResource("2_vdajv")
+shader = ExtResource("2_weu2e")
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_egcxy"]
-atlas = ExtResource("2_me054")
+atlas = ExtResource("3_gqc0m")
 region = Rect2(0, 0, 16, 16)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_lvb43"]
@@ -65,7 +65,7 @@ blend_mode = 1
 [node name="Player" type="CharacterBody2D"]
 z_index = 10
 collision_layer = 2
-script = ExtResource("1_sifrq")
+script = ExtResource("1_5ojl5")
 
 [node name="Player Sprite" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_3bwnh")
@@ -93,18 +93,18 @@ wait_time = 0.033
 [node name="Thrust Meter" type="Node2D" parent="."]
 z_index = 999
 z_as_relative = false
-script = ExtResource("4_svhw4")
+script = ExtResource("4_u3g7v")
 
 [node name="Ring" type="Sprite2D" parent="Thrust Meter"]
 material = SubResource("CanvasItemMaterial_uqxoj")
-texture = ExtResource("5_26ssj")
+texture = ExtResource("5_b5i8q")
 offset = Vector2(0, -24)
 region_enabled = true
 region_rect = Rect2(0, 0, 24, 24)
 
 [node name="Pie" type="Sprite2D" parent="Thrust Meter"]
 material = SubResource("CanvasItemMaterial_xfpwg")
-texture = ExtResource("5_26ssj")
+texture = ExtResource("5_b5i8q")
 offset = Vector2(0, -24)
 region_enabled = true
 region_rect = Rect2(0, 24, 24, 24)

@@ -1,13 +1,13 @@
 [gd_scene load_steps=5 format=3 uid="uid://bk13qyh8h8uqw"]
 
-[ext_resource type="Script" path="res://crawly_mob.gd" id="1_7eukr"]
-[ext_resource type="Texture2D" uid="uid://do7ox613sdjn2" path="res://enemies.png" id="2_03bhy"]
+[ext_resource type="Script" path="res://Mobs/crawly_mob.gd" id="1_28un7"]
+[ext_resource type="Texture2D" uid="uid://do7ox613sdjn2" path="res://Mobs/enemies.png" id="2_5e3kt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uuscn"]
 size = Vector2(16, 14)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7udyg"]
-atlas = ExtResource("2_03bhy")
+atlas = ExtResource("2_5e3kt")
 region = Rect2(0, 0, 16, 16)
 
 [node name="Crawly Mob" type="CharacterBody2D"]
@@ -15,7 +15,7 @@ collision_layer = 4
 collision_mask = 3
 floor_max_angle = 1.55334
 floor_snap_length = 0.0
-script = ExtResource("1_7eukr")
+script = ExtResource("1_28un7")
 speed = 6169.58
 health = 20
 

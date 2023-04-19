@@ -1,16 +1,16 @@
-[gd_resource type="TileSet" load_steps=165 format=3 uid="uid://birho3skfjhbr"]
+[gd_resource type="TileSet" load_steps=165 format=3 uid="uid://bbcmc4vabwnbb"]
 
-[ext_resource type="Shader" path="res://bg blend.gdshader" id="1_3nnjc"]
-[ext_resource type="Shader" uid="uid://dkopu1grc0cvh" path="res://dirt.tres" id="1_dqr2m"]
-[ext_resource type="Shader" uid="uid://bii7mhhl3rcah" path="res://dirt solid.tres" id="2_o6qtb"]
-[ext_resource type="Texture2D" uid="uid://d0jtcc2bjs8gm" path="res://underground.png" id="3_1wx5q"]
-[ext_resource type="Shader" path="res://fake AO subtract.gdshader" id="4_7p287"]
-[ext_resource type="Shader" uid="uid://ltbitrfll2bm" path="res://dirt edge.tres" id="4_dn83p"]
-[ext_resource type="Shader" uid="uid://bdccqj6syxpgy" path="res://brown dirt.tres" id="4_x32nr"]
-[ext_resource type="Shader" uid="uid://dudn24b4mmhpj" path="res://brown dirt edge.tres" id="5_fyq7c"]
-[ext_resource type="Texture2D" uid="uid://4qvqwgv6nq7p" path="res://lighting.png" id="5_piray"]
-[ext_resource type="Shader" uid="uid://ch6j13ghbsxxy" path="res://grass.tres" id="7_b0yap"]
-[ext_resource type="Shader" uid="uid://c7g1bgs8h57ja" path="res://sand.tres" id="7_por6k"]
+[ext_resource type="Shader" path="res://Tilesets/bg blend.gdshader" id="1_yy7te"]
+[ext_resource type="Shader" uid="uid://dkopu1grc0cvh" path="res://Tilesets/dirt.tres" id="2_ir5ov"]
+[ext_resource type="Shader" uid="uid://bii7mhhl3rcah" path="res://Tilesets/dirt solid.tres" id="3_41wff"]
+[ext_resource type="Shader" uid="uid://bdccqj6syxpgy" path="res://Tilesets/brown dirt.tres" id="4_b0j31"]
+[ext_resource type="Shader" uid="uid://dudn24b4mmhpj" path="res://Tilesets/brown dirt edge.tres" id="5_v5v7l"]
+[ext_resource type="Shader" uid="uid://ltbitrfll2bm" path="res://Tilesets/dirt edge.tres" id="6_5qjcs"]
+[ext_resource type="Shader" uid="uid://c7g1bgs8h57ja" path="res://Tilesets/sand.tres" id="7_jey6n"]
+[ext_resource type="Shader" uid="uid://ch6j13ghbsxxy" path="res://Tilesets/grass.tres" id="8_1hn1q"]
+[ext_resource type="Texture2D" uid="uid://d0jtcc2bjs8gm" path="res://Tilesets/underground.png" id="9_msk8v"]
+[ext_resource type="Shader" path="res://Tilesets/fake AO subtract.gdshader" id="10_u15w4"]
+[ext_resource type="Texture2D" uid="uid://4qvqwgv6nq7p" path="res://Tilesets/lighting.png" id="11_4h5df"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_1iu5h"]
 tile_data = PackedInt32Array(0, 0, 131072, 1, 65536, 131072)
@@ -55,307 +55,307 @@ tile_data = PackedInt32Array(0, 458752, 131077, 1, 393216, 131077)
 tile_data = PackedInt32Array(0, 262144, 65542, 65536, 262144, 65543)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_bufin"]
-shader = ExtResource("1_3nnjc")
+shader = ExtResource("1_yy7te")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_hggpi"]
-shader = ExtResource("1_dqr2m")
+shader = ExtResource("2_ir5ov")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_jioqg"]
-shader = ExtResource("2_o6qtb")
+shader = ExtResource("3_41wff")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_yqfat"]
-shader = ExtResource("4_x32nr")
+shader = ExtResource("4_b0j31")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_677sq"]
-shader = ExtResource("5_fyq7c")
+shader = ExtResource("5_v5v7l")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_6iuwl"]
-shader = ExtResource("2_o6qtb")
+shader = ExtResource("3_41wff")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ovych"]
-shader = ExtResource("2_o6qtb")
+shader = ExtResource("3_41wff")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_8n1ee"]
-shader = ExtResource("2_o6qtb")
+shader = ExtResource("3_41wff")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_2yfbr"]
-shader = ExtResource("2_o6qtb")
+shader = ExtResource("3_41wff")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ed4mq"]
-shader = ExtResource("5_fyq7c")
+shader = ExtResource("5_v5v7l")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_jynku"]
-shader = ExtResource("5_fyq7c")
+shader = ExtResource("5_v5v7l")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_c4jr0"]
-shader = ExtResource("5_fyq7c")
+shader = ExtResource("5_v5v7l")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_st27g"]
-shader = ExtResource("5_fyq7c")
+shader = ExtResource("5_v5v7l")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_n4tn6"]
-shader = ExtResource("2_o6qtb")
+shader = ExtResource("3_41wff")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_mka4k"]
-shader = ExtResource("5_fyq7c")
+shader = ExtResource("5_v5v7l")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_3pe06"]
-shader = ExtResource("5_fyq7c")
+shader = ExtResource("5_v5v7l")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ixvx1"]
-shader = ExtResource("5_fyq7c")
+shader = ExtResource("5_v5v7l")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_8qvva"]
-shader = ExtResource("2_o6qtb")
+shader = ExtResource("3_41wff")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_twvgk"]
-shader = ExtResource("2_o6qtb")
+shader = ExtResource("3_41wff")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_7dyhh"]
-shader = ExtResource("2_o6qtb")
+shader = ExtResource("3_41wff")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_2x8i0"]
-shader = ExtResource("4_dn83p")
+shader = ExtResource("6_5qjcs")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_0cu21"]
-shader = ExtResource("4_dn83p")
+shader = ExtResource("6_5qjcs")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_b54ng"]
-shader = ExtResource("4_dn83p")
+shader = ExtResource("6_5qjcs")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_dde0t"]
-shader = ExtResource("4_dn83p")
+shader = ExtResource("6_5qjcs")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_b4run"]
-shader = ExtResource("5_fyq7c")
+shader = ExtResource("5_v5v7l")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_v7oh5"]
-shader = ExtResource("7_por6k")
+shader = ExtResource("7_jey6n")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_67g0n"]
-shader = ExtResource("7_por6k")
+shader = ExtResource("7_jey6n")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_rjlgm"]
-shader = ExtResource("1_3nnjc")
+shader = ExtResource("1_yy7te")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_7l8xl"]
-shader = ExtResource("2_o6qtb")
+shader = ExtResource("3_41wff")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_l42yi"]
-shader = ExtResource("5_fyq7c")
+shader = ExtResource("5_v5v7l")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_afgio"]
-shader = ExtResource("5_fyq7c")
+shader = ExtResource("5_v5v7l")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_g7flo"]
-shader = ExtResource("5_fyq7c")
+shader = ExtResource("5_v5v7l")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_s1c4d"]
-shader = ExtResource("2_o6qtb")
+shader = ExtResource("3_41wff")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_3eh4d"]
-shader = ExtResource("2_o6qtb")
+shader = ExtResource("3_41wff")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_8gyjc"]
-shader = ExtResource("2_o6qtb")
+shader = ExtResource("3_41wff")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_l88so"]
-shader = ExtResource("4_dn83p")
+shader = ExtResource("6_5qjcs")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_j4qog"]
-shader = ExtResource("4_dn83p")
+shader = ExtResource("6_5qjcs")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_jc16k"]
-shader = ExtResource("4_dn83p")
+shader = ExtResource("6_5qjcs")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ejste"]
-shader = ExtResource("4_dn83p")
+shader = ExtResource("6_5qjcs")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_tmyf1"]
-shader = ExtResource("5_fyq7c")
+shader = ExtResource("5_v5v7l")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_53ifj"]
-shader = ExtResource("2_o6qtb")
+shader = ExtResource("3_41wff")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_cwtyt"]
-shader = ExtResource("2_o6qtb")
+shader = ExtResource("3_41wff")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_05xu1"]
-shader = ExtResource("2_o6qtb")
+shader = ExtResource("3_41wff")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_dg4hb"]
-shader = ExtResource("2_o6qtb")
+shader = ExtResource("3_41wff")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_03qgc"]
-shader = ExtResource("5_fyq7c")
+shader = ExtResource("5_v5v7l")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_j3qit"]
-shader = ExtResource("5_fyq7c")
+shader = ExtResource("5_v5v7l")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_qa5ic"]
-shader = ExtResource("5_fyq7c")
+shader = ExtResource("5_v5v7l")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_6tydd"]
-shader = ExtResource("5_fyq7c")
+shader = ExtResource("5_v5v7l")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ggvue"]
-shader = ExtResource("2_o6qtb")
+shader = ExtResource("3_41wff")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_nafxk"]
-shader = ExtResource("5_fyq7c")
+shader = ExtResource("5_v5v7l")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_apivu"]
-shader = ExtResource("5_fyq7c")
+shader = ExtResource("5_v5v7l")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_k0i2b"]
-shader = ExtResource("5_fyq7c")
+shader = ExtResource("5_v5v7l")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_to58s"]
-shader = ExtResource("2_o6qtb")
+shader = ExtResource("3_41wff")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ta7py"]
-shader = ExtResource("2_o6qtb")
+shader = ExtResource("3_41wff")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_wvfd5"]
-shader = ExtResource("2_o6qtb")
+shader = ExtResource("3_41wff")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_hsyrr"]
-shader = ExtResource("4_dn83p")
+shader = ExtResource("6_5qjcs")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_b02ur"]
-shader = ExtResource("4_dn83p")
+shader = ExtResource("6_5qjcs")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_hxlu0"]
-shader = ExtResource("4_dn83p")
+shader = ExtResource("6_5qjcs")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_x1bt0"]
-shader = ExtResource("4_dn83p")
+shader = ExtResource("6_5qjcs")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_5uauc"]
-shader = ExtResource("5_fyq7c")
+shader = ExtResource("5_v5v7l")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_7ypge"]
-shader = ExtResource("7_por6k")
+shader = ExtResource("7_jey6n")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_s82jf"]
-shader = ExtResource("7_por6k")
+shader = ExtResource("7_jey6n")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_5qcfy"]
-shader = ExtResource("7_por6k")
+shader = ExtResource("7_jey6n")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_0osv2"]
-shader = ExtResource("7_por6k")
+shader = ExtResource("7_jey6n")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_qf0cq"]
-shader = ExtResource("7_por6k")
+shader = ExtResource("7_jey6n")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_odvtg"]
-shader = ExtResource("7_por6k")
+shader = ExtResource("7_jey6n")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_mb2dx"]
-shader = ExtResource("7_por6k")
+shader = ExtResource("7_jey6n")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_h2cio"]
-shader = ExtResource("7_por6k")
+shader = ExtResource("7_jey6n")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_6pyby"]
-shader = ExtResource("7_por6k")
+shader = ExtResource("7_jey6n")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_np8q8"]
-shader = ExtResource("7_por6k")
+shader = ExtResource("7_jey6n")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_7phcc"]
-shader = ExtResource("7_b0yap")
+shader = ExtResource("8_1hn1q")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_7qtv3"]
-shader = ExtResource("7_b0yap")
+shader = ExtResource("8_1hn1q")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_rvke1"]
-shader = ExtResource("7_por6k")
+shader = ExtResource("7_jey6n")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ksdik"]
-shader = ExtResource("7_por6k")
+shader = ExtResource("7_jey6n")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_lamc1"]
-shader = ExtResource("7_b0yap")
+shader = ExtResource("8_1hn1q")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_wqb1h"]
-shader = ExtResource("7_b0yap")
+shader = ExtResource("8_1hn1q")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_h4leh"]
-shader = ExtResource("7_por6k")
+shader = ExtResource("7_jey6n")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_l3puk"]
-shader = ExtResource("7_por6k")
+shader = ExtResource("7_jey6n")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ry6nk"]
-shader = ExtResource("7_por6k")
+shader = ExtResource("7_jey6n")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_x0euw"]
-shader = ExtResource("7_por6k")
+shader = ExtResource("7_jey6n")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_lgpfk"]
-shader = ExtResource("7_b0yap")
+shader = ExtResource("8_1hn1q")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_fhwjf"]
-shader = ExtResource("7_b0yap")
+shader = ExtResource("8_1hn1q")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ytfnh"]
-shader = ExtResource("7_b0yap")
+shader = ExtResource("8_1hn1q")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_b7xxb"]
-shader = ExtResource("7_b0yap")
+shader = ExtResource("8_1hn1q")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_dyp7p"]
-shader = ExtResource("7_por6k")
+shader = ExtResource("7_jey6n")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_qau6b"]
-shader = ExtResource("7_por6k")
+shader = ExtResource("7_jey6n")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_3g0gn"]
-shader = ExtResource("7_por6k")
+shader = ExtResource("7_jey6n")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_xc5d4"]
-shader = ExtResource("7_por6k")
+shader = ExtResource("7_jey6n")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_g6p7y"]
-shader = ExtResource("7_por6k")
+shader = ExtResource("7_jey6n")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_1fjyq"]
-shader = ExtResource("7_por6k")
+shader = ExtResource("7_jey6n")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_qdae4"]
-shader = ExtResource("7_b0yap")
+shader = ExtResource("8_1hn1q")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_kgraf"]
-shader = ExtResource("7_b0yap")
+shader = ExtResource("8_1hn1q")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_u8so4"]
-shader = ExtResource("7_b0yap")
+shader = ExtResource("8_1hn1q")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_puxqu"]
-shader = ExtResource("7_b0yap")
+shader = ExtResource("8_1hn1q")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_dd6ox"]
-shader = ExtResource("7_por6k")
+shader = ExtResource("7_jey6n")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_a74gq"]
-shader = ExtResource("7_por6k")
+shader = ExtResource("7_jey6n")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_8tqqv"]
-shader = ExtResource("7_por6k")
+shader = ExtResource("7_jey6n")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_2t6g2"]
-shader = ExtResource("7_por6k")
+shader = ExtResource("7_jey6n")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_twp6c"]
-shader = ExtResource("7_por6k")
+shader = ExtResource("7_jey6n")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_642jm"]
-shader = ExtResource("7_por6k")
+shader = ExtResource("7_jey6n")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3m074"]
-texture = ExtResource("3_1wx5q")
+texture = ExtResource("9_msk8v")
 0:1/0 = 0
 0:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:1/0/physics_layer_0/angular_velocity = 0.0
@@ -1247,7 +1247,7 @@ texture = ExtResource("3_1wx5q")
 7:7/2/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 8, -8, -8, 8, -8, 8, 8)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_tli76"]
-shader = ExtResource("4_7p287")
+shader = ExtResource("10_u15w4")
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_3v6qr"]
 blend_mode = 1
@@ -1271,40 +1271,40 @@ blend_mode = 1
 blend_mode = 1
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_mce28"]
-shader = ExtResource("4_7p287")
+shader = ExtResource("10_u15w4")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_fc2jp"]
-shader = ExtResource("4_7p287")
+shader = ExtResource("10_u15w4")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_k51gx"]
-shader = ExtResource("4_7p287")
+shader = ExtResource("10_u15w4")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ubea8"]
-shader = ExtResource("4_7p287")
+shader = ExtResource("10_u15w4")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_kpssm"]
-shader = ExtResource("4_7p287")
+shader = ExtResource("10_u15w4")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_c3n5r"]
-shader = ExtResource("4_7p287")
+shader = ExtResource("10_u15w4")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_rh0qi"]
-shader = ExtResource("4_7p287")
+shader = ExtResource("10_u15w4")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_v54ig"]
-shader = ExtResource("4_7p287")
+shader = ExtResource("10_u15w4")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_h30ym"]
-shader = ExtResource("4_7p287")
+shader = ExtResource("10_u15w4")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_vgcna"]
-shader = ExtResource("4_7p287")
+shader = ExtResource("10_u15w4")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_42mg0"]
-shader = ExtResource("4_7p287")
+shader = ExtResource("10_u15w4")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_g3tak"]
-shader = ExtResource("4_7p287")
+shader = ExtResource("10_u15w4")
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_7r7fj"]
 blend_mode = 1
@@ -1316,16 +1316,16 @@ blend_mode = 1
 blend_mode = 1
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_t7xva"]
-shader = ExtResource("4_7p287")
+shader = ExtResource("10_u15w4")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_f5qyu"]
-shader = ExtResource("4_7p287")
+shader = ExtResource("10_u15w4")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_t2p2m"]
-shader = ExtResource("4_7p287")
+shader = ExtResource("10_u15w4")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_g0mlc"]
-shader = ExtResource("4_7p287")
+shader = ExtResource("10_u15w4")
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_p3g3s"]
 blend_mode = 1
@@ -1337,16 +1337,16 @@ blend_mode = 1
 blend_mode = 1
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ps8jv"]
-shader = ExtResource("4_7p287")
+shader = ExtResource("10_u15w4")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_l4qlt"]
-shader = ExtResource("4_7p287")
+shader = ExtResource("10_u15w4")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_3dhqh"]
-shader = ExtResource("4_7p287")
+shader = ExtResource("10_u15w4")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_0wvh8"]
-shader = ExtResource("4_7p287")
+shader = ExtResource("10_u15w4")
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_lbg0r"]
 blend_mode = 1
@@ -1358,7 +1358,7 @@ blend_mode = 1
 blend_mode = 1
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1lexl"]
-texture = ExtResource("5_piray")
+texture = ExtResource("11_4h5df")
 0:0/next_alternative_id = 4
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)

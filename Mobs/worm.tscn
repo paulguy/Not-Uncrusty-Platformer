@@ -1,58 +1,58 @@
-[gd_scene load_steps=19 format=3 uid="uid://d1ervcibn1jey"]
+[gd_scene load_steps=19 format=3 uid="uid://8u7vcedlhsu4"]
 
-[ext_resource type="Script" path="res://worm.gd" id="1_jlckj"]
-[ext_resource type="Texture2D" uid="uid://bhfb002g3j2a" path="res://worm.png" id="1_u8c67"]
-[ext_resource type="Shader" uid="uid://dhl4dk8h6nb0o" path="res://worm.tres" id="2_go7nn"]
+[ext_resource type="Script" path="res://Mobs/worm.gd" id="1_v0dcl"]
+[ext_resource type="Shader" uid="uid://dhl4dk8h6nb0o" path="res://Mobs/worm.tres" id="2_jdk0u"]
+[ext_resource type="Texture2D" uid="uid://bhfb002g3j2a" path="res://Mobs/worm.png" id="3_2wu6x"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_vt8b7"]
-shader = ExtResource("2_go7nn")
+shader = ExtResource("2_jdk0u")
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kmyx0"]
-atlas = ExtResource("1_u8c67")
+atlas = ExtResource("3_2wu6x")
 region = Rect2(0, 3, 16, 3)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bfn3k"]
-atlas = ExtResource("1_u8c67")
+atlas = ExtResource("3_2wu6x")
 region = Rect2(16, 3, 16, 3)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6i658"]
-atlas = ExtResource("1_u8c67")
+atlas = ExtResource("3_2wu6x")
 region = Rect2(32, 3, 16, 3)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5v3ht"]
-atlas = ExtResource("1_u8c67")
+atlas = ExtResource("3_2wu6x")
 region = Rect2(48, 3, 16, 3)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5uqs6"]
-atlas = ExtResource("1_u8c67")
+atlas = ExtResource("3_2wu6x")
 region = Rect2(64, 3, 16, 3)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_04xev"]
-atlas = ExtResource("1_u8c67")
+atlas = ExtResource("3_2wu6x")
 region = Rect2(80, 3, 16, 3)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2xk24"]
-atlas = ExtResource("1_u8c67")
+atlas = ExtResource("3_2wu6x")
 region = Rect2(0, 0, 16, 3)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_negod"]
-atlas = ExtResource("1_u8c67")
+atlas = ExtResource("3_2wu6x")
 region = Rect2(16, 0, 16, 3)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_b6mi6"]
-atlas = ExtResource("1_u8c67")
+atlas = ExtResource("3_2wu6x")
 region = Rect2(32, 0, 16, 3)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xx7el"]
-atlas = ExtResource("1_u8c67")
+atlas = ExtResource("3_2wu6x")
 region = Rect2(48, 0, 16, 3)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_35f6g"]
-atlas = ExtResource("1_u8c67")
+atlas = ExtResource("3_2wu6x")
 region = Rect2(64, 0, 16, 3)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rk2w4"]
-atlas = ExtResource("1_u8c67")
+atlas = ExtResource("3_2wu6x")
 region = Rect2(80, 0, 16, 3)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_vfd7e"]
@@ -110,7 +110,7 @@ radius = 1.5
 [node name="Worm" type="CharacterBody2D"]
 collision_layer = 4
 floor_max_angle = 0.804597
-script = ExtResource("1_jlckj")
+script = ExtResource("1_v0dcl")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 material = SubResource("ShaderMaterial_vt8b7")

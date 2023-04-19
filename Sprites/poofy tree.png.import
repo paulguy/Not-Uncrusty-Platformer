@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bhfb002g3j2a"
-path="res://.godot/imported/worm.png-2e1629290dddf451fbcf9903ce499d1e.ctex"
+uid="uid://c7a6lo8bnjivp"
+path="res://.godot/imported/poofy tree.png-50ba31f6fe37d7791b9bf2ab7da30112.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://worm.png"
-dest_files=["res://.godot/imported/worm.png-2e1629290dddf451fbcf9903ce499d1e.ctex"]
+source_file="res://Sprites/poofy tree.png"
+dest_files=["res://.godot/imported/poofy tree.png-50ba31f6fe37d7791b9bf2ab7da30112.ctex"]
 
 [params]
 

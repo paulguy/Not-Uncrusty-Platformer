@@ -23,7 +23,7 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 @onready var invinco = self.get_node("Invincibility Time")
 @onready var invinco_anim_timer = self.get_node("Invincibility Animation")
 @onready var orig_material = sprite.material
-@onready var invinco_material = preload("res://white_material.tres")
+@onready var invinco_material = preload("res://Mobs/white_material.tres")
 @onready var meter = self.get_node("Thrust Meter")
 
 var mousepos = Vector2.ZERO

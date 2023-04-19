@@ -1,13 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://da3dj7qvritt"]
+[gd_scene load_steps=4 format=3 uid="uid://b6pgwmljiikrp"]
 
-[ext_resource type="TileSet" uid="uid://birho3skfjhbr" path="res://world_graphics.tres" id="1_b7fuy"]
+[ext_resource type="TileSet" uid="uid://bbcmc4vabwnbb" path="res://Tilesets/world_graphics.tres" id="1_heqta"]
 [ext_resource type="Script" path="res://start_tunnel.gd" id="2_qsvlr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xqih0"]
 size = Vector2(352, 464)
 
 [node name="Start Tunnel" type="TileMap"]
-tile_set = ExtResource("1_b7fuy")
+tile_set = ExtResource("1_heqta")
 format = 2
 layer_0/name = "fake AO"
 layer_0/z_index = -1

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://4qvqwgv6nq7p"
-path="res://.godot/imported/lighting.png-e631d40bd267306ada09dbf8cfdcb1ab.ctex"
+path="res://.godot/imported/lighting.png-0e56c2a20edc82a7c566442dd7028790.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://lighting.png"
-dest_files=["res://.godot/imported/lighting.png-e631d40bd267306ada09dbf8cfdcb1ab.ctex"]
+source_file="res://Tilesets/lighting.png"
+dest_files=["res://.godot/imported/lighting.png-0e56c2a20edc82a7c566442dd7028790.ctex"]
 
 [params]
 
