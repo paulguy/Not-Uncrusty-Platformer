@@ -1,12 +1,13 @@
-[gd_scene load_steps=13 format=3 uid="uid://cti5vqikblpoy"]
+[gd_scene load_steps=15 format=3 uid="uid://cti5vqikblpoy"]
 
 [ext_resource type="TileSet" uid="uid://bbcmc4vabwnbb" path="res://Tilesets/world_graphics.tres" id="1_3d2wv"]
 [ext_resource type="Script" path="res://start_area.gd" id="2_nxej3"]
 [ext_resource type="PackedScene" uid="uid://8u7vcedlhsu4" path="res://Mobs/worm.tscn" id="3_7451u"]
-[ext_resource type="TileSet" path="res://Tilesets/water.tres" id="5_k050t"]
+[ext_resource type="TileSet" uid="uid://dqx4iwi5r15fh" path="res://Tilesets/water.tres" id="5_k050t"]
 [ext_resource type="PackedScene" uid="uid://wvpa0pvyksvb" path="res://Mobs/fish.tscn" id="6_krxrc"]
 [ext_resource type="Texture2D" uid="uid://ghyxgx1h5prq" path="res://Sprites/palm tree.png" id="6_w3vmm"]
 [ext_resource type="Shader" uid="uid://bmko041neak4w" path="res://noise.tres" id="7_4njp4"]
+[ext_resource type="Shader" uid="uid://t8fgwpvgq8ww" path="res://test.tres" id="8_7buyh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mx0sb"]
 size = Vector2(3984, 2548)
@@ -25,6 +26,9 @@ b = Vector2(0, -2500)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_f26up"]
 shader = ExtResource("7_4njp4")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_krs0t"]
+shader = ExtResource("8_7buyh")
 
 [node name="Start Surface" type="TileMap"]
 tile_set = ExtResource("1_3d2wv")
@@ -137,3 +141,8 @@ z_index = 2
 material = SubResource("ShaderMaterial_f26up")
 polygon = PackedVector2Array(3168, -2500, -816, -2500, -816, -2644, 3360, -2644, 3360, -256, 3168, -256)
 vertex_colors = PackedColorArray(0.741176, 1, 0.898039, 1, 0.741176, 1, 0.898039, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.741176, 1, 0.898039, 1)
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+z_index = 1001
+material = SubResource("ShaderMaterial_krs0t")
+polygon = PackedVector2Array(1051, -1052, 2661, -767, 2659, -360, 1063, -805)

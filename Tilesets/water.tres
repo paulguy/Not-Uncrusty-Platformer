@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=3 format=3]
+[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://dqx4iwi5r15fh"]
 
 [ext_resource type="Texture2D" uid="uid://ctpmcoe01swn0" path="res://Tilesets/water anim.png" id="1_3ey17"]
 
