@@ -141,7 +141,9 @@ func _physics_process(delta):
 		thrust = Vector2.LEFT
 	else:
 		particles.emitting = true
-		particles.process_material.direction = Vector3(-thrust.x, -thrust.y, 0).normalized()
+		var particleVec = Vector2(-thrust.x, -thrust.y).normalized()
+		particles.process_material.direction = Vector3(particleVec.x, particleVec.y, 0)
+		particles.position = particleVec.rotated(PI / 3.5) * sprite.texture.region.size.x / 3
 
 	var dir = thrust.normalized()
 	var dist = abs((dir - anim_dir).length()) * MAX_ANIM_TIME

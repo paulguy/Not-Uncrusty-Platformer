@@ -1,17 +1,58 @@
-[gd_scene load_steps=8 format=3 uid="uid://dyxnvg3ae2i8l"]
+[gd_scene load_steps=12 format=3 uid="uid://dyxnvg3ae2i8l"]
 
 [ext_resource type="Script" path="res://area.gd" id="1_kafqj"]
 [ext_resource type="TileSet" uid="uid://bbcmc4vabwnbb" path="res://Tilesets/world_graphics.tres" id="1_kjjmx"]
-[ext_resource type="Shader" uid="uid://c5rjmigi82dex" path="res://Night Filter.tres" id="3_u32hg"]
 [ext_resource type="Texture2D" uid="uid://c7a6lo8bnjivp" path="res://Sprites/poofy tree.png" id="4_x7s3k"]
 [ext_resource type="Texture2D" uid="uid://dvlm73gxlboqv" path="res://Sprites/bench.png" id="5_32vba"]
+[ext_resource type="Texture2D" uid="uid://befhuh3lq3qi1" path="res://Sprites/hotdogs.png" id="5_h8ksr"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_h3rma"]
-shader = ExtResource("3_u32hg")
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_3lqst"]
+a = Vector2(-37, 1)
+b = Vector2(26, 1)
+
+[sub_resource type="Gradient" id="Gradient_5hv0e"]
+interpolation_mode = 2
+offsets = PackedFloat32Array(0, 0.712919, 1)
+colors = PackedColorArray(0.219501, 0.219501, 0.219501, 1, 0.545098, 0.545098, 0.545098, 0.831373, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_layiu"]
+gradient = SubResource("Gradient_5hv0e")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_xuktg"]
+lifetime_randomness = 1.0
+emission_shape = 3
+emission_box_extents = Vector3(1, 1, 1)
+particle_flag_disable_z = true
+gravity = Vector3(0, -98, 0)
+orbit_velocity_min = 0.0
+orbit_velocity_max = 0.0
+linear_accel_min = -100.0
+linear_accel_max = 100.0
+radial_accel_min = -100.0
+radial_accel_max = 100.0
+tangential_accel_min = -100.0
+tangential_accel_max = 100.0
+color_ramp = SubResource("GradientTexture1D_layiu")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_4cvpw"]
+lifetime_randomness = 1.0
+emission_shape = 3
+emission_box_extents = Vector3(5, 1, 1)
+particle_flag_disable_z = true
+gravity = Vector3(0, -98, 0)
+orbit_velocity_min = 0.0
+orbit_velocity_max = 0.0
+linear_accel_min = -100.0
+linear_accel_max = 100.0
+radial_accel_min = -100.0
+radial_accel_max = 100.0
+tangential_accel_min = -100.0
+tangential_accel_max = 100.0
+color_ramp = SubResource("GradientTexture1D_layiu")
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_wooki"]
-a = Vector2(-37, 1)
-b = Vector2(31, 1)
+a = Vector2(-50, 1)
+b = Vector2(46, 1)
 
 [node name="Surface Park" type="TileMap"]
 tile_set = ExtResource("1_kjjmx")
@@ -23,16 +64,9 @@ layer_1/enabled = true
 layer_1/modulate = Color(1, 1, 1, 1)
 layer_1/y_sort_enabled = false
 layer_1/y_sort_origin = 0
-layer_1/z_index = 1
+layer_1/z_index = 11
 layer_1/tile_data = PackedInt32Array(-196612, 327680, 65538, -196613, 327680, 65538, -196614, 327680, 65538, -196615, 327680, 65538, -196616, 327680, 65538, -196617, 327680, 65538, -196618, 327680, 65538, -196619, 327680, 65538, -196620, 327680, 65538, -196621, 327680, 65538, -131102, 327680, 65538, -131101, 327680, 65538, -131100, 327680, 65538, -131099, 327680, 65538, -131098, 327680, 65538, -131097, 327680, 65538, -131096, 327680, 65538, -131095, 327680, 65538, -131094, 327680, 65538, -131093, 327680, 65538, -131092, 327680, 65538, -131091, 327680, 65538, -131090, 327680, 65538, -131089, 327680, 65538, -131088, 327680, 65538, -131087, 327680, 65538, -131086, 327680, 65538, -65574, 327680, 65538, -65573, 327680, 65538, -65572, 327680, 65538, -65571, 327680, 65538, -65570, 327680, 65538, -65569, 327680, 65538, -65568, 327680, 65538, -65567, 327680, 65538, -131110, 327680, 65537, -131109, 327680, 65537, -131108, 327680, 65537, -131107, 327680, 65537, -131106, 327680, 65537, -131105, 327680, 65537, -131104, 327680, 65537, -131103, 327680, 65537, -196638, 327680, 65537, -196637, 327680, 65537, -196636, 327680, 65537, -196635, 327680, 65537, -196634, 327680, 65537, -196633, 327680, 65537, -196632, 327680, 65537, -196631, 327680, 65537, -196630, 327680, 65537, -196629, 327680, 65537, -196628, 327680, 65537, -196627, 327680, 65537, -196626, 327680, 65537, -196625, 327680, 65537, -196624, 327680, 65537, -196623, 327680, 65537, -196622, 327680, 65537, -262148, 327680, 65537, -262149, 327680, 65537, -262150, 327680, 65537, -262151, 327680, 65537, -262152, 327680, 65537, -262153, 327680, 65537, -262154, 327680, 65537, -262155, 327680, 65537, -262156, 327680, 65537, -262157, 327680, 65537)
 script = ExtResource("1_kafqj")
-
-[node name="Polygon2D" type="Polygon2D" parent="."]
-z_index = 11
-material = SubResource("ShaderMaterial_h3rma")
-position = Vector2(8, 0)
-polygon = PackedVector2Array(-553, -184, -257, -166, -259, 16, -606, 35)
-vertex_colors = PackedColorArray(0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-260, -96)
@@ -46,5 +80,47 @@ texture = ExtResource("5_32vba")
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bench/StaticBody2D"]
+shape = SubResource("SegmentShape2D_3lqst")
+one_way_collision = true
+
+[node name="Sky" type="Polygon2D" parent="."]
+z_index = -2
+position = Vector2(-3168, 1056)
+polygon = PackedVector2Array(-816, -624, 3168, -624, 3168, -2500, -816, -2500)
+vertex_colors = PackedColorArray(0.352941, 0.709804, 1, 1, 0.352941, 0.709804, 1, 1, 0.0392157, 0.137255, 0.360784, 1, 0.0392157, 0.137255, 0.360784, 1)
+
+[node name="Hotdogs" type="Sprite2D" parent="."]
+position = Vector2(-411, -80)
+texture = ExtResource("5_h8ksr")
+
+[node name="Smoke 1" type="GPUParticles2D" parent="Hotdogs"]
+position = Vector2(12, 9)
+process_material = SubResource("ParticleProcessMaterial_xuktg")
+
+[node name="Smoke 2" type="GPUParticles2D" parent="Hotdogs"]
+position = Vector2(8, 9)
+process_material = SubResource("ParticleProcessMaterial_xuktg")
+
+[node name="Smoke 3" type="GPUParticles2D" parent="Hotdogs"]
+position = Vector2(0, 9)
+process_material = SubResource("ParticleProcessMaterial_4cvpw")
+
+[node name="Smoke 4" type="GPUParticles2D" parent="Hotdogs"]
+position = Vector2(-12, 9)
+process_material = SubResource("ParticleProcessMaterial_4cvpw")
+
+[node name="Smoke 5" type="GPUParticles2D" parent="Hotdogs"]
+position = Vector2(-24, 9)
+process_material = SubResource("ParticleProcessMaterial_4cvpw")
+
+[node name="Smoke 6" type="GPUParticles2D" parent="Hotdogs"]
+position = Vector2(-36, 9)
+process_material = SubResource("ParticleProcessMaterial_4cvpw")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Hotdogs"]
+position = Vector2(2, -33)
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hotdogs/StaticBody2D"]
 shape = SubResource("SegmentShape2D_wooki")
 one_way_collision = true

@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://cti5vqikblpoy"]
+[gd_scene load_steps=15 format=3 uid="uid://o8fy4y5kc3my"]
 
 [ext_resource type="TileSet" uid="uid://bbcmc4vabwnbb" path="res://Tilesets/world_graphics.tres" id="1_3d2wv"]
 [ext_resource type="Script" path="res://start_area.gd" id="2_nxej3"]
@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://wvpa0pvyksvb" path="res://Mobs/fish.tscn" id="6_krxrc"]
 [ext_resource type="Texture2D" uid="uid://ghyxgx1h5prq" path="res://Sprites/palm tree.png" id="6_w3vmm"]
 [ext_resource type="Shader" uid="uid://bmko041neak4w" path="res://noise.tres" id="7_4njp4"]
-[ext_resource type="Shader" uid="uid://t8fgwpvgq8ww" path="res://test.tres" id="8_7buyh"]
+[ext_resource type="Shader" uid="uid://t8fgwpvgq8ww" path="res://test.tres" id="8_1qsow"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mx0sb"]
 size = Vector2(3984, 2548)
@@ -28,7 +28,7 @@ b = Vector2(0, -2500)
 shader = ExtResource("7_4njp4")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_krs0t"]
-shader = ExtResource("8_7buyh")
+shader = ExtResource("8_1qsow")
 
 [node name="Start Surface" type="TileMap"]
 tile_set = ExtResource("1_3d2wv")
@@ -54,7 +54,7 @@ layer_3/enabled = true
 layer_3/modulate = Color(1, 1, 1, 1)
 layer_3/y_sort_enabled = false
 layer_3/y_sort_origin = 0
-layer_3/z_index = 11
+layer_3/z_index = 13
 layer_3/tile_data = PackedInt32Array(-2162718, 393216, 65539, -2162717, 327680, 65537, -2097182, 393216, 65540, -2097181, 327680, 65538, -2162716, 458752, 65539, -2097180, 458752, 65540, -1507350, 458752, 65538, -1572886, 458752, 65537, -1507351, 262144, 65538, -1507352, 262144, 65538, -1507353, 262144, 65538, -1572887, 262144, 65537, -1572888, 262144, 65537, -1572889, 262144, 65537, -1572890, 393216, 65537, -1507354, 393216, 65538, -4259826, 393216, 65540, -4194289, 393216, 65540, -4128749, 393216, 65540, -4063208, 393216, 65540, -3997666, 393216, 65540, -4063207, 327680, 65538, -3997665, 327680, 65538, -3997664, 458752, 65538, -4063202, 327680, 65538, -4063203, 327680, 65538, -4063204, 327680, 65538, -4063205, 327680, 65538, -4063206, 327680, 65538, -4128748, 327680, 65538, -4128747, 327680, 65538, -4128746, 327680, 65538, -4128745, 327680, 65538, -4128744, 327680, 65538, -4194286, 327680, 65538, -4194285, 327680, 65538, -4194287, 327680, 65538, -4194288, 327680, 65538, -4259825, 327680, 65538, -4325361, 458752, 65539, -4259824, 327680, 65537, -4259823, 327680, 65537, -4259822, 327680, 65537, -4259821, 458752, 65539, -4194284, 327680, 65537, -4194283, 327680, 65537, -4194282, 327680, 65537, -4194281, 327680, 65537, -4194280, 458752, 65539, -4128743, 327680, 65537, -4128742, 327680, 65537, -4128741, 327680, 65537, -4128740, 327680, 65537, -4128739, 327680, 65537, -4128738, 458752, 65539, -4063201, 327680, 65537, -4063200, 458752, 65537, -4325362, 393216, 65539)
 layer_4/name = "water"
 layer_4/enabled = true
