@@ -74,12 +74,6 @@ func _ready():
 		Vector2(highest-lowest, right_bottom-left_top),
 		Vector2(0, left_bottom-left_top)
 	])
-	vertex_colors = PackedColorArray([
-		Color(1.0, 1.0, 1.0, 0.0),
-		Color(1.0, 1.0, 1.0, 0.0),
-		Color(1.0, 1.0, 1.0, 1.0),
-		Color(1.0, 1.0, 1.0, 1.0)
-	])
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
