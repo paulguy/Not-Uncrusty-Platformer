@@ -1,5 +1,12 @@
 extends Polygon2D
 
+@onready var parent = get_parent()
+
+var left_bottom
+var right_bottom
+var left_size
+var right_size
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	if len(polygon) != 4:
@@ -8,9 +15,9 @@ func _ready():
 	var lowest = polygon[0].x
 	var highest = polygon[0].x
 	var left_top = polygon[0].y
-	var left_bottom = polygon[0].y
+	left_bottom = polygon[0].y
 	var right_top = polygon[0].y
-	var right_bottom = polygon[0].y
+	right_bottom = polygon[0].y
 	for corner in polygon:
 		if corner.x < lowest:
 			# check if values are close
@@ -52,6 +59,8 @@ func _ready():
 				right_top = corner.y
 			elif corner.y > right_bottom:
 				right_bottom = corner.y
+	left_size = left_bottom - left_top
+	right_size = right_bottom - right_top
 	# rebuild the polygon
 	polygon = PackedVector2Array([
 		Vector2(lowest, left_top),
@@ -74,4 +83,11 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	# get the position relative to the center and scale it
+	var screen_center = get_viewport_transform().origin.y / get_screen_transform().get_scale().y - 150.0
+	var center_dist_left = (screen_center + (parent.position.y + left_bottom)) / 150.0
+	var center_dist_right = (screen_center + (parent.position.y + right_bottom)) / 150.0
+	center_dist_left = clampf(center_dist_left, 0.0, 2.0)
+	center_dist_right = clampf(center_dist_right, 0.0, 2.0)
+	polygon[0].y = polygon[3].y + left_size * center_dist_left * -2.0
+	polygon[1].y = polygon[2].y + right_size * center_dist_right * -2.0
