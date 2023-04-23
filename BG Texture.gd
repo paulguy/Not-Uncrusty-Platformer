@@ -1,6 +1,9 @@
+class_name BG_Texture
 extends Polygon2D
 
 @onready var parent = get_parent()
+@export var stretch_min : float = 0.0
+@export var stretch_max : float = 2.0
 
 var left_bottom
 var right_bottom
@@ -69,19 +72,19 @@ func _ready():
 		Vector2(lowest, left_bottom)
 	])
 	uv = PackedVector2Array([
-		Vector2(0, 0),
-		Vector2(highest-lowest, right_top-left_top),
-		Vector2(highest-lowest, right_bottom-left_top),
-		Vector2(0, left_bottom-left_top)
+		Vector2(lowest, 0),
+		Vector2(highest, 0),
+		Vector2(highest, right_bottom-right_top),
+		Vector2(lowest, left_bottom-left_top)
 	])
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	# get the position relative to the center and scale it
 	var screen_center = get_viewport_transform().origin.y / get_screen_transform().get_scale().y - 150.0
 	var center_dist_left = (screen_center + (parent.position.y + left_bottom)) / 150.0
 	var center_dist_right = (screen_center + (parent.position.y + right_bottom)) / 150.0
-	center_dist_left = clampf(center_dist_left, 0.0, 2.0)
-	center_dist_right = clampf(center_dist_right, 0.0, 2.0)
+	center_dist_left = clampf(center_dist_left, stretch_min, stretch_max)
+	center_dist_right = clampf(center_dist_right, stretch_min, stretch_max)
 	polygon[0].y = polygon[3].y + left_size * center_dist_left * -2.0
 	polygon[1].y = polygon[2].y + right_size * center_dist_right * -2.0
