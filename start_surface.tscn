@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://hsm5h3i7dkoa"]
+[gd_scene load_steps=35 format=3 uid="uid://hsm5h3i7dkoa"]
 
 [ext_resource type="TileSet" uid="uid://bbcmc4vabwnbb" path="res://Tilesets/world_graphics.tres" id="1_3d2wv"]
 [ext_resource type="Script" path="res://start_area.gd" id="2_nxej3"]
@@ -18,7 +18,9 @@
 [ext_resource type="Texture2D" uid="uid://dlp8eh3cekk71" path="res://Animations/water-under3.png" id="16_x2q7m"]
 [ext_resource type="Texture2D" uid="uid://dk6kpbo3slqbd" path="res://Animations/water-under4.png" id="17_ah5qn"]
 [ext_resource type="Texture2D" uid="uid://dvxhx6j5jhltc" path="res://Animations/shoreline1.png" id="18_feyyk"]
+[ext_resource type="Texture2D" uid="uid://dq41cosmyep0v" path="res://Sprites/dirt-bg.png" id="19_rm6qk"]
 [ext_resource type="Texture2D" uid="uid://duh41xv6gl0q3" path="res://Animations/shoreline2.png" id="19_ysoqv"]
+[ext_resource type="Texture2D" uid="uid://ohqwlvfaptlb" path="res://Sprites/grass-bg.png" id="20_2g0ou"]
 [ext_resource type="Texture2D" uid="uid://c7226mch4d4g" path="res://Animations/shoreline3.png" id="20_dbhbg"]
 [ext_resource type="Texture2D" uid="uid://bn4314y7pub24" path="res://Animations/shoreline4.png" id="21_4j7xo"]
 [ext_resource type="Texture2D" uid="uid://mxnjq3xlvv5p" path="res://Sprites/sand.png" id="22_s4uyv"]
@@ -58,17 +60,6 @@ frame_2/duration = 1.0
 frame_3/texture = ExtResource("12_gjrys")
 frame_3/duration = 1.0
 
-[sub_resource type="AnimatedTexture" id="AnimatedTexture_h2hxm"]
-frames = 4
-speed_scale = 4.0
-frame_0/texture = ExtResource("14_dep3t")
-frame_1/texture = ExtResource("15_1vio2")
-frame_1/duration = 1.0
-frame_2/texture = ExtResource("16_x2q7m")
-frame_2/duration = 1.0
-frame_3/texture = ExtResource("17_ah5qn")
-frame_3/duration = 1.0
-
 [sub_resource type="AnimatedTexture" id="AnimatedTexture_1swvc"]
 frames = 4
 speed_scale = 4.0
@@ -78,6 +69,17 @@ frame_1/duration = 1.0
 frame_2/texture = ExtResource("20_dbhbg")
 frame_2/duration = 1.0
 frame_3/texture = ExtResource("21_4j7xo")
+frame_3/duration = 1.0
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_h2hxm"]
+frames = 4
+speed_scale = 4.0
+frame_0/texture = ExtResource("14_dep3t")
+frame_1/texture = ExtResource("15_1vio2")
+frame_1/duration = 1.0
+frame_2/texture = ExtResource("16_x2q7m")
+frame_2/duration = 1.0
+frame_3/texture = ExtResource("17_ah5qn")
 frame_3/duration = 1.0
 
 [node name="Start Surface" type="TileMap"]
@@ -194,124 +196,192 @@ material = SubResource("ShaderMaterial_f26up")
 polygon = PackedVector2Array(3168, -2500, -816, -2500, -816, -2644, 3360, -2644, 3360, -256, 3168, -256)
 vertex_colors = PackedColorArray(0.741176, 1, 0.898039, 1, 0.741176, 1, 0.898039, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.741176, 1, 0.898039, 1)
 
-[node name="Water BG Upper" type="Polygon2D" parent="."]
+[node name="BG Upper" type="Node2D" parent="."]
+script = ExtResource("13_4r12w")
+
+[node name="Water BG Upper" type="Polygon2D" parent="BG Upper"]
 texture_repeat = 2
 material = SubResource("ShaderMaterial_fc7el")
 texture = SubResource("AnimatedTexture_efwnd")
 polygon = PackedVector2Array(3168, -656, 2176, -656, 2176, -624, 3168, -624)
 uv = PackedVector2Array(0, 0, 996, 0, 996, 32, 0, 32)
-script = ExtResource("13_4r12w")
 
-[node name="Water BG Lower" type="Polygon2D" parent="."]
-texture_repeat = 2
-material = SubResource("ShaderMaterial_fc7el")
-texture = SubResource("AnimatedTexture_h2hxm")
-polygon = PackedVector2Array(3168, -656, 2176, -656, 2176, -624, 3168, -624)
-uv = PackedVector2Array(0, 0, 996, 0, 996, 32, 0, 32)
-script = ExtResource("13_4r12w")
-stretch_min = -2.0
-stretch_max = 0.0
-
-[node name="Shoreline" type="Polygon2D" parent="."]
+[node name="Shoreline" type="Polygon2D" parent="BG Upper"]
 texture_repeat = 2
 material = SubResource("ShaderMaterial_fc7el")
 texture = SubResource("AnimatedTexture_1swvc")
 polygon = PackedVector2Array(2144, -672, 2176, -656, 2176, -622, 2144, -638)
 uv = PackedVector2Array(0, 0, 32, 0, 32, 32, 0, 32)
-script = ExtResource("13_4r12w")
 
-[node name="Beach BG 1" type="Polygon2D" parent="."]
+[node name="Beach BG 1" type="Polygon2D" parent="BG Upper"]
 texture_repeat = 2
 material = SubResource("ShaderMaterial_fc7el")
 texture = ExtResource("22_s4uyv")
 polygon = PackedVector2Array(2144, -672, 2016, -736, 2016, -702, 2144, -638)
 uv = PackedVector2Array(0, 0, 32, 0, 32, 32, 0, 32)
-script = ExtResource("13_4r12w")
 
-[node name="Beach BG 2" type="Polygon2D" parent="."]
+[node name="Beach BG 2" type="Polygon2D" parent="BG Upper"]
 texture_repeat = 2
 material = SubResource("ShaderMaterial_fc7el")
 texture = ExtResource("22_s4uyv")
 polygon = PackedVector2Array(2000, -736, 2016, -736, 2016, -702, 2000, -702)
 uv = PackedVector2Array(0, 0, 32, 0, 32, 32, 0, 32)
-script = ExtResource("13_4r12w")
 
-[node name="Beach BG 3" type="Polygon2D" parent="."]
+[node name="Beach BG 3" type="Polygon2D" parent="BG Upper"]
 texture_repeat = 2
 material = SubResource("ShaderMaterial_fc7el")
 texture = ExtResource("22_s4uyv")
 polygon = PackedVector2Array(2000, -736, 1952, -712, 1952, -678, 2000, -702)
 uv = PackedVector2Array(0, 0, 32, 0, 32, 32, 0, 32)
-script = ExtResource("13_4r12w")
 
-[node name="Beach BG 4" type="Polygon2D" parent="."]
+[node name="Beach BG 4" type="Polygon2D" parent="BG Upper"]
 texture_repeat = 2
 material = SubResource("ShaderMaterial_fc7el")
 texture = ExtResource("22_s4uyv")
 polygon = PackedVector2Array(1936, -720, 1952, -712, 1952, -678, 1936, -686)
 uv = PackedVector2Array(0, 0, 32, 0, 32, 32, 0, 32)
-script = ExtResource("13_4r12w")
 
-[node name="Beach BG 5" type="Polygon2D" parent="."]
+[node name="Beach BG 5" type="Polygon2D" parent="BG Upper"]
 texture_repeat = 2
 material = SubResource("ShaderMaterial_fc7el")
 texture = ExtResource("22_s4uyv")
 polygon = PackedVector2Array(1936, -720, 1888, -696, 1888, -662, 1936, -686)
 uv = PackedVector2Array(0, 0, 32, 0, 32, 32, 0, 32)
-script = ExtResource("13_4r12w")
 
-[node name="Beach BG 6" type="Polygon2D" parent="."]
+[node name="Beach BG 6" type="Polygon2D" parent="BG Upper"]
 texture_repeat = 2
 material = SubResource("ShaderMaterial_fc7el")
 texture = ExtResource("22_s4uyv")
 polygon = PackedVector2Array(1872, -704, 1888, -696, 1888, -662, 1872, -670)
 uv = PackedVector2Array(0, 0, 32, 0, 32, 32, 0, 32)
-script = ExtResource("13_4r12w")
 
-[node name="Beach BG 7" type="Polygon2D" parent="."]
+[node name="Beach BG 7" type="Polygon2D" parent="BG Upper"]
 texture_repeat = 2
 material = SubResource("ShaderMaterial_fc7el")
 texture = ExtResource("22_s4uyv")
 polygon = PackedVector2Array(1872, -704, 1808, -704, 1808, -670, 1872, -670)
 uv = PackedVector2Array(0, 0, 32, 0, 32, 32, 0, 32)
-script = ExtResource("13_4r12w")
 
-[node name="Beach BG 8" type="Polygon2D" parent="."]
+[node name="Beach BG 8" type="Polygon2D" parent="BG Upper"]
 texture_repeat = 2
 material = SubResource("ShaderMaterial_fc7el")
 texture = ExtResource("22_s4uyv")
 polygon = PackedVector2Array(1520, -848, 1808, -704, 1808, -670, 1520, -814)
 uv = PackedVector2Array(0, 0, 32, 0, 32, 32, 0, 32)
-script = ExtResource("13_4r12w")
 
-[node name="Beach BG 9" type="Polygon2D" parent="."]
+[node name="Beach BG 9" type="Polygon2D" parent="BG Upper"]
 texture_repeat = 2
 material = SubResource("ShaderMaterial_fc7el")
 texture = ExtResource("22_s4uyv")
 polygon = PackedVector2Array(1520, -848, 1504, -848, 1504, -814, 1520, -814)
 uv = PackedVector2Array(0, 0, 32, 0, 32, 32, 0, 32)
-script = ExtResource("13_4r12w")
 
-[node name="Beach BG 10" type="Polygon2D" parent="."]
+[node name="Beach BG 10" type="Polygon2D" parent="BG Upper"]
 texture_repeat = 2
 material = SubResource("ShaderMaterial_fc7el")
 texture = ExtResource("22_s4uyv")
 polygon = PackedVector2Array(1488, -840, 1504, -848, 1504, -814, 1488, -806)
 uv = PackedVector2Array(0, 0, 32, 0, 32, 32, 0, 32)
-script = ExtResource("13_4r12w")
 
-[node name="Beach BG 11" type="Polygon2D" parent="."]
+[node name="Beach BG 11" type="Polygon2D" parent="BG Upper"]
 texture_repeat = 2
 material = SubResource("ShaderMaterial_fc7el")
 texture = ExtResource("22_s4uyv")
 polygon = PackedVector2Array(1488, -840, 1312, -928, 1312, -894, 1488, -806)
 uv = PackedVector2Array(0, 0, 32, 0, 32, 32, 0, 32)
-script = ExtResource("13_4r12w")
 
-[node name="Sea Floor" type="Polygon2D" parent="."]
+[node name="Beach BG 12" type="Polygon2D" parent="BG Upper"]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_fc7el")
+texture = ExtResource("22_s4uyv")
+polygon = PackedVector2Array(1232, -928, 1312, -928, 1312, -894, 1232, -894)
+uv = PackedVector2Array(0, 0, 32, 0, 32, 32, 0, 32)
+
+[node name="Beach BG 13" type="Polygon2D" parent="BG Upper"]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_fc7el")
+texture = ExtResource("22_s4uyv")
+polygon = PackedVector2Array(1232, -928, 1184, -904, 1184, -870, 1232, -894)
+uv = PackedVector2Array(0, 0, 32, 0, 32, 32, 0, 32)
+
+[node name="Beach BG 14" type="Polygon2D" parent="BG Upper"]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_fc7el")
+texture = ExtResource("22_s4uyv")
+polygon = PackedVector2Array(1168, -912, 1184, -904, 1184, -870, 1168, -878)
+uv = PackedVector2Array(0, 0, 32, 0, 32, 32, 0, 32)
+
+[node name="Beach BG 15" type="Polygon2D" parent="BG Upper"]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_fc7el")
+texture = ExtResource("22_s4uyv")
+polygon = PackedVector2Array(1168, -912, 1072, -912, 1072, -878, 1168, -878)
+uv = PackedVector2Array(0, 0, 32, 0, 32, 32, 0, 32)
+
+[node name="Beach BG 16" type="Polygon2D" parent="BG Upper"]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_fc7el")
+texture = ExtResource("22_s4uyv")
+polygon = PackedVector2Array(992, -872, 1072, -912, 1072, -878, 992, -838)
+uv = PackedVector2Array(0, 0, 32, 0, 32, 32, 0, 32)
+
+[node name="Beach BG 17" type="Polygon2D" parent="BG Upper"]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_fc7el")
+texture = ExtResource("22_s4uyv")
+polygon = PackedVector2Array(992, -872, 848, -944, 848, -910, 992, -838)
+uv = PackedVector2Array(0, 0, 32, 0, 32, 32, 0, 32)
+
+[node name="Beach BG 18" type="Polygon2D" parent="BG Upper"]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_fc7el")
+texture = ExtResource("22_s4uyv")
+polygon = PackedVector2Array(784, -944, 848, -944, 848, -910, 784, -910)
+uv = PackedVector2Array(0, 0, 32, 0, 32, 32, 0, 32)
+
+[node name="Beach BG 19" type="Polygon2D" parent="BG Upper"]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_fc7el")
+texture = ExtResource("22_s4uyv")
+polygon = PackedVector2Array(784, -944, 656, -1008, 656, -974, 784, -910)
+uv = PackedVector2Array(0, 0, 32, 0, 32, 32, 0, 32)
+
+[node name="Beach BG 20" type="Polygon2D" parent="BG Upper"]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_fc7el")
+texture = ExtResource("22_s4uyv")
+polygon = PackedVector2Array(640, -1008, 656, -1008, 656, -974, 640, -974)
+uv = PackedVector2Array(0, 0, 32, 0, 32, 32, 0, 32)
+
+[node name="Dirt BG 1" type="Polygon2D" parent="BG Upper"]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_fc7el")
+texture = ExtResource("19_rm6qk")
+polygon = PackedVector2Array(640, -1008, 522, -1008, 522, -974, 640, -974)
+uv = PackedVector2Array(0, 0, 32, 0, 32, 32, 0, 32)
+
+[node name="Grass BG 1" type="Polygon2D" parent="BG Upper"]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_fc7el")
+texture = ExtResource("20_2g0ou")
+polygon = PackedVector2Array(495, -1008, 522, -1008, 522, -974, 495, -974)
+uv = PackedVector2Array(0, 0, 32, 0, 32, 32, 0, 32)
+
+[node name="Sea Floor" type="Polygon2D" parent="BG Upper"]
 texture_repeat = 2
 material = SubResource("ShaderMaterial_fc7el")
 texture = ExtResource("22_s4uyv")
 polygon = PackedVector2Array(3168, -432, 2176, -432, 2176, -398, 3168, -398)
 uv = PackedVector2Array(0, 0, 32, 0, 32, 32, 0, 32)
+
+[node name="BG Lower" type="Node2D" parent="."]
 script = ExtResource("13_4r12w")
+stretch_min = -2.0
+stretch_max = 0.0
+
+[node name="Water BG Lower" type="Polygon2D" parent="BG Lower"]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_fc7el")
+texture = SubResource("AnimatedTexture_h2hxm")
+polygon = PackedVector2Array(3168, -656, 2176, -656, 2176, -624, 3168, -624)
+uv = PackedVector2Array(0, 0, 996, 0, 996, 32, 0, 32)
