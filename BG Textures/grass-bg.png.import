@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dk6kpbo3slqbd"
-path="res://.godot/imported/water-under4.png-dcc3d42912baf12a771aa6aa4d9c0f7f.ctex"
+uid="uid://ohqwlvfaptlb"
+path="res://.godot/imported/grass-bg.png-f242da0c6a3b5459c34e688cde4d3935.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Animations/water-under4.png"
-dest_files=["res://.godot/imported/water-under4.png-dcc3d42912baf12a771aa6aa4d9c0f7f.ctex"]
+source_file="res://BG Textures/grass-bg.png"
+dest_files=["res://.godot/imported/grass-bg.png-f242da0c6a3b5459c34e688cde4d3935.ctex"]
 
 [params]
 

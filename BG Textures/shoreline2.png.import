@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://mxnjq3xlvv5p"
-path="res://.godot/imported/sand.png-9f0bafda79119bcf126b7a38b458be65.ctex"
+uid="uid://duh41xv6gl0q3"
+path="res://.godot/imported/shoreline2.png-f32c6863cd5fac13aef050f76c2c4b9c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/sand.png"
-dest_files=["res://.godot/imported/sand.png-9f0bafda79119bcf126b7a38b458be65.ctex"]
+source_file="res://BG Textures/shoreline2.png"
+dest_files=["res://.godot/imported/shoreline2.png-f32c6863cd5fac13aef050f76c2c4b9c.ctex"]
 
 [params]
 

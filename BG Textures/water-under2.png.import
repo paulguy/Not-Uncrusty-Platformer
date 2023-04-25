@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dlp8eh3cekk71"
-path="res://.godot/imported/water-under3.png-6b4543485186203e7607de56e662341d.ctex"
+uid="uid://be0t40h0iyvpl"
+path="res://.godot/imported/water-under2.png-c5943d64d079ba8b46308f8faca9232d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Animations/water-under3.png"
-dest_files=["res://.godot/imported/water-under3.png-6b4543485186203e7607de56e662341d.ctex"]
+source_file="res://BG Textures/water-under2.png"
+dest_files=["res://.godot/imported/water-under2.png-c5943d64d079ba8b46308f8faca9232d.ctex"]
 
 [params]
 

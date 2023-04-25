@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://dyxnvg3ae2i8l"]
+[gd_scene load_steps=13 format=3 uid="uid://dyxnvg3ae2i8l"]
 
 [ext_resource type="Script" path="res://area.gd" id="1_kafqj"]
 [ext_resource type="TileSet" uid="uid://bbcmc4vabwnbb" path="res://Tilesets/world_graphics.tres" id="1_kjjmx"]
@@ -6,7 +6,6 @@
 [ext_resource type="Texture2D" uid="uid://c7a6lo8bnjivp" path="res://Sprites/poofy tree.png" id="4_x7s3k"]
 [ext_resource type="Texture2D" uid="uid://dvlm73gxlboqv" path="res://Sprites/bench.png" id="5_32vba"]
 [ext_resource type="Texture2D" uid="uid://befhuh3lq3qi1" path="res://Sprites/hotdogs.png" id="5_h8ksr"]
-[ext_resource type="Shader" uid="uid://t8fgwpvgq8ww" path="res://test.tres" id="7_7cjja"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_3lqst"]
 a = Vector2(-37, 1)
@@ -55,9 +54,6 @@ color_ramp = SubResource("GradientTexture1D_layiu")
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_wooki"]
 a = Vector2(-50, 1)
 b = Vector2(46, 1)
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_4kf4k"]
-shader = ExtResource("7_7cjja")
 
 [node name="Surface Park" type="TileMap"]
 tile_set = ExtResource("1_kjjmx")
@@ -133,10 +129,3 @@ collision_mask = 0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hotdogs/StaticBody2D"]
 shape = SubResource("SegmentShape2D_wooki")
 one_way_collision = true
-
-[node name="Polygon2D" type="Polygon2D" parent="."]
-z_index = 1001
-material = SubResource("ShaderMaterial_4kf4k")
-position = Vector2(29.3469, -14)
-scale = Vector2(0.967527, 1)
-polygon = PackedVector2Array(-536, -221, -202, -214, -142.99, 92, -636, 107)

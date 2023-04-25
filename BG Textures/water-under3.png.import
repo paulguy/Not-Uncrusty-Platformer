@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dq41cosmyep0v"
-path="res://.godot/imported/dirt-bg.png-e17dafdb791f9100f36b348ca890c348.ctex"
+uid="uid://dlp8eh3cekk71"
+path="res://.godot/imported/water-under3.png-2284f66876836a64dd0d1b99fa43e47a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/dirt-bg.png"
-dest_files=["res://.godot/imported/dirt-bg.png-e17dafdb791f9100f36b348ca890c348.ctex"]
+source_file="res://BG Textures/water-under3.png"
+dest_files=["res://.godot/imported/water-under3.png-2284f66876836a64dd0d1b99fa43e47a.ctex"]
 
 [params]
 

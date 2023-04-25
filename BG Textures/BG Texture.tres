@@ -1,4 +1,4 @@
-[gd_resource type="VisualShader" load_steps=6 format=3 uid="uid://4fumw32rfsdn"]
+[gd_resource type="VisualShader" load_steps=7 format=3 uid="uid://4fumw32rfsdn"]
 
 [sub_resource type="VisualShaderNodeInput" id="VisualShaderNodeInput_ujmmd"]
 expanded_output_ports = [0]
@@ -17,6 +17,8 @@ operator = 5
 [sub_resource type="VisualShaderNodeFloatOp" id="VisualShaderNodeFloatOp_uca3d"]
 default_input_values = [0, 0.0, 1, 0.7]
 operator = 5
+
+[sub_resource type="VisualShaderNodeTexture" id="VisualShaderNodeTexture_y1xak"]
 
 [resource]
 code = "shader_type canvas_item;
@@ -56,7 +58,7 @@ void fragment() {
 
 }
 "
-graph_offset = Vector2(136.246, -72.794)
+graph_offset = Vector2(-6.57452, -104.661)
 mode = 1
 flags/light_only = false
 nodes/fragment/0/position = Vector2(1440, 240)
@@ -70,4 +72,6 @@ nodes/fragment/5/node = SubResource("VisualShaderNodeFloatOp_2bu8g")
 nodes/fragment/5/position = Vector2(540, 200)
 nodes/fragment/6/node = SubResource("VisualShaderNodeFloatOp_uca3d")
 nodes/fragment/6/position = Vector2(540, 400)
+nodes/fragment/7/node = SubResource("VisualShaderNodeTexture_y1xak")
+nodes/fragment/7/position = Vector2(860, -200)
 nodes/fragment/connections = PackedInt32Array(3, 0, 0, 0, 2, 1, 4, 0, 2, 2, 5, 0, 5, 0, 4, 1, 4, 0, 3, 0, 2, 2, 6, 0, 6, 0, 0, 1)

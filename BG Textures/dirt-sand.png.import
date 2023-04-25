@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bbj22umgy10bu"
-path="res://.godot/imported/water-surface3.png-370b7b23f9318b02d0487e5ab158eab0.ctex"
+uid="uid://du33l47xoyji5"
+path="res://.godot/imported/dirt-sand.png-c684fdeb3c143146feb1becf83768ba8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Animations/water-surface3.png"
-dest_files=["res://.godot/imported/water-surface3.png-370b7b23f9318b02d0487e5ab158eab0.ctex"]
+source_file="res://BG Textures/dirt-sand.png"
+dest_files=["res://.godot/imported/dirt-sand.png-c684fdeb3c143146feb1becf83768ba8.ctex"]
 
 [params]
 

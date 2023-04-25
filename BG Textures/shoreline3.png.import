@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bn4314y7pub24"
-path="res://.godot/imported/shoreline4.png-b0bc2d3d714200c7c7e7a9c21bdc8385.ctex"
+uid="uid://c7226mch4d4g"
+path="res://.godot/imported/shoreline3.png-1fead67f40edebd67b7fe02ea0a79ed8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Animations/shoreline4.png"
-dest_files=["res://.godot/imported/shoreline4.png-b0bc2d3d714200c7c7e7a9c21bdc8385.ctex"]
+source_file="res://BG Textures/shoreline3.png"
+dest_files=["res://.godot/imported/shoreline3.png-1fead67f40edebd67b7fe02ea0a79ed8.ctex"]
 
 [params]
 
