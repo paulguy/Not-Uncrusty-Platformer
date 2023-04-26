@@ -159,6 +159,7 @@ vertex_colors = PackedColorArray(0, 0, 0, 0.290196, 0, 0, 0, 0.290196, 0, 0, 0, 
 
 [node name="Sky" type="Polygon2D" parent="."]
 z_index = -2
+position = Vector2(0, 7)
 polygon = PackedVector2Array(-816, -624, 3168, -624, 3168, -2500, -816, -2500)
 vertex_colors = PackedColorArray(0.352941, 0.709804, 1, 1, 0.352941, 0.709804, 1, 1, 0.0392157, 0.137255, 0.360784, 1, 0.0392157, 0.137255, 0.360784, 1)
 
@@ -293,6 +294,7 @@ polygon = PackedVector2Array(1488, -840, 1312, -928, 1312, -894, 1488, -806)
 uv = PackedVector2Array(0, 0, 32, 0, 32, 32, 0, 32)
 
 [node name="Beach BG 12" type="Polygon2D" parent="BG Upper"]
+z_index = -1
 texture_repeat = 2
 material = SubResource("ShaderMaterial_fc7el")
 texture = ExtResource("18_xb65s")
@@ -362,6 +364,201 @@ texture = ExtResource("19_i7g6f")
 polygon = PackedVector2Array(624, -1008, 544, -1008, 544, -974, 624, -974)
 uv = PackedVector2Array(0, 0, 32, 0, 32, 32, 0, 32)
 
+[node name="Dirt BG 2" type="Polygon2D" parent="BG Upper"]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_fc7el")
+texture = ExtResource("19_i7g6f")
+polygon = PackedVector2Array(367, -1278, 351, -1278, 351, -1246, 367, -1246)
+uv = PackedVector2Array(0, 0, 32, 0, 32, 32, 0, 32)
+
+[node name="Dirt BG 3" type="Polygon2D" parent="BG Upper"]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_fc7el")
+texture = ExtResource("19_i7g6f")
+polygon = PackedVector2Array(303, -1296, 351, -1296, 351, -1262, 303, -1262)
+uv = PackedVector2Array(0, 0, 32, 0, 32, 32, 0, 32)
+
+[node name="Dirt BG 4" type="Polygon2D" parent="BG Upper"]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_fc7el")
+texture = ExtResource("19_i7g6f")
+polygon = PackedVector2Array(303, -1312, 271, -1312, 271, -1278, 303, -1278)
+uv = PackedVector2Array(0, 0, 32, 0, 32, 32, 0, 32)
+
+[node name="Dirt BG 5" type="Polygon2D" parent="BG Upper"]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_fc7el")
+texture = ExtResource("19_i7g6f")
+polygon = PackedVector2Array(223, -1328, 271, -1328, 271, -1294, 223, -1294)
+uv = PackedVector2Array(0, 0, 32, 0, 32, 32, 0, 32)
+
+[node name="Dirt BG 6" type="Polygon2D" parent="BG Upper"]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_fc7el")
+texture = ExtResource("19_i7g6f")
+polygon = PackedVector2Array(223, -1344, 191, -1344, 191, -1310, 223, -1310)
+uv = PackedVector2Array(0, 0, 32, 0, 32, 32, 0, 32)
+
+[node name="Dirt BG 7" type="Polygon2D" parent="BG Upper"]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_fc7el")
+texture = ExtResource("19_i7g6f")
+polygon = PackedVector2Array(127, -1360, 191, -1360, 191, -1326, 127, -1326)
+uv = PackedVector2Array(0, 0, 32, 0, 32, 32, 0, 32)
+
+[node name="Dirt BG 8" type="Polygon2D" parent="BG Upper"]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_fc7el")
+texture = ExtResource("19_i7g6f")
+polygon = PackedVector2Array(127, -1376, -15, -1376, -15, -1342, 127, -1342)
+uv = PackedVector2Array(0, 0, 32, 0, 32, 32, 0, 32)
+
+[node name="Dirt BG 9" type="Polygon2D" parent="BG Upper"]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_fc7el")
+texture = ExtResource("19_i7g6f")
+polygon = PackedVector2Array(-63, -1360, -15, -1360, -15, -1326, -63, -1326)
+uv = PackedVector2Array(0, 0, 32, 0, 32, 32, 0, 32)
+
+[node name="Dirt BG 10" type="Polygon2D" parent="BG Upper"]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_fc7el")
+texture = ExtResource("19_i7g6f")
+polygon = PackedVector2Array(-63, -1344, -112, -1344, -112, -1310, -63, -1310)
+uv = PackedVector2Array(0, 0, 32, 0, 32, 32, 0, 32)
+
+[node name="Dirt BG 11" type="Polygon2D" parent="BG Upper"]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_fc7el")
+texture = ExtResource("19_i7g6f")
+polygon = PackedVector2Array(-160, -1296, -112, -1344, -112, -1310, -160, -1262)
+uv = PackedVector2Array(0, 0, 32, 0, 32, 32, 0, 32)
+
+[node name="Dirt BG 12" type="Polygon2D" parent="BG Upper"]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_fc7el")
+texture = ExtResource("19_i7g6f")
+polygon = PackedVector2Array(-160, -1296, -192, -1296, -192, -1262, -160, -1262)
+uv = PackedVector2Array(0, 0, 32, 0, 32, 32, 0, 32)
+
+[node name="Dirt BG 13" type="Polygon2D" parent="BG Upper"]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_fc7el")
+texture = ExtResource("19_i7g6f")
+polygon = PackedVector2Array(-240, -1248, -192, -1296, -192, -1262, -240, -1214)
+uv = PackedVector2Array(0, 0, 32, 0, 32, 32, 0, 32)
+
+[node name="Dirt BG 15" type="Polygon2D" parent="BG Upper"]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_fc7el")
+position = Vector2(-288, -1216)
+texture = ExtResource("19_i7g6f")
+polygon = PackedVector2Array(0, 0, 32, -32, 32, 2, 0, 34)
+uv = PackedVector2Array(0, 0, 32, 0, 32, 32, 0, 32)
+
+[node name="Dirt BG 17" type="Polygon2D" parent="BG Upper"]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_fc7el")
+position = Vector2(-320, -1200)
+texture = ExtResource("19_i7g6f")
+polygon = PackedVector2Array(0, 0, 16, -16, 16, 18, 0, 34)
+uv = PackedVector2Array(0, 0, 32, 0, 32, 32, 0, 32)
+
+[node name="Dirt BG 19" type="Polygon2D" parent="BG Upper"]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_fc7el")
+position = Vector2(-352, -1184)
+texture = ExtResource("19_i7g6f")
+polygon = PackedVector2Array(0, 0, 16, -16, 16, 18, 0, 34)
+uv = PackedVector2Array(0, 0, 32, 0, 32, 32, 0, 32)
+
+[node name="Dirt BG 21" type="Polygon2D" parent="BG Upper"]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_fc7el")
+position = Vector2(-384, -1168)
+texture = ExtResource("19_i7g6f")
+polygon = PackedVector2Array(0, 0, 16, -16, 16, 18, 0, 34)
+uv = PackedVector2Array(0, 0, 32, 0, 32, 32, 0, 32)
+
+[node name="Dirt BG 23" type="Polygon2D" parent="BG Upper"]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_fc7el")
+position = Vector2(-448, -1136)
+texture = ExtResource("19_i7g6f")
+polygon = PackedVector2Array(0, 0, 32, -32, 32, 2, 0, 34)
+uv = PackedVector2Array(0, 0, 32, 0, 32, 32, 0, 32)
+
+[node name="Dirt BG 16" type="Polygon2D" parent="BG Upper"]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_fc7el")
+position = Vector2(-304, -1216)
+texture = ExtResource("19_i7g6f")
+polygon = PackedVector2Array(0, 0, 16, 0, 16, 34, 0, 34)
+uv = PackedVector2Array(0, 0, 32, 0, 32, 32, 0, 32)
+
+[node name="Dirt BG 18" type="Polygon2D" parent="BG Upper"]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_fc7el")
+position = Vector2(-336, -1200)
+texture = ExtResource("19_i7g6f")
+polygon = PackedVector2Array(0, 0, 16, 0, 16, 34, 0, 34)
+uv = PackedVector2Array(0, 0, 32, 0, 32, 32, 0, 32)
+
+[node name="Dirt BG 20" type="Polygon2D" parent="BG Upper"]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_fc7el")
+position = Vector2(-368, -1184)
+texture = ExtResource("19_i7g6f")
+polygon = PackedVector2Array(0, 0, 16, 0, 16, 34, 0, 34)
+uv = PackedVector2Array(0, 0, 32, 0, 32, 32, 0, 32)
+
+[node name="Dirt BG 22" type="Polygon2D" parent="BG Upper"]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_fc7el")
+position = Vector2(-416, -1168)
+texture = ExtResource("19_i7g6f")
+polygon = PackedVector2Array(0, 0, 32, 0, 32, 34, 0, 34)
+uv = PackedVector2Array(0, 0, 32, 0, 32, 32, 0, 32)
+
+[node name="Dirt BG 24" type="Polygon2D" parent="BG Upper"]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_fc7el")
+position = Vector2(-511, -1136)
+texture = ExtResource("19_i7g6f")
+polygon = PackedVector2Array(0, 0, 63, 0, 63, 34, 0, 34)
+uv = PackedVector2Array(0, 0, 32, 0, 32, 32, 0, 32)
+
+[node name="Dirt BG 25" type="Polygon2D" parent="BG Upper"]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_fc7el")
+position = Vector2(-657, -1120)
+texture = ExtResource("19_i7g6f")
+polygon = PackedVector2Array(0, 0, 146, 0, 146, 34, 0, 34)
+uv = PackedVector2Array(0, 0, 32, 0, 32, 32, 0, 32)
+
+[node name="Dirt BG 26" type="Polygon2D" parent="BG Upper"]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_fc7el")
+position = Vector2(-785, -1136)
+texture = ExtResource("19_i7g6f")
+polygon = PackedVector2Array(0, 0, 128, 0, 128, 34, 0, 34)
+uv = PackedVector2Array(0, 0, 32, 0, 32, 32, 0, 32)
+
+[node name="Dirt BG 27" type="Polygon2D" parent="BG Upper"]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_fc7el")
+position = Vector2(-816, -1152)
+texture = ExtResource("19_i7g6f")
+polygon = PackedVector2Array(0, 0, 31, 0, 31, 34, 0, 34)
+uv = PackedVector2Array(0, 0, 32, 0, 32, 32, 0, 32)
+
+[node name="Dirt BG 14" type="Polygon2D" parent="BG Upper"]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_fc7el")
+texture = ExtResource("19_i7g6f")
+polygon = PackedVector2Array(-240, -1248, -256, -1248, -256, -1214, -240, -1214)
+uv = PackedVector2Array(0, 0, 32, 0, 32, 32, 0, 32)
+
 [node name="Grass BG 1" type="Polygon2D" parent="BG Upper"]
 texture_repeat = 2
 material = SubResource("ShaderMaterial_fc7el")
@@ -379,8 +576,9 @@ uv = PackedVector2Array(0, 0, 32, 0, 32, 32, 0, 32)
 [node name="Grass BG 3" type="Polygon2D" parent="BG Upper"]
 texture_repeat = 2
 material = SubResource("ShaderMaterial_fc7el")
+position = Vector2(336, -1040)
 texture = ExtResource("20_fmgqm")
-polygon = PackedVector2Array(336, -1040, 400, -1040, 400, -1006, 336, -1006)
+polygon = PackedVector2Array(0, 0, 63, 0, 63, 34, 0, 34)
 uv = PackedVector2Array(0, 0, 32, 0, 32, 32, 0, 32)
 
 [node name="Sea Floor" type="Polygon2D" parent="BG Upper"]

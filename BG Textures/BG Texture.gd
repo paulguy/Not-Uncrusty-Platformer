@@ -21,6 +21,12 @@ func _ready():
 	for p in get_children():
 		if len(p.polygon) != 4:
 			push_error("Background polygon without 4 sizes.")
+		# make all polygon coords map-relative
+		p.polygon[0] += p.position
+		p.polygon[1] += p.position
+		p.polygon[2] += p.position
+		p.polygon[3] += p.position
+		p.position = Vector2.ZERO
 		# find horizontal range
 		var lowest = p.polygon[0].x
 		var highest = p.polygon[0].x
