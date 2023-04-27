@@ -1,11 +1,21 @@
-[gd_scene load_steps=13 format=3 uid="uid://dyxnvg3ae2i8l"]
+[gd_scene load_steps=24 format=3 uid="uid://dyxnvg3ae2i8l"]
 
-[ext_resource type="Script" path="res://area.gd" id="1_kafqj"]
 [ext_resource type="TileSet" uid="uid://bbcmc4vabwnbb" path="res://Tilesets/world_graphics.tres" id="1_kjjmx"]
+[ext_resource type="Script" path="res://surface_park.gd" id="2_5qxml"]
 [ext_resource type="Texture2D" uid="uid://b5481t88nl873" path="res://Sprites/poofy tree 2.png" id="4_tr6el"]
 [ext_resource type="Texture2D" uid="uid://c7a6lo8bnjivp" path="res://Sprites/poofy tree.png" id="4_x7s3k"]
 [ext_resource type="Texture2D" uid="uid://dvlm73gxlboqv" path="res://Sprites/bench.png" id="5_32vba"]
 [ext_resource type="Texture2D" uid="uid://befhuh3lq3qi1" path="res://Sprites/hotdogs.png" id="5_h8ksr"]
+[ext_resource type="Script" path="res://BG Textures/BG Texture.gd" id="7_jdq8j"]
+[ext_resource type="Shader" uid="uid://b8734ru76ys5u" path="res://BG Textures/BG Texture Edge.tres" id="8_1r2fa"]
+[ext_resource type="Texture2D" uid="uid://cr8aavov15k41" path="res://BG Textures/grass-dirt.png" id="9_iawf3"]
+[ext_resource type="Shader" uid="uid://cv016vn41m8bi" path="res://BG Textures/BG Texture Opaque.tres" id="10_6tqd6"]
+[ext_resource type="Texture2D" uid="uid://ohqwlvfaptlb" path="res://BG Textures/grass-bg.png" id="11_p188n"]
+[ext_resource type="Shader" uid="uid://4fumw32rfsdn" path="res://BG Textures/BG Texture.tres" id="12_bkuoe"]
+[ext_resource type="Texture2D" uid="uid://dq41cosmyep0v" path="res://BG Textures/dirt-bg.png" id="13_dolq3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p7in6"]
+size = Vector2(2000, 2500)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_3lqst"]
 a = Vector2(-37, 1)
@@ -55,6 +65,15 @@ color_ramp = SubResource("GradientTexture1D_layiu")
 a = Vector2(-50, 1)
 b = Vector2(46, 1)
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_fis2y"]
+shader = ExtResource("8_1r2fa")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_u0mv1"]
+shader = ExtResource("10_6tqd6")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3deqy"]
+shader = ExtResource("12_bkuoe")
+
 [node name="Surface Park" type="TileMap"]
 tile_set = ExtResource("1_kjjmx")
 format = 2
@@ -67,21 +86,22 @@ layer_1/y_sort_enabled = false
 layer_1/y_sort_origin = 0
 layer_1/z_index = 11
 layer_1/tile_data = PackedInt32Array(-196612, 327680, 65538, -196613, 327680, 65538, -196614, 327680, 65538, -196615, 327680, 65538, -196616, 327680, 65538, -196617, 327680, 65538, -196618, 327680, 65538, -196619, 327680, 65538, -196620, 327680, 65538, -196621, 327680, 65538, -131102, 327680, 65538, -131101, 327680, 65538, -131100, 327680, 65538, -131099, 327680, 65538, -131098, 327680, 65538, -131097, 327680, 65538, -131096, 327680, 65538, -131095, 327680, 65538, -131094, 327680, 65538, -131093, 327680, 65538, -131092, 327680, 65538, -131091, 327680, 65538, -131090, 327680, 65538, -131089, 327680, 65538, -131088, 327680, 65538, -131087, 327680, 65538, -131086, 327680, 65538, -65574, 327680, 65538, -65573, 327680, 65538, -65572, 327680, 65538, -65571, 327680, 65538, -65570, 327680, 65538, -65569, 327680, 65538, -65568, 327680, 65538, -65567, 327680, 65538, -131110, 327680, 65537, -131109, 327680, 65537, -131108, 327680, 65537, -131107, 327680, 65537, -131106, 327680, 65537, -131105, 327680, 65537, -131104, 327680, 65537, -131103, 327680, 65537, -196638, 327680, 65537, -196637, 327680, 65537, -196636, 327680, 65537, -196635, 327680, 65537, -196634, 327680, 65537, -196633, 327680, 65537, -196632, 327680, 65537, -196631, 327680, 65537, -196630, 327680, 65537, -196629, 327680, 65537, -196628, 327680, 65537, -196627, 327680, 65537, -196626, 327680, 65537, -196625, 327680, 65537, -196624, 327680, 65537, -196623, 327680, 65537, -196622, 327680, 65537, -262148, 327680, 65537, -262149, 327680, 65537, -262150, 327680, 65537, -262151, 327680, 65537, -262152, 327680, 65537, -262153, 327680, 65537, -262154, 327680, 65537, -262155, 327680, 65537, -262156, 327680, 65537, -262157, 327680, 65537)
-script = ExtResource("1_kafqj")
+script = ExtResource("2_5qxml")
+
+[node name="Map Area" type="Area2D" parent="."]
+visible = false
+collision_layer = 32768
+collision_mask = 0
+monitoring = false
+
+[node name="Map Shape" type="CollisionShape2D" parent="Map Area"]
+position = Vector2(-1000, 0)
+shape = SubResource("RectangleShape2D_p7in6")
 
 [node name="Sky" type="Polygon2D" parent="."]
 z_index = -2
-position = Vector2(-3168, 1056)
-polygon = PackedVector2Array(-816, -624, 3168, -624, 3168, -2500, -816, -2500)
+polygon = PackedVector2Array(-2000, 432, 0, 432, 0, -1444, -2000, -1444)
 vertex_colors = PackedColorArray(0.352941, 0.709804, 1, 1, 0.352941, 0.709804, 1, 1, 0.0392157, 0.137255, 0.360784, 1, 0.0392157, 0.137255, 0.360784, 1)
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-260, -96)
-texture = ExtResource("4_x7s3k")
-
-[node name="Sprite2D2" type="Sprite2D" parent="."]
-position = Vector2(-451, -96)
-texture = ExtResource("4_tr6el")
 
 [node name="Bench" type="Sprite2D" parent="."]
 position = Vector2(-309, -64)
@@ -129,3 +149,49 @@ collision_mask = 0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hotdogs/StaticBody2D"]
 shape = SubResource("SegmentShape2D_wooki")
 one_way_collision = true
+
+[node name="BG Upper" type="Node2D" parent="."]
+script = ExtResource("7_jdq8j")
+
+[node name="Grass-Dirt Edge 1" type="Polygon2D" parent="BG Upper"]
+z_index = -1
+texture_repeat = 2
+material = SubResource("ShaderMaterial_fis2y")
+position = Vector2(-64, -96)
+texture = ExtResource("9_iawf3")
+polygon = PackedVector2Array(0, 0, 32, 0, 32, 34, 0, 34)
+uv = PackedVector2Array(0, 0, 32, 0, 32, 32, 0, 32)
+
+[node name="Grass BG 1" type="Polygon2D" parent="BG Upper"]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_u0mv1")
+position = Vector2(-208, -96)
+texture = ExtResource("11_p188n")
+polygon = PackedVector2Array(0, 0, 144, 0, 144, 34, 0, 34)
+uv = PackedVector2Array(0, 0, 32, 0, 32, 32, 0, 32)
+
+[node name="Grass BG 2" type="Polygon2D" parent="BG Upper"]
+z_index = -1
+texture_repeat = 2
+material = SubResource("ShaderMaterial_u0mv1")
+position = Vector2(-480, -80)
+texture = ExtResource("11_p188n")
+polygon = PackedVector2Array(0, 0, 272, 0, 272, 34, 0, 34)
+uv = PackedVector2Array(0, 0, 32, 0, 32, 32, 0, 32)
+
+[node name="Tree" type="Sprite2D" parent="BG Upper/Grass BG 2"]
+position = Vector2(227, -35)
+texture = ExtResource("4_x7s3k")
+
+[node name="Tree 2" type="Sprite2D" parent="BG Upper/Grass BG 2"]
+position = Vector2(82, -41)
+texture = ExtResource("4_tr6el")
+
+[node name="Dirt BG 1" type="Polygon2D" parent="BG Upper"]
+z_index = -1
+texture_repeat = 2
+material = SubResource("ShaderMaterial_3deqy")
+position = Vector2(-32, -96)
+texture = ExtResource("13_dolq3")
+polygon = PackedVector2Array(0, 0, 32, 0, 32, 34, 0, 34)
+uv = PackedVector2Array(0, 0, 32, 0, 32, 32, 0, 32)

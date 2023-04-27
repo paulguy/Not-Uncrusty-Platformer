@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://d0t3u3e50ljbk"]
+[gd_scene load_steps=40 format=3 uid="uid://d0t3u3e50ljbk"]
 
 [ext_resource type="TileSet" uid="uid://bbcmc4vabwnbb" path="res://Tilesets/world_graphics.tres" id="1_3d2wv"]
 [ext_resource type="Script" path="res://start_area.gd" id="2_nxej3"]
@@ -14,7 +14,9 @@
 [ext_resource type="Texture2D" uid="uid://bbj22umgy10bu" path="res://BG Textures/water-surface3.png" id="12_mf4ub"]
 [ext_resource type="Texture2D" uid="uid://dbhyfb7njqca1" path="res://BG Textures/water-surface4.png" id="13_cmw56"]
 [ext_resource type="Texture2D" uid="uid://bxfgvs5djw38h" path="res://Sprites/duck.png" id="13_etvxh"]
+[ext_resource type="Texture2D" uid="uid://cynymsmuceqf2" path="res://Sprites/duck 2.png" id="14_6d5km"]
 [ext_resource type="Texture2D" uid="uid://dvxhx6j5jhltc" path="res://BG Textures/shoreline1.png" id="14_pfflt"]
+[ext_resource type="Texture2D" uid="uid://bxtssmb0138vu" path="res://Sprites/duck 3.png" id="15_s5fxc"]
 [ext_resource type="Texture2D" uid="uid://duh41xv6gl0q3" path="res://BG Textures/shoreline2.png" id="15_ujawo"]
 [ext_resource type="Texture2D" uid="uid://c7226mch4d4g" path="res://BG Textures/shoreline3.png" id="16_gk8xl"]
 [ext_resource type="Texture2D" uid="uid://bn4314y7pub24" path="res://BG Textures/shoreline4.png" id="17_np7t8"]
@@ -172,7 +174,6 @@ vertex_colors = PackedColorArray(0, 0, 0, 0.290196, 0, 0, 0, 0.290196, 0, 0, 0, 
 
 [node name="Sky" type="Polygon2D" parent="."]
 z_index = -2
-position = Vector2(1, 0)
 polygon = PackedVector2Array(-816, -624, 3168, -624, 3168, -2500, -816, -2500)
 vertex_colors = PackedColorArray(0.352941, 0.709804, 1, 1, 0.352941, 0.709804, 1, 1, 0.0392157, 0.137255, 0.360784, 1, 0.0392157, 0.137255, 0.360784, 1)
 
@@ -224,7 +225,7 @@ texture = ExtResource("13_etvxh")
 
 [node name="Duck2" type="Sprite2D" parent="BG Upper/Water BG Upper"]
 position = Vector2(2421, -653)
-texture = ExtResource("13_etvxh")
+texture = ExtResource("14_6d5km")
 flip_h = true
 
 [node name="Duck3" type="Sprite2D" parent="BG Upper/Water BG Upper"]
@@ -239,6 +240,15 @@ texture = ExtResource("13_etvxh")
 position = Vector2(2862, -647)
 texture = ExtResource("13_etvxh")
 flip_h = true
+
+[node name="Duck6" type="Sprite2D" parent="BG Upper/Water BG Upper"]
+position = Vector2(2716, -653)
+texture = ExtResource("13_etvxh")
+flip_h = true
+
+[node name="Duck7" type="Sprite2D" parent="BG Upper/Water BG Upper"]
+position = Vector2(3067, -649)
+texture = ExtResource("15_s5fxc")
 
 [node name="Shoreline" type="Polygon2D" parent="BG Upper"]
 texture_repeat = 2

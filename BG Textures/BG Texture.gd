@@ -31,6 +31,7 @@ func _ready():
 		p.polygon[1] += p.position
 		p.polygon[2] += p.position
 		p.polygon[3] += p.position
+		var original_pos = p.position
 		p.position = Vector2.ZERO
 		# find horizontal range
 		var lowest = p.polygon[0].x
@@ -89,11 +90,13 @@ func _ready():
 			Vector2(highest, right_bottom[i]),
 			Vector2(lowest, left_bottom[i])
 		])
+		var tex_width = highest-lowest
+		var left_uv = fmod(lowest, p.texture.get_width())
 		p.uv = PackedVector2Array([
-			Vector2(lowest, 0),
-			Vector2(highest, 0),
-			Vector2(highest, right_bottom[i]-right_top),
-			Vector2(lowest, left_bottom[i]-left_top)
+			Vector2(left_uv, 0),
+			Vector2(left_uv+tex_width, 0),
+			Vector2(left_uv+tex_width, right_bottom[i]-right_top),
+			Vector2(left_uv, left_bottom[i]-left_top)
 		])
 		if p.get_child_count() > 0:
 			child_offset[i] = []
@@ -106,7 +109,8 @@ func _ready():
 			for pc in p.get_children():
 				if pc is Sprite2D:
 					var p_width = highest - lowest
-					var pc_x_offset = pc.position.x - lowest
+					var pc_x_offset = pc.position.x + original_pos.x - lowest
+					pc.position += original_pos
 					pc.position -= pc.texture.get_size() / 2.0
 					pc.centered = false
 					pc.region_rect = Rect2(Vector2.ZERO, pc.texture.get_size())
@@ -115,7 +119,8 @@ func _ready():
 					child_y_position[i][j] = pc.position.y
 					child_offset[i][j] = Vector2.ZERO
 					child_offset[i][j].x = pc_x_offset/p_width
-					child_offset[i][j].y = left_bottom[i] + ((right_bottom[i]-left_bottom[i])*child_offset[i][j].x) - child_y_position[i][j] - pc.texture.get_size().y
+					child_offset[i][j].y = left_bottom[i] + ((right_bottom[i]-left_bottom[i])*child_offset[i][j].x) - child_y_position[i][j] - child_y_size[i][j]
+					print(child_offset[i][j])
 					child_y_position[i][j] += child_offset[i][j].y
 				else:
 					push_error("BG Texture child isn't a Sprite2D nor a Polygon2D.")
