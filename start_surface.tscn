@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://d0t3u3e50ljbk"]
+[gd_scene load_steps=38 format=3 uid="uid://d0t3u3e50ljbk"]
 
 [ext_resource type="TileSet" uid="uid://bbcmc4vabwnbb" path="res://Tilesets/world_graphics.tres" id="1_3d2wv"]
 [ext_resource type="Script" path="res://start_area.gd" id="2_nxej3"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://8sro8jh7l1xj" path="res://BG Textures/water-surface2.png" id="11_74ydo"]
 [ext_resource type="Texture2D" uid="uid://bbj22umgy10bu" path="res://BG Textures/water-surface3.png" id="12_mf4ub"]
 [ext_resource type="Texture2D" uid="uid://dbhyfb7njqca1" path="res://BG Textures/water-surface4.png" id="13_cmw56"]
+[ext_resource type="Texture2D" uid="uid://bxfgvs5djw38h" path="res://Sprites/duck.png" id="13_etvxh"]
 [ext_resource type="Texture2D" uid="uid://dvxhx6j5jhltc" path="res://BG Textures/shoreline1.png" id="14_pfflt"]
 [ext_resource type="Texture2D" uid="uid://duh41xv6gl0q3" path="res://BG Textures/shoreline2.png" id="15_ujawo"]
 [ext_resource type="Texture2D" uid="uid://c7226mch4d4g" path="res://BG Textures/shoreline3.png" id="16_gk8xl"]
@@ -139,6 +140,18 @@ position = Vector2(-448, -532)
 z_index = 1
 position = Vector2(2781, -523)
 
+[node name="Fish2" parent="." instance=ExtResource("6_krxrc")]
+z_index = 1
+position = Vector2(2982, -453)
+
+[node name="Fish3" parent="." instance=ExtResource("6_krxrc")]
+z_index = 1
+position = Vector2(3014, -561)
+
+[node name="Fish4" parent="." instance=ExtResource("6_krxrc")]
+z_index = 1
+position = Vector2(2649, -520)
+
 [node name="Water Surface" type="TileMap" parent="."]
 tile_set = ExtResource("5_k050t")
 format = 2
@@ -159,7 +172,7 @@ vertex_colors = PackedColorArray(0, 0, 0, 0.290196, 0, 0, 0, 0.290196, 0, 0, 0, 
 
 [node name="Sky" type="Polygon2D" parent="."]
 z_index = -2
-position = Vector2(0, 7)
+position = Vector2(1, 0)
 polygon = PackedVector2Array(-816, -624, 3168, -624, 3168, -2500, -816, -2500)
 vertex_colors = PackedColorArray(0.352941, 0.709804, 1, 1, 0.352941, 0.709804, 1, 1, 0.0392157, 0.137255, 0.360784, 1, 0.0392157, 0.137255, 0.360784, 1)
 
@@ -167,10 +180,6 @@ vertex_colors = PackedColorArray(0.352941, 0.709804, 1, 1, 0.352941, 0.709804, 1
 z_index = -2
 color = Color(0, 0, 0, 1)
 polygon = PackedVector2Array(368, -1200, 367, -1200, 367, -1217, -113, -1217, -113, -640, -514, -640, -514, -624, 336, -624, 336, -1088, 352, -1088, 352, -1168, 368, -1168)
-
-[node name="Tree 1" type="Sprite2D" parent="."]
-position = Vector2(1273, -959)
-texture = ExtResource("6_w3vmm")
 
 [node name="Water Surface Line" type="StaticBody2D" parent="."]
 collision_layer = 4
@@ -208,6 +217,28 @@ material = SubResource("ShaderMaterial_fc7el")
 texture = SubResource("AnimatedTexture_efwnd")
 polygon = PackedVector2Array(3168, -656, 2176, -656, 2176, -624, 3168, -624)
 uv = PackedVector2Array(0, 0, 996, 0, 996, 32, 0, 32)
+
+[node name="Duck" type="Sprite2D" parent="BG Upper/Water BG Upper"]
+position = Vector2(2255, -646)
+texture = ExtResource("13_etvxh")
+
+[node name="Duck2" type="Sprite2D" parent="BG Upper/Water BG Upper"]
+position = Vector2(2421, -653)
+texture = ExtResource("13_etvxh")
+flip_h = true
+
+[node name="Duck3" type="Sprite2D" parent="BG Upper/Water BG Upper"]
+position = Vector2(2476, -642)
+texture = ExtResource("13_etvxh")
+
+[node name="Duck4" type="Sprite2D" parent="BG Upper/Water BG Upper"]
+position = Vector2(2594, -649)
+texture = ExtResource("13_etvxh")
+
+[node name="Duck5" type="Sprite2D" parent="BG Upper/Water BG Upper"]
+position = Vector2(2862, -647)
+texture = ExtResource("13_etvxh")
+flip_h = true
 
 [node name="Shoreline" type="Polygon2D" parent="BG Upper"]
 texture_repeat = 2
@@ -300,6 +331,10 @@ material = SubResource("ShaderMaterial_fc7el")
 texture = ExtResource("18_xb65s")
 polygon = PackedVector2Array(1232, -928, 1312, -928, 1312, -894, 1232, -894)
 uv = PackedVector2Array(0, 0, 32, 0, 32, 32, 0, 32)
+
+[node name="Tree 1" type="Sprite2D" parent="BG Upper/Beach BG 12"]
+position = Vector2(1272, -963)
+texture = ExtResource("6_w3vmm")
 
 [node name="Beach BG 13" type="Polygon2D" parent="BG Upper"]
 texture_repeat = 2
@@ -604,10 +639,10 @@ uv = PackedVector2Array(0, 0, 32, 0, 32, 32, 0, 32)
 
 [node name="BG Lower" type="Node2D" parent="."]
 script = ExtResource("8_fjrn3")
-stretch_min = -2.0
-stretch_max = 0.0
+stretch_max = -2.0
 
 [node name="Water BG Lower" type="Polygon2D" parent="BG Lower"]
+z_index = -1
 texture_repeat = 2
 material = SubResource("ShaderMaterial_fc7el")
 texture = SubResource("AnimatedTexture_h2hxm")

@@ -2,13 +2,15 @@ class_name BG_Texture
 extends Node2D
 
 @onready var parent = get_parent()
-@export var stretch_min : float = 0.0
 @export var stretch_max : float = 2.0
 
 var left_bottom = []
 var right_bottom = []
 var left_size = []
 var right_size = []
+var child_offset = []
+var child_y_position = []
+var child_y_size = []
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -17,6 +19,9 @@ func _ready():
 	right_bottom.resize(count)
 	left_size.resize(count)
 	right_size.resize(count)
+	child_offset.resize(count)
+	child_y_position.resize(count)
+	child_y_size.resize(count)
 	var i = 0
 	for p in get_children():
 		if len(p.polygon) != 4:
@@ -90,6 +95,31 @@ func _ready():
 			Vector2(highest, right_bottom[i]-right_top),
 			Vector2(lowest, left_bottom[i]-left_top)
 		])
+		if p.get_child_count() > 0:
+			child_offset[i] = []
+			child_offset[i].resize(p.get_child_count())
+			child_y_position[i] = []
+			child_y_position[i].resize(p.get_child_count())
+			child_y_size[i] = []
+			child_y_size[i].resize(p.get_child_count())
+			var j = 0
+			for pc in p.get_children():
+				if pc is Sprite2D:
+					var p_width = highest - lowest
+					var pc_x_offset = pc.position.x - lowest
+					pc.position -= pc.texture.get_size() / 2.0
+					pc.centered = false
+					pc.region_rect = Rect2(Vector2.ZERO, pc.texture.get_size())
+					pc.region_enabled = true
+					child_y_size[i][j] = pc.region_rect.size.y
+					child_y_position[i][j] = pc.position.y
+					child_offset[i][j] = Vector2.ZERO
+					child_offset[i][j].x = pc_x_offset/p_width
+					child_offset[i][j].y = left_bottom[i] + ((right_bottom[i]-left_bottom[i])*child_offset[i][j].x) - child_y_position[i][j] - pc.texture.get_size().y
+					child_y_position[i][j] += child_offset[i][j].y
+				else:
+					push_error("BG Texture child isn't a Sprite2D nor a Polygon2D.")
+				j += 1
 		i += 1
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -100,8 +130,19 @@ func _process(_delta):
 		# get the position relative to the center and scale it
 		var center_dist_left = (screen_center + (parent.position.y + left_bottom[i])) / 150.0
 		var center_dist_right = (screen_center + (parent.position.y + right_bottom[i])) / 150.0
-		center_dist_left = clampf(center_dist_left, stretch_min, stretch_max)
-		center_dist_right = clampf(center_dist_right, stretch_min, stretch_max)
-		p.polygon[0].y = p.polygon[3].y + left_size[i] * center_dist_left * -2.0
-		p.polygon[1].y = p.polygon[2].y + right_size[i] * center_dist_right * -2.0
+		var j = 0
+		for pc in p.get_children():
+			var y_offset = child_offset[i][j].y * (center_dist_left + (center_dist_right-center_dist_left)) * child_offset[i][j].x * 2.0
+			if y_offset < 0.0:
+				pc.region_rect.size.y = child_y_size[i][j] + y_offset
+			pc.position.y = child_y_position[i][j] - y_offset
+			j += 1
+		if stretch_max < 0.0:
+			center_dist_left = clampf(center_dist_left, stretch_max, 0.0) * -2.0
+			center_dist_right = clampf(center_dist_right, stretch_max, 0.0) * -2.0
+		else:
+			center_dist_left = clampf(center_dist_left, 0.0, stretch_max) * -2.0
+			center_dist_right = clampf(center_dist_right, 0.0, stretch_max) * -2.0
+		p.polygon[0].y = p.polygon[3].y + center_dist_left * left_size[i]
+		p.polygon[1].y = p.polygon[2].y + center_dist_right * right_size[i]
 		i += 1
