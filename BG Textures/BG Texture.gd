@@ -31,7 +31,7 @@ func _ready():
 		p.polygon[1] += p.position
 		p.polygon[2] += p.position
 		p.polygon[3] += p.position
-		var original_pos = p.position
+		var parent_pos = p.position
 		p.position = Vector2.ZERO
 		# find horizontal range
 		var lowest = p.polygon[0].x
@@ -109,9 +109,9 @@ func _ready():
 			for pc in p.get_children():
 				if pc is Sprite2D:
 					var p_width = highest - lowest
-					var pc_x_offset = pc.position.x + original_pos.x - lowest
-					pc.position += original_pos
-					pc.position -= pc.texture.get_size() / 2.0
+					var pc_x_offset = pc.position.x + parent_pos.x - lowest
+					pc.position += parent_pos
+					pc.position -= pc.texture.get_size() * pc.scale / 2.0
 					pc.centered = false
 					pc.region_rect = Rect2(Vector2.ZERO, pc.texture.get_size())
 					pc.region_enabled = true
@@ -119,8 +119,7 @@ func _ready():
 					child_y_position[i][j] = pc.position.y
 					child_offset[i][j] = Vector2.ZERO
 					child_offset[i][j].x = pc_x_offset/p_width
-					child_offset[i][j].y = left_bottom[i] + ((right_bottom[i]-left_bottom[i])*child_offset[i][j].x) - child_y_position[i][j] - child_y_size[i][j]
-					print(child_offset[i][j])
+					child_offset[i][j].y = left_bottom[i] + ((right_bottom[i]-left_bottom[i])*child_offset[i][j].x) - child_y_position[i][j] - (child_y_size[i][j] * pc.scale.y)
 					child_y_position[i][j] += child_offset[i][j].y
 				else:
 					push_error("BG Texture child isn't a Sprite2D nor a Polygon2D.")
@@ -137,7 +136,7 @@ func _process(_delta):
 		var center_dist_right = (screen_center + (parent.position.y + right_bottom[i])) / 150.0
 		var j = 0
 		for pc in p.get_children():
-			var y_offset = child_offset[i][j].y * (center_dist_left + (center_dist_right-center_dist_left)) * child_offset[i][j].x * 2.0
+			var y_offset = child_offset[i][j].y * (center_dist_left + (center_dist_right-center_dist_left)) * child_offset[i][j].x / pc.scale.y * 2.0
 			if y_offset < 0.0:
 				pc.region_rect.size.y = child_y_size[i][j] + y_offset
 			pc.position.y = child_y_position[i][j] - y_offset

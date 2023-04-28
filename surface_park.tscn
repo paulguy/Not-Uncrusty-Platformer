@@ -180,11 +180,12 @@ polygon = PackedVector2Array(0, 0, 272, 0, 272, 34, 0, 34)
 uv = PackedVector2Array(0, 0, 32, 0, 32, 32, 0, 32)
 
 [node name="Tree" type="Sprite2D" parent="BG Upper/Grass BG 2"]
-position = Vector2(227, -35)
+position = Vector2(225, -24)
 texture = ExtResource("4_x7s3k")
 
 [node name="Tree 2" type="Sprite2D" parent="BG Upper/Grass BG 2"]
-position = Vector2(82, -41)
+position = Vector2(108, -19)
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("4_tr6el")
 
 [node name="Dirt BG 1" type="Polygon2D" parent="BG Upper"]
