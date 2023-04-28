@@ -99,6 +99,8 @@ func _ready():
 			Vector2(left_uv, left_bottom[i]-left_top)
 		])
 		if p.get_child_count() > 0:
+			var p_bottom = max(left_bottom[i], right_bottom[i])
+			var p_size = Vector2(highest - lowest, p_bottom - min(left_top, right_top))
 			child_offset[i] = []
 			child_offset[i].resize(p.get_child_count())
 			child_y_position[i] = []
@@ -108,19 +110,18 @@ func _ready():
 			var j = 0
 			for pc in p.get_children():
 				if pc is Sprite2D:
-					var p_width = highest - lowest
-					var pc_x_offset = pc.position.x + parent_pos.x - lowest
-					pc.position += parent_pos
-					pc.position -= pc.texture.get_size() * pc.scale / 2.0
+					var pc_bottom_center = Vector2(pc.position.x, pc.position.y + (pc.texture.get_height() * pc.scale.y * 0.5))
+					var pc_x_offset = pc_bottom_center.x/p_size.x
+					var pc_y_offset = ((right_bottom[i]-left_bottom[i])*pc_x_offset)
+					var pc_y_pos = p_bottom - pc_y_offset
+					child_offset[i][j] = Vector2(pc_x_offset, p_size.y - pc_y_offset - pc_bottom_center.y)
+					pc.offset = -pc.texture.get_size() * Vector2(0.5, 1.0)
 					pc.centered = false
 					pc.region_rect = Rect2(Vector2.ZERO, pc.texture.get_size())
 					pc.region_enabled = true
 					child_y_size[i][j] = pc.region_rect.size.y
-					child_y_position[i][j] = pc.position.y
-					child_offset[i][j] = Vector2.ZERO
-					child_offset[i][j].x = pc_x_offset/p_width
-					child_offset[i][j].y = left_bottom[i] + ((right_bottom[i]-left_bottom[i])*child_offset[i][j].x) - child_y_position[i][j] - (child_y_size[i][j] * pc.scale.y)
-					child_y_position[i][j] += child_offset[i][j].y
+					child_y_position[i][j] = pc_y_pos
+					pc.position.x = parent_pos.x + pc_bottom_center.x
 				else:
 					push_error("BG Texture child isn't a Sprite2D nor a Polygon2D.")
 				j += 1
@@ -134,19 +135,25 @@ func _process(_delta):
 		# get the position relative to the center and scale it
 		var center_dist_left = (screen_center + (parent.position.y + left_bottom[i])) / 150.0
 		var center_dist_right = (screen_center + (parent.position.y + right_bottom[i])) / 150.0
-		var j = 0
-		for pc in p.get_children():
-			var y_offset = child_offset[i][j].y * (center_dist_left + (center_dist_right-center_dist_left)) * child_offset[i][j].x / pc.scale.y * 2.0
-			if y_offset < 0.0:
-				pc.region_rect.size.y = child_y_size[i][j] + y_offset
-			pc.position.y = child_y_position[i][j] - y_offset
-			j += 1
+		var center_dist_left_pc = center_dist_left * -2.0
+		var center_dist_right_pc = center_dist_right * -2.0
 		if stretch_max < 0.0:
+			center_dist_left_pc = max(center_dist_left_pc, stretch_max)
+			center_dist_right_pc = max(center_dist_right_pc, stretch_max)
 			center_dist_left = clampf(center_dist_left, stretch_max, 0.0) * -2.0
 			center_dist_right = clampf(center_dist_right, stretch_max, 0.0) * -2.0
 		else:
+			center_dist_left_pc = min(center_dist_left_pc, stretch_max)
+			center_dist_right_pc = min(center_dist_right_pc, stretch_max)
 			center_dist_left = clampf(center_dist_left, 0.0, stretch_max) * -2.0
 			center_dist_right = clampf(center_dist_right, 0.0, stretch_max) * -2.0
 		p.polygon[0].y = p.polygon[3].y + center_dist_left * left_size[i]
 		p.polygon[1].y = p.polygon[2].y + center_dist_right * right_size[i]
+		var j = 0
+		for pc in p.get_children():
+			var y_offset = center_dist_left_pc + ((center_dist_right_pc-center_dist_left_pc) * child_offset[i][j].x)
+			pc.position.y = child_y_position[i][j] + (child_offset[i][j].y * y_offset)
+			if pc.position.y > child_y_position[i][j]:
+				pc.region_rect.size.y = max((child_y_size[i][j] * pc.scale.y) - (pc.position.y - child_y_position[i][j]), 0.0)
+			j += 1
 		i += 1
