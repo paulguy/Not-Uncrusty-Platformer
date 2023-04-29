@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://dyxnvg3ae2i8l"]
+[gd_scene load_steps=26 format=3 uid="uid://dyxnvg3ae2i8l"]
 
 [ext_resource type="TileSet" uid="uid://bbcmc4vabwnbb" path="res://Tilesets/world_graphics.tres" id="1_kjjmx"]
 [ext_resource type="Script" path="res://surface_park.gd" id="2_5qxml"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://b4mneh8w1frqi" path="res://Sprites/bg-trees.png" id="11_dqb2h"]
 [ext_resource type="Texture2D" uid="uid://ohqwlvfaptlb" path="res://BG Textures/grass-bg.png" id="11_p188n"]
 [ext_resource type="Shader" uid="uid://4fumw32rfsdn" path="res://BG Textures/BG Texture.tres" id="12_bkuoe"]
+[ext_resource type="Texture2D" uid="uid://073pkk5by0ov" path="res://Sprites/bg-trees 2.png" id="12_isfil"]
 [ext_resource type="Texture2D" uid="uid://dq41cosmyep0v" path="res://BG Textures/dirt-bg.png" id="13_dolq3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p7in6"]
@@ -79,7 +80,6 @@ shader = ExtResource("12_bkuoe")
 tile_set = ExtResource("1_kjjmx")
 format = 2
 layer_0/name = "fg"
-layer_0/enabled = false
 layer_0/tile_data = PackedInt32Array(-196609, 0, 589830, -196610, 0, 589830, -196611, 0, 589830, -196612, 0, 589830, -196613, 0, 589830, -196614, 0, 589830, -196615, 0, 589830, -196616, 0, 589830, -196617, 0, 589830, -196618, 0, 589830, -196619, 0, 589830, -196620, 0, 589830, -196621, 0, 589830, -131086, 0, 589830, -131087, 0, 589830, -131088, 0, 589830, -131089, 0, 589830, -131090, 0, 589830, -131091, 0, 589830, -131092, 0, 589830, -131093, 0, 589830, -131094, 0, 589830, -131095, 0, 589830, -131096, 0, 589830, -131097, 0, 589830, -131098, 0, 589830, -131099, 0, 589830, -131100, 0, 589830, -131101, 0, 589830, -131102, 0, 589830, -65567, 0, 589830, -65568, 0, 589830, -65569, 0, 589830, -65570, 0, 589830, -65571, 0, 589830, -65572, 0, 589830, -65573, 0, 589830, -65574, 0, 589830, -65575, 0, 589830, -39, 0, 262148, -38, 0, 262148, -37, 0, 262148, -36, 0, 262148, -35, 0, 262148, -34, 0, 262148, -33, 0, 262148, -32, 0, 262148, -31, 0, 262148, -30, 0, 262148, -29, 0, 262148, -28, 0, 262148, -27, 0, 262148, -26, 0, 262148, -25, 0, 262148, -65566, 0, 262148, -65565, 0, 262148, -65564, 0, 262148, -65563, 0, 262148, -65562, 0, 262148, -65561, 0, 262148, -65560, 0, 262148, -65559, 0, 262148, -65558, 0, 262148, -65557, 0, 262148, -65556, 0, 262148, -65555, 0, 262148, -65554, 0, 262148, -65553, 0, 262148, -65552, 0, 262148, -65551, 0, 262148, -131073, 0, 262148, -131074, 0, 262148, -131075, 0, 262148, -131076, 0, 262148, -131077, 0, 262148, -131078, 0, 262148, -131079, 0, 262148, -131080, 0, 262148, -131081, 0, 262148, -131082, 0, 262148, -131083, 0, 262148, -131084, 0, 262148, -131085, 0, 262148, -24, 0, 262148, -23, 0, 262148, -22, 0, 262148, -21, 0, 262148, -20, 0, 262148, -19, 0, 262148, -18, 0, 262148, -17, 0, 262148, -16, 0, 262148, -15, 0, 262148, -14, 0, 262148, -13, 0, 262148, -12, 0, 262148, -11, 0, 262148, -10, 0, 262148, -9, 0, 262148, -8, 0, 262148, -7, 0, 262148, -6, 0, 262148, -5, 0, 262148, -4, 0, 262148, -3, 0, 262148, -2, 0, 262148, -1, 0, 262148, -65537, 0, 262148, -65538, 0, 262148, -65539, 0, 262148, -65540, 0, 262148, -65541, 0, 262148, -65542, 0, 262148, -65543, 0, 262148, -65544, 0, 262148, -65545, 0, 262148, -65546, 0, 262148, -65547, 0, 262148, -65548, 0, 262148, -65549, 0, 262148, -65550, 0, 262148)
 layer_1/name = "decor 1"
 layer_1/enabled = true
@@ -154,6 +154,7 @@ one_way_collision = true
 
 [node name="BG Upper" type="Node2D" parent="."]
 script = ExtResource("7_jdq8j")
+y_edge_overlap = 2.0
 
 [node name="Grass-Dirt Edge 1" type="Polygon2D" parent="BG Upper"]
 z_index = -1
@@ -172,8 +173,24 @@ texture = ExtResource("11_p188n")
 polygon = PackedVector2Array(0, 0, 144, 0, 144, 34, 0, 34)
 uv = PackedVector2Array(0, 0, 32, 0, 32, 32, 0, 32)
 
+[node name="BG Trees 1" type="Sprite2D" parent="BG Upper/Grass BG 1"]
+position = Vector2(23, -8)
+texture = ExtResource("11_dqb2h")
+
+[node name="BG Trees 2" type="Sprite2D" parent="BG Upper/Grass BG 1"]
+position = Vector2(56, -7)
+texture = ExtResource("11_dqb2h")
+
+[node name="BG Trees 3" type="Sprite2D" parent="BG Upper/Grass BG 1"]
+position = Vector2(96, -6)
+texture = ExtResource("11_dqb2h")
+
+[node name="BG Trees 4" type="Sprite2D" parent="BG Upper/Grass BG 1"]
+position = Vector2(143, -7)
+texture = ExtResource("12_isfil")
+
 [node name="Grass BG 2" type="Polygon2D" parent="BG Upper"]
-z_index = -1
+z_index = -2
 texture_repeat = 2
 material = SubResource("ShaderMaterial_u0mv1")
 position = Vector2(-480, -80)
@@ -182,11 +199,48 @@ polygon = PackedVector2Array(0, 0, 272, 0, 272, 34, 0, 34)
 uv = PackedVector2Array(0, 0, 32, 0, 32, 32, 0, 32)
 
 [node name="Tree" type="Sprite2D" parent="BG Upper/Grass BG 2"]
+z_index = 2
 position = Vector2(225, -24)
 texture = ExtResource("4_x7s3k")
 
 [node name="BG Trees 1" type="Sprite2D" parent="BG Upper/Grass BG 2"]
+z_index = 1
 position = Vector2(159, -8)
+texture = ExtResource("11_dqb2h")
+
+[node name="BG Trees 6" type="Sprite2D" parent="BG Upper/Grass BG 2"]
+position = Vector2(129, 1)
+texture = ExtResource("12_isfil")
+
+[node name="BG Trees 8" type="Sprite2D" parent="BG Upper/Grass BG 2"]
+position = Vector2(17, -8)
+texture = ExtResource("12_isfil")
+
+[node name="BG Trees 7" type="Sprite2D" parent="BG Upper/Grass BG 2"]
+z_index = 1
+position = Vector2(227, -6)
+texture = ExtResource("12_isfil")
+
+[node name="BG Trees 4" type="Sprite2D" parent="BG Upper/Grass BG 2"]
+position = Vector2(82, -8)
+texture = ExtResource("11_dqb2h")
+
+[node name="BG Trees 5" type="Sprite2D" parent="BG Upper/Grass BG 2"]
+position = Vector2(44, -6)
+texture = ExtResource("11_dqb2h")
+
+[node name="BG Trees 2" type="Sprite2D" parent="BG Upper/Grass BG 2"]
+position = Vector2(121, -9)
+texture = ExtResource("11_dqb2h")
+
+[node name="BG Trees 3" type="Sprite2D" parent="BG Upper/Grass BG 2"]
+z_index = 1
+position = Vector2(197, -7)
+texture = ExtResource("11_dqb2h")
+
+[node name="BG Trees 9" type="Sprite2D" parent="BG Upper/Grass BG 2"]
+z_index = 1
+position = Vector2(254, -7)
 texture = ExtResource("11_dqb2h")
 
 [node name="Tree 2" type="Sprite2D" parent="BG Upper/Grass BG 2"]

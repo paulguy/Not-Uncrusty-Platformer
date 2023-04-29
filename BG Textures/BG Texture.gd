@@ -3,6 +3,7 @@ extends Node2D
 
 @onready var parent = get_parent()
 @export var stretch_max : float = 2.0
+@export var y_edge_overlap : float = 0.0
 
 var left_bottom = []
 var right_bottom = []
@@ -115,13 +116,14 @@ func _ready():
 					var pc_y_offset = ((right_bottom[i]-left_bottom[i])*pc_x_offset)
 					var pc_y_pos = p_bottom - pc_y_offset
 					child_offset[i][j] = Vector2(pc_x_offset, p_size.y - pc_y_offset - pc_bottom_center.y)
-					pc.offset = -pc.texture.get_size() * Vector2(0.5, 1.0)
+					pc.offset = -pc.texture.get_size() * Vector2(0.5, 1.0) + Vector2(0.0, y_edge_overlap)
 					pc.centered = false
 					pc.region_rect = Rect2(Vector2.ZERO, pc.texture.get_size())
 					pc.region_enabled = true
 					child_y_size[i][j] = pc.region_rect.size.y
 					child_y_position[i][j] = pc_y_pos
 					pc.position.x = parent_pos.x + pc_bottom_center.x
+					pc.y_sort_enabled = true
 				else:
 					push_error("BG Texture child isn't a Sprite2D nor a Polygon2D.")
 				j += 1
@@ -153,7 +155,7 @@ func _process(_delta):
 		for pc in p.get_children():
 			var y_offset = center_dist_left_pc + ((center_dist_right_pc-center_dist_left_pc) * child_offset[i][j].x)
 			pc.position.y = child_y_position[i][j] + (child_offset[i][j].y * y_offset)
-			if pc.position.y > child_y_position[i][j]:
-				pc.region_rect.size.y = max((child_y_size[i][j] * pc.scale.y) - (pc.position.y - child_y_position[i][j]), 0.0)
+			if pc.position.y + y_edge_overlap > child_y_position[i][j]:
+				pc.region_rect.size.y = max((child_y_size[i][j] * pc.scale.y) - (pc.position.y + y_edge_overlap - child_y_position[i][j]), 0.0)
 			j += 1
 		i += 1
