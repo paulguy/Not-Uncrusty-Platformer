@@ -100,8 +100,9 @@ func _ready():
 			Vector2(left_uv, left_bottom[i]-left_top)
 		])
 		if p.get_child_count() > 0:
+			var p_top = min(left_top, right_top)
 			var p_bottom = max(left_bottom[i], right_bottom[i])
-			var p_size = Vector2(highest - lowest, p_bottom - min(left_top, right_top))
+			var p_size = Vector2(highest - lowest, p_bottom - p_top)
 			child_offset[i] = []
 			child_offset[i].resize(p.get_child_count())
 			child_y_position[i] = []
@@ -111,7 +112,7 @@ func _ready():
 			var j = 0
 			for pc in p.get_children():
 				if pc is Sprite2D:
-					var pc_bottom_center = Vector2(pc.position.x, pc.position.y + (pc.texture.get_height() * pc.scale.y * 0.5))
+					var pc_bottom_center = Vector2(pc.position.x, pc.position.y - (p_top - parent_pos.y) + (pc.texture.get_height() * pc.scale.y * 0.5))
 					var pc_x_offset = pc_bottom_center.x/p_size.x
 					var pc_y_offset = ((right_bottom[i]-left_bottom[i])*pc_x_offset)
 					var pc_y_pos = p_bottom - pc_y_offset

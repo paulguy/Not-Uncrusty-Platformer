@@ -32,9 +32,6 @@ func off_screen():
 		area.remove_child(self)
 		deactivate()
 
-func _ready():
-	pass
-
 const _dirVectDict = {
 	MovementDirection.UP: Vector2.UP,
 	MovementDirection.DOWN: Vector2.DOWN,

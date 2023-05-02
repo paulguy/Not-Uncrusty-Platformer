@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://d0t3u3e50ljbk"]
+[gd_scene load_steps=41 format=3 uid="uid://d0t3u3e50ljbk"]
 
 [ext_resource type="TileSet" uid="uid://bbcmc4vabwnbb" path="res://Tilesets/world_graphics.tres" id="1_3d2wv"]
 [ext_resource type="Script" path="res://start_area.gd" id="2_nxej3"]
@@ -29,6 +29,7 @@
 [ext_resource type="Texture2D" uid="uid://be0t40h0iyvpl" path="res://BG Textures/water-under2.png" id="24_thed8"]
 [ext_resource type="Texture2D" uid="uid://dlp8eh3cekk71" path="res://BG Textures/water-under3.png" id="25_8ubff"]
 [ext_resource type="Texture2D" uid="uid://dk6kpbo3slqbd" path="res://BG Textures/water-under4.png" id="26_5ehot"]
+[ext_resource type="PackedScene" uid="uid://bctbea01ve6tt" path="res://Mobs/bird.tscn" id="30_rr1dr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mx0sb"]
 size = Vector2(3984, 2548)
@@ -37,8 +38,8 @@ size = Vector2(3984, 2548)
 blend_mode = 1
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_jqk6q"]
-a = Vector2(2144, -600)
-b = Vector2(3168, -600)
+a = Vector2(2144, -625)
+b = Vector2(3168, -625)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_phe8b"]
 a = Vector2(3168, -2500)
@@ -210,6 +211,7 @@ polygon = PackedVector2Array(3168, -2500, -816, -2500, -816, -2644, 3360, -2644,
 vertex_colors = PackedColorArray(0.741176, 1, 0.898039, 1, 0.741176, 1, 0.898039, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.741176, 1, 0.898039, 1)
 
 [node name="BG Upper" type="Node2D" parent="."]
+z_index = -1
 script = ExtResource("8_fjrn3")
 
 [node name="Water BG Upper" type="Polygon2D" parent="BG Upper"]
@@ -335,7 +337,6 @@ polygon = PackedVector2Array(1488, -840, 1312, -928, 1312, -894, 1488, -806)
 uv = PackedVector2Array(0, 0, 32, 0, 32, 32, 0, 32)
 
 [node name="Beach BG 12" type="Polygon2D" parent="BG Upper"]
-z_index = -1
 texture_repeat = 2
 material = SubResource("ShaderMaterial_fc7el")
 texture = ExtResource("18_xb65s")
@@ -652,9 +653,17 @@ script = ExtResource("8_fjrn3")
 stretch_max = -2.0
 
 [node name="Water BG Lower" type="Polygon2D" parent="BG Lower"]
-z_index = -1
 texture_repeat = 2
 material = SubResource("ShaderMaterial_fc7el")
 texture = SubResource("AnimatedTexture_h2hxm")
 polygon = PackedVector2Array(3168, -656, 2176, -656, 2176, -624, 3168, -624)
 uv = PackedVector2Array(0, 0, 996, 0, 996, 32, 0, 32)
+
+[node name="Bird" parent="." instance=ExtResource("30_rr1dr")]
+position = Vector2(458, -1035)
+
+[node name="Bird2" parent="." instance=ExtResource("30_rr1dr")]
+position = Vector2(597, -1032)
+
+[node name="Bird3" parent="." instance=ExtResource("30_rr1dr")]
+position = Vector2(519, -1034)
