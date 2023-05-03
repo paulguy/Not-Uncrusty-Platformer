@@ -9,8 +9,8 @@ load_path = "res://.godot/imported/bird 1.png-f86b2df6f883c0fea26ccf5f2accc758.c
 atlas = SubResource("CompressedTexture2D_qnali")
 region = Rect2(0, 0, 16, 16)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_23thh"]
-size = Vector2(16, 16)
+[sub_resource type="CircleShape2D" id="CircleShape2D_34iux"]
+radius = 8.0
 
 [node name="Bird" type="CharacterBody2D"]
 collision_layer = 0
@@ -21,5 +21,4 @@ script = ExtResource("1_nwqvb")
 texture = SubResource("AtlasTexture_lkwxo")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
-shape = SubResource("RectangleShape2D_23thh")
+shape = SubResource("CircleShape2D_34iux")
