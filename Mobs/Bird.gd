@@ -6,23 +6,31 @@ enum BirdMode {
 	LANDING
 }
 
-@export var start_facing = MovementDirection.RIGHT
+@export var texture : Texture2D
+@export var start_facing : MovementDirection = MovementDirection.RIGHT
+@export var WANDER_SPEED : float = 50.0
+@export var WANDER_JUMP : float = -50.0
+@export var MIN_NEXT_FLY_TIME : float = 5.0
+@export var MAX_NEXT_FLY_TIME : float = 15.0
+@export var MIN_FLY_TIME : float = 2.0
+@export var MAX_FLY_TIME : float = 7.0
+@export var MIN_TAKEOFF_FLAP_POWER : float = 200.0
+@export var MAX_TAKEOFF_FLAP_POWER : float = 300.0
+@export var MIN_FLAP_POWER : float = 50.0
+@export var MAX_FLAP_POWER : float = 100.0
+@export var MIN_DIR_CHANGE_TIME : float = 0.5
+@export var MAX_DIR_CHANGE_TIME : float = 5.0
+@export var FLAP_DAMPING : float = 0.99
+@export var GLIDE_ACCEL : float = 1.02
+@export var FALL_RECOVER_SPEED : float = 200.0
+@export var FLAP_GRAVITY : float = 0.8
+@export var GLIDE_GRAVITY : float = 0.6
+@export var MAX_LAND_SPEED : float = 200.0
+@export var LANDING_FLAP : float = 0.4
 
-const SPEED = 50
-const JUMP_VELOCITY = -50.0
-const MIN_NEXT_FLY_TIME = 5.0
-const MAX_NEXT_FLY_TIME = 15.0
-const MIN_FLY_TIME = 2.0
-const MAX_FLY_TIME = 7.0
-const MIN_TAKEOFF_FLAP_POWER = 200.0
-const MAX_TAKEOFF_FLAP_POWER = 300.0
-const MIN_FLAP_POWER = 50.0
-const MAX_FLAP_POWER = 100.0
-const MIN_DIR_CHANGE_TIME = 0.5
-const MAX_DIR_CHANGE_TIME = 5.0
-const FLAP_DAMPING = 0.99
-const GLIDE_ACCEL = 1.02
-const FALL_RECOVER_SPEED = 200.0
+var ANIM_STAND = 0
+var ANIM_GLIDE = 16
+var ANIM_FLAP = 32
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -49,18 +57,27 @@ func take_off():
 	lastFlapVelocity = MAX_FLAP_POWER
 	nextFlyTime = randf_range(MIN_FLY_TIME, MAX_FLY_TIME)
 
-func flap():
-	velocity.y = -randf_range(MIN_FLAP_POWER, MAX_FLAP_POWER)
+func flap(multiplier : float = 1.0):
+	sprite.texture.region.position.x = ANIM_FLAP
+	velocity.y = -randf_range(MIN_FLAP_POWER, MAX_FLAP_POWER) * multiplier
 	lastFlapVelocity = velocity.y
+
+func land():
+	sprite.texture.region.position.x = ANIM_GLIDE
+	mode = BirdMode.LANDING
+
+func wander():
+	set_next_fly_time()
+	mode = BirdMode.WANDERING
 
 func turn_around():
 	facing = opp_dir(facing)
 	if facing == MovementDirection.RIGHT:
 		sprite.flip_h = false
-		velocity.x = SPEED
+		velocity.x = WANDER_SPEED
 	else:
 		sprite.flip_h = true
-		velocity.x = -SPEED
+		velocity.x = -WANDER_SPEED
 
 func deactivate():
 	super()
@@ -70,16 +87,22 @@ func deactivate():
 	set_next_dir_change_time()
 
 func _ready():
+	if texture == null:
+		texture = sprite.texture.atlas
+	var texHeight = texture.get_height()
+	# make sure there's a new atlas texture per each bird.
+	sprite.texture = AtlasTexture.new()
+	sprite.texture.atlas = texture
+	sprite.texture.region = Rect2(0, 0, texHeight, texHeight)
+	ANIM_GLIDE = texHeight
+	ANIM_FLAP = texHeight * 2
 	deactivate()
 
 func _physics_process(delta):
-	velocity.y += gravity * delta
-
-	move_and_slide()
-
 	match mode:
 		BirdMode.WANDERING:
-			sprite.texture.region.position.x = 0
+			velocity.y += gravity * delta
+			sprite.texture.region.position.x = ANIM_STAND
 			if is_on_wall():
 				turn_around()
 			if velocity.y > FALL_RECOVER_SPEED:
@@ -87,9 +110,9 @@ func _physics_process(delta):
 			else:
 				if is_on_floor():
 					if facing == MovementDirection.LEFT:
-						velocity = Vector2(-SPEED, JUMP_VELOCITY)
+						velocity = Vector2(-WANDER_SPEED, WANDER_JUMP)
 					else:
-						velocity = Vector2(SPEED, JUMP_VELOCITY)
+						velocity = Vector2(WANDER_SPEED, WANDER_JUMP)
 				nextFlyTime -= delta
 				if nextFlyTime <= 0.0:
 					take_off()
@@ -99,28 +122,34 @@ func _physics_process(delta):
 					turn_around()
 		BirdMode.FLYING:
 			if is_on_wall():
-				mode = BirdMode.LANDING
+				turn_around()
+				land()
 			elif is_on_floor():
-				mode = BirdMode.WANDERING
-				set_next_fly_time()
+				wander()
 			else:
 				if velocity.y > 0.0:
 					sprite.texture.region.position.x = 16
 					velocity.x *= GLIDE_ACCEL
+					velocity.y += gravity * GLIDE_GRAVITY * delta
 					if velocity.y > -lastFlapVelocity:
 						flap()
 				else:
-					sprite.texture.region.position.x = 32
 					velocity.x *= FLAP_DAMPING
+					velocity.y += gravity * FLAP_GRAVITY * delta
 				nextFlyTime -= delta
 				if nextFlyTime <= 0.0:
-					mode = BirdMode.LANDING
+					land()
 		BirdMode.LANDING:
-			sprite.texture.region.position.x = 32
 			if is_on_wall():
 				turn_around()
 			if is_on_floor():
-				mode = BirdMode.WANDERING
-				set_next_fly_time()
+				wander()
 			else:
-				velocity.y *= FLAP_DAMPING
+				velocity.x *= FLAP_DAMPING
+				velocity.y += gravity * FLAP_GRAVITY * delta
+				if velocity.y > MAX_LAND_SPEED * 0.75:
+					sprite.texture.region.position.x = ANIM_GLIDE
+					if velocity.y > MAX_LAND_SPEED:
+						flap(LANDING_FLAP)
+
+	move_and_slide()

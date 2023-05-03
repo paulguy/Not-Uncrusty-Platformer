@@ -663,7 +663,4 @@ uv = PackedVector2Array(0, 0, 996, 0, 996, 32, 0, 32)
 position = Vector2(458, -1035)
 
 [node name="Bird2" parent="." instance=ExtResource("30_rr1dr")]
-position = Vector2(597, -1032)
-
-[node name="Bird3" parent="." instance=ExtResource("30_rr1dr")]
-position = Vector2(519, -1034)
+position = Vector2(407, -1048)
