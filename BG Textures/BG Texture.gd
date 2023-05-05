@@ -112,7 +112,7 @@ func _ready():
 			var j = 0
 			for pc in p.get_children():
 				if pc is Sprite2D:
-					var pc_bottom_center = Vector2(pc.position.x, pc.position.y - (p_top - parent_pos.y) + (pc.texture.get_height() * pc.scale.y * 0.5))
+					var pc_bottom_center = Vector2(pc.position.x, pc.position.y - ((p_top - parent_pos.y) * pc.scale.y) + (pc.texture.get_height() * pc.scale.y * 0.5))
 					var pc_x_offset = pc_bottom_center.x/p_size.x
 					var pc_y_offset = ((right_bottom[i]-left_bottom[i])*pc_x_offset)
 					var pc_y_pos = p_bottom - pc_y_offset
