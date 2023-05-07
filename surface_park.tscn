@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://dyxnvg3ae2i8l"]
+[gd_scene load_steps=32 format=3 uid="uid://dyxnvg3ae2i8l"]
 
 [ext_resource type="TileSet" uid="uid://bbcmc4vabwnbb" path="res://Tilesets/world_graphics.tres" id="1_kjjmx"]
 [ext_resource type="Script" path="res://surface_park.gd" id="2_5qxml"]
@@ -14,7 +14,13 @@
 [ext_resource type="Texture2D" uid="uid://ohqwlvfaptlb" path="res://BG Textures/grass-bg.png" id="11_p188n"]
 [ext_resource type="Shader" uid="uid://4fumw32rfsdn" path="res://BG Textures/BG Texture.tres" id="12_bkuoe"]
 [ext_resource type="Texture2D" uid="uid://073pkk5by0ov" path="res://Sprites/bg-trees 2.png" id="12_isfil"]
+[ext_resource type="Texture2D" uid="uid://8n5ljv2he1lt" path="res://Sprites/bg building.png" id="12_ors07"]
+[ext_resource type="Texture2D" uid="uid://bxw5ivn6xcwnf" path="res://Sprites/bg building 3.png" id="12_reril"]
+[ext_resource type="Texture2D" uid="uid://ucj5js6bvf3n" path="res://BG Textures/sidewalk.png" id="12_xcids"]
 [ext_resource type="Texture2D" uid="uid://dq41cosmyep0v" path="res://BG Textures/dirt-bg.png" id="13_dolq3"]
+[ext_resource type="Texture2D" uid="uid://dnqo1w6dvdw" path="res://Sprites/bg building 2.png" id="13_pxkyl"]
+[ext_resource type="Texture2D" uid="uid://dqcq15lq4d33d" path="res://BG Textures/curb.png" id="13_qfehl"]
+[ext_resource type="Texture2D" uid="uid://58y5fu5bxhdc" path="res://BG Textures/road.png" id="14_n8nm6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p7in6"]
 size = Vector2(2000, 2500)
@@ -87,7 +93,7 @@ layer_1/modulate = Color(1, 1, 1, 1)
 layer_1/y_sort_enabled = false
 layer_1/y_sort_origin = 0
 layer_1/z_index = 11
-layer_1/tile_data = PackedInt32Array(-196612, 327680, 65538, -196613, 327680, 65538, -196614, 327680, 65538, -196615, 327680, 65538, -196616, 327680, 65538, -196617, 327680, 65538, -196618, 327680, 65538, -196619, 327680, 65538, -196620, 327680, 65538, -196621, 327680, 65538, -131102, 327680, 65538, -131101, 327680, 65538, -131100, 327680, 65538, -131099, 327680, 65538, -131098, 327680, 65538, -131097, 327680, 65538, -131096, 327680, 65538, -131095, 327680, 65538, -131094, 327680, 65538, -131093, 327680, 65538, -131092, 327680, 65538, -131091, 327680, 65538, -131090, 327680, 65538, -131089, 327680, 65538, -131088, 327680, 65538, -131087, 327680, 65538, -131086, 327680, 65538, -65574, 327680, 65538, -65573, 327680, 65538, -65572, 327680, 65538, -65571, 327680, 65538, -65570, 327680, 65538, -65569, 327680, 65538, -65568, 327680, 65538, -65567, 327680, 65538, -131110, 327680, 65537, -131109, 327680, 65537, -131108, 327680, 65537, -131107, 327680, 65537, -131106, 327680, 65537, -131105, 327680, 65537, -131104, 327680, 65537, -131103, 327680, 65537, -196638, 327680, 65537, -196637, 327680, 65537, -196636, 327680, 65537, -196635, 327680, 65537, -196634, 327680, 65537, -196633, 327680, 65537, -196632, 327680, 65537, -196631, 327680, 65537, -196630, 327680, 65537, -196629, 327680, 65537, -196628, 327680, 65537, -196627, 327680, 65537, -196626, 327680, 65537, -196625, 327680, 65537, -196624, 327680, 65537, -196623, 327680, 65537, -196622, 327680, 65537, -262148, 327680, 65537, -262149, 327680, 65537, -262150, 327680, 65537, -262151, 327680, 65537, -262152, 327680, 65537, -262153, 327680, 65537, -262154, 327680, 65537, -262155, 327680, 65537, -262156, 327680, 65537, -262157, 327680, 65537, -65579, 262144, 65538, -65580, 327680, 65538, -65581, 327680, 65538, -131115, 327680, 65537, -131116, 327680, 65537, -131117, 262144, 65537, -131118, 262144, 65537, -65582, 262144, 65538, -131114, 65537, 0, -131113, 131073, 0, -131112, 196609, 0, -131111, 262145, 0, -65575, 262145, 1, -65576, 196609, 1, -65577, 131073, 1, -65578, 65537, 1, -131119, 1, 0, -65583, 1, 1, -65584, 393217, 1, -65585, 327681, 1, -65586, 393217, 1, -65587, 393217, 1, -65588, 327681, 1, -65589, 327681, 1, -65590, 327681, 1, -65591, 393217, 1)
+layer_1/tile_data = PackedInt32Array(-196612, 327680, 65538, -196613, 327680, 65538, -196614, 327680, 65538, -196615, 327680, 65538, -196616, 327680, 65538, -196617, 327680, 65538, -196618, 327680, 65538, -196619, 327680, 65538, -196620, 327680, 65538, -196621, 327680, 65538, -131102, 327680, 65538, -131101, 327680, 65538, -131100, 327680, 65538, -131099, 327680, 65538, -131098, 327680, 65538, -131097, 327680, 65538, -131096, 327680, 65538, -131095, 327680, 65538, -131094, 327680, 65538, -131093, 327680, 65538, -131092, 327680, 65538, -131091, 327680, 65538, -131090, 327680, 65538, -131089, 327680, 65538, -131088, 327680, 65538, -131087, 327680, 65538, -131086, 327680, 65538, -65574, 327680, 65538, -65573, 327680, 65538, -65572, 327680, 65538, -65571, 327680, 65538, -65570, 327680, 65538, -65569, 327680, 65538, -65568, 327680, 65538, -65567, 327680, 65538, -131110, 327680, 65537, -131109, 262144, 65537, -131108, 327680, 65537, -131107, 262144, 65537, -131106, 327680, 65537, -131105, 262144, 65537, -131104, 327680, 65537, -131103, 327680, 65537, -196638, 327680, 65537, -196637, 327680, 65537, -196636, 327680, 65537, -196635, 327680, 65537, -196634, 327680, 65537, -196633, 327680, 65537, -196632, 327680, 65537, -196631, 327680, 65537, -196630, 327680, 65537, -196629, 327680, 65537, -196628, 327680, 65537, -196627, 327680, 65537, -196626, 327680, 65537, -196625, 327680, 65537, -196624, 327680, 65537, -196623, 327680, 65537, -196622, 327680, 65537, -262148, 327680, 65537, -262149, 327680, 65537, -262150, 327680, 65537, -262151, 327680, 65537, -262152, 327680, 65537, -262153, 327680, 65537, -262154, 327680, 65537, -262155, 327680, 65537, -262156, 327680, 65537, -262157, 327680, 65537, -65579, 131073, 1, -65580, 65537, 1, -65581, 327680, 65538, -131115, 131073, 0, -131116, 65537, 0, -131117, 262144, 65537, -131118, 262144, 65537, -65582, 262144, 65538, -131119, 1, 0, -65583, 1, 1, -65584, 393217, 1, -65585, 327681, 1, -65586, 393217, 1, -65587, 393217, 1, -65588, 327681, 1, -65589, 327681, 1, -65590, 327681, 1, -65591, 393217, 1, -131114, 196609, 0, -65578, 196609, 1, -131113, 262145, 0, -65577, 262145, 1, -131111, 262144, 65537, -131112, 327680, 65537, -65575, 327680, 65538, -65576, 327680, 65538)
 script = ExtResource("2_5qxml")
 
 [node name="Map Area" type="Area2D" parent="."]
@@ -117,6 +123,7 @@ shape = SubResource("SegmentShape2D_3lqst")
 one_way_collision = true
 
 [node name="Hotdogs" type="Sprite2D" parent="."]
+z_index = 1
 position = Vector2(-411, -80)
 texture = ExtResource("5_h8ksr")
 
@@ -166,6 +173,7 @@ polygon = PackedVector2Array(0, 0, 32, 0, 32, 34, 0, 34)
 uv = PackedVector2Array(0, 0, 32, 0, 32, 32, 0, 32)
 
 [node name="Grass BG 1" type="Polygon2D" parent="BG Upper"]
+z_index = 1
 texture_repeat = 2
 material = SubResource("ShaderMaterial_u0mv1")
 position = Vector2(-208, -96)
@@ -189,8 +197,91 @@ texture = ExtResource("11_dqb2h")
 position = Vector2(143, -7)
 texture = ExtResource("12_isfil")
 
+[node name="Grass BG 3" type="Polygon2D" parent="BG Upper"]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_u0mv1")
+position = Vector2(-640, -64)
+texture = ExtResource("11_p188n")
+polygon = PackedVector2Array(0, 0, 160, 0, 160, 34, 0, 34)
+uv = PackedVector2Array(0, 0, 32, 0, 32, 32, 0, 32)
+
+[node name="Building" type="Sprite2D" parent="BG Upper/Grass BG 3"]
+z_index = -1
+position = Vector2(34, -16)
+texture = ExtResource("12_reril")
+
+[node name="Building 2" type="Sprite2D" parent="BG Upper/Grass BG 3"]
+z_index = -1
+position = Vector2(103, -16)
+texture = ExtResource("12_reril")
+
+[node name="BG Trees" type="Sprite2D" parent="BG Upper/Grass BG 3"]
+position = Vector2(144, -5)
+texture = ExtResource("11_dqb2h")
+
+[node name="BG Trees 2" type="Sprite2D" parent="BG Upper/Grass BG 3"]
+z_index = 1
+position = Vector2(78, -3)
+texture = ExtResource("12_isfil")
+
+[node name="Tree" type="Sprite2D" parent="BG Upper/Grass BG 3"]
+z_index = 2
+position = Vector2(19, -22)
+texture = ExtResource("4_x7s3k")
+
+[node name="Grass BG 4" type="Polygon2D" parent="BG Upper"]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_u0mv1")
+position = Vector2(-736, -64)
+texture = ExtResource("11_p188n")
+polygon = PackedVector2Array(0, 0, 32, 0, 32, 34, 0, 34)
+uv = PackedVector2Array(0, 0, 32, 0, 32, 32, 0, 32)
+
+[node name="Building" type="Sprite2D" parent="BG Upper/Grass BG 4"]
+z_index = -1
+position = Vector2(23, -32)
+texture = ExtResource("12_ors07")
+
+[node name="Building \'2" type="Sprite2D" parent="BG Upper/Grass BG 4"]
+z_index = -1
+position = Vector2(6, -32)
+texture = ExtResource("13_pxkyl")
+
+[node name="Sidewalk 1" type="Polygon2D" parent="BG Upper"]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_u0mv1")
+position = Vector2(-704, -72)
+texture = ExtResource("12_xcids")
+polygon = PackedVector2Array(0, 0, 64, 0, 64, 34, 0, 34)
+uv = PackedVector2Array(0, 0, 32, 0, 32, 32, 0, 32)
+
+[node name="Building" type="Sprite2D" parent="BG Upper/Sidewalk 1"]
+z_index = -1
+position = Vector2(48, -32)
+texture = ExtResource("12_ors07")
+
+[node name="Building \'2" type="Sprite2D" parent="BG Upper/Sidewalk 1"]
+z_index = -1
+position = Vector2(16, -32)
+texture = ExtResource("13_pxkyl")
+
+[node name="Curb 1" type="Polygon2D" parent="BG Upper"]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_u0mv1")
+position = Vector2(-752, -72)
+texture = ExtResource("13_qfehl")
+polygon = PackedVector2Array(0, 0, 16, 0, 16, 34, 0, 34)
+uv = PackedVector2Array(0, 0, 32, 0, 32, 32, 0, 32)
+
+[node name="Curb 2" type="Polygon2D" parent="BG Upper"]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_u0mv1")
+position = Vector2(-880, -64)
+texture = ExtResource("14_n8nm6")
+polygon = PackedVector2Array(0, 0, 128, 0, 128, 34, 0, 34)
+uv = PackedVector2Array(0, 0, 32, 0, 32, 32, 0, 32)
+
 [node name="Grass BG 2" type="Polygon2D" parent="BG Upper"]
-z_index = -2
 texture_repeat = 2
 material = SubResource("ShaderMaterial_u0mv1")
 position = Vector2(-480, -80)
@@ -209,7 +300,13 @@ position = Vector2(159, -8)
 texture = ExtResource("11_dqb2h")
 
 [node name="BG Trees 6" type="Sprite2D" parent="BG Upper/Grass BG 2"]
+z_index = 1
 position = Vector2(129, 1)
+texture = ExtResource("12_isfil")
+
+[node name="BG Trees 10" type="Sprite2D" parent="BG Upper/Grass BG 2"]
+z_index = 1
+position = Vector2(11, -3)
 texture = ExtResource("12_isfil")
 
 [node name="BG Trees 8" type="Sprite2D" parent="BG Upper/Grass BG 2"]
@@ -239,7 +336,6 @@ position = Vector2(197, -7)
 texture = ExtResource("11_dqb2h")
 
 [node name="BG Trees 9" type="Sprite2D" parent="BG Upper/Grass BG 2"]
-z_index = 1
 position = Vector2(254, -7)
 texture = ExtResource("11_dqb2h")
 
