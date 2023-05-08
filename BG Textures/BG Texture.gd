@@ -125,8 +125,6 @@ func _ready():
 					child_y_position[i][j] = pc_y_pos
 					pc.position.x = parent_pos.x + pc_bottom_center.x
 					pc.y_sort_enabled = true
-				else:
-					push_error("BG Texture child isn't a Sprite2D nor a Polygon2D.")
 				j += 1
 		i += 1
 
