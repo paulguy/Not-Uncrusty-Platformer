@@ -1,13 +1,17 @@
-[gd_scene load_steps=41 format=3 uid="uid://d0t3u3e50ljbk"]
+[gd_scene load_steps=47 format=3 uid="uid://d0t3u3e50ljbk"]
 
 [ext_resource type="TileSet" uid="uid://bbcmc4vabwnbb" path="res://Tilesets/world_graphics.tres" id="1_3d2wv"]
 [ext_resource type="Script" path="res://start_area.gd" id="2_nxej3"]
 [ext_resource type="PackedScene" uid="uid://8u7vcedlhsu4" path="res://Mobs/worm.tscn" id="3_7451u"]
 [ext_resource type="TileSet" uid="uid://dqx4iwi5r15fh" path="res://Tilesets/water.tres" id="5_k050t"]
 [ext_resource type="PackedScene" uid="uid://wvpa0pvyksvb" path="res://Mobs/fish.tscn" id="6_krxrc"]
+[ext_resource type="Texture2D" uid="uid://dqpoxjtpdxcje" path="res://Sprites/large cloud 1.png" id="6_ricdt"]
 [ext_resource type="Texture2D" uid="uid://ghyxgx1h5prq" path="res://Sprites/palm tree.png" id="6_w3vmm"]
+[ext_resource type="Texture2D" uid="uid://ct61mf4awkd03" path="res://Sprites/small cloud 1.png" id="7_3lw3x"]
 [ext_resource type="Shader" uid="uid://bmko041neak4w" path="res://noise.tres" id="7_4njp4"]
 [ext_resource type="Script" path="res://BG Textures/BG Texture.gd" id="8_fjrn3"]
+[ext_resource type="Texture2D" uid="uid://bgtvi2rsito0n" path="res://Sprites/small cloud 3.png" id="8_w1ya4"]
+[ext_resource type="Texture2D" uid="uid://dvilcr4dbvxtw" path="res://Sprites/small cloud 2.png" id="9_mgav6"]
 [ext_resource type="Shader" uid="uid://4fumw32rfsdn" path="res://BG Textures/BG Texture.tres" id="9_np6au"]
 [ext_resource type="Texture2D" uid="uid://cn80ndgwlstyp" path="res://BG Textures/water-surface1.png" id="10_8ub77"]
 [ext_resource type="Texture2D" uid="uid://8sro8jh7l1xj" path="res://BG Textures/water-surface2.png" id="11_74ydo"]
@@ -30,6 +34,8 @@
 [ext_resource type="Texture2D" uid="uid://dlp8eh3cekk71" path="res://BG Textures/water-under3.png" id="25_8ubff"]
 [ext_resource type="Texture2D" uid="uid://dk6kpbo3slqbd" path="res://BG Textures/water-under4.png" id="26_5ehot"]
 [ext_resource type="PackedScene" uid="uid://bctbea01ve6tt" path="res://Mobs/bird.tscn" id="30_rr1dr"]
+[ext_resource type="Texture2D" uid="uid://kmfc5kty33kc" path="res://Sprites/starfish.png" id="31_wxl06"]
+[ext_resource type="Texture2D" uid="uid://b31si2j4oi0bj" path="res://Sprites/seashell.png" id="32_7gmre"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mx0sb"]
 size = Vector2(3984, 2548)
@@ -177,6 +183,150 @@ vertex_colors = PackedColorArray(0, 0, 0, 0.290196, 0, 0, 0, 0.290196, 0, 0, 0, 
 z_index = -2
 polygon = PackedVector2Array(-816, -624, 3168, -624, 3168, -2500, -816, -2500)
 vertex_colors = PackedColorArray(0.352941, 0.709804, 1, 1, 0.352941, 0.709804, 1, 1, 0.0392157, 0.137255, 0.360784, 1, 0.0392157, 0.137255, 0.360784, 1)
+
+[node name="Cloud 1" type="Sprite2D" parent="Sky"]
+position = Vector2(862, -1436)
+texture = ExtResource("6_ricdt")
+
+[node name="Cloud 2" type="Sprite2D" parent="Sky"]
+position = Vector2(1345, -1363)
+texture = ExtResource("6_ricdt")
+
+[node name="Cloud 3" type="Sprite2D" parent="Sky"]
+position = Vector2(2046, -1238)
+texture = ExtResource("6_ricdt")
+
+[node name="Cloud 4" type="Sprite2D" parent="Sky"]
+position = Vector2(2801, -1213)
+texture = ExtResource("6_ricdt")
+
+[node name="Cloud 5" type="Sprite2D" parent="Sky"]
+position = Vector2(2386, -1434)
+texture = ExtResource("6_ricdt")
+
+[node name="Cloud 6" type="Sprite2D" parent="Sky"]
+position = Vector2(455, -1693)
+texture = ExtResource("6_ricdt")
+
+[node name="Cloud 7" type="Sprite2D" parent="Sky"]
+position = Vector2(-104, -1766)
+texture = ExtResource("6_ricdt")
+
+[node name="Cloud 8" type="Sprite2D" parent="Sky"]
+position = Vector2(-539, -1605)
+texture = ExtResource("6_ricdt")
+
+[node name="Cloud 9" type="Sprite2D" parent="Sky"]
+position = Vector2(-408, -1985)
+texture = ExtResource("6_ricdt")
+
+[node name="Cloud 10" type="Sprite2D" parent="Sky"]
+position = Vector2(1123, -1655)
+texture = ExtResource("6_ricdt")
+
+[node name="Cloud 11" type="Sprite2D" parent="Sky"]
+position = Vector2(1651, -1555)
+texture = ExtResource("6_ricdt")
+
+[node name="Cloud 12" type="Sprite2D" parent="Sky"]
+position = Vector2(2132, -1706)
+texture = ExtResource("6_ricdt")
+
+[node name="Cloud 13" type="Sprite2D" parent="Sky"]
+position = Vector2(2869, -1607)
+texture = ExtResource("6_ricdt")
+
+[node name="Cloud 14" type="Sprite2D" parent="Sky"]
+position = Vector2(1497, -1854)
+texture = ExtResource("6_ricdt")
+
+[node name="Cloud 15" type="Sprite2D" parent="Sky"]
+position = Vector2(754, -1935)
+texture = ExtResource("6_ricdt")
+
+[node name="Cloud 16" type="Sprite2D" parent="Sky"]
+position = Vector2(2639, -1943)
+texture = ExtResource("6_ricdt")
+
+[node name="Small Cloud 1" type="Sprite2D" parent="Sky"]
+position = Vector2(574, -1281)
+texture = ExtResource("7_3lw3x")
+
+[node name="Small Cloud 2" type="Sprite2D" parent="Sky"]
+position = Vector2(760, -1346)
+texture = ExtResource("8_w1ya4")
+
+[node name="Small Cloud 3" type="Sprite2D" parent="Sky"]
+position = Vector2(1062, -1299)
+texture = ExtResource("9_mgav6")
+
+[node name="Small Cloud 4" type="Sprite2D" parent="Sky"]
+position = Vector2(1319, -1233)
+texture = ExtResource("7_3lw3x")
+
+[node name="Small Cloud 5" type="Sprite2D" parent="Sky"]
+position = Vector2(876, -1233)
+texture = ExtResource("8_w1ya4")
+
+[node name="Small Cloud 6" type="Sprite2D" parent="Sky"]
+position = Vector2(1560, -1138)
+texture = ExtResource("9_mgav6")
+
+[node name="Small Cloud 7" type="Sprite2D" parent="Sky"]
+position = Vector2(1689, -1292)
+texture = ExtResource("7_3lw3x")
+
+[node name="Small Cloud 8" type="Sprite2D" parent="Sky"]
+position = Vector2(1877, -1032)
+texture = ExtResource("7_3lw3x")
+
+[node name="Small Cloud 9" type="Sprite2D" parent="Sky"]
+position = Vector2(1973, -1397)
+texture = ExtResource("7_3lw3x")
+
+[node name="Small Cloud 10" type="Sprite2D" parent="Sky"]
+position = Vector2(2419, -1228)
+texture = ExtResource("9_mgav6")
+
+[node name="Small Cloud 11" type="Sprite2D" parent="Sky"]
+position = Vector2(2245, -1097)
+texture = ExtResource("8_w1ya4")
+
+[node name="Small Cloud 12" type="Sprite2D" parent="Sky"]
+position = Vector2(2604, -1123)
+texture = ExtResource("7_3lw3x")
+
+[node name="Small Cloud 13" type="Sprite2D" parent="Sky"]
+position = Vector2(3040, -1083)
+texture = ExtResource("9_mgav6")
+
+[node name="Small Cloud 14" type="Sprite2D" parent="Sky"]
+position = Vector2(2941, -1349)
+texture = ExtResource("8_w1ya4")
+
+[node name="Small Cloud 15" type="Sprite2D" parent="Sky"]
+position = Vector2(2622, -1345)
+texture = ExtResource("8_w1ya4")
+
+[node name="Small Cloud 16" type="Sprite2D" parent="Sky"]
+position = Vector2(2821, -1067)
+texture = ExtResource("7_3lw3x")
+
+[node name="Small Cloud 17" type="Sprite2D" parent="Sky"]
+position = Vector2(2428, -1098)
+texture = ExtResource("8_w1ya4")
+
+[node name="Small Cloud 18" type="Sprite2D" parent="Sky"]
+position = Vector2(2033, -1095)
+texture = ExtResource("7_3lw3x")
+
+[node name="Small Cloud 19" type="Sprite2D" parent="Sky"]
+position = Vector2(1761, -1138)
+texture = ExtResource("9_mgav6")
+
+[node name="Small Cloud 20" type="Sprite2D" parent="Sky"]
+position = Vector2(1496, -1264)
+texture = ExtResource("7_3lw3x")
 
 [node name="Sky Mask" type="Polygon2D" parent="."]
 z_index = -2
@@ -664,3 +814,38 @@ position = Vector2(458, -1035)
 
 [node name="Bird2" parent="." instance=ExtResource("30_rr1dr")]
 position = Vector2(407, -1048)
+
+[node name="Starfish 1" type="Sprite2D" parent="."]
+z_index = 13
+position = Vector2(2220, -597)
+rotation = 1.92161
+texture = ExtResource("31_wxl06")
+
+[node name="Starfish 2" type="Sprite2D" parent="."]
+z_index = 13
+position = Vector2(2299, -559)
+texture = ExtResource("31_wxl06")
+
+[node name="Starfish 3" type="Sprite2D" parent="."]
+z_index = 13
+position = Vector2(2426, -495)
+rotation = -3.20093
+texture = ExtResource("31_wxl06")
+
+[node name="Shell 1" type="Sprite2D" parent="."]
+z_index = 13
+position = Vector2(2147, -634)
+rotation = 0.879646
+texture = ExtResource("32_7gmre")
+
+[node name="Shell 2" type="Sprite2D" parent="."]
+z_index = 13
+position = Vector2(2090, -662)
+rotation = -1.6825
+texture = ExtResource("32_7gmre")
+
+[node name="Shell 3" type="Sprite2D" parent="."]
+z_index = 13
+position = Vector2(1935, -683)
+rotation = 3.23584
+texture = ExtResource("32_7gmre")
