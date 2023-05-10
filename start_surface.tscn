@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=3 uid="uid://d0t3u3e50ljbk"]
+[gd_scene load_steps=49 format=3 uid="uid://d0t3u3e50ljbk"]
 
 [ext_resource type="TileSet" uid="uid://bbcmc4vabwnbb" path="res://Tilesets/world_graphics.tres" id="1_3d2wv"]
 [ext_resource type="Script" path="res://start_area.gd" id="2_nxej3"]
@@ -36,6 +36,8 @@
 [ext_resource type="PackedScene" uid="uid://bctbea01ve6tt" path="res://Mobs/bird.tscn" id="30_rr1dr"]
 [ext_resource type="Texture2D" uid="uid://kmfc5kty33kc" path="res://Sprites/starfish.png" id="31_wxl06"]
 [ext_resource type="Texture2D" uid="uid://b31si2j4oi0bj" path="res://Sprites/seashell.png" id="32_7gmre"]
+[ext_resource type="Texture2D" uid="uid://d1qbe08fot1f1" path="res://Sprites/trash can full.png" id="37_7o8wb"]
+[ext_resource type="Texture2D" uid="uid://bxvafj0y4527t" path="res://Sprites/recycle bin full.png" id="38_x84id"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mx0sb"]
 size = Vector2(3984, 2548)
@@ -849,3 +851,23 @@ z_index = 13
 position = Vector2(1935, -683)
 rotation = 3.23584
 texture = ExtResource("32_7gmre")
+
+[node name="Trash Can 1" type="Sprite2D" parent="."]
+position = Vector2(565, -981)
+texture = ExtResource("37_7o8wb")
+
+[node name="Trash Can 2" type="Sprite2D" parent="."]
+position = Vector2(575, -981)
+texture = ExtResource("37_7o8wb")
+
+[node name="Trash Can 3" type="Sprite2D" parent="."]
+position = Vector2(586, -981)
+texture = ExtResource("37_7o8wb")
+
+[node name="Trash Can 4" type="Sprite2D" parent="."]
+position = Vector2(596, -981)
+texture = ExtResource("37_7o8wb")
+
+[node name="Trash Can 5" type="Sprite2D" parent="."]
+position = Vector2(609, -981)
+texture = ExtResource("38_x84id")
