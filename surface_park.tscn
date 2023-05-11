@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=3 uid="uid://dyxnvg3ae2i8l"]
+[gd_scene load_steps=44 format=3 uid="uid://dyxnvg3ae2i8l"]
 
 [ext_resource type="TileSet" uid="uid://bbcmc4vabwnbb" path="res://Tilesets/world_graphics.tres" id="1_kjjmx"]
 [ext_resource type="Script" path="res://surface_park.gd" id="2_5qxml"]
@@ -31,6 +31,7 @@
 [ext_resource type="Texture2D" uid="uid://behal7m72y0uu" path="res://Sprites/recycle bin.png" id="29_g83wh"]
 [ext_resource type="Texture2D" uid="uid://bxvafj0y4527t" path="res://Sprites/recycle bin full.png" id="30_yre01"]
 [ext_resource type="Texture2D" uid="uid://bc33bxoduqav2" path="res://Sprites/trash can.png" id="31_tva86"]
+[ext_resource type="Shader" uid="uid://t8fgwpvgq8ww" path="res://CRT2.tres" id="32_1sjlx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p7in6"]
 size = Vector2(2000, 2500)
@@ -91,6 +92,9 @@ shader = ExtResource("10_6tqd6")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_3deqy"]
 shader = ExtResource("12_bkuoe")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1bdu6"]
+shader = ExtResource("32_1sjlx")
 
 [node name="Surface Park" type="TileMap"]
 tile_set = ExtResource("1_kjjmx")
@@ -571,3 +575,8 @@ texture = ExtResource("31_tva86")
 [node name="Fence Post" type="Sprite2D" parent="."]
 position = Vector2(-1102, -64)
 texture = ExtResource("16_7wfwx")
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+z_index = 20
+material = SubResource("ShaderMaterial_1bdu6")
+polygon = PackedVector2Array(-35, -196, -691, -196, -536, -20, -7, -23)
