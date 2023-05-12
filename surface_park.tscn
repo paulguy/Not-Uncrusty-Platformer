@@ -31,7 +31,7 @@
 [ext_resource type="Texture2D" uid="uid://behal7m72y0uu" path="res://Sprites/recycle bin.png" id="29_g83wh"]
 [ext_resource type="Texture2D" uid="uid://bxvafj0y4527t" path="res://Sprites/recycle bin full.png" id="30_yre01"]
 [ext_resource type="Texture2D" uid="uid://bc33bxoduqav2" path="res://Sprites/trash can.png" id="31_tva86"]
-[ext_resource type="Shader" uid="uid://t8fgwpvgq8ww" path="res://CRT2.tres" id="32_p4aiv"]
+[ext_resource type="Shader" uid="uid://t8fgwpvgq8ww" path="res://CRT2.tres" id="32_i50o3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p7in6"]
 size = Vector2(2000, 2500)
@@ -94,7 +94,7 @@ shader = ExtResource("10_6tqd6")
 shader = ExtResource("12_bkuoe")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_1bdu6"]
-shader = ExtResource("32_p4aiv")
+shader = ExtResource("32_i50o3")
 
 [node name="Surface Park" type="TileMap"]
 tile_set = ExtResource("1_kjjmx")

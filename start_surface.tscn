@@ -1,4 +1,4 @@
-[gd_scene load_steps=49 format=3 uid="uid://d0t3u3e50ljbk"]
+[gd_scene load_steps=50 format=3 uid="uid://d0t3u3e50ljbk"]
 
 [ext_resource type="TileSet" uid="uid://bbcmc4vabwnbb" path="res://Tilesets/world_graphics.tres" id="1_3d2wv"]
 [ext_resource type="Script" path="res://start_area.gd" id="2_nxej3"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://ghyxgx1h5prq" path="res://Sprites/palm tree.png" id="6_w3vmm"]
 [ext_resource type="Texture2D" uid="uid://ct61mf4awkd03" path="res://Sprites/small cloud 1.png" id="7_3lw3x"]
 [ext_resource type="Shader" uid="uid://bmko041neak4w" path="res://noise.tres" id="7_4njp4"]
+[ext_resource type="Texture2D" uid="uid://ckbvcyxd6dh75" path="res://Sprites/large cloud 2.png" id="7_522o3"]
 [ext_resource type="Script" path="res://BG Textures/BG Texture.gd" id="8_fjrn3"]
 [ext_resource type="Texture2D" uid="uid://bgtvi2rsito0n" path="res://Sprites/small cloud 3.png" id="8_w1ya4"]
 [ext_resource type="Texture2D" uid="uid://dvilcr4dbvxtw" path="res://Sprites/small cloud 2.png" id="9_mgav6"]
@@ -192,7 +193,7 @@ texture = ExtResource("6_ricdt")
 
 [node name="Cloud 2" type="Sprite2D" parent="Sky"]
 position = Vector2(1345, -1363)
-texture = ExtResource("6_ricdt")
+texture = ExtResource("7_522o3")
 
 [node name="Cloud 3" type="Sprite2D" parent="Sky"]
 position = Vector2(2046, -1238)
@@ -208,11 +209,11 @@ texture = ExtResource("6_ricdt")
 
 [node name="Cloud 6" type="Sprite2D" parent="Sky"]
 position = Vector2(455, -1693)
-texture = ExtResource("6_ricdt")
+texture = ExtResource("7_522o3")
 
 [node name="Cloud 7" type="Sprite2D" parent="Sky"]
 position = Vector2(-104, -1766)
-texture = ExtResource("6_ricdt")
+texture = ExtResource("7_522o3")
 
 [node name="Cloud 8" type="Sprite2D" parent="Sky"]
 position = Vector2(-539, -1605)
@@ -220,7 +221,7 @@ texture = ExtResource("6_ricdt")
 
 [node name="Cloud 9" type="Sprite2D" parent="Sky"]
 position = Vector2(-408, -1985)
-texture = ExtResource("6_ricdt")
+texture = ExtResource("7_522o3")
 
 [node name="Cloud 10" type="Sprite2D" parent="Sky"]
 position = Vector2(1123, -1655)
@@ -228,7 +229,7 @@ texture = ExtResource("6_ricdt")
 
 [node name="Cloud 11" type="Sprite2D" parent="Sky"]
 position = Vector2(1651, -1555)
-texture = ExtResource("6_ricdt")
+texture = ExtResource("7_522o3")
 
 [node name="Cloud 12" type="Sprite2D" parent="Sky"]
 position = Vector2(2132, -1706)
@@ -236,7 +237,7 @@ texture = ExtResource("6_ricdt")
 
 [node name="Cloud 13" type="Sprite2D" parent="Sky"]
 position = Vector2(2869, -1607)
-texture = ExtResource("6_ricdt")
+texture = ExtResource("7_522o3")
 
 [node name="Cloud 14" type="Sprite2D" parent="Sky"]
 position = Vector2(1497, -1854)
@@ -244,11 +245,11 @@ texture = ExtResource("6_ricdt")
 
 [node name="Cloud 15" type="Sprite2D" parent="Sky"]
 position = Vector2(754, -1935)
-texture = ExtResource("6_ricdt")
+texture = ExtResource("7_522o3")
 
 [node name="Cloud 16" type="Sprite2D" parent="Sky"]
 position = Vector2(2639, -1943)
-texture = ExtResource("6_ricdt")
+texture = ExtResource("7_522o3")
 
 [node name="Small Cloud 1" type="Sprite2D" parent="Sky"]
 position = Vector2(574, -1281)
