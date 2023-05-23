@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=167 format=3 uid="uid://bbcmc4vabwnbb"]
+[gd_resource type="TileSet" load_steps=177 format=3 uid="uid://bbcmc4vabwnbb"]
 
 [ext_resource type="Shader" path="res://Tilesets/bg blend.gdshader" id="1_yy7te"]
 [ext_resource type="Shader" uid="uid://dkopu1grc0cvh" path="res://Tilesets/dirt.tres" id="2_ir5ov"]
@@ -56,6 +56,15 @@ tile_data = PackedInt32Array(0, 458752, 131077, 1, 393216, 131077)
 tile_data = PackedInt32Array(0, 262144, 65542, 65536, 262144, 65543)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_bufin"]
+shader = ExtResource("1_yy7te")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_68ttm"]
+shader = ExtResource("1_yy7te")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3sbj7"]
+shader = ExtResource("1_yy7te")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7xbvg"]
 shader = ExtResource("1_yy7te")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_hggpi"]
@@ -137,6 +146,15 @@ shader = ExtResource("7_jey6n")
 shader = ExtResource("7_jey6n")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_rjlgm"]
+shader = ExtResource("1_yy7te")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_lsrbg"]
+shader = ExtResource("1_yy7te")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ltoxp"]
+shader = ExtResource("1_yy7te")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_yrwe0"]
 shader = ExtResource("1_yy7te")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_7l8xl"]
@@ -241,6 +259,9 @@ shader = ExtResource("7_jey6n")
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_s82jf"]
 shader = ExtResource("7_jey6n")
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ho0re"]
+shader = ExtResource("1_yy7te")
+
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_5qcfy"]
 shader = ExtResource("7_jey6n")
 
@@ -252,6 +273,9 @@ shader = ExtResource("7_jey6n")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_odvtg"]
 shader = ExtResource("7_jey6n")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_usesr"]
+shader = ExtResource("1_yy7te")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_mb2dx"]
 shader = ExtResource("7_jey6n")
@@ -271,6 +295,9 @@ shader = ExtResource("8_1hn1q")
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_7qtv3"]
 shader = ExtResource("8_1hn1q")
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_t5gl5"]
+shader = ExtResource("1_yy7te")
+
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_rvke1"]
 shader = ExtResource("7_jey6n")
 
@@ -282,6 +309,9 @@ shader = ExtResource("8_1hn1q")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_wqb1h"]
 shader = ExtResource("8_1hn1q")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_87pov"]
+shader = ExtResource("1_yy7te")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_h4leh"]
 shader = ExtResource("7_jey6n")
@@ -357,30 +387,96 @@ shader = ExtResource("7_jey6n")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3m074"]
 texture = ExtResource("9_msk8v")
+0:1/next_alternative_id = 3
 0:1/0 = 0
 0:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:1/0/physics_layer_0/angular_velocity = 0.0
 0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:1/1 = 1
+0:1/1/modulate = Color(0.501961, 0.180392, 0.113725, 1)
+0:1/1/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:1/1/physics_layer_0/angular_velocity = 0.0
+0:1/1/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:1/2 = 2
+0:1/2/modulate = Color(0.113725, 0.0627451, 0.027451, 1)
+0:1/2/material = SubResource("ShaderMaterial_68ttm")
+0:1/2/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:1/2/physics_layer_0/angular_velocity = 0.0
+0:2/next_alternative_id = 3
 0:2/0 = 0
 0:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:2/0/physics_layer_0/angular_velocity = 0.0
 0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:2/1 = 1
+0:2/1/modulate = Color(0.501961, 0.180392, 0.113725, 1)
+0:2/1/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:2/1/physics_layer_0/angular_velocity = 0.0
+0:2/1/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:2/2 = 2
+0:2/2/modulate = Color(0.113725, 0.0627451, 0.027451, 1)
+0:2/2/material = SubResource("ShaderMaterial_3sbj7")
+0:2/2/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:2/2/physics_layer_0/angular_velocity = 0.0
+0:3/next_alternative_id = 3
 0:3/0 = 0
 0:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:3/0/physics_layer_0/angular_velocity = 0.0
 0:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:3/1 = 1
+0:3/1/modulate = Color(0.501961, 0.180392, 0.113725, 1)
+0:3/1/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:3/1/physics_layer_0/angular_velocity = 0.0
+0:3/1/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:3/2 = 2
+0:3/2/modulate = Color(0.113725, 0.0627451, 0.027451, 1)
+0:3/2/material = SubResource("ShaderMaterial_7xbvg")
+0:3/2/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:3/2/physics_layer_0/angular_velocity = 0.0
+1:3/next_alternative_id = 4
 1:3/0 = 0
 1:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 1:3/0/physics_layer_0/angular_velocity = 0.0
 1:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:3/1 = 1
+1:3/1/modulate = Color(0.501961, 0.180392, 0.113725, 1)
+1:3/1/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:3/1/physics_layer_0/angular_velocity = 0.0
+1:3/1/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:3/2 = 2
+1:3/2/modulate = Color(0.113725, 0.0627451, 0.027451, 1)
+1:3/2/material = SubResource("ShaderMaterial_yrwe0")
+1:3/2/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:3/2/physics_layer_0/angular_velocity = 0.0
+1:2/next_alternative_id = 3
 1:2/0 = 0
 1:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 1:2/0/physics_layer_0/angular_velocity = 0.0
 1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:2/1 = 1
+1:2/1/modulate = Color(0.501961, 0.180392, 0.113725, 1)
+1:2/1/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:2/1/physics_layer_0/angular_velocity = 0.0
+1:2/1/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:2/2 = 2
+1:2/2/modulate = Color(0.113725, 0.0627451, 0.027451, 1)
+1:2/2/material = SubResource("ShaderMaterial_ltoxp")
+1:2/2/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:2/2/physics_layer_0/angular_velocity = 0.0
+1:1/next_alternative_id = 3
 1:1/0 = 0
 1:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 1:1/0/physics_layer_0/angular_velocity = 0.0
 1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:1/1 = 1
+1:1/1/modulate = Color(0.501961, 0.180392, 0.113725, 1)
+1:1/1/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:1/1/physics_layer_0/angular_velocity = 0.0
+1:1/1/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:1/2 = 2
+1:1/2/modulate = Color(0.113725, 0.0627451, 0.027451, 1)
+1:1/2/material = SubResource("ShaderMaterial_lsrbg")
+1:1/2/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:1/2/physics_layer_0/angular_velocity = 0.0
 1:0/next_alternative_id = 3
 1:0/0 = 0
 1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
@@ -436,14 +532,26 @@ texture = ExtResource("9_msk8v")
 2:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 2:2/0/physics_layer_0/angular_velocity = 0.0
 2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, -8, 8, 8, -8, 8, 0, -8)
+2:3/next_alternative_id = 2
 2:3/0 = 0
 2:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 2:3/0/physics_layer_0/angular_velocity = 0.0
 2:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 0, -8, 0, 0, -8, 0)
+2:3/1 = 1
+2:3/1/modulate = Color(0.956863, 0.913725, 0.568627, 1)
+2:3/1/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:3/1/physics_layer_0/angular_velocity = 0.0
+2:3/1/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 0, -8, 0, 0, -8, 0)
+3:3/next_alternative_id = 2
 3:3/0 = 0
 3:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 3:3/0/physics_layer_0/angular_velocity = 0.0
 3:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(0, -8, 8, -8, 8, 0, 0, 0)
+3:3/1 = 1
+3:3/1/modulate = Color(0.956863, 0.913725, 0.568627, 1)
+3:3/1/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:3/1/physics_layer_0/angular_velocity = 0.0
+3:3/1/physics_layer_0/polygon_0/points = PackedVector2Array(8, -8, 0, -8, 0, 0, 8, 0)
 4:3/next_alternative_id = 2
 4:3/0 = 0
 4:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
@@ -454,10 +562,16 @@ texture = ExtResource("9_msk8v")
 4:3/1/physics_layer_0/linear_velocity = Vector2(0, 0)
 4:3/1/physics_layer_0/angular_velocity = 0.0
 4:3/1/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 0, -8, 8, 0, 8, 0, 0)
+5:3/next_alternative_id = 2
 5:3/0 = 0
 5:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 5:3/0/physics_layer_0/angular_velocity = 0.0
 5:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(0, 0, 8, 0, 8, 8, 0, 8)
+5:3/1 = 1
+5:3/1/modulate = Color(0.956863, 0.913725, 0.568627, 1)
+5:3/1/physics_layer_0/linear_velocity = Vector2(0, 0)
+5:3/1/physics_layer_0/angular_velocity = 0.0
+5:3/1/physics_layer_0/polygon_0/points = PackedVector2Array(8, 8, 0, 8, 0, 0, 8, 0)
 5:4/next_alternative_id = 2
 5:4/0 = 0
 5:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
@@ -468,16 +582,25 @@ texture = ExtResource("9_msk8v")
 5:4/1/physics_layer_0/linear_velocity = Vector2(0, 0)
 5:4/1/physics_layer_0/angular_velocity = 0.0
 5:4/1/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 0, -8, 8, 8, 8, 8, 0)
-4:4/next_alternative_id = 2
+4:4/next_alternative_id = 3
 4:4/0 = 0
 4:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 4:4/0/physics_layer_0/angular_velocity = 0.0
 4:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, -8, 8, 0, -8, 0, -8, -8)
-3:4/next_alternative_id = 2
+4:4/2 = 2
+4:4/2/modulate = Color(0.956863, 0.913725, 0.568627, 1)
+4:4/2/physics_layer_0/linear_velocity = Vector2(0, 0)
+4:4/2/physics_layer_0/angular_velocity = 0.0
+4:4/2/physics_layer_0/polygon_0/points = PackedVector2Array(8, -8, -8, -8, -8, 0, 8, 0)
+3:4/next_alternative_id = 3
 3:4/0 = 0
 3:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 3:4/0/physics_layer_0/angular_velocity = 0.0
 3:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, -8, 8, 8, 0, 8, 0, -8)
+3:4/2 = 2
+3:4/2/modulate = Color(0.745098, 0.403922, 0.0784314, 1)
+3:4/2/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:4/2/physics_layer_0/angular_velocity = 0.0
 2:4/next_alternative_id = 2
 2:4/0 = 0
 2:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
@@ -487,7 +610,7 @@ texture = ExtResource("9_msk8v")
 2:4/1/modulate = Color(0.745098, 0.403922, 0.0784314, 1)
 2:4/1/physics_layer_0/linear_velocity = Vector2(0, 0)
 2:4/1/physics_layer_0/angular_velocity = 0.0
-2:5/next_alternative_id = 2
+2:5/next_alternative_id = 3
 2:5/0 = 0
 2:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 2:5/0/physics_layer_0/angular_velocity = 0.0
@@ -497,18 +620,56 @@ texture = ExtResource("9_msk8v")
 2:5/1/physics_layer_0/linear_velocity = Vector2(0, 0)
 2:5/1/physics_layer_0/angular_velocity = 0.0
 2:5/1/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:5/2 = 2
+2:5/2/modulate = Color(0.113725, 0.0627451, 0.027451, 1)
+2:5/2/material = SubResource("ShaderMaterial_ho0re")
+2:5/2/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:5/2/physics_layer_0/angular_velocity = 0.0
+3:5/next_alternative_id = 3
 3:5/0 = 0
 3:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 3:5/0/physics_layer_0/angular_velocity = 0.0
 3:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:5/1 = 1
+3:5/1/modulate = Color(0.501961, 0.180392, 0.113725, 1)
+3:5/1/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:5/1/physics_layer_0/angular_velocity = 0.0
+3:5/1/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:5/2 = 2
+3:5/2/modulate = Color(0.113725, 0.0627451, 0.027451, 1)
+3:5/2/material = SubResource("ShaderMaterial_usesr")
+3:5/2/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:5/2/physics_layer_0/angular_velocity = 0.0
+4:5/next_alternative_id = 3
 4:5/0 = 0
 4:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 4:5/0/physics_layer_0/angular_velocity = 0.0
 4:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:5/1 = 1
+4:5/1/modulate = Color(0.501961, 0.180392, 0.113725, 1)
+4:5/1/physics_layer_0/linear_velocity = Vector2(0, 0)
+4:5/1/physics_layer_0/angular_velocity = 0.0
+4:5/1/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:5/2 = 2
+4:5/2/modulate = Color(0.113725, 0.0627451, 0.027451, 1)
+4:5/2/material = SubResource("ShaderMaterial_t5gl5")
+4:5/2/physics_layer_0/linear_velocity = Vector2(0, 0)
+4:5/2/physics_layer_0/angular_velocity = 0.0
+5:5/next_alternative_id = 3
 5:5/0 = 0
 5:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 5:5/0/physics_layer_0/angular_velocity = 0.0
 5:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+5:5/1 = 1
+5:5/1/modulate = Color(0.501961, 0.180392, 0.113725, 1)
+5:5/1/physics_layer_0/linear_velocity = Vector2(0, 0)
+5:5/1/physics_layer_0/angular_velocity = 0.0
+5:5/1/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+5:5/2 = 2
+5:5/2/modulate = Color(0.113725, 0.0627451, 0.027451, 1)
+5:5/2/material = SubResource("ShaderMaterial_87pov")
+5:5/2/physics_layer_0/linear_velocity = Vector2(0, 0)
+5:5/2/physics_layer_0/angular_velocity = 0.0
 0:0/next_alternative_id = 3
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)

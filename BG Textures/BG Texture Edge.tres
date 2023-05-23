@@ -33,6 +33,8 @@ function = 31
 
 [resource]
 code = "shader_type canvas_item;
+render_mode blend_mix;
+
 
 
 

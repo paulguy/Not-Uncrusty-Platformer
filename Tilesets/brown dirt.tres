@@ -51,6 +51,8 @@ input_name = "screen_uv"
 
 [resource]
 code = "shader_type canvas_item;
+render_mode blend_mix;
+
 uniform sampler2D curve_frg_2 : repeat_disable;
 uniform sampler2D curve_frg_5 : repeat_disable;
 uniform sampler2D curve_frg_6 : repeat_disable;

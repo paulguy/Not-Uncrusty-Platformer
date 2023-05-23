@@ -37,7 +37,7 @@ position = Vector2(200, 150)
 shape = SubResource("RectangleShape2D_b62dn")
 
 [node name="Player" parent="." instance=ExtResource("2_g2lhd")]
-position = Vector2(-938, -2246)
+position = Vector2(-34, -82)
 
 [node name="Start Tunnel" parent="." instance=ExtResource("7_gd3fx")]
 position = Vector2(-192, -192)
