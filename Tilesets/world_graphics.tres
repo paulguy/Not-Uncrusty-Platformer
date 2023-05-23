@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=185 format=3 uid="uid://bbcmc4vabwnbb"]
+[gd_resource type="TileSet" load_steps=197 format=3 uid="uid://bbcmc4vabwnbb"]
 
 [ext_resource type="Shader" path="res://Tilesets/bg blend.gdshader" id="1_yy7te"]
 [ext_resource type="Shader" uid="uid://dkopu1grc0cvh" path="res://Tilesets/dirt.tres" id="2_ir5ov"]
@@ -1479,6 +1479,9 @@ texture = ExtResource("9_msk8v")
 1:8/4/material = SubResource("ShaderMaterial_ercgm")
 1:8/4/physics_layer_0/linear_velocity = Vector2(0, 0)
 1:8/4/physics_layer_0/angular_velocity = 0.0
+2:8/0 = 0
+2:8/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:8/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3b4qp"]
 texture = ExtResource("10_rtur7")
@@ -1605,6 +1608,30 @@ shader = ExtResource("10_u15w4")
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_g0mlc"]
 shader = ExtResource("10_u15w4")
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_gm7yv"]
+shader = ExtResource("10_u15w4")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_vbtch"]
+shader = ExtResource("10_u15w4")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_c5qm1"]
+shader = ExtResource("10_u15w4")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ye36a"]
+shader = ExtResource("10_u15w4")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_04g80"]
+shader = ExtResource("10_u15w4")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_uxnpy"]
+shader = ExtResource("10_u15w4")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_i1i8t"]
+shader = ExtResource("10_u15w4")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_6qupo"]
+shader = ExtResource("10_u15w4")
+
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_p3g3s"]
 blend_mode = 1
 
@@ -1631,6 +1658,18 @@ blend_mode = 1
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_m1g3u"]
 blend_mode = 1
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qwm7n"]
+shader = ExtResource("10_u15w4")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8la1y"]
+shader = ExtResource("10_u15w4")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_jdavp"]
+shader = ExtResource("10_u15w4")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_725da"]
+shader = ExtResource("10_u15w4")
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_g7pjh"]
 blend_mode = 1
@@ -1975,24 +2014,87 @@ texture = ExtResource("11_4h5df")
 0:6/4/material = SubResource("ShaderMaterial_v54ig")
 0:6/4/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:6/4/physics_layer_0/angular_velocity = 0.0
+1:6/next_alternative_id = 5
 1:6/0 = 0
 1:6/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 1:6/0/physics_layer_0/angular_velocity = 0.0
+1:6/1 = 1
+1:6/1/material = SubResource("ShaderMaterial_gm7yv")
+1:6/1/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:6/1/physics_layer_0/angular_velocity = 0.0
+1:6/2 = 2
+1:6/2/flip_h = true
+1:6/2/material = SubResource("ShaderMaterial_vbtch")
+1:6/2/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:6/2/physics_layer_0/angular_velocity = 0.0
+1:6/3 = 3
+1:6/3/flip_v = true
+1:6/3/material = SubResource("ShaderMaterial_c5qm1")
+1:6/3/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:6/3/physics_layer_0/angular_velocity = 0.0
+1:6/4 = 4
+1:6/4/flip_h = true
+1:6/4/flip_v = true
+1:6/4/material = SubResource("ShaderMaterial_ye36a")
+1:6/4/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:6/4/physics_layer_0/angular_velocity = 0.0
 2:6/0 = 0
 2:6/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 2:6/0/physics_layer_0/angular_velocity = 0.0
+3:6/next_alternative_id = 5
 3:6/0 = 0
 3:6/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 3:6/0/physics_layer_0/angular_velocity = 0.0
+3:6/1 = 1
+3:6/1/material = SubResource("ShaderMaterial_qwm7n")
+3:6/1/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:6/1/physics_layer_0/angular_velocity = 0.0
+3:6/2 = 2
+3:6/2/flip_h = true
+3:6/2/material = SubResource("ShaderMaterial_8la1y")
+3:6/2/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:6/2/physics_layer_0/angular_velocity = 0.0
+3:6/3 = 3
+3:6/3/flip_v = true
+3:6/3/material = SubResource("ShaderMaterial_jdavp")
+3:6/3/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:6/3/physics_layer_0/angular_velocity = 0.0
+3:6/4 = 4
+3:6/4/flip_h = true
+3:6/4/flip_v = true
+3:6/4/material = SubResource("ShaderMaterial_725da")
+3:6/4/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:6/4/physics_layer_0/angular_velocity = 0.0
 0:7/0 = 0
 0:7/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:7/0/physics_layer_0/angular_velocity = 0.0
-1:7/0 = 0
-1:7/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-1:7/0/physics_layer_0/angular_velocity = 0.0
 2:7/0 = 0
 2:7/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 2:7/0/physics_layer_0/angular_velocity = 0.0
+1:7/next_alternative_id = 5
+1:7/0 = 0
+1:7/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:7/0/physics_layer_0/angular_velocity = 0.0
+1:7/1 = 1
+1:7/1/material = SubResource("ShaderMaterial_04g80")
+1:7/1/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:7/1/physics_layer_0/angular_velocity = 0.0
+1:7/2 = 2
+1:7/2/flip_h = true
+1:7/2/material = SubResource("ShaderMaterial_uxnpy")
+1:7/2/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:7/2/physics_layer_0/angular_velocity = 0.0
+1:7/3 = 3
+1:7/3/transpose = true
+1:7/3/material = SubResource("ShaderMaterial_i1i8t")
+1:7/3/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:7/3/physics_layer_0/angular_velocity = 0.0
+1:7/4 = 4
+1:7/4/flip_v = true
+1:7/4/transpose = true
+1:7/4/material = SubResource("ShaderMaterial_6qupo")
+1:7/4/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:7/4/physics_layer_0/angular_velocity = 0.0
 
 [resource]
 physics_layer_0/collision_layer = 1
