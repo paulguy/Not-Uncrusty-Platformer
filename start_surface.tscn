@@ -854,21 +854,21 @@ rotation = 3.23584
 texture = ExtResource("32_7gmre")
 
 [node name="Trash Can 1" type="Sprite2D" parent="."]
-position = Vector2(565, -981)
+position = Vector2(557, -984)
 texture = ExtResource("37_7o8wb")
 
 [node name="Trash Can 2" type="Sprite2D" parent="."]
-position = Vector2(575, -981)
+position = Vector2(572, -984)
 texture = ExtResource("37_7o8wb")
 
 [node name="Trash Can 3" type="Sprite2D" parent="."]
-position = Vector2(586, -981)
+position = Vector2(585, -984)
 texture = ExtResource("37_7o8wb")
 
 [node name="Trash Can 4" type="Sprite2D" parent="."]
-position = Vector2(596, -981)
+position = Vector2(601, -984)
 texture = ExtResource("37_7o8wb")
 
 [node name="Trash Can 5" type="Sprite2D" parent="."]
-position = Vector2(609, -981)
+position = Vector2(615, -984)
 texture = ExtResource("38_x84id")

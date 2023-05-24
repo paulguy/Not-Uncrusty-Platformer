@@ -578,27 +578,32 @@ texture = ExtResource("27_6iaa2")
 
 [node name="Trash Can 1" type="Sprite2D" parent="."]
 z_index = 1
-position = Vector2(-1079, -46)
+position = Vector2(-1080, -49)
 texture = ExtResource("28_q6wtj")
 
 [node name="Trash Can 2" type="Sprite2D" parent="."]
 z_index = 1
-position = Vector2(-1070, -46)
+position = Vector2(-1067, -49)
 texture = ExtResource("29_g83wh")
 
 [node name="Trash Can 3" type="Sprite2D" parent="."]
 z_index = 1
-position = Vector2(-1061, -46)
+position = Vector2(-1055, -49)
 texture = ExtResource("28_q6wtj")
 
 [node name="Trash Can 4" type="Sprite2D" parent="."]
 z_index = 1
-position = Vector2(-1052, -46)
+position = Vector2(-1042, -49)
 texture = ExtResource("30_yre01")
 
 [node name="Trash Can 5" type="Sprite2D" parent="."]
 z_index = 1
-position = Vector2(-1043, -46)
+position = Vector2(-1030, -49)
+texture = ExtResource("31_tva86")
+
+[node name="Trash Can 6" type="Sprite2D" parent="."]
+z_index = 3
+position = Vector2(-264, -57)
 texture = ExtResource("31_tva86")
 
 [node name="Fence Post" type="Sprite2D" parent="."]

@@ -75,7 +75,7 @@ position = Vector2(118, 16)
 texture = ExtResource("5_iirfb")
 
 [node name="trash can" type="Sprite2D" parent="."]
-position = Vector2(162, 26)
+position = Vector2(162, 23)
 texture = ExtResource("6_3vghe")
 
 [node name="tree" type="Sprite2D" parent="."]
