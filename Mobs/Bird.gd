@@ -33,6 +33,8 @@ enum BirdMode {
 @export var MIN_KICKOFF_SPEED : float = 25.0
 @export var MAX_KICKOFF_SPEED : float = 40.0
 @export var TAKEOFF_ACCEL : float = 1.02
+@export var TRY_MAX_DISTANCE : float = 500.0
+@export var DISTANCE_POWER_FACTOR : float = 0.5
 
 var ANIM_STAND = 0
 var ANIM_GLIDE = 16
@@ -53,7 +55,20 @@ func set_next_fly_time():
 	nextFlyTime = randf_range(MIN_NEXT_FLY_TIME, MAX_NEXT_FLY_TIME)
 
 func set_next_dir_change_time():
-	nextDirChangeTime = randf_range(MIN_DIR_CHANGE_TIME, MAX_DIR_CHANGE_TIME)
+	# try to get the bird to turn around more often towards the start position
+	# 1.0 is at the start, 0.0 is at or beyond TRY_MAX_DISTANCE
+	var distFromStart = clamp(TRY_MAX_DISTANCE - abs(position.x - startPos.x), 0.0, TRY_MAX_DISTANCE) / TRY_MAX_DISTANCE
+	var diff_dir_change_time = MAX_DIR_CHANGE_TIME - MIN_DIR_CHANGE_TIME
+	if (facing == MovementDirection.LEFT and position.x < startPos.x) or \
+	   (facing == MovementDirection.RIGHT and position.x > startPos.x):
+		# facing away
+		# make time shorter as distance increases
+		diff_dir_change_time *= pow(distFromStart, DISTANCE_POWER_FACTOR)
+	else:
+		# facing towards
+		# make time longer as distance increases
+		diff_dir_change_time *= pow(1.0 - distFromStart, DISTANCE_POWER_FACTOR)
+	nextDirChangeTime = randf_range(MIN_DIR_CHANGE_TIME, MIN_DIR_CHANGE_TIME + diff_dir_change_time)
 
 func take_off():
 	mode = BirdMode.FLYING
@@ -114,7 +129,7 @@ func _ready():
 	sprite.texture = AtlasTexture.new()
 	sprite.texture.atlas = texture
 	sprite.texture.region = Rect2(0, 0, texHeight, texHeight)
-	get_node("CollisionShape2D").shape.radius = texHeight / 2
+	get_node("CollisionShape2D").shape.radius = int(texHeight) / 2.0
 	ANIM_GLIDE = texHeight
 	ANIM_FLAP = texHeight * 2
 	deactivate()

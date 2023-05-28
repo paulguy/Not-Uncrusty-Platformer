@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=3 uid="uid://dyxnvg3ae2i8l"]
+[gd_scene load_steps=48 format=3 uid="uid://dyxnvg3ae2i8l"]
 
 [ext_resource type="TileSet" uid="uid://bbcmc4vabwnbb" path="res://Tilesets/world_graphics.tres" id="1_kjjmx"]
 [ext_resource type="Script" path="res://surface_park.gd" id="2_5qxml"]
@@ -21,6 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://dnqo1w6dvdw" path="res://Sprites/bg building 2.png" id="13_pxkyl"]
 [ext_resource type="Texture2D" uid="uid://dqcq15lq4d33d" path="res://BG Textures/curb.png" id="13_qfehl"]
 [ext_resource type="Texture2D" uid="uid://58y5fu5bxhdc" path="res://BG Textures/road.png" id="14_n8nm6"]
+[ext_resource type="Texture2D" uid="uid://buvckuioypfy3" path="res://Sprites/bg building 4.png" id="14_o8b67"]
 [ext_resource type="Texture2D" uid="uid://dhisi8e0u263d" path="res://Sprites/fence post.png" id="16_7wfwx"]
 [ext_resource type="Texture2D" uid="uid://dhluherq0msfr" path="res://BG Textures/road stripe.png" id="19_qu514"]
 [ext_resource type="Texture2D" uid="uid://dbyg6udc8lp2e" path="res://BG Textures/dashed road stripe.png" id="20_4ry3q"]
@@ -32,6 +33,7 @@
 [ext_resource type="Texture2D" uid="uid://d1qbe08fot1f1" path="res://Sprites/trash can full.png" id="28_q6wtj"]
 [ext_resource type="Texture2D" uid="uid://behal7m72y0uu" path="res://Sprites/recycle bin.png" id="29_g83wh"]
 [ext_resource type="Texture2D" uid="uid://bxvafj0y4527t" path="res://Sprites/recycle bin full.png" id="30_yre01"]
+[ext_resource type="Texture2D" uid="uid://bflc03wq3fbwe" path="res://Sprites/basketball.png" id="31_2fhep"]
 [ext_resource type="Texture2D" uid="uid://bc33bxoduqav2" path="res://Sprites/trash can.png" id="31_tva86"]
 [ext_resource type="Shader" uid="uid://t8fgwpvgq8ww" path="res://CRT.tres" id="32_i50o3"]
 
@@ -248,8 +250,8 @@ texture = ExtResource("12_isfil")
 
 [node name="Building 5" type="Sprite2D" parent="BG Upper/Grass BG 4"]
 z_index = -1
-position = Vector2(47, -32)
-texture = ExtResource("13_pxkyl")
+position = Vector2(47, -16)
+texture = ExtResource("14_o8b67")
 
 [node name="Tree" type="Sprite2D" parent="BG Upper/Grass BG 4"]
 z_index = 2
@@ -274,6 +276,61 @@ position = Vector2(-1760, -64)
 texture = ExtResource("11_p188n")
 polygon = PackedVector2Array(0, 0, 768, 0, 768, 34, 0, 34)
 uv = PackedVector2Array(0, 0, 32, 0, 32, 32, 0, 32)
+
+[node name="Building 4" type="Sprite2D" parent="BG Upper/Grass BG 5"]
+z_index = -1
+position = Vector2(737, -32)
+texture = ExtResource("13_pxkyl")
+
+[node name="Building 6" type="Sprite2D" parent="BG Upper/Grass BG 5"]
+z_index = -1
+position = Vector2(684, -32)
+texture = ExtResource("13_pxkyl")
+
+[node name="Building 8" type="Sprite2D" parent="BG Upper/Grass BG 5"]
+z_index = -1
+position = Vector2(615, -32)
+texture = ExtResource("12_ors07")
+
+[node name="Building 12" type="Sprite2D" parent="BG Upper/Grass BG 5"]
+z_index = -1
+position = Vector2(9, -32)
+texture = ExtResource("12_ors07")
+
+[node name="Building 16" type="Sprite2D" parent="BG Upper/Grass BG 5"]
+z_index = -1
+position = Vector2(-245, -32)
+texture = ExtResource("13_pxkyl")
+
+[node name="Building 5" type="Sprite2D" parent="BG Upper/Grass BG 5"]
+z_index = -1
+position = Vector2(759, -16)
+texture = ExtResource("14_o8b67")
+
+[node name="Building 7" type="Sprite2D" parent="BG Upper/Grass BG 5"]
+z_index = -1
+position = Vector2(707, -16)
+texture = ExtResource("14_o8b67")
+
+[node name="Building 9" type="Sprite2D" parent="BG Upper/Grass BG 5"]
+z_index = -1
+position = Vector2(523, -16)
+texture = ExtResource("14_o8b67")
+
+[node name="Building 11" type="Sprite2D" parent="BG Upper/Grass BG 5"]
+z_index = -1
+position = Vector2(219, -16)
+texture = ExtResource("14_o8b67")
+
+[node name="Building 13" type="Sprite2D" parent="BG Upper/Grass BG 5"]
+z_index = -1
+position = Vector2(37, -16)
+texture = ExtResource("14_o8b67")
+
+[node name="Building 18" type="Sprite2D" parent="BG Upper/Grass BG 5"]
+z_index = -1
+position = Vector2(-406, -16)
+texture = ExtResource("14_o8b67")
 
 [node name="Fence Post" type="Sprite2D" parent="BG Upper/Grass BG 5"]
 position = Vector2(578, -16)
@@ -302,6 +359,11 @@ texture = ExtResource("11_dqb2h")
 [node name="BG Trees 6" type="Sprite2D" parent="BG Upper/Grass BG 5"]
 z_index = 2
 position = Vector2(191, -6)
+texture = ExtResource("11_dqb2h")
+
+[node name="BG Trees 13" type="Sprite2D" parent="BG Upper/Grass BG 5"]
+z_index = 2
+position = Vector2(-474, -8)
 texture = ExtResource("11_dqb2h")
 
 [node name="BG Trees 7" type="Sprite2D" parent="BG Upper/Grass BG 5"]
@@ -388,6 +450,26 @@ texture = ExtResource("12_reril")
 [node name="Building 3" type="Sprite2D" parent="BG Upper/Grass BG 5"]
 z_index = -1
 position = Vector2(292, -16)
+texture = ExtResource("12_reril")
+
+[node name="Building 10" type="Sprite2D" parent="BG Upper/Grass BG 5"]
+z_index = -1
+position = Vector2(118, -16)
+texture = ExtResource("12_reril")
+
+[node name="Building 14" type="Sprite2D" parent="BG Upper/Grass BG 5"]
+z_index = -1
+position = Vector2(-51, -16)
+texture = ExtResource("12_reril")
+
+[node name="Building 15" type="Sprite2D" parent="BG Upper/Grass BG 5"]
+z_index = -1
+position = Vector2(-120, -16)
+texture = ExtResource("12_reril")
+
+[node name="Building 17" type="Sprite2D" parent="BG Upper/Grass BG 5"]
+z_index = -1
+position = Vector2(-290, -16)
 texture = ExtResource("12_reril")
 
 [node name="Sidewalk 1" type="Polygon2D" parent="BG Upper"]
@@ -575,6 +657,11 @@ texture = ExtResource("28_pm1c5")
 z_index = 11
 position = Vector2(-1456, -36)
 texture = ExtResource("27_6iaa2")
+
+[node name="Basketball" type="Sprite2D" parent="."]
+z_index = 11
+position = Vector2(-1776, -36)
+texture = ExtResource("31_2fhep")
 
 [node name="Trash Can 1" type="Sprite2D" parent="."]
 z_index = 1
