@@ -255,8 +255,48 @@ texture = ExtResource("7_522o3")
 position = Vector2(574, -1281)
 texture = ExtResource("7_3lw3x")
 
+[node name="Small Cloud 28" type="Sprite2D" parent="Sky"]
+position = Vector2(418, -1445)
+texture = ExtResource("7_3lw3x")
+
+[node name="Small Cloud 29" type="Sprite2D" parent="Sky"]
+position = Vector2(34, -1568)
+texture = ExtResource("7_3lw3x")
+
+[node name="Small Cloud 30" type="Sprite2D" parent="Sky"]
+position = Vector2(-359, -1506)
+texture = ExtResource("7_3lw3x")
+
+[node name="Small Cloud 21" type="Sprite2D" parent="Sky"]
+position = Vector2(558, -1467)
+texture = ExtResource("7_3lw3x")
+
+[node name="Small Cloud 22" type="Sprite2D" parent="Sky"]
+position = Vector2(155, -1619)
+texture = ExtResource("7_3lw3x")
+
+[node name="Small Cloud 23" type="Sprite2D" parent="Sky"]
+position = Vector2(-334, -1614)
+texture = ExtResource("7_3lw3x")
+
+[node name="Small Cloud 24" type="Sprite2D" parent="Sky"]
+position = Vector2(-741, -1516)
+texture = ExtResource("7_3lw3x")
+
 [node name="Small Cloud 2" type="Sprite2D" parent="Sky"]
 position = Vector2(760, -1346)
+texture = ExtResource("8_w1ya4")
+
+[node name="Small Cloud 25" type="Sprite2D" parent="Sky"]
+position = Vector2(354, -1580)
+texture = ExtResource("8_w1ya4")
+
+[node name="Small Cloud 26" type="Sprite2D" parent="Sky"]
+position = Vector2(-156, -1562)
+texture = ExtResource("8_w1ya4")
+
+[node name="Small Cloud 27" type="Sprite2D" parent="Sky"]
+position = Vector2(-536, -1489)
 texture = ExtResource("8_w1ya4")
 
 [node name="Small Cloud 3" type="Sprite2D" parent="Sky"]
