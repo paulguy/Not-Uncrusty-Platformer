@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bnqhj35d2qkpa"]
+[gd_scene load_steps=10 format=3 uid="uid://bnqhj35d2qkpa"]
 
 [ext_resource type="Script" path="res://Game.gd" id="1_r4gip"]
 [ext_resource type="PackedScene" uid="uid://bth8beo6h5ybm" path="res://Mobs/player.tscn" id="2_g2lhd"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://d0t3u3e50ljbk" path="res://start_surface.tscn" id="6_loc4c"]
 [ext_resource type="PackedScene" uid="uid://dyxnvg3ae2i8l" path="res://surface_park.tscn" id="7_4pkfy"]
 [ext_resource type="PackedScene" uid="uid://b6pgwmljiikrp" path="res://start_tunnel.tscn" id="7_gd3fx"]
+[ext_resource type="PackedScene" uid="uid://dq083vadn4wg6" path="res://city_right.tscn" id="8_l7vx2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b62dn"]
 size = Vector2(400, 300)
@@ -49,6 +50,9 @@ position = Vector2(-128, -1072)
 
 [node name="Surface Park" parent="." instance=ExtResource("7_4pkfy")]
 position = Vector2(-944, -2128)
+
+[node name="City Right" parent="." instance=ExtResource("8_l7vx2")]
+position = Vector2(-3264, -2128)
 
 [connection signal="area_entered" from="Screen Area" to="Screen Area" method="_on_area_entered"]
 [connection signal="area_exited" from="Screen Area" to="Screen Area" method="_on_area_exited"]
