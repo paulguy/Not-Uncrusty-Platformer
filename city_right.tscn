@@ -1,15 +1,80 @@
-[gd_scene load_steps=3 format=3 uid="uid://dq083vadn4wg6"]
+[gd_scene load_steps=11 format=3 uid="uid://dq083vadn4wg6"]
 
 [ext_resource type="TileSet" uid="uid://bbcmc4vabwnbb" path="res://Tilesets/world_graphics.tres" id="1_3n3y5"]
 [ext_resource type="Script" path="res://area.gd" id="2_f8vse"]
+[ext_resource type="Script" path="res://BG Textures/BG Texture.gd" id="3_5q7w5"]
+[ext_resource type="Shader" uid="uid://cv016vn41m8bi" path="res://BG Textures/BG Texture Opaque.tres" id="3_rsdee"]
+[ext_resource type="Texture2D" uid="uid://ohqwlvfaptlb" path="res://BG Textures/grass-bg.png" id="4_57521"]
+[ext_resource type="Texture2D" uid="uid://b4mneh8w1frqi" path="res://Sprites/bg-trees.png" id="5_klm4r"]
+[ext_resource type="Texture2D" uid="uid://58y5fu5bxhdc" path="res://BG Textures/road.png" id="6_difmd"]
+[ext_resource type="Texture2D" uid="uid://ucj5js6bvf3n" path="res://BG Textures/sidewalk.png" id="7_lr0pc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oo5ie"]
+size = Vector2(2320, 1876)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_c08gj"]
+shader = ExtResource("3_rsdee")
 
 [node name="City Right" type="TileMap"]
 tile_set = ExtResource("1_3n3y5")
 format = 2
+layer_0/name = "fg"
 layer_0/tile_data = PackedInt32Array(-65537, 0, 589830, -65538, 0, 589830, -65539, 0, 589830, -65540, 0, 589830, -65541, 0, 589830, -65542, 0, 589830, -65543, 0, 589830, -65544, 0, 589830, -65545, 0, 589830, -65546, 0, 589830, -65547, 0, 589830, -65548, 0, 589830, -65549, 0, 589830, -65550, 0, 589830, -65551, 0, 589830, -65552, 0, 589830, -65553, 0, 589830, -65554, 0, 589830, -65555, 0, 589830, -65556, 0, 589830, -65557, 0, 589830, -1, 0, 262148, -2, 0, 262148, -3, 0, 262148, -4, 0, 262148, -5, 0, 262148, -6, 0, 262148, -7, 0, 262148, -8, 0, 262148, -9, 0, 262148, -10, 0, 262148, -11, 0, 262148, -12, 0, 262148, -13, 0, 262148, -14, 0, 262148, -15, 0, 262148, -16, 0, 262148, -17, 0, 262148, -18, 0, 262148, -19, 0, 262148, -20, 0, 262148, -21, 0, 262148)
+layer_1/name = "decor 1"
+layer_1/enabled = true
+layer_1/modulate = Color(1, 1, 1, 1)
+layer_1/y_sort_enabled = false
+layer_1/y_sort_origin = 0
+layer_1/z_index = 11
+layer_1/tile_data = PackedInt32Array(-65544, 262144, 65538, -65545, 327681, 1, -65546, 327681, 1, -65547, 327681, 1, -65548, 327681, 1, -65549, 327681, 1, -65550, 327681, 1, -65551, 327681, 1, -65552, 327681, 1, -65553, 327681, 1, -65554, 327681, 1, -65555, 327681, 1, -65556, 327681, 1, -65557, 327681, 1, -65543, 262144, 65538, -65542, 262144, 65538, -65541, 327680, 65538, -65540, 262144, 65538, -65539, 327680, 65538, -65538, 327680, 65538, -65537, 262144, 65538, -131073, 262144, 65537, -131074, 327680, 65537, -131075, 327680, 65537, -131076, 327680, 65537, -131077, 262144, 65537, -131078, 262144, 65537, -131079, 262144, 65537, -131080, 262144, 65537, -131081, 393216, 65537)
 script = ExtResource("2_f8vse")
+
+[node name="Map Area" type="Area2D" parent="."]
+visible = false
+collision_layer = 32768
+collision_mask = 0
+monitoring = false
+
+[node name="Map Shape" type="CollisionShape2D" parent="Map Area"]
+position = Vector2(-1160, -506)
+shape = SubResource("RectangleShape2D_oo5ie")
 
 [node name="Sky" type="Polygon2D" parent="."]
 z_index = -2
 polygon = PackedVector2Array(-2320, 432, 0, 432, 0, -1444, -2320, -1444)
 vertex_colors = PackedColorArray(0.352941, 0.709804, 1, 1, 0.352941, 0.709804, 1, 1, 0.0392157, 0.137255, 0.360784, 1, 0.0392157, 0.137255, 0.360784, 1)
+
+[node name="BG Upper" type="Node2D" parent="."]
+script = ExtResource("3_5q7w5")
+
+[node name="Grass BG 1" type="Polygon2D" parent="BG Upper"]
+z_index = -1
+texture_repeat = 2
+material = SubResource("ShaderMaterial_c08gj")
+position = Vector2(-128, -64)
+texture = ExtResource("4_57521")
+polygon = PackedVector2Array(0, 0, 128, 0, 128, 34, 0, 34)
+uv = PackedVector2Array(0, 0, 32, 0, 32, 32, 0, 32)
+
+[node name="BG Trees 13" type="Sprite2D" parent="BG Upper/Grass BG 1"]
+z_index = 2
+position = Vector2(76, -4)
+texture = ExtResource("5_klm4r")
+
+[node name="Sidewalk" type="Polygon2D" parent="BG Upper"]
+z_index = -1
+texture_repeat = 2
+material = SubResource("ShaderMaterial_c08gj")
+position = Vector2(-192, -64)
+texture = ExtResource("7_lr0pc")
+polygon = PackedVector2Array(0, 0, 64, 0, 64, 34, 0, 34)
+uv = PackedVector2Array(0, 0, 32, 0, 32, 32, 0, 32)
+
+[node name="Parking Lot" type="Polygon2D" parent="BG Upper"]
+z_index = -1
+texture_repeat = 2
+material = SubResource("ShaderMaterial_c08gj")
+position = Vector2(-336, -64)
+texture = ExtResource("6_difmd")
+polygon = PackedVector2Array(0, 0, 144, 0, 144, 34, 0, 34)
+uv = PackedVector2Array(0, 0, 32, 0, 32, 32, 0, 32)

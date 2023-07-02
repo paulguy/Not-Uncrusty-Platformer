@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=199 format=3 uid="uid://bbcmc4vabwnbb"]
+[gd_resource type="TileSet" load_steps=200 format=3 uid="uid://bbcmc4vabwnbb"]
 
 [ext_resource type="Shader" path="res://Tilesets/bg blend.gdshader" id="1_yy7te"]
 [ext_resource type="Shader" uid="uid://dkopu1grc0cvh" path="res://Tilesets/dirt.tres" id="2_ir5ov"]
@@ -31,6 +31,9 @@ tile_data = PackedInt32Array(65536, 458752, 65543, 131072, 393216, 131079, 65537
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_ooghw"]
 tile_data = PackedInt32Array(0, 458752, 131077, 65536, 196608, 131079, 1, 393216, 131077, 65537, 131072, 131079, 65538, 458752, 131078, 131074, 327680, 65543, 65539, 458752, 131079, 131075, 393216, 65543)
+
+[sub_resource type="TileMapPattern" id="TileMapPattern_arxc1"]
+tile_data = PackedInt32Array(0, 65536, 786438, 65536, 65536, 655366, 1, 65536, 720902, 65537, 65536, 589830)
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_fi1t7"]
 tile_data = PackedInt32Array(0, 327680, 65542, 65536, 327680, 65543, 1, 393216, 65542, 65537, 393216, 65543)
@@ -1608,6 +1611,27 @@ texture = ExtResource("10_rtur7")
 0:4/0 = 0
 0:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:4/0/physics_layer_0/angular_velocity = 0.0
+0:5/0 = 0
+0:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:5/0/physics_layer_0/angular_velocity = 0.0
+1:5/0 = 0
+1:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:5/0/physics_layer_0/angular_velocity = 0.0
+2:5/0 = 0
+2:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:5/0/physics_layer_0/angular_velocity = 0.0
+3:5/0 = 0
+3:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:5/0/physics_layer_0/angular_velocity = 0.0
+4:5/0 = 0
+4:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+4:5/0/physics_layer_0/angular_velocity = 0.0
+5:5/0 = 0
+5:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+5:5/0/physics_layer_0/angular_velocity = 0.0
+6:5/0 = 0
+6:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+6:5/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_tli76"]
 shader = ExtResource("10_u15w4")
@@ -2264,3 +2288,4 @@ pattern_10 = SubResource("TileMapPattern_stn1x")
 pattern_11 = SubResource("TileMapPattern_gy8ys")
 pattern_12 = SubResource("TileMapPattern_mk12e")
 pattern_13 = SubResource("TileMapPattern_ooghw")
+pattern_14 = SubResource("TileMapPattern_arxc1")
