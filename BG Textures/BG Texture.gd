@@ -94,10 +94,10 @@ func _ready():
 		var tex_width = highest-lowest
 		var left_uv = fmod(lowest, p.texture.get_width())
 		p.uv = PackedVector2Array([
-			Vector2(left_uv, 0),
-			Vector2(left_uv+tex_width, 0),
-			Vector2(left_uv+tex_width, right_bottom[i]-right_top),
-			Vector2(left_uv, left_bottom[i]-left_top)
+			Vector2(left_uv, p.uv[0].y),
+			Vector2(left_uv+tex_width, p.uv[1].y),
+			Vector2(left_uv+tex_width, p.uv[2].y),
+			Vector2(left_uv, p.uv[3].y)
 		])
 		if p.get_child_count() > 0:
 			var p_top = min(left_top, right_top)
