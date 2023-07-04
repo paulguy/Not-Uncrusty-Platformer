@@ -115,7 +115,7 @@ func _physics_process(delta):
 
 	meter.set_thrust(thrust_remaining)
 	if thrust_dec > 0.0:
-		thrust_sprite.set_thrust(thrust_angle, thrust_dec / (THRUST_PER_SECOND * delta) * THRUST_MAX_DISTANCE)
+		thrust_sprite.set_thrust(thrust_angle, thrust_dec / (THRUST_PER_SECOND * delta), THRUST_MAX_DISTANCE)
 	if thrust_cheat:
 		thrust_remaining = 1.0
 

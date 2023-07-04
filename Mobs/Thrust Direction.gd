@@ -5,6 +5,8 @@ const FADE_OUT_TIME = 0.2
 const MIN_ALPHA = 0.0
 const MAX_ALPHA = 0.5
 const MIN_VIS_TIME = 0.2
+const MIN_DIST = 0.1
+const MIN_SCALE = 0.5
 
 var tween
 var vis : bool = false
@@ -26,10 +28,12 @@ func _process(delta):
 		vis = false
 		fade_to(MIN_ALPHA)
 
-func set_thrust(ang, len):
+func set_thrust(ang, len, len_factor):
 	if not vis:
 		vis = true
 		vistime = MIN_VIS_TIME
 		fade_to(MAX_ALPHA)
 	self.rotation = ang
-	self.position = Vector2.RIGHT.rotated(ang) * len
+	self.position = Vector2.RIGHT.rotated(ang) * (len * (1.0 - MIN_DIST) + MIN_DIST) * len_factor
+	len = len * (1.0 - MIN_SCALE) + MIN_SCALE
+	self.scale = Vector2(len, len)
