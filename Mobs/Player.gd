@@ -13,6 +13,7 @@ const KNOCK_BACK = Vector2(200, -120)
 const THRUST_PER_SECOND = 1.0
 const THRUST_RECHARGE_FACTOR = 0.8
 const THRUST_DEPLETED_RECHARGE_FACTOR = 0.6
+const THRUST_MAX_DISTANCE = 100.0
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -25,6 +26,7 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 @onready var orig_material = sprite.material
 @onready var invinco_material = preload("res://Mobs/white_material.tres")
 @onready var meter = self.get_node("Thrust Meter")
+@onready var thrust_sprite = self.get_node("Thrust Sprite")
 
 var mousepos = Vector2.ZERO
 var tween = null
@@ -75,20 +77,25 @@ func _physics_process(delta):
 	var addVel = Vector2.ZERO
 	var damp = AIR_DAMP
 	var thrust = Vector2.ZERO
+	var thrust_angle = 0.0
+	var thrust_dec = 0.0
 
 	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
 		if not thrust_depleted:
 			if thrust_remaining > 0:
-				var thrust_dec = THRUST_PER_SECOND * delta
+				var zoom = camera.zoom
+				var voffset = position - (-self.get_viewport_transform().origin / zoom)
+				var diff = mousepos / zoom - voffset
+				thrust_angle = diff.angle()
+				var thrust_power = clamp(diff.length() / THRUST_MAX_DISTANCE, -1.0, 1.0)
+
+				thrust_dec = thrust_power * (THRUST_PER_SECOND * delta)
 				thrust_remaining -= thrust_dec
 				if thrust_remaining < 0:
 					thrust_dec = -thrust_remaining
 					thrust_depleted = true
 
-				var zoom = camera.zoom
-				var voffset = position - (-self.get_viewport_transform().origin / zoom)
-				var diff = mousepos / zoom - voffset
-				thrust = diff.normalized() * THRUST * thrust_dec
+				thrust = Vector2.RIGHT.rotated(thrust_angle) * (THRUST * thrust_dec)
 				addVel += thrust
 		else:
 			thrust_remaining += THRUST_DEPLETED_RECHARGE_FACTOR * delta
@@ -107,6 +114,8 @@ func _physics_process(delta):
 				thrust_remaining = 1.0
 
 	meter.set_thrust(thrust_remaining)
+	if thrust_dec > 0.0:
+		thrust_sprite.set_thrust(thrust_angle, thrust_dec / (THRUST_PER_SECOND * delta) * THRUST_MAX_DISTANCE)
 	if thrust_cheat:
 		thrust_remaining = 1.0
 

@@ -1,10 +1,12 @@
-[gd_scene load_steps=18 format=3 uid="uid://bth8beo6h5ybm"]
+[gd_scene load_steps=21 format=3 uid="uid://bth8beo6h5ybm"]
 
 [ext_resource type="Script" path="res://Mobs/Player.gd" id="1_5ojl5"]
 [ext_resource type="Shader" uid="uid://n3k0v4jglej7" path="res://Mobs/player.tres" id="2_weu2e"]
 [ext_resource type="Texture2D" uid="uid://sbf7cwvddxjg" path="res://Mobs/face.png" id="3_gqc0m"]
 [ext_resource type="Script" path="res://Mobs/Thrust Meter.gd" id="4_u3g7v"]
 [ext_resource type="Texture2D" uid="uid://mw4c4o3qna0p" path="res://Mobs/health bar.png" id="5_b5i8q"]
+[ext_resource type="Texture2D" uid="uid://dkokvrkf814aq" path="res://Sprites/thrust direction.png" id="6_662fd"]
+[ext_resource type="Script" path="res://Mobs/Thrust Direction.gd" id="6_yc0rq"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_3bwnh"]
 shader = ExtResource("2_weu2e")
@@ -62,6 +64,9 @@ blend_mode = 1
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_xfpwg"]
 blend_mode = 1
 
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_fanda"]
+blend_mode = 1
+
 [node name="Player" type="CharacterBody2D"]
 z_index = 10
 collision_layer = 2
@@ -108,6 +113,12 @@ texture = ExtResource("5_b5i8q")
 offset = Vector2(0, -24)
 region_enabled = true
 region_rect = Rect2(0, 24, 24, 24)
+
+[node name="Thrust Sprite" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+material = SubResource("CanvasItemMaterial_fanda")
+texture = ExtResource("6_662fd")
+script = ExtResource("6_yc0rq")
 
 [connection signal="timeout" from="Invincibility Time" to="." method="_on_invincibility_time_timeout"]
 [connection signal="timeout" from="Invincibility Animation" to="." method="_on_invincibility_animation_timeout"]
