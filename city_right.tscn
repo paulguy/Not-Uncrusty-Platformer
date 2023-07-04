@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://dq083vadn4wg6"]
+[gd_scene load_steps=15 format=3 uid="uid://dq083vadn4wg6"]
 
 [ext_resource type="TileSet" uid="uid://bbcmc4vabwnbb" path="res://Tilesets/world_graphics.tres" id="1_3n3y5"]
 [ext_resource type="Script" path="res://area.gd" id="2_f8vse"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://ucj5js6bvf3n" path="res://BG Textures/sidewalk.png" id="7_lr0pc"]
 [ext_resource type="Texture2D" uid="uid://c4obxcbnuy7hh" path="res://Sprites/gas pump.png" id="9_4rcka"]
 [ext_resource type="Texture2D" uid="uid://7e6q52tiva0r" path="res://BG Textures/scummy ceiling.png" id="9_4w6a8"]
+[ext_resource type="Texture2D" uid="uid://whu2of2vy5i8" path="res://Sprites/gas station logo.png" id="11_iedvm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oo5ie"]
 size = Vector2(2320, 1876)
@@ -24,14 +25,14 @@ size = Vector2(256, 18)
 tile_set = ExtResource("1_3n3y5")
 format = 2
 layer_0/name = "fg"
-layer_0/tile_data = PackedInt32Array(-65537, 0, 589830, -65538, 0, 589830, -65539, 0, 589830, -65540, 0, 589830, -65541, 0, 589830, -65542, 0, 589830, -65543, 0, 589830, -65544, 0, 589830, -65545, 0, 589830, -65546, 0, 589830, -65547, 0, 589830, -65548, 0, 589830, -65549, 0, 589830, -65550, 0, 589830, -65551, 0, 589830, -65552, 0, 589830, -65553, 0, 589830, -65554, 0, 589830, -65555, 0, 589830, -65556, 0, 589830, -65557, 0, 589830, -1, 0, 262148, -2, 0, 262148, -3, 0, 262148, -4, 0, 262148, -5, 0, 262148, -6, 0, 262148, -7, 0, 262148, -8, 0, 262148, -9, 0, 262148, -10, 0, 262148, -11, 0, 262148, -12, 0, 262148, -13, 0, 262148, -14, 0, 262148, -15, 0, 262148, -16, 0, 262148, -17, 0, 262148, -18, 0, 262148, -19, 0, 262148, -20, 0, 262148, -21, 0, 262148, -131087, 65537, 5, -196623, 1, 5, -262159, 1, 5, -327695, 393217, 5, -393231, 262145, 65541)
+layer_0/tile_data = PackedInt32Array(-65537, 0, 589830, -65538, 0, 589830, -65539, 0, 589830, -65540, 0, 589830, -65541, 0, 589830, -65542, 0, 589830, -65543, 0, 589830, -65544, 0, 589830, -65545, 0, 589830, -65546, 0, 589830, -65547, 0, 589830, -65548, 0, 589830, -65549, 0, 589830, -65550, 0, 589830, -65551, 0, 589830, -65552, 0, 589830, -65553, 0, 589830, -65554, 0, 589830, -65555, 0, 589830, -65556, 0, 589830, -65557, 0, 589830, -1, 0, 262148, -2, 0, 262148, -3, 0, 262148, -4, 0, 262148, -5, 0, 262148, -6, 0, 262148, -7, 0, 262148, -8, 0, 262148, -9, 0, 262148, -10, 0, 262148, -11, 0, 262148, -12, 0, 262148, -13, 0, 262148, -14, 0, 262148, -15, 0, 262148, -16, 0, 262148, -17, 0, 262148, -18, 0, 262148, -19, 0, 262148, -20, 0, 262148, -21, 0, 262148, -131081, 262145, 0, -131084, 65537, 0, -131083, 131073, 0, -131082, 196609, 0, -65558, 0, 589830, -65559, 0, 589830, -65560, 0, 589830, -65561, 0, 589830, -65562, 0, 589830, -65563, 0, 589830, -65564, 0, 589830, -65565, 0, 589830, -65566, 0, 589830, -65567, 0, 589830, -65568, 0, 589830, -65569, 0, 589830, -65570, 0, 589830, -22, 0, 262148, -23, 0, 262148, -24, 0, 262148, -25, 0, 262148, -26, 0, 262148, -27, 0, 262148, -28, 0, 262148, -29, 0, 262148, -30, 0, 262148, -31, 0, 262148, -32, 0, 262148, -33, 0, 262148, -34, 0, 262148, -393243, 262145, 65541, -327707, 393217, 5, -262171, 1, 5, -196635, 1, 5, -131099, 65537, 5, -393230, 262145, 65541, -327694, 393217, 5, -262158, 1, 5, -196622, 1, 5, -131086, 65537, 5)
 layer_1/name = "decor 1"
 layer_1/enabled = true
 layer_1/modulate = Color(1, 1, 1, 1)
 layer_1/y_sort_enabled = false
 layer_1/y_sort_origin = 0
 layer_1/z_index = 11
-layer_1/tile_data = PackedInt32Array(-65544, 262144, 65538, -65545, 327681, 1, -65546, 327681, 1, -65547, 327681, 1, -65548, 327681, 1, -65549, 327681, 1, -65550, 327681, 1, -65551, 327681, 1, -65552, 327681, 1, -65553, 327681, 1, -65554, 327681, 1, -65555, 327681, 1, -65556, 327681, 1, -65557, 327681, 1, -65543, 262144, 65538, -65542, 262144, 65538, -65541, 327680, 65538, -65540, 262144, 65538, -65539, 327680, 65538, -65538, 327680, 65538, -65537, 262144, 65538, -131073, 262144, 65537, -131074, 327680, 65537, -131075, 327680, 65537, -131076, 327680, 65537, -131077, 262144, 65537, -131078, 262144, 65537, -131079, 262144, 65537, -131080, 262144, 65537, -131081, 393216, 65537)
+layer_1/tile_data = PackedInt32Array(-65544, 262144, 65538, -65545, 196609, 1, -65546, 1, 1, -65547, 262145, 1, -65548, 131073, 1, -65549, 393217, 1, -65550, 327681, 1, -65551, 327681, 1, -65552, 327681, 1, -65553, 327681, 1, -65554, 327681, 1, -65555, 327681, 1, -65556, 393217, 1, -65557, 327681, 1, -65543, 262144, 65538, -65542, 262144, 65538, -65541, 327680, 65538, -65540, 262144, 65538, -65539, 327680, 65538, -65538, 327680, 65538, -65537, 262144, 65538, -131073, 262144, 65537, -131074, 327680, 65537, -131075, 327680, 65537, -131076, 327680, 65537, -131077, 262144, 65537, -131078, 262144, 65537, -131079, 262144, 65537, -131080, 262144, 65537, -131081, 393216, 65537, -65558, 393217, 1, -65559, 393217, 1, -65560, 393217, 1, -65561, 327681, 1, -65562, 327681, 1, -65563, 393217, 1, -65564, 327681, 1, -65565, 327681, 1, -65566, 393217, 1, -65567, 393217, 1, -65568, 393217, 1, -65569, 327681, 1, -65570, 327681, 1)
 script = ExtResource("2_f8vse")
 
 [node name="Map Area" type="Area2D" parent="."]
@@ -70,7 +71,7 @@ texture = ExtResource("5_klm4r")
 z_index = -1
 texture_repeat = 2
 material = SubResource("ShaderMaterial_c08gj")
-position = Vector2(-192, -64)
+position = Vector2(-192, -72)
 texture = ExtResource("7_lr0pc")
 polygon = PackedVector2Array(0, 0, 64, 0, 64, 34, 0, 34)
 uv = PackedVector2Array(0, 0, 32, 0, 32, 32, 0, 32)
@@ -79,16 +80,16 @@ uv = PackedVector2Array(0, 0, 32, 0, 32, 32, 0, 32)
 z_index = -1
 texture_repeat = 2
 material = SubResource("ShaderMaterial_c08gj")
-position = Vector2(-336, -64)
+position = Vector2(-544, -64)
 texture = ExtResource("6_difmd")
-polygon = PackedVector2Array(0, 0, 144, 0, 144, 34, 0, 34)
+polygon = PackedVector2Array(0, 0, 352, 0, 352, 34, 0, 34)
 uv = PackedVector2Array(0, 0, 32, 0, 32, 32, 0, 32)
 
-[node name="Parking Lot2" type="Polygon2D" parent="BG Upper"]
+[node name="Gas Station Awning Roof" type="Polygon2D" parent="BG Upper"]
 z_index = -1
 texture_repeat = 2
 material = SubResource("ShaderMaterial_c08gj")
-position = Vector2(-464, -146)
+position = Vector2(-448, -146)
 texture = ExtResource("6_difmd")
 polygon = PackedVector2Array(0, 0, 256, 0, 256, 16, 0, 16)
 uv = PackedVector2Array(0, 0, 32, 0, 32, 32, 0, 32)
@@ -101,17 +102,21 @@ stretch_max = -2.0
 z_index = -1
 texture_repeat = 2
 material = SubResource("ShaderMaterial_c08gj")
-position = Vector2(-464, -128)
+position = Vector2(-448, -128)
 texture = ExtResource("9_4w6a8")
 polygon = PackedVector2Array(0, 0, 256, 0, 256, 16, 0, 16)
 uv = PackedVector2Array(0, 0, 32, 0, 32, 32, 0, 32)
 
 [node name="Gas Pump" type="Sprite2D" parent="."]
-position = Vector2(-297, -72)
+position = Vector2(-272, -72)
+texture = ExtResource("9_4rcka")
+
+[node name="Gas Pump 2" type="Sprite2D" parent="."]
+position = Vector2(-369, -72)
 texture = ExtResource("9_4rcka")
 
 [node name="Gas Station Awning" type="Polygon2D" parent="."]
-position = Vector2(-464, -128)
+position = Vector2(-448, -128)
 color = Color(0, 0, 0.654902, 1)
 polygon = PackedVector2Array(0, 0, 256, 0, 256, 16, 0, 16)
 
@@ -126,3 +131,7 @@ collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Gas Station Awning/StaticBody2D"]
 shape = SubResource("RectangleShape2D_l6fod")
+
+[node name="Gas Station Awning Logo" type="Sprite2D" parent="Gas Station Awning"]
+position = Vector2(224, 8)
+texture = ExtResource("11_iedvm")
