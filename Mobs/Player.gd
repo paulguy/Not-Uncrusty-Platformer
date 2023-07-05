@@ -77,17 +77,25 @@ func _physics_process(delta):
 	var addVel = Vector2.ZERO
 	var damp = AIR_DAMP
 	var thrust = Vector2.ZERO
-	var thrust_angle = 0.0
+	var diff = Vector2.ZERO
 	var thrust_dec = 0.0
+	var jump = false
+	var direction = 0
 
 	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
+		var zoom = camera.zoom
+		var voffset = position - (-self.get_viewport_transform().origin / zoom)
+		diff = mousepos / zoom - voffset
+	else:
+		diff = Vector2(Input.get_axis("right_analog_left", "right_analog_right"),
+					   Input.get_axis("right_analog_up", "right_analog_down")) * THRUST_MAX_DISTANCE
+
+	var thrust_angle = diff.angle()
+	var thrust_power = clamp(diff.length() / THRUST_MAX_DISTANCE, -1.0, 1.0)
+
+	if diff != Vector2.ZERO:
 		if not thrust_depleted:
 			if thrust_remaining > 0:
-				var zoom = camera.zoom
-				var voffset = position - (-self.get_viewport_transform().origin / zoom)
-				var diff = mousepos / zoom - voffset
-				thrust_angle = diff.angle()
-				var thrust_power = clamp(diff.length() / THRUST_MAX_DISTANCE, -1.0, 1.0)
 
 				thrust_dec = thrust_power * (THRUST_PER_SECOND * delta)
 				thrust_remaining -= thrust_dec
@@ -119,6 +127,23 @@ func _physics_process(delta):
 	if thrust_cheat:
 		thrust_remaining = 1.0
 
+	var stick = Vector2(Input.get_axis("left_analog_left", "left_analog_right"),
+						Input.get_axis("left_analog_up", "left_analog_down"))
+	if stick != Vector2.ZERO:
+		stick = stick.angle()
+
+		if stick > -PI * (7.0/8.0) and stick < -PI * (1.0/8.0):
+			jump = true
+
+		if stick < -PI * (5.0/8.0) or stick > PI * (5.0/8.0):
+			direction = -1
+		elif stick > -PI * (3.0/8.0) and stick < PI * (3.0/8.0):
+			direction = 1
+	else:
+		if Input.is_action_just_pressed("jump"):
+			jump = true
+		direction = Input.get_axis("move_left", "move_right")
+
 	# Add the gravity.
 	if not is_on_floor():
 		addVel += Vector2(0, gravity * delta)
@@ -126,13 +151,10 @@ func _physics_process(delta):
 		damp += FLOOR_DAMP
 
 		# Handle Jump.
-		if Input.is_action_just_pressed("jump"):
+		if jump:
 			addVel += Vector2.UP * JUMP_VELOCITY
 			thrust += Vector2.UP
 
-		# Get the input direction and handle the movement/deceleration.
-		# As good practice, you should replace UI actions with custom gameplay actions.
-		var direction = Input.get_axis("move_left", "move_right")
 		if direction:
 			addVel += Vector2(direction * delta * SPEED, 0)
 			thrust += Vector2(direction, 0)
