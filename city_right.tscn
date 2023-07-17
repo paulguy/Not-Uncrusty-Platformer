@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://dq083vadn4wg6"]
+[gd_scene load_steps=18 format=3 uid="uid://dq083vadn4wg6"]
 
 [ext_resource type="TileSet" uid="uid://bbcmc4vabwnbb" path="res://Tilesets/world_graphics.tres" id="1_3n3y5"]
 [ext_resource type="Script" path="res://area.gd" id="2_f8vse"]
@@ -7,16 +7,20 @@
 [ext_resource type="Texture2D" uid="uid://ohqwlvfaptlb" path="res://BG Textures/grass-bg.png" id="4_57521"]
 [ext_resource type="Texture2D" uid="uid://b4mneh8w1frqi" path="res://Sprites/bg-trees.png" id="5_klm4r"]
 [ext_resource type="Texture2D" uid="uid://58y5fu5bxhdc" path="res://BG Textures/road.png" id="6_difmd"]
+[ext_resource type="Script" path="res://BG Trees 13.gd" id="7_8ulxn"]
 [ext_resource type="Texture2D" uid="uid://ucj5js6bvf3n" path="res://BG Textures/sidewalk.png" id="7_lr0pc"]
 [ext_resource type="Texture2D" uid="uid://c4obxcbnuy7hh" path="res://Sprites/gas pump.png" id="9_4rcka"]
 [ext_resource type="Texture2D" uid="uid://7e6q52tiva0r" path="res://BG Textures/scummy ceiling.png" id="9_4w6a8"]
 [ext_resource type="Texture2D" uid="uid://whu2of2vy5i8" path="res://Sprites/gas station logo.png" id="11_iedvm"]
+[ext_resource type="PackedScene" uid="uid://33djf7gddlrm" path="res://dialog_box.tscn" id="12_pvxir"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oo5ie"]
 size = Vector2(2320, 1876)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_c08gj"]
 shader = ExtResource("3_rsdee")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7dup4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l6fod"]
 size = Vector2(256, 18)
@@ -66,6 +70,16 @@ uv = PackedVector2Array(0, 0, 32, 0, 32, 32, 0, 32)
 z_index = 2
 position = Vector2(76, -4)
 texture = ExtResource("5_klm4r")
+script = ExtResource("7_8ulxn")
+
+[node name="Area2D" type="Area2D" parent="BG Upper/Grass BG 1/BG Trees 13"]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BG Upper/Grass BG 1/BG Trees 13/Area2D"]
+shape = SubResource("RectangleShape2D_7dup4")
+
+[node name="Dialog Box" parent="BG Upper/Grass BG 1/BG Trees 13" instance=ExtResource("12_pvxir")]
 
 [node name="Sidewalk" type="Polygon2D" parent="BG Upper"]
 z_index = -1
@@ -135,3 +149,6 @@ shape = SubResource("RectangleShape2D_l6fod")
 [node name="Gas Station Awning Logo" type="Sprite2D" parent="Gas Station Awning"]
 position = Vector2(224, 8)
 texture = ExtResource("11_iedvm")
+
+[connection signal="body_entered" from="BG Upper/Grass BG 1/BG Trees 13/Area2D" to="BG Upper/Grass BG 1/BG Trees 13" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="BG Upper/Grass BG 1/BG Trees 13/Area2D" to="BG Upper/Grass BG 1/BG Trees 13" method="_on_area_2d_body_exited"]

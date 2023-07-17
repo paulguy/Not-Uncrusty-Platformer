@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://33djf7gddlrm"]
+
+[ext_resource type="Texture2D" uid="uid://o07qulyjesx4" path="res://textbox-border.png" id="1_ryswp"]
+[ext_resource type="Script" path="res://dialog_box.gd" id="2_bhj23"]
+[ext_resource type="FontFile" uid="uid://1ucenfnqetd0" path="res://FSEX302-alt.ttf" id="3_p5lcr"]
+
+[sub_resource type="Theme" id="Theme_ekoy3"]
+default_font = ExtResource("3_p5lcr")
+default_font_size = 13
+
+[node name="Dialog Box" type="NinePatchRect"]
+visible = false
+offset_right = 197.0
+offset_bottom = 154.0
+texture = ExtResource("1_ryswp")
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+script = ExtResource("2_bhj23")
+
+[node name="Dialog Box Text" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 48.0
+offset_bottom = 48.0
+theme = SubResource("Theme_ekoy3")
+autowrap_mode = 0
+shortcut_keys_enabled = false
