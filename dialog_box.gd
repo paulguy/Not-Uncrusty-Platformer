@@ -5,16 +5,17 @@ var font
 var border_margin
 var text_cache = Dictionary()
 
-func set_text(text : String):
+func set_text(text : String, ratio : float = 1.0):
 	# don't show the process
 	visible = false
 	# get the maximum width of the string
 	textbox.autowrap_mode = TextServer.AUTOWRAP_OFF
 	textbox.fit_content = false
 	textbox.text = text
+	var key = [text, ratio]
 	# try to fetch result from cache
-	if text in text_cache:
-		textbox.size.x = text_cache[text]
+	if key in text_cache:
+		textbox.size.x = text_cache[key]
 		textbox.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 		textbox.fit_content = true
 	else:
@@ -30,12 +31,12 @@ func set_text(text : String):
 		# this feels fragile...
 		while abs(low - high) > 1.0:
 			textbox.size.x = low + ((high - low) / 2)
-			if textbox.get_content_width() < textbox.get_content_height():
+			if textbox.get_content_width() / textbox.get_content_height() < ratio:
 				low = textbox.size.x
 			else:
 				high = textbox.size.x
 		# save result
-		text_cache[text] = textbox.size.x
+		text_cache[key] = textbox.size.x
 	# set the box width around the border
 	size = Vector2(textbox.get_content_width(), textbox.get_content_height()) + border_margin
 	# make it visible again
