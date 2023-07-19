@@ -51,3 +51,4 @@ func _ready():
 	# get the fixed border size
 	border_margin = Vector2(patch_margin_left + patch_margin_right,
 							patch_margin_top + patch_margin_bottom)
+	textbox.position = Vector2(patch_margin_left, patch_margin_top)

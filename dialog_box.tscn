@@ -21,10 +21,8 @@ script = ExtResource("2_bhj23")
 
 [node name="Dialog Box Text" type="RichTextLabel" parent="."]
 layout_mode = 0
-offset_left = 8.0
-offset_top = 8.0
-offset_right = 48.0
-offset_bottom = 48.0
+offset_right = 40.0
+offset_bottom = 40.0
 theme = SubResource("Theme_ekoy3")
 autowrap_mode = 0
 shortcut_keys_enabled = false
