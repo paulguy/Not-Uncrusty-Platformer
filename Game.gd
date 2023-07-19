@@ -90,7 +90,8 @@ func _process(_delta):
 	area.position = off
 
 @onready var CODES = {
-	"THRUSSY": player
+	"THRUSSY": player,
+	"DEBUG": player
 }
 
 var cur_code = ""

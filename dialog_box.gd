@@ -3,9 +3,8 @@ extends NinePatchRect
 @onready var textbox = $"Dialog Box Text"
 var font
 var border_margin
-var text_cache = Dictionary()
 
-func set_text(text : String, ratio : float = 1.0):
+func set_text(player : Player, text : String, ratio : float = 1.0):
 	# don't show the process
 	visible = false
 	# get the maximum width of the string
@@ -13,6 +12,7 @@ func set_text(text : String, ratio : float = 1.0):
 	textbox.fit_content = false
 	textbox.text = text
 	var key = [text, ratio]
+	var text_cache = player.get_cache()
 	# try to fetch result from cache
 	if key in text_cache:
 		textbox.size.x = text_cache[key]
