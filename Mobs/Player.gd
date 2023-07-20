@@ -220,8 +220,10 @@ func _on_invincibility_animation_timeout():
 func cheat(code):
 	if code == "THRUSSY":
 		thrust_cheat = not thrust_cheat
-	elif code == "DEBUG":
-		print(text_cache)
+	elif code == "TEXTJSON":
+		print("Text Cache JSON:")
+		for key in text_cache.keys():
+			print(JSON.stringify({'text':key[0], 'ratio':key[1], 'width':text_cache[key]}))
 
 func get_cache():
 	return text_cache

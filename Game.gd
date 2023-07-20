@@ -91,7 +91,7 @@ func _process(_delta):
 
 @onready var CODES = {
 	"THRUSSY": player,
-	"DEBUG": player
+	"TEXTJSON": player
 }
 
 var cur_code = ""
