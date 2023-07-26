@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://dq083vadn4wg6"]
+[gd_scene load_steps=32 format=3 uid="uid://dq083vadn4wg6"]
 
 [ext_resource type="TileSet" uid="uid://bbcmc4vabwnbb" path="res://Tilesets/world_graphics.tres" id="1_3n3y5"]
 [ext_resource type="Script" path="res://area.gd" id="2_f8vse"]
@@ -18,6 +18,14 @@
 [ext_resource type="Texture2D" uid="uid://c70uua2yybws6" path="res://Sprites/food-cooler-back.png" id="16_ilrly"]
 [ext_resource type="Texture2D" uid="uid://bi6e7ka6ppdn0" path="res://Sprites/food-cooler-door.png" id="17_h7qmw"]
 [ext_resource type="Texture2D" uid="uid://c6u47gagd88wy" path="res://Sprites/store-shelf.png" id="18_nvyu2"]
+[ext_resource type="Texture2D" uid="uid://ccl7gs4og5yo4" path="res://Sprites/red-drink-can-4x.png" id="18_ocit6"]
+[ext_resource type="Texture2D" uid="uid://dptttpl64y88c" path="res://Sprites/blue-drink-can-4x.png" id="19_8k70h"]
+[ext_resource type="Texture2D" uid="uid://b3fybwx27yax7" path="res://Sprites/green-drink-can-4x.png" id="20_24fyv"]
+[ext_resource type="Texture2D" uid="uid://1wakeremv1e0" path="res://Sprites/green-drink-can-1x.png" id="21_ytx31"]
+[ext_resource type="Texture2D" uid="uid://nn3u4fhdod3l" path="res://Sprites/orange-drink-can-1x.png" id="22_0rgdu"]
+[ext_resource type="Texture2D" uid="uid://bgqp1mfswxmrl" path="res://Sprites/tall-blue-drink-can-3x.png" id="23_cl343"]
+[ext_resource type="Texture2D" uid="uid://crviw45x52twb" path="res://Sprites/tall-red-drink-can-1x.png" id="24_chjp3"]
+[ext_resource type="Texture2D" uid="uid://bptk35nkdtdda" path="res://Sprites/bottled-soft-drink-1x.png" id="25_k6s6f"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oo5ie"]
 size = Vector2(2320, 1876)
@@ -45,7 +53,7 @@ layer_1/modulate = Color(1, 1, 1, 1)
 layer_1/y_sort_enabled = false
 layer_1/y_sort_origin = 0
 layer_1/z_index = 11
-layer_1/tile_data = PackedInt32Array(-65544, 262144, 65538, -65545, 196609, 1, -65546, 1, 1, -65547, 262145, 1, -65548, 131073, 1, -65549, 393217, 1, -65550, 327681, 1, -65551, 327681, 1, -65552, 327681, 1, -65553, 327681, 1, -65554, 327681, 1, -65555, 327681, 1, -65556, 393217, 1, -65557, 327681, 1, -65543, 262144, 65538, -65542, 262144, 65538, -65541, 327680, 65538, -65540, 262144, 65538, -65539, 327680, 65538, -65538, 327680, 65538, -65537, 262144, 65538, -131073, 262144, 65537, -131074, 327680, 65537, -131075, 327680, 65537, -131076, 327680, 65537, -131077, 262144, 65537, -131078, 262144, 65537, -131079, 262144, 65537, -131080, 262144, 65537, -131081, 393216, 65537, -65558, 393217, 1, -65559, 393217, 1, -65560, 393217, 1, -65561, 327681, 1, -65562, 327681, 1, -65563, 393217, 1, -65564, 327681, 1, -65565, 327681, 1, -65566, 393217, 1, -65567, 393217, 1, -65568, 393217, 1, -65569, 327681, 1, -65570, 327681, 1)
+layer_1/tile_data = PackedInt32Array(-65544, 262144, 65538, -65545, 196609, 1, -65546, 1, 1, -65547, 262145, 1, -65548, 131073, 1, -65549, 393217, 1, -65550, 327681, 1, -65551, 327681, 1, -65552, 327681, 1, -65553, 327681, 1, -65554, 327681, 1, -65555, 327681, 1, -65556, 393217, 1, -65557, 327681, 1, -65543, 262144, 65538, -65542, 262144, 65538, -65541, 327680, 65538, -65540, 262144, 65538, -65539, 327680, 65538, -65538, 327680, 65538, -65537, 262144, 65538, -131073, 262144, 65537, -131074, 327680, 65537, -131075, 327680, 65537, -131076, 327680, 65537, -131077, 262144, 65537, -131078, 262144, 65537, -131079, 262144, 65537, -131080, 262144, 65537, -131081, 393216, 65537, -65558, 393217, 1, -65559, 393217, 1, -65560, 393217, 1, -65561, 327681, 1, -65562, 327681, 1, -65563, 393217, 1, -65564, 327681, 1, -65565, 327681, 1, -65566, 393217, 1, -65567, 393217, 1, -65568, 393217, 1, -65569, 327681, 1, -65570, 327681, 1, -131147, 65539, 3, -131146, 65539, 3, -131145, 65539, 3, -131144, 65539, 3, -131143, 65539, 3, -131142, 65539, 3, -131141, 65539, 3, -131140, 65539, 3, -131139, 65539, 3, -131138, 65539, 3, -131137, 65539, 3, -131136, 65539, 3, -131135, 65539, 3, -131134, 65539, 3, -131133, 65539, 3, -131132, 65539, 3, -131131, 65539, 3, -131130, 65539, 3, -131129, 65539, 3, -131128, 65539, 3, -131127, 65539, 3, -131126, 65539, 3, -131125, 65539, 3, -131124, 65539, 3, -131123, 65539, 3, -131122, 65539, 3)
 script = ExtResource("2_f8vse")
 
 [node name="Map Area" type="Area2D" parent="."]
@@ -283,6 +291,42 @@ texture = ExtResource("17_h7qmw")
 position = Vector2(96, 16)
 texture = ExtResource("16_ilrly")
 
+[node name="Drinks 1" type="Sprite2D" parent="Gas Station Sprites"]
+position = Vector2(90, 20)
+texture = ExtResource("18_ocit6")
+
+[node name="Drinks 2" type="Sprite2D" parent="Gas Station Sprites"]
+position = Vector2(102, 30)
+texture = ExtResource("19_8k70h")
+
+[node name="Drinks 3" type="Sprite2D" parent="Gas Station Sprites"]
+position = Vector2(90, -10)
+texture = ExtResource("20_24fyv")
+
+[node name="Drinks 4" type="Sprite2D" parent="Gas Station Sprites"]
+position = Vector2(105, 20)
+texture = ExtResource("21_ytx31")
+
+[node name="Drinks 5" type="Sprite2D" parent="Gas Station Sprites"]
+position = Vector2(87, 30)
+texture = ExtResource("22_0rgdu")
+
+[node name="Drinks 6" type="Sprite2D" parent="Gas Station Sprites"]
+position = Vector2(105, -10)
+texture = ExtResource("22_0rgdu")
+
+[node name="Drinks 7" type="Sprite2D" parent="Gas Station Sprites"]
+position = Vector2(111, -10)
+texture = ExtResource("22_0rgdu")
+
+[node name="Drinks 8" type="Sprite2D" parent="Gas Station Sprites"]
+position = Vector2(91, 5)
+texture = ExtResource("23_cl343")
+
+[node name="Drinks 9" type="Sprite2D" parent="Gas Station Sprites"]
+position = Vector2(108, 5)
+texture = ExtResource("24_chjp3")
+
 [node name="Cooler Door 3" type="Sprite2D" parent="Gas Station Sprites"]
 position = Vector2(96, 11)
 texture = ExtResource("17_h7qmw")
@@ -306,6 +350,10 @@ texture = ExtResource("17_h7qmw")
 [node name="Cooler Back 6" type="Sprite2D" parent="Gas Station Sprites"]
 position = Vector2(216, 16)
 texture = ExtResource("16_ilrly")
+
+[node name="Tea" type="Sprite2D" parent="Gas Station Sprites"]
+position = Vector2(204, 5)
+texture = ExtResource("25_k6s6f")
 
 [node name="Cooler Door 6" type="Sprite2D" parent="Gas Station Sprites"]
 position = Vector2(216, 11)
