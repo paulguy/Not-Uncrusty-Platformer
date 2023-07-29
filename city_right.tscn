@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://dq083vadn4wg6"]
+[gd_scene load_steps=39 format=3 uid="uid://dq083vadn4wg6"]
 
 [ext_resource type="TileSet" uid="uid://bbcmc4vabwnbb" path="res://Tilesets/world_graphics.tres" id="1_3n3y5"]
 [ext_resource type="Script" path="res://area.gd" id="2_f8vse"]
@@ -26,6 +26,13 @@
 [ext_resource type="Texture2D" uid="uid://bgqp1mfswxmrl" path="res://Sprites/tall-blue-drink-can-3x.png" id="23_cl343"]
 [ext_resource type="Texture2D" uid="uid://crviw45x52twb" path="res://Sprites/tall-red-drink-can-1x.png" id="24_chjp3"]
 [ext_resource type="Texture2D" uid="uid://bptk35nkdtdda" path="res://Sprites/bottled-soft-drink-1x.png" id="25_k6s6f"]
+[ext_resource type="Texture2D" uid="uid://cyewqrukvcvg" path="res://Sprites/blue-cereal-box.png" id="27_xb6ko"]
+[ext_resource type="Texture2D" uid="uid://cr5mo3ayw8yv3" path="res://Sprites/yellow-cereal-box.png" id="28_0xlxs"]
+[ext_resource type="Texture2D" uid="uid://iy4tj2amc7lq" path="res://Sprites/chocolate-cereal-box.png" id="29_gusal"]
+[ext_resource type="Texture2D" uid="uid://lpamfnsup5mj" path="res://Sprites/yellow-chips-bag.png" id="30_reikh"]
+[ext_resource type="Texture2D" uid="uid://fgxpyjpc4itj" path="res://Sprites/blue-chip-bag.png" id="31_5qxgh"]
+[ext_resource type="Texture2D" uid="uid://b4g4pmur13u0d" path="res://Sprites/pizza-chip-tube.png" id="32_38ei1"]
+[ext_resource type="Texture2D" uid="uid://cx6ty8nmdnhmg" path="res://Sprites/green-chip-tube.png" id="33_obiun"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oo5ie"]
 size = Vector2(2320, 1876)
@@ -378,6 +385,58 @@ texture = ExtResource("18_nvyu2")
 [node name="Shelf 3" type="Sprite2D" parent="Gas Station Sprites"]
 position = Vector2(45, 24)
 texture = ExtResource("18_nvyu2")
+
+[node name="Cereal 1" type="Sprite2D" parent="Gas Station Sprites"]
+position = Vector2(64, 0)
+texture = ExtResource("27_xb6ko")
+
+[node name="Cereal 6" type="Sprite2D" parent="Gas Station Sprites"]
+position = Vector2(76, 0)
+texture = ExtResource("27_xb6ko")
+
+[node name="Cereal 2" type="Sprite2D" parent="Gas Station Sprites"]
+position = Vector2(52, 0)
+texture = ExtResource("28_0xlxs")
+
+[node name="Cereal 3" type="Sprite2D" parent="Gas Station Sprites"]
+position = Vector2(38, 0)
+texture = ExtResource("28_0xlxs")
+
+[node name="Cereal 4" type="Sprite2D" parent="Gas Station Sprites"]
+position = Vector2(26, 0)
+texture = ExtResource("29_gusal")
+
+[node name="Cereal 5" type="Sprite2D" parent="Gas Station Sprites"]
+position = Vector2(13, 0)
+texture = ExtResource("29_gusal")
+
+[node name="Chips 1" type="Polygon2D" parent="Gas Station Sprites"]
+texture_repeat = 2
+position = Vector2(260, 12)
+texture = ExtResource("30_reikh")
+polygon = PackedVector2Array(0, 0, 32, 0, 32, 9, 0, 9)
+uv = PackedVector2Array(0, 0, 32, 0, 32, 9, 0, 9)
+
+[node name="Chips 2" type="Polygon2D" parent="Gas Station Sprites"]
+texture_repeat = 2
+position = Vector2(224, 12)
+texture = ExtResource("31_5qxgh")
+polygon = PackedVector2Array(0, 0, 32, 0, 32, 9, 0, 9)
+uv = PackedVector2Array(0, 0, 32, 0, 32, 9, 0, 9)
+
+[node name="Chips 3" type="Polygon2D" parent="Gas Station Sprites"]
+texture_repeat = 2
+position = Vector2(260, -9)
+texture = ExtResource("32_38ei1")
+polygon = PackedVector2Array(0, 0, 32, 0, 32, 18, 0, 18)
+uv = PackedVector2Array(0, 0, 32, 0, 32, 18, 0, 18)
+
+[node name="Chips 4" type="Polygon2D" parent="Gas Station Sprites"]
+texture_repeat = 2
+position = Vector2(224, -9)
+texture = ExtResource("33_obiun")
+polygon = PackedVector2Array(0, 0, 32, 0, 32, 18, 0, 18)
+uv = PackedVector2Array(0, 0, 32, 0, 32, 18, 0, 18)
 
 [connection signal="body_entered" from="BG Upper/Grass BG 1/BG Trees 13/Area2D" to="BG Upper/Grass BG 1/BG Trees 13" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="BG Upper/Grass BG 1/BG Trees 13/Area2D" to="BG Upper/Grass BG 1/BG Trees 13" method="_on_area_2d_body_exited"]
