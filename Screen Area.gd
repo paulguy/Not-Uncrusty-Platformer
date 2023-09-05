@@ -4,12 +4,21 @@ var onscreenMobs = []
 var toBeOnScreen = []
 var mobs_paused = false
 
+const OVERSIZE = 1.0
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	var shape = $"Screen Shape"
+	var vport = get_viewport_rect()
+	shape.shape.size = vport.size * (1.0 + OVERSIZE)
+	shape.position = shape.shape.size / 2.0
+	position = -shape.position
 	pass # Replace with function body.
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
+	var tform = get_viewport_transform()
+	position = (-tform.origin / tform.get_scale()) - (get_viewport_rect().size / 2.0)
 	# eventually on_screen will call add_child which seems to do something with
 	# the 2D physics engine that it doesn't like being done while evaluating
 	# whether collisions happened, so change to collecting all objects which

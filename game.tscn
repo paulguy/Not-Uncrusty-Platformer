@@ -15,19 +15,8 @@ size = Vector2(400, 300)
 [node name="Game" type="Node2D"]
 script = ExtResource("1_r4gip")
 
-[node name="ScreenBox" type="Polygon2D" parent="."]
-z_index = 4096
-color = Color(0, 0, 0, 1)
-polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
-polygons = [PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 5, 6, 7)]
-
-[node name="Background" type="Polygon2D" parent="."]
-z_index = -1
-color = Color(0, 0, 0, 1)
-polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
-
 [node name="Screen Area" type="Area2D" parent="."]
-position = Vector2(-189, -167)
+position = Vector2(-200, -150)
 collision_layer = 0
 collision_mask = 32772
 monitorable = false

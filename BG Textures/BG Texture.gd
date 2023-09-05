@@ -130,7 +130,8 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
-	var screen_center = get_viewport_transform().origin.y / get_screen_transform().get_scale().y - 150.0
+	var vport = get_viewport_transform()
+	var screen_center = (vport.origin.y / vport.get_scale().y) - (get_viewport_rect().size.y / 2.0)
 	var i = 0
 	for p in get_children():
 		# get the position relative to the center and scale it

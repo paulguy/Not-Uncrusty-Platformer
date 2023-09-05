@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=3 uid="uid://dq083vadn4wg6"]
+[gd_scene load_steps=48 format=3 uid="uid://dq083vadn4wg6"]
 
 [ext_resource type="TileSet" uid="uid://bbcmc4vabwnbb" path="res://Tilesets/world_graphics.tres" id="1_3n3y5"]
 [ext_resource type="Script" path="res://area.gd" id="2_f8vse"]
@@ -50,6 +50,9 @@ shader = ExtResource("3_rsdee")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7dup4"]
 size = Vector2(46, 57)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mn6p3"]
+size = Vector2(256, 18)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l6fod"]
 size = Vector2(480, 18)
 
@@ -81,7 +84,6 @@ layer_2/tile_data = PackedInt32Array(-65544, 262144, 65538, -65545, 196609, 1, -
 script = ExtResource("2_f8vse")
 
 [node name="Map Area" type="Area2D" parent="."]
-visible = false
 collision_layer = 32768
 collision_mask = 0
 monitoring = false
@@ -240,7 +242,7 @@ position = Vector2(128, 7)
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Gas Station Awning/StaticBody2D"]
-shape = SubResource("RectangleShape2D_l6fod")
+shape = SubResource("RectangleShape2D_mn6p3")
 
 [node name="Gas Station Awning Logo" type="Sprite2D" parent="Gas Station Awning"]
 position = Vector2(224, 8)

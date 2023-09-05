@@ -85,9 +85,7 @@ func _physics_process(delta):
 	var direction = 0
 
 	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
-		var zoom = camera.zoom
-		var voffset = position - (-self.get_viewport_transform().origin / zoom)
-		diff = mousepos / zoom - voffset
+		diff = mousepos - (get_viewport_rect().size / 2.0)
 	else:
 		diff = Vector2(Input.get_axis("right_analog_left", "right_analog_right"),
 					   Input.get_axis("right_analog_up", "right_analog_down")) * THRUST_MAX_DISTANCE

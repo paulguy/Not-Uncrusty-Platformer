@@ -28,12 +28,12 @@ func _process(delta):
 		vis = false
 		fade_to(MIN_ALPHA)
 
-func set_thrust(ang, len, len_factor):
+func set_thrust(ang, length, len_factor):
 	if not vis:
 		vis = true
 		vistime = MIN_VIS_TIME
 		fade_to(MAX_ALPHA)
 	self.rotation = ang
-	self.position = Vector2.RIGHT.rotated(ang) * (len * (1.0 - MIN_DIST) + MIN_DIST) * len_factor
-	len = len * (1.0 - MIN_SCALE) + MIN_SCALE
-	self.scale = Vector2(len, len)
+	self.position = Vector2.RIGHT.rotated(ang) * (length * (1.0 - MIN_DIST) + MIN_DIST) * len_factor
+	length = length * (1.0 - MIN_SCALE) + MIN_SCALE
+	self.scale = Vector2(length, length)
