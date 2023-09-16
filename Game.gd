@@ -23,24 +23,7 @@ func pause(paused : bool):
 
 	area.pause_mobs(paused)
 
-@onready var CODES = {
-	"THRUSSY": player,
-	"TEXTJSON": player
-}
-
-var cur_code = ""
-
+# no idea how to get text input events to a singleton
 func _input(event):
 	if event is InputEventKey and event.pressed:
-		cur_code += String.chr(event.unicode).to_upper()
-		var found = false
-		for code in CODES.keys():
-			if code.begins_with(cur_code):
-				found = true
-				break
-		if found:
-			if cur_code in CODES:
-				CODES[cur_code].cheat(cur_code)
-				cur_code = ""
-		else:
-			cur_code = ""
+		Cheater.key_pressed(String.chr(event.unicode).to_upper())

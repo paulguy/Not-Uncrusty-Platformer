@@ -41,6 +41,8 @@ var text_cache = {}
 
 func _ready():
 	camera.make_current()
+	Cheater.register('THRUSSY', self)
+	Cheater.register('TEXTJSON', self)
 
 func _input(event):
 	if event is InputEventMouse:
