@@ -3,23 +3,20 @@ extends Node
 var cur_code = ""
 var codes = Dictionary()
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
-func key_pressed(char : String):
-	cur_code += char
-	var found = false
-	for code in codes.keys():
-		if code.begins_with(cur_code):
-			found = true
-			break
-	if found:
-		if cur_code in codes:
-			codes[cur_code].cheat(cur_code)
-			cur_code = ""
-	else:
-			cur_code = ""
+func _input(event):
+	if event is InputEventKey and event.pressed:
+		cur_code += String.chr(event.unicode).to_upper()
+		var found = false
+		for code in codes.keys():
+			if code.begins_with(cur_code):
+				found = true
+				break
+		if found:
+			if cur_code in codes:
+				codes[cur_code].cheat(cur_code)
+				cur_code = ""
+		else:
+				cur_code = ""
 
 func register(code : String, thing : Node):
 	if code in codes:

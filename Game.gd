@@ -22,8 +22,3 @@ func pause(paused : bool):
 		player.process_mode = PROCESS_MODE_INHERIT
 
 	area.pause_mobs(paused)
-
-# no idea how to get text input events to a singleton
-func _input(event):
-	if event is InputEventKey and event.pressed:
-		Cheater.key_pressed(String.chr(event.unicode).to_upper())
