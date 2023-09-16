@@ -2,6 +2,7 @@ extends Node
 
 var cur_code = ""
 var codes = Dictionary()
+var signals = Dictionary()
 
 func _input(event):
 	if event is InputEventKey and event.pressed:
@@ -13,16 +14,26 @@ func _input(event):
 				break
 		if found:
 			if cur_code in codes:
-				codes[cur_code].cheat(cur_code)
+				for sig in codes[cur_code]:
+					sig.emit(cur_code)
 				cur_code = ""
 		else:
 				cur_code = ""
 
 func register(code : String, thing : Node):
-	if code in codes:
-		print_debug("Got duplicate cheat code {0} from node {1}!".format([code, thing]))
+	var sig
+	if thing in signals:
+		sig = signals[thing]
 	else:
-		codes[code] = thing
+		thing.add_user_signal("cheat", [{"name": "code", "type": TYPE_STRING}])
+		sig = Signal(thing, "cheat")
+		sig.connect(thing.cheat)
+		signals[thing] = sig
+
+	if code in codes:
+		codes[code].appemd(sig)
+	else:
+		codes[code] = [sig]
 
 func unregister(code : String):
 	if code in codes:
