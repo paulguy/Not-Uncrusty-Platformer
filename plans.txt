@@ -7,7 +7,8 @@ duke3d themes.  more spacey/scifi but human-lived in tech base/ship with
     familiar amenities, alien ship
 Tron/old style "VR" theme
 weirdcore, vaporwave, "early 3D graphics"
-neon/cyberpunky city
+neon/cyberpunky city, maybe in an "underground, outside" space?  I like this
+    and probably will have a few such places in general.
 road with dusky sky, yellow/orange/red/purple/blue palette, open field,
    distant buildings
 Weird dream where everything was like, yellow/orange/red "rays" of light or
@@ -30,7 +31,7 @@ mountains with snow
     maybe some caves that can go down in to some underground regions.
     tunnel?  with some kind of basement/underground access
 city
-    transitioning from normal to cyberpunk to liminal spaces, getting
+    transitioning from normal to liminal spaces, getting
     progressively aged to being kinda rundown and "duke3d like"
     maybe some buildings going deep down to transition to some underground
     areas.
