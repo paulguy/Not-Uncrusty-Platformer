@@ -1,4 +1,4 @@
-[gd_scene load_steps=65 format=3 uid="uid://dq083vadn4wg6"]
+[gd_scene load_steps=79 format=3 uid="uid://dq083vadn4wg6"]
 
 [ext_resource type="TileSet" uid="uid://bbcmc4vabwnbb" path="res://Tilesets/world_graphics.tres" id="1_3n3y5"]
 [ext_resource type="Script" path="res://area.gd" id="2_f8vse"]
@@ -16,10 +16,13 @@
 [ext_resource type="PackedScene" uid="uid://33djf7gddlrm" path="res://dialog_box.tscn" id="12_pvxir"]
 [ext_resource type="Script" path="res://FG Hider.gd" id="15_0j1js"]
 [ext_resource type="Texture2D" uid="uid://c70uua2yybws6" path="res://Sprites/food-cooler-back.png" id="16_ilrly"]
+[ext_resource type="Texture2D" uid="uid://d0k4pl0c34ims" path="res://Sprites/tall-food-box.png" id="17_cwgow"]
 [ext_resource type="Texture2D" uid="uid://bi6e7ka6ppdn0" path="res://Sprites/food-cooler-door.png" id="17_h7qmw"]
 [ext_resource type="Texture2D" uid="uid://c6u47gagd88wy" path="res://Sprites/store-shelf.png" id="18_nvyu2"]
 [ext_resource type="Texture2D" uid="uid://ccl7gs4og5yo4" path="res://Sprites/red-drink-can-4x.png" id="18_ocit6"]
+[ext_resource type="Texture2D" uid="uid://luy6s2vgslql" path="res://Sprites/narrow-food-box.png" id="18_sj2kx"]
 [ext_resource type="Texture2D" uid="uid://dptttpl64y88c" path="res://Sprites/blue-drink-can-4x.png" id="19_8k70h"]
+[ext_resource type="Texture2D" uid="uid://dabxm0jcsgm21" path="res://Sprites/wide-food-box.png" id="19_ajeqg"]
 [ext_resource type="Texture2D" uid="uid://b3fybwx27yax7" path="res://Sprites/green-drink-can-4x.png" id="20_24fyv"]
 [ext_resource type="Texture2D" uid="uid://1wakeremv1e0" path="res://Sprites/green-drink-can-1x.png" id="21_ytx31"]
 [ext_resource type="Texture2D" uid="uid://nn3u4fhdod3l" path="res://Sprites/orange-drink-can-1x.png" id="22_0rgdu"]
@@ -31,22 +34,33 @@
 [ext_resource type="Texture2D" uid="uid://ceh76e6fn3n3q" path="res://Sprites/big-red-milk.png" id="27_8ms3a"]
 [ext_resource type="Texture2D" uid="uid://cyewqrukvcvg" path="res://Sprites/blue-cereal-box.png" id="27_xb6ko"]
 [ext_resource type="Texture2D" uid="uid://cr5mo3ayw8yv3" path="res://Sprites/yellow-cereal-box.png" id="28_0xlxs"]
+[ext_resource type="Texture2D" uid="uid://67i0u8t7q1tk" path="res://Sprites/green-energy-drink.png" id="28_3bbh3"]
 [ext_resource type="Texture2D" uid="uid://bcuk56hfo7l30" path="res://Sprites/small-red-milk.png" id="28_768ny"]
 [ext_resource type="Texture2D" uid="uid://bkm7ogrw3enfi" path="res://Sprites/small-chocolate-milk.png" id="29_1ems6"]
 [ext_resource type="Texture2D" uid="uid://iy4tj2amc7lq" path="res://Sprites/chocolate-cereal-box.png" id="29_gusal"]
+[ext_resource type="Texture2D" uid="uid://byplc6665kucp" path="res://Sprites/blue-energy-drink.png" id="29_x6ocx"]
+[ext_resource type="Texture2D" uid="uid://cenki7krp65hr" path="res://Sprites/orange-energy-drink.png" id="30_0d7cp"]
 [ext_resource type="Texture2D" uid="uid://cemu22juhc3cg" path="res://Sprites/small-purple-milk.png" id="30_pw52d"]
 [ext_resource type="Texture2D" uid="uid://lpamfnsup5mj" path="res://Sprites/yellow-chips-bag.png" id="30_reikh"]
 [ext_resource type="Texture2D" uid="uid://fgxpyjpc4itj" path="res://Sprites/blue-chip-bag.png" id="31_5qxgh"]
+[ext_resource type="Texture2D" uid="uid://oujuq1so7fqr" path="res://Sprites/purple-energy-drink.png" id="31_spi3q"]
 [ext_resource type="Texture2D" uid="uid://gewlt1rep6ud" path="res://Sprites/small-green-milk.png" id="31_xi6mo"]
 [ext_resource type="Texture2D" uid="uid://b4g4pmur13u0d" path="res://Sprites/pizza-chip-tube.png" id="32_38ei1"]
+[ext_resource type="Texture2D" uid="uid://b2qiheioqovqy" path="res://Sprites/banana-energy-drink.png" id="32_het72"]
 [ext_resource type="Texture2D" uid="uid://dpmoehdetlo" path="res://Sprites/food-tub-tall.png" id="32_pwhtx"]
+[ext_resource type="Texture2D" uid="uid://cilh8ahhew5c8" path="res://Sprites/white-energy-drink.png" id="33_ggp8o"]
 [ext_resource type="Texture2D" uid="uid://cx6ty8nmdnhmg" path="res://Sprites/green-chip-tube.png" id="33_obiun"]
 [ext_resource type="Texture2D" uid="uid://dceijnjsen022" path="res://Sprites/food-tub-short.png" id="33_p7h08"]
 [ext_resource type="Texture2D" uid="uid://baochpawoajce" path="res://Sprites/orange-fruit.png" id="34_2nl77"]
+[ext_resource type="Texture2D" uid="uid://cg0dktc2d57bw" path="res://Sprites/tall-green-energy-drink.png" id="34_fr8b6"]
 [ext_resource type="Texture2D" uid="uid://bv2c566gqvicd" path="res://Sprites/basket-piece.png" id="34_osal5"]
+[ext_resource type="Texture2D" uid="uid://by88qe7lkwa0k" path="res://Sprites/tall-blue-energy-drink.png" id="35_7hjy1"]
 [ext_resource type="Texture2D" uid="uid://b8gontseswqn1" path="res://Sprites/red-apple.png" id="35_7lp00"]
 [ext_resource type="Texture2D" uid="uid://b7xdyqrcm5s5y" path="res://Sprites/green-apple.png" id="36_dynrd"]
+[ext_resource type="Texture2D" uid="uid://dwsgjrqffnt4x" path="res://Sprites/tall-orange-energy-drink.png" id="36_ohllb"]
 [ext_resource type="Texture2D" uid="uid://btudqe2oxevcp" path="res://Sprites/yellow-apple.png" id="37_1hbyi"]
+[ext_resource type="Texture2D" uid="uid://5un4jd3x6uqu" path="res://Sprites/tall-banana-energy-drink.png" id="37_6rvdo"]
+[ext_resource type="Texture2D" uid="uid://dtk32ftgr7ci1" path="res://Sprites/egg carton.png" id="38_j5kj3"]
 [ext_resource type="Texture2D" uid="uid://dyl7cm8byv40h" path="res://Sprites/bunch-bananas.png" id="38_n1jnv"]
 [ext_resource type="Texture2D" uid="uid://c8u4ubi8jt8s0" path="res://Sprites/single-sideon-banana.png" id="39_g14cf"]
 [ext_resource type="Texture2D" uid="uid://du1o7520u5vqf" path="res://Sprites/single-fronton-banana.png" id="40_8cunj"]
@@ -310,6 +324,46 @@ position = Vector2(-1180, -96)
 position = Vector2(16, 16)
 texture = ExtResource("16_ilrly")
 
+[node name="Box 1" type="Sprite2D" parent="Gas Station Sprites/Cooler Back 1"]
+position = Vector2(-12, -6)
+texture = ExtResource("17_cwgow")
+
+[node name="Box 2" type="Sprite2D" parent="Gas Station Sprites/Cooler Back 1"]
+position = Vector2(-12, -14)
+texture = ExtResource("17_cwgow")
+
+[node name="Box 3" type="Sprite2D" parent="Gas Station Sprites/Cooler Back 1"]
+position = Vector2(-12, 6)
+texture = ExtResource("18_sj2kx")
+
+[node name="Box 4" type="Sprite2D" parent="Gas Station Sprites/Cooler Back 1"]
+position = Vector2(-12, 2)
+texture = ExtResource("18_sj2kx")
+
+[node name="Box 5" type="Sprite2D" parent="Gas Station Sprites/Cooler Back 1"]
+position = Vector2(-12, 16)
+texture = ExtResource("18_sj2kx")
+
+[node name="Box 6" type="Sprite2D" parent="Gas Station Sprites/Cooler Back 1"]
+position = Vector2(-12, 12)
+texture = ExtResource("18_sj2kx")
+
+[node name="Box 9" type="Sprite2D" parent="Gas Station Sprites/Cooler Back 1"]
+position = Vector2(12, -24)
+texture = ExtResource("18_sj2kx")
+
+[node name="Box 10" type="Sprite2D" parent="Gas Station Sprites/Cooler Back 1"]
+position = Vector2(12, -28)
+texture = ExtResource("18_sj2kx")
+
+[node name="Box 7" type="Sprite2D" parent="Gas Station Sprites/Cooler Back 1"]
+position = Vector2(-6, -24)
+texture = ExtResource("19_ajeqg")
+
+[node name="Box 8" type="Sprite2D" parent="Gas Station Sprites/Cooler Back 1"]
+position = Vector2(-6, -28)
+texture = ExtResource("19_ajeqg")
+
 [node name="Cooler Door 1" type="Sprite2D" parent="Gas Station Sprites/Cooler Back 1"]
 position = Vector2(0, -5)
 texture = ExtResource("17_h7qmw")
@@ -369,6 +423,46 @@ texture = ExtResource("17_h7qmw")
 [node name="Cooler Back 4" type="Sprite2D" parent="Gas Station Sprites"]
 position = Vector2(136, 16)
 texture = ExtResource("16_ilrly")
+
+[node name="Drink 1" type="Sprite2D" parent="Gas Station Sprites/Cooler Back 4"]
+position = Vector2(-15, -26)
+texture = ExtResource("28_3bbh3")
+
+[node name="Drink 2" type="Sprite2D" parent="Gas Station Sprites/Cooler Back 4"]
+position = Vector2(-9, -26)
+texture = ExtResource("29_x6ocx")
+
+[node name="Drink 3" type="Sprite2D" parent="Gas Station Sprites/Cooler Back 4"]
+position = Vector2(-3, -26)
+texture = ExtResource("30_0d7cp")
+
+[node name="Drink 4" type="Sprite2D" parent="Gas Station Sprites/Cooler Back 4"]
+position = Vector2(3, -26)
+texture = ExtResource("31_spi3q")
+
+[node name="Drink 5" type="Sprite2D" parent="Gas Station Sprites/Cooler Back 4"]
+position = Vector2(9, -26)
+texture = ExtResource("32_het72")
+
+[node name="Drink 6" type="Sprite2D" parent="Gas Station Sprites/Cooler Back 4"]
+position = Vector2(15, -26)
+texture = ExtResource("33_ggp8o")
+
+[node name="Drink 7" type="Sprite2D" parent="Gas Station Sprites/Cooler Back 4"]
+position = Vector2(-12, -11)
+texture = ExtResource("34_fr8b6")
+
+[node name="Drink 8" type="Sprite2D" parent="Gas Station Sprites/Cooler Back 4"]
+position = Vector2(-4, -11)
+texture = ExtResource("35_7hjy1")
+
+[node name="Drink 9" type="Sprite2D" parent="Gas Station Sprites/Cooler Back 4"]
+position = Vector2(4, -11)
+texture = ExtResource("36_ohllb")
+
+[node name="Drink 10" type="Sprite2D" parent="Gas Station Sprites/Cooler Back 4"]
+position = Vector2(12, -11)
+texture = ExtResource("37_6rvdo")
 
 [node name="Cooler Door 4" type="Sprite2D" parent="Gas Station Sprites/Cooler Back 4"]
 position = Vector2(0, -5)
@@ -442,6 +536,10 @@ texture = ExtResource("25_k6s6f")
 position = Vector2(-4, -11)
 texture = ExtResource("25_k6s6f")
 
+[node name="Tea3" type="Sprite2D" parent="Gas Station Sprites/Cooler Back 6"]
+position = Vector2(4, -11)
+texture = ExtResource("25_k6s6f")
+
 [node name="Cooler Door 6" type="Sprite2D" parent="Gas Station Sprites/Cooler Back 6"]
 position = Vector2(0, -5)
 texture = ExtResource("17_h7qmw")
@@ -449,6 +547,26 @@ texture = ExtResource("17_h7qmw")
 [node name="Cooler Back 7" type="Sprite2D" parent="Gas Station Sprites"]
 position = Vector2(256, 16)
 texture = ExtResource("16_ilrly")
+
+[node name="Eggs 1" type="Sprite2D" parent="Gas Station Sprites/Cooler Back 7"]
+position = Vector2(-9, -24)
+texture = ExtResource("38_j5kj3")
+
+[node name="Eggs 2" type="Sprite2D" parent="Gas Station Sprites/Cooler Back 7"]
+position = Vector2(-9, -28)
+texture = ExtResource("38_j5kj3")
+
+[node name="Eggs 3" type="Sprite2D" parent="Gas Station Sprites/Cooler Back 7"]
+position = Vector2(9, -24)
+texture = ExtResource("38_j5kj3")
+
+[node name="Eggs 4" type="Sprite2D" parent="Gas Station Sprites/Cooler Back 7"]
+position = Vector2(9, -28)
+texture = ExtResource("38_j5kj3")
+
+[node name="Tub 1" type="Sprite2D" parent="Gas Station Sprites/Cooler Back 7"]
+position = Vector2(0, -14)
+texture = ExtResource("32_pwhtx")
 
 [node name="Cooler Door 7" type="Sprite2D" parent="Gas Station Sprites/Cooler Back 7"]
 position = Vector2(0, -5)
