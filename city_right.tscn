@@ -1,4 +1,4 @@
-[gd_scene load_steps=79 format=3 uid="uid://dq083vadn4wg6"]
+[gd_scene load_steps=87 format=3 uid="uid://dq083vadn4wg6"]
 
 [ext_resource type="TileSet" uid="uid://bbcmc4vabwnbb" path="res://Tilesets/world_graphics.tres" id="1_3n3y5"]
 [ext_resource type="Script" path="res://area.gd" id="2_f8vse"]
@@ -24,8 +24,10 @@
 [ext_resource type="Texture2D" uid="uid://dptttpl64y88c" path="res://Sprites/blue-drink-can-4x.png" id="19_8k70h"]
 [ext_resource type="Texture2D" uid="uid://dabxm0jcsgm21" path="res://Sprites/wide-food-box.png" id="19_ajeqg"]
 [ext_resource type="Texture2D" uid="uid://b3fybwx27yax7" path="res://Sprites/green-drink-can-4x.png" id="20_24fyv"]
+[ext_resource type="Texture2D" uid="uid://dvb76yjgcahjo" path="res://Sprites/dairy-ice-cream.png" id="21_b0kxp"]
 [ext_resource type="Texture2D" uid="uid://1wakeremv1e0" path="res://Sprites/green-drink-can-1x.png" id="21_ytx31"]
 [ext_resource type="Texture2D" uid="uid://nn3u4fhdod3l" path="res://Sprites/orange-drink-can-1x.png" id="22_0rgdu"]
+[ext_resource type="Texture2D" uid="uid://c1jmmr01b8sda" path="res://Sprites/tofu-ice-cream.png" id="22_bqhg7"]
 [ext_resource type="Texture2D" uid="uid://bgqp1mfswxmrl" path="res://Sprites/tall-blue-drink-can-3x.png" id="23_cl343"]
 [ext_resource type="Texture2D" uid="uid://crviw45x52twb" path="res://Sprites/tall-red-drink-can-1x.png" id="24_chjp3"]
 [ext_resource type="Texture2D" uid="uid://bptk35nkdtdda" path="res://Sprites/bottled-soft-drink-1x.png" id="25_k6s6f"]
@@ -64,13 +66,19 @@
 [ext_resource type="Texture2D" uid="uid://dyl7cm8byv40h" path="res://Sprites/bunch-bananas.png" id="38_n1jnv"]
 [ext_resource type="Texture2D" uid="uid://c8u4ubi8jt8s0" path="res://Sprites/single-sideon-banana.png" id="39_g14cf"]
 [ext_resource type="Texture2D" uid="uid://du1o7520u5vqf" path="res://Sprites/single-fronton-banana.png" id="40_8cunj"]
+[ext_resource type="Texture2D" uid="uid://5jml4qv2jirk" path="res://Sprites/orange-juice.png" id="50_d6iwb"]
 [ext_resource type="Texture2D" uid="uid://7pbdhp4pqil0" path="res://Sprites/wrapped-bread.png" id="51_2e81e"]
+[ext_resource type="Texture2D" uid="uid://dhjos46s2brmb" path="res://Sprites/apple-juice.png" id="51_mwe8a"]
 [ext_resource type="Texture2D" uid="uid://ddlc2hmtt3qka" path="res://Sprites/old-pc.png" id="51_sojef"]
+[ext_resource type="Texture2D" uid="uid://cef83vwbavtih" path="res://Sprites/grape-juice.png" id="52_8r8xs"]
 [ext_resource type="Texture2D" uid="uid://cbhoisx3rjcac" path="res://Sprites/wrapped-bagels.png" id="52_8xsh4"]
 [ext_resource type="Texture2D" uid="uid://cvfsmpbimsl44" path="res://Sprites/crt-monitor.png" id="52_fmovk"]
 [ext_resource type="Texture2D" uid="uid://b0js447ph5cs2" path="res://Sprites/receipt-printer.png" id="53_c7y1i"]
+[ext_resource type="Texture2D" uid="uid://cgydfi7cera1c" path="res://Sprites/tomato-juice.png" id="53_d78nl"]
 [ext_resource type="Texture2D" uid="uid://bwet5jextcukm" path="res://Sprites/pin-pad.png" id="54_mlxib"]
 [ext_resource type="Texture2D" uid="uid://csgs6uujcs65" path="res://Sprites/scratch-off-stand.png" id="57_smm5x"]
+[ext_resource type="Texture2D" uid="uid://ckkfv8b5444u7" path="res://Sprites/salty-crackers.png" id="60_bhkjw"]
+[ext_resource type="Texture2D" uid="uid://drh7yedqpftbb" path="res://Sprites/cheese-crackers.png" id="61_rsa72"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oo5ie"]
 size = Vector2(2320, 1876)
@@ -372,6 +380,22 @@ texture = ExtResource("17_h7qmw")
 position = Vector2(56, 16)
 texture = ExtResource("16_ilrly")
 
+[node name="Ice Crem 1" type="Sprite2D" parent="Gas Station Sprites/Cooler Back 2"]
+position = Vector2(-12, -26)
+texture = ExtResource("21_b0kxp")
+
+[node name="Ice Crem 2" type="Sprite2D" parent="Gas Station Sprites/Cooler Back 2"]
+position = Vector2(-4, -26)
+texture = ExtResource("21_b0kxp")
+
+[node name="Ice Crem 3" type="Sprite2D" parent="Gas Station Sprites/Cooler Back 2"]
+position = Vector2(4, -26)
+texture = ExtResource("21_b0kxp")
+
+[node name="Ice Crem 4" type="Sprite2D" parent="Gas Station Sprites/Cooler Back 2"]
+position = Vector2(12, -26)
+texture = ExtResource("22_bqhg7")
+
 [node name="Cooler Door 2" type="Sprite2D" parent="Gas Station Sprites/Cooler Back 2"]
 position = Vector2(0, -5)
 texture = ExtResource("17_h7qmw")
@@ -540,6 +564,50 @@ texture = ExtResource("25_k6s6f")
 position = Vector2(4, -11)
 texture = ExtResource("25_k6s6f")
 
+[node name="Juice 1" type="Sprite2D" parent="Gas Station Sprites/Cooler Back 6"]
+position = Vector2(-15, -26)
+texture = ExtResource("50_d6iwb")
+
+[node name="Juice 2" type="Sprite2D" parent="Gas Station Sprites/Cooler Back 6"]
+position = Vector2(-9, -26)
+texture = ExtResource("50_d6iwb")
+
+[node name="Juice 3" type="Sprite2D" parent="Gas Station Sprites/Cooler Back 6"]
+position = Vector2(-3, -26)
+texture = ExtResource("50_d6iwb")
+
+[node name="Juice 4" type="Sprite2D" parent="Gas Station Sprites/Cooler Back 6"]
+position = Vector2(3, -26)
+texture = ExtResource("51_mwe8a")
+
+[node name="Juice 5" type="Sprite2D" parent="Gas Station Sprites/Cooler Back 6"]
+position = Vector2(9, -26)
+texture = ExtResource("51_mwe8a")
+
+[node name="Juice 6" type="Sprite2D" parent="Gas Station Sprites/Cooler Back 6"]
+position = Vector2(15, -26)
+texture = ExtResource("51_mwe8a")
+
+[node name="Juice 7" type="Sprite2D" parent="Gas Station Sprites/Cooler Back 6"]
+position = Vector2(-15, 4)
+texture = ExtResource("52_8r8xs")
+
+[node name="Juice 8" type="Sprite2D" parent="Gas Station Sprites/Cooler Back 6"]
+position = Vector2(-9, 4)
+texture = ExtResource("52_8r8xs")
+
+[node name="Juice 10" type="Sprite2D" parent="Gas Station Sprites/Cooler Back 6"]
+position = Vector2(-15, 14)
+texture = ExtResource("53_d78nl")
+
+[node name="Juice 11" type="Sprite2D" parent="Gas Station Sprites/Cooler Back 6"]
+position = Vector2(-9, 14)
+texture = ExtResource("53_d78nl")
+
+[node name="Juice 12" type="Sprite2D" parent="Gas Station Sprites/Cooler Back 6"]
+position = Vector2(-3, 14)
+texture = ExtResource("53_d78nl")
+
 [node name="Cooler Door 6" type="Sprite2D" parent="Gas Station Sprites/Cooler Back 6"]
 position = Vector2(0, -5)
 texture = ExtResource("17_h7qmw")
@@ -573,7 +641,7 @@ position = Vector2(0, -5)
 texture = ExtResource("17_h7qmw")
 
 [node name="Shelf 1" type="Sprite2D" parent="Gas Station Sprites"]
-position = Vector2(258, 24)
+position = Vector2(256, 24)
 texture = ExtResource("18_nvyu2")
 
 [node name="Chips 1" type="Polygon2D" parent="Gas Station Sprites/Shelf 1"]
@@ -603,6 +671,38 @@ position = Vector2(-34, -33)
 texture = ExtResource("33_obiun")
 polygon = PackedVector2Array(0, 0, 32, 0, 32, 18, 0, 18)
 uv = PackedVector2Array(0, 0, 32, 0, 32, 18, 0, 18)
+
+[node name="Crackers 1" type="Sprite2D" parent="Gas Station Sprites/Shelf 1"]
+position = Vector2(-31, 5)
+texture = ExtResource("60_bhkjw")
+
+[node name="Crackers 2" type="Sprite2D" parent="Gas Station Sprites/Shelf 1"]
+position = Vector2(-22, 5)
+texture = ExtResource("60_bhkjw")
+
+[node name="Crackers 3" type="Sprite2D" parent="Gas Station Sprites/Shelf 1"]
+position = Vector2(-14, 5)
+texture = ExtResource("60_bhkjw")
+
+[node name="Crackers 4" type="Sprite2D" parent="Gas Station Sprites/Shelf 1"]
+position = Vector2(-4, 5)
+texture = ExtResource("60_bhkjw")
+
+[node name="Crackers 5" type="Sprite2D" parent="Gas Station Sprites/Shelf 1"]
+position = Vector2(7, 5)
+texture = ExtResource("61_rsa72")
+
+[node name="Crackers 6" type="Sprite2D" parent="Gas Station Sprites/Shelf 1"]
+position = Vector2(16, 5)
+texture = ExtResource("61_rsa72")
+
+[node name="Crackers 7" type="Sprite2D" parent="Gas Station Sprites/Shelf 1"]
+position = Vector2(26, 5)
+texture = ExtResource("61_rsa72")
+
+[node name="Crackers 8" type="Sprite2D" parent="Gas Station Sprites/Shelf 1"]
+position = Vector2(34, 5)
+texture = ExtResource("61_rsa72")
 
 [node name="Shelf 2" type="Sprite2D" parent="Gas Station Sprites"]
 position = Vector2(145, 24)
