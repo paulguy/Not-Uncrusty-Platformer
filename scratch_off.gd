@@ -21,7 +21,9 @@ var cur_texture : ImageTexture
 var scratch_area : bool = false
 var number_spaces : Array
 var prize_digits : Array
+var seed_digits : Array
 var animating : bool = false
+var rand_seed : int = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -35,12 +37,16 @@ func _ready():
 	number_spaces.resize(9)
 	prize_digits = Array()
 	prize_digits.resize(6)
+	seed_digits = Array()
+	seed_digits.resize(16)
 	for child in $Ticket.get_children():
 		var childname = child.name.split(" ")
 		if childname[0] == "Number":
 			number_spaces[int(childname[2])*3+int(childname[1])] = child
 		elif childname[0] == "Prize":
 			prize_digits[int(childname[1])] = child
+		elif childname[0] == "Seed":
+			seed_digits[int(childname[1])] = child
 
 func _input(event):
 	if event is InputEventMouse:
@@ -68,26 +74,43 @@ func free_prize():
 	digit = prize_digits[0]
 	digit.texture.region.position.x = digit.texture.region.size.x * SPACE_POSITION
 
+func set_seed():
+	rand_seed = randi() | (randi() << 32)
+	return rand_seed
+
+func rand_int(low : int, high : int):
+	var seedarr = rand_from_seed(rand_seed)
+	rand_seed = seedarr[0]
+	return (rand_seed % (high - low)) + low
+
 func generate_ticket():
+	var digit
+
+	var rseed = set_seed()
+	for number in 16:
+		digit = seed_digits[number]
+		digit.texture.region.position.x = digit.texture.region.size.x * (rseed & 0xF)
+		rseed >>= 4
+
 	for number in number_spaces:
 		number.texture.region.position.x = number.texture.region.size.x * UNSET_POSITION
 
-	var winning = (randi_range(0, WIN_CHANCE) == 0)
+	var winning = (rand_int(0, WIN_CHANCE) == 0)
 	if winning:
-		var direction = randi_range(0, 2)
+		var direction = rand_int(0, 2)
 		match direction:
 			0:
-				var row = randi_range(0, 2)
+				var row = rand_int(0, 2)
 				put_number(0, row, 7)
 				put_number(1, row, 7)
 				put_number(2, row, 7)
 			1:
-				var column = randi_range(0, 2)
+				var column = rand_int(0, 2)
 				put_number(column, 0, 7)
 				put_number(column, 1, 7)
 				put_number(column, 2, 7)
 			2:
-				var slant = (randi_range(0, 1) == 0)
+				var slant = (rand_int(0, 1) == 0)
 				if slant:
 					put_number(0, 0, 7)
 					put_number(1, 1, 7)
@@ -97,7 +120,7 @@ func generate_ticket():
 					put_number(1, 1, 7)
 					put_number(0, 2, 7)
 
-		var whichguigi = randi_range(0, 5)
+		var whichguigi = rand_int(0, 5)
 		for number in number_spaces:
 			if number.texture.region.position.x / number.texture.region.size.x == UNSET_POSITION:
 				whichguigi -= 1
@@ -105,9 +128,9 @@ func generate_ticket():
 					number.texture.region.position.x = number.texture.region.size.x * GUIGI_POSITION
 					break
 
-		var luigi = (randi_range(0, LUIGI_CHANCE) == 0)
+		var luigi = (rand_int(0, LUIGI_CHANCE) == 0)
 		if luigi:
-			var whichluigi = randi_range(0, 2)
+			var whichluigi = rand_int(0, 2)
 			for number in number_spaces:
 				if number.texture.region.position.x / number.texture.region.size.x == 7:
 					whichluigi -= 1
@@ -117,25 +140,25 @@ func generate_ticket():
 		
 		for number in number_spaces:
 			if number.texture.region.position.x / number.texture.region.size.x == UNSET_POSITION:
-				number.texture.region.position.x = number.texture.region.size.x * randi_range(0, 9)
+				number.texture.region.position.x = number.texture.region.size.x * rand_int(0, 9)
 	else:
 		for number in number_spaces:
-			number.texture.region.position.x = number.texture.region.size.x * randi_range(0, 9)
-		var almost_winning = (randi_range(0, ALMOST_WIN_CHANCE) == 0)
+			number.texture.region.position.x = number.texture.region.size.x * rand_int(0, 9)
+		var almost_winning = (rand_int(0, ALMOST_WIN_CHANCE) == 0)
 		if almost_winning:
-			var startpos = randi_range(0, 1)
-			var direction = randi_range(0, 2)
+			var startpos = rand_int(0, 1)
+			var direction = rand_int(0, 2)
 			match direction:
 				0:
-					var row = randi_range(0, 2)
+					var row = rand_int(0, 2)
 					put_number(startpos+0, row, 7)
 					put_number(startpos+1, row, 7)
 				1:
-					var column = randi_range(0, 2)
+					var column = rand_int(0, 2)
 					put_number(column, startpos+0, 7)
 					put_number(column, startpos+1, 7)
 				2:
-					var slant = (randi_range(0, 1) == 0)
+					var slant = (rand_int(0, 1) == 0)
 					if slant:
 						put_number(startpos+0, startpos+0, 7)
 						put_number(startpos+1, startpos+1, 7)
@@ -143,12 +166,11 @@ func generate_ticket():
 						put_number(2-startpos, startpos+0, 7)
 						put_number(1-startpos, startpos+1, 7)
 
-		for digit in prize_digits:
-			digit.texture.region.position.x = digit.texture.region.size.x * SPACE_POSITION
+		for sprite in prize_digits:
+			sprite.texture.region.position.x = sprite.texture.region.size.x * SPACE_POSITION
 
-		var prize = PRIZES[randi_range(0, PRIZES.size()-1)]
+		var prize = PRIZES[rand_int(0, PRIZES.size()-1)]
 		var prizedigit = 0
-		var digit
 		while prize > 0:
 			digit = prize_digits[prizedigit]
 			digit.texture.region.position.x = digit.texture.region.size.x * (prize % 10)
@@ -178,7 +200,7 @@ func generate_ticket():
 		   get_number(0, 2) == 7):
 			free_prize()
 
-func _process(delta):
+func _process(_delta):
 	if $Ticket/Overlay.texture == null:
 		cur_image = overlay_gfx.duplicate()
 		cur_texture = ImageTexture.create_from_image(cur_image)

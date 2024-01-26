@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://cs7ssmm3dm5vr"]
+[gd_scene load_steps=45 format=3 uid="uid://cs7ssmm3dm5vr"]
 
 [ext_resource type="Script" path="res://scratch_off.gd" id="1_lqtx1"]
 [ext_resource type="Texture2D" uid="uid://lx23harrsbt2" path="res://scratch-off.png" id="1_qpylp"]
@@ -128,6 +128,70 @@ region = Rect2(0, 16, 8, 16)
 atlas = ExtResource("3_c87px")
 region = Rect2(0, 16, 8, 16)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_7v6kt"]
+atlas = ExtResource("3_c87px")
+region = Rect2(0, 32, 8, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_17nyi"]
+atlas = ExtResource("3_c87px")
+region = Rect2(0, 32, 8, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5dv15"]
+atlas = ExtResource("3_c87px")
+region = Rect2(0, 32, 8, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mnmk6"]
+atlas = ExtResource("3_c87px")
+region = Rect2(0, 32, 8, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gspxk"]
+atlas = ExtResource("3_c87px")
+region = Rect2(0, 32, 8, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4yxhd"]
+atlas = ExtResource("3_c87px")
+region = Rect2(0, 32, 8, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ceein"]
+atlas = ExtResource("3_c87px")
+region = Rect2(0, 32, 8, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c1ylq"]
+atlas = ExtResource("3_c87px")
+region = Rect2(0, 32, 8, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d7anv"]
+atlas = ExtResource("3_c87px")
+region = Rect2(0, 32, 8, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_26kfd"]
+atlas = ExtResource("3_c87px")
+region = Rect2(0, 32, 8, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_buy37"]
+atlas = ExtResource("3_c87px")
+region = Rect2(0, 32, 8, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h3mb2"]
+atlas = ExtResource("3_c87px")
+region = Rect2(0, 32, 8, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_33b8p"]
+atlas = ExtResource("3_c87px")
+region = Rect2(0, 32, 8, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uuylu"]
+atlas = ExtResource("3_c87px")
+region = Rect2(0, 32, 8, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1tga0"]
+atlas = ExtResource("3_c87px")
+region = Rect2(0, 32, 8, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6rk1x"]
+atlas = ExtResource("3_c87px")
+region = Rect2(0, 32, 8, 16)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_c36ju"]
 atlas = ExtResource("4_o63qd")
 region = Rect2(0, 0, 32, 32)
@@ -218,6 +282,70 @@ texture = SubResource("AtlasTexture_mmpsm")
 [node name="Prize 5" type="Sprite2D" parent="Ticket"]
 position = Vector2(-24, 44)
 texture = SubResource("AtlasTexture_jyspd")
+
+[node name="Seed 0" type="Sprite2D" parent="Ticket"]
+position = Vector2(152, 68)
+texture = SubResource("AtlasTexture_7v6kt")
+
+[node name="Seed 1" type="Sprite2D" parent="Ticket"]
+position = Vector2(144, 68)
+texture = SubResource("AtlasTexture_17nyi")
+
+[node name="Seed 2" type="Sprite2D" parent="Ticket"]
+position = Vector2(136, 68)
+texture = SubResource("AtlasTexture_5dv15")
+
+[node name="Seed 3" type="Sprite2D" parent="Ticket"]
+position = Vector2(128, 68)
+texture = SubResource("AtlasTexture_mnmk6")
+
+[node name="Seed 4" type="Sprite2D" parent="Ticket"]
+position = Vector2(120, 68)
+texture = SubResource("AtlasTexture_gspxk")
+
+[node name="Seed 5" type="Sprite2D" parent="Ticket"]
+position = Vector2(112, 68)
+texture = SubResource("AtlasTexture_4yxhd")
+
+[node name="Seed 6" type="Sprite2D" parent="Ticket"]
+position = Vector2(104, 68)
+texture = SubResource("AtlasTexture_ceein")
+
+[node name="Seed 7" type="Sprite2D" parent="Ticket"]
+position = Vector2(96, 68)
+texture = SubResource("AtlasTexture_c1ylq")
+
+[node name="Seed 8" type="Sprite2D" parent="Ticket"]
+position = Vector2(88, 68)
+texture = SubResource("AtlasTexture_d7anv")
+
+[node name="Seed 9" type="Sprite2D" parent="Ticket"]
+position = Vector2(80, 68)
+texture = SubResource("AtlasTexture_26kfd")
+
+[node name="Seed 10" type="Sprite2D" parent="Ticket"]
+position = Vector2(72, 68)
+texture = SubResource("AtlasTexture_buy37")
+
+[node name="Seed 11" type="Sprite2D" parent="Ticket"]
+position = Vector2(64, 68)
+texture = SubResource("AtlasTexture_h3mb2")
+
+[node name="Seed 12" type="Sprite2D" parent="Ticket"]
+position = Vector2(56, 68)
+texture = SubResource("AtlasTexture_33b8p")
+
+[node name="Seed 13" type="Sprite2D" parent="Ticket"]
+position = Vector2(48, 68)
+texture = SubResource("AtlasTexture_uuylu")
+
+[node name="Seed 14" type="Sprite2D" parent="Ticket"]
+position = Vector2(40, 68)
+texture = SubResource("AtlasTexture_1tga0")
+
+[node name="Seed 15" type="Sprite2D" parent="Ticket"]
+position = Vector2(32, 68)
+texture = SubResource("AtlasTexture_6rk1x")
 
 [node name="Overlay" type="Sprite2D" parent="Ticket"]
 position = Vector2(-143, -28)
