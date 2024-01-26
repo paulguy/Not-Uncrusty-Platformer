@@ -21,6 +21,7 @@ var cur_texture : ImageTexture
 var scratch_area : bool = false
 var number_spaces : Array
 var prize_digits : Array
+var animating : bool = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -34,7 +35,7 @@ func _ready():
 	number_spaces.resize(9)
 	prize_digits = Array()
 	prize_digits.resize(6)
-	for child in get_children():
+	for child in $Ticket.get_children():
 		var childname = child.name.split(" ")
 		if childname[0] == "Number":
 			number_spaces[int(childname[2])*3+int(childname[1])] = child
@@ -178,10 +179,10 @@ func generate_ticket():
 			free_prize()
 
 func _process(delta):
-	if $Overlay.texture == null:
+	if $Ticket/Overlay.texture == null:
 		cur_image = overlay_gfx.duplicate()
 		cur_texture = ImageTexture.create_from_image(cur_image)
-		$Overlay.texture = cur_texture
+		$Ticket/Overlay.texture = cur_texture
 		generate_ticket()
 	elif scratch_area:
 		var scratch_pos = $Coin.position - $"Scratch Area".position
@@ -212,5 +213,13 @@ func _on_scratch_area_body_exited(body):
 
 func _on_ticket_button_area_body_entered(body):
 	body = body.get_parent()
-	if body == $Coin:
-		$Overlay.texture = null
+	if not animating and body == $Coin:
+		animating = true
+		$"New Ticket Animation".play("new ticket")
+
+func _on_new_ticket_animation_animation_finished(anim_name):
+	if anim_name == "new ticket":
+		$Ticket/Overlay.texture = null
+		$"New Ticket Animation".play("new ticket 2")
+	elif anim_name == "new ticket 2":
+		animating = false
