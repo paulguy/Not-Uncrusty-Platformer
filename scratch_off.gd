@@ -1,4 +1,6 @@
 extends Node2D
+signal want_exit
+signal new_ticket
 
 const MAX_CURSOR_SPEED = 20.0
 const WIN_CHANCE = 10
@@ -50,7 +52,7 @@ func _ready():
 
 func _input(event):
 	if event is InputEventMouse:
-		cursorpos = event.position - (get_viewport_transform().origin / get_viewport_transform().get_scale())
+		cursorpos = event.position - (get_viewport_rect().size / 2.0)
 
 func put_number(x : int, y : int, num : int):
 	var number = number_spaces[x*3+y]
@@ -206,7 +208,7 @@ func _process(_delta):
 		cur_texture = ImageTexture.create_from_image(cur_image)
 		$Ticket/Overlay.texture = cur_texture
 		generate_ticket()
-	elif scratch_area:
+	elif not animating and scratch_area:
 		var scratch_pos = $Coin.position - $"Scratch Area".position
 		if lastpos != Vector2.UP:
 			var steps = max(abs(scratch_pos.x - lastpos.x), abs(scratch_pos.y - lastpos.y))
@@ -243,5 +245,11 @@ func _on_new_ticket_animation_animation_finished(anim_name):
 	if anim_name == "new ticket":
 		$Ticket/Overlay.texture = null
 		$"New Ticket Animation".play("new ticket 2")
+		emit_signal("new_ticket")
 	elif anim_name == "new ticket 2":
 		animating = false
+
+func _on_exit_button_area_body_entered(body):
+	body = body.get_parent()
+	if not animating and body == $Coin:
+		emit_signal("want_exit")

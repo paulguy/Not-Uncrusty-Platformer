@@ -67,6 +67,7 @@ blend_mode = 1
 
 [node name="Player" type="CharacterBody2D"]
 z_index = 10
+disable_mode = 1
 collision_layer = 2
 script = ExtResource("1_5ojl5")
 

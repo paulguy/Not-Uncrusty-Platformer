@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://d1gropvtpq31v"]
+
+[ext_resource type="Script" path="res://Scratch Off Scrap.gd" id="1_qyb3h"]
+[ext_resource type="Texture2D" uid="uid://bhcbdkq6jlifv" path="res://Sprites/scratch-off-scrap.png" id="2_bh2w8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k61yy"]
+size = Vector2(8, 1)
+
+[node name="Scratch Off Scrap" type="CharacterBody2D"]
+collision_layer = 4
+collision_mask = 5
+script = ExtResource("1_qyb3h")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -1)
+texture = ExtResource("2_bh2w8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_k61yy")

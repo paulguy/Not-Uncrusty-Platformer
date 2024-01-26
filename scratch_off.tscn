@@ -390,5 +390,6 @@ polygon = PackedVector2Array(0, 0, 107, 0, 107, 53, 169, 53, 169, 92, 0, 92)
 
 [connection signal="animation_finished" from="New Ticket Animation" to="." method="_on_new_ticket_animation_animation_finished"]
 [connection signal="body_entered" from="New Ticket Button/Ticket Button Area" to="." method="_on_ticket_button_area_body_entered"]
+[connection signal="body_entered" from="Exit Button/Exit Button Area" to="." method="_on_exit_button_area_body_entered"]
 [connection signal="body_entered" from="Scratch Area" to="." method="_on_scratch_area_body_entered"]
 [connection signal="body_exited" from="Scratch Area" to="." method="_on_scratch_area_body_exited"]
