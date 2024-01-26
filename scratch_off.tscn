@@ -1,0 +1,184 @@
+[gd_scene load_steps=25 format=3 uid="uid://cs7ssmm3dm5vr"]
+
+[ext_resource type="Script" path="res://scratch_off.gd" id="1_lqtx1"]
+[ext_resource type="Texture2D" uid="uid://lx23harrsbt2" path="res://scratch-off.png" id="1_qpylp"]
+[ext_resource type="Texture2D" uid="uid://dybmymbtduxvo" path="res://scratch-off-numbers.png" id="3_c87px"]
+[ext_resource type="Texture2D" uid="uid://dagml4autr2h1" path="res://coin.png" id="3_ihd8n"]
+[ext_resource type="Texture2D" uid="uid://oo5brodjq6q7" path="res://scratch-off-buttons.png" id="4_o63qd"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4ip2y"]
+atlas = ExtResource("3_c87px")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aydes"]
+atlas = ExtResource("3_c87px")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1k6rh"]
+atlas = ExtResource("3_c87px")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1o08s"]
+atlas = ExtResource("3_c87px")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3wy7w"]
+atlas = ExtResource("3_c87px")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e5wmo"]
+atlas = ExtResource("3_c87px")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3cir8"]
+atlas = ExtResource("3_c87px")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1lp25"]
+atlas = ExtResource("3_c87px")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wcai3"]
+atlas = ExtResource("3_c87px")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bhf7y"]
+atlas = ExtResource("3_c87px")
+region = Rect2(0, 16, 8, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i0jqh"]
+atlas = ExtResource("3_c87px")
+region = Rect2(0, 16, 8, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x1dpb"]
+atlas = ExtResource("3_c87px")
+region = Rect2(0, 16, 8, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_efbk6"]
+atlas = ExtResource("3_c87px")
+region = Rect2(0, 16, 8, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mmpsm"]
+atlas = ExtResource("3_c87px")
+region = Rect2(0, 16, 8, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jyspd"]
+atlas = ExtResource("3_c87px")
+region = Rect2(0, 16, 8, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c36ju"]
+atlas = ExtResource("4_o63qd")
+region = Rect2(0, 0, 80, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0y3js"]
+size = Vector2(80, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0ialu"]
+atlas = ExtResource("3_ihd8n")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2hogl"]
+radius = 3.0
+
+[node name="Scratch Off" type="Node2D"]
+script = ExtResource("1_lqtx1")
+
+[node name="Ticket" type="Sprite2D" parent="."]
+position = Vector2(0, -30)
+texture = ExtResource("1_qpylp")
+
+[node name="Number 0 0" type="Sprite2D" parent="."]
+position = Vector2(-119, -40)
+texture = SubResource("AtlasTexture_4ip2y")
+
+[node name="Number 1 0" type="Sprite2D" parent="."]
+position = Vector2(-87, -40)
+texture = SubResource("AtlasTexture_aydes")
+
+[node name="Number 2 0" type="Sprite2D" parent="."]
+position = Vector2(-55, -40)
+texture = SubResource("AtlasTexture_1k6rh")
+
+[node name="Number 0 1" type="Sprite2D" parent="."]
+position = Vector2(-119, -9)
+texture = SubResource("AtlasTexture_1o08s")
+
+[node name="Number 1 1" type="Sprite2D" parent="."]
+position = Vector2(-87, -9)
+texture = SubResource("AtlasTexture_3wy7w")
+
+[node name="Number 2 1" type="Sprite2D" parent="."]
+position = Vector2(-55, -9)
+texture = SubResource("AtlasTexture_e5wmo")
+
+[node name="Number 0 2" type="Sprite2D" parent="."]
+position = Vector2(-119, 20)
+texture = SubResource("AtlasTexture_3cir8")
+
+[node name="Number 1 2" type="Sprite2D" parent="."]
+position = Vector2(-87, 20)
+texture = SubResource("AtlasTexture_1lp25")
+
+[node name="Number 2 2" type="Sprite2D" parent="."]
+position = Vector2(-55, 20)
+texture = SubResource("AtlasTexture_wcai3")
+
+[node name="Prize 0" type="Sprite2D" parent="."]
+position = Vector2(16, 14)
+texture = SubResource("AtlasTexture_bhf7y")
+
+[node name="Prize 1" type="Sprite2D" parent="."]
+position = Vector2(8, 14)
+texture = SubResource("AtlasTexture_i0jqh")
+
+[node name="Prize 2" type="Sprite2D" parent="."]
+position = Vector2(0, 14)
+texture = SubResource("AtlasTexture_x1dpb")
+
+[node name="Prize 3" type="Sprite2D" parent="."]
+position = Vector2(-8, 14)
+texture = SubResource("AtlasTexture_efbk6")
+
+[node name="Prize 4" type="Sprite2D" parent="."]
+position = Vector2(-16, 14)
+texture = SubResource("AtlasTexture_mmpsm")
+
+[node name="Prize 5" type="Sprite2D" parent="."]
+position = Vector2(-24, 14)
+texture = SubResource("AtlasTexture_jyspd")
+
+[node name="Overlay" type="Sprite2D" parent="."]
+position = Vector2(-143, -58)
+centered = false
+
+[node name="New Ticket Button" type="Sprite2D" parent="."]
+position = Vector2(-120, 112)
+texture = SubResource("AtlasTexture_c36ju")
+
+[node name="Ticket Button Area" type="Area2D" parent="New Ticket Button"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="New Ticket Button/Ticket Button Area"]
+shape = SubResource("RectangleShape2D_0y3js")
+
+[node name="Coin" type="Sprite2D" parent="."]
+texture = SubResource("AtlasTexture_0ialu")
+offset = Vector2(0, -26)
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="Coin"]
+motion_mode = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Coin/CharacterBody2D"]
+shape = SubResource("CircleShape2D_2hogl")
+
+[node name="Scratch Area" type="Area2D" parent="."]
+position = Vector2(-143, -58)
+collision_layer = 0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Scratch Area"]
+polygon = PackedVector2Array(0, 0, 107, 0, 107, 53, 169, 53, 169, 92, 0, 92)
+
+[node name="Test Camera" type="Camera2D" parent="."]
+
+[connection signal="body_entered" from="New Ticket Button/Ticket Button Area" to="." method="_on_ticket_button_area_body_entered"]
+[connection signal="body_entered" from="Scratch Area" to="." method="_on_scratch_area_body_entered"]
+[connection signal="body_exited" from="Scratch Area" to="." method="_on_scratch_area_body_exited"]
