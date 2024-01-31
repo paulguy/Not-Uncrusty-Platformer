@@ -82,7 +82,7 @@
 [ext_resource type="PackedScene" uid="uid://dq8hcjpa1yc7f" path="res://Animations/action_particles.tscn" id="76_bdtre"]
 [ext_resource type="Script" path="res://Lottery Ticket Trigger.gd" id="76_dj4sg"]
 [ext_resource type="Texture2D" uid="uid://cw3x3glx7rkhf" path="res://Sprites/window-door.png" id="82_b8ntl"]
-[ext_resource type="Texture2D" uid="uid://catcxfvg2cueq" path="res://Sprites/grocery-store-sign.png" id="83_x5quy"]
+[ext_resource type="Texture2D" uid="uid://bmwv5pxjr1yja" path="res://Sprites/bar-sign.png" id="83_8tsxm"]
 [ext_resource type="Texture2D" uid="uid://dykc62t76v11e" path="res://Sprites/vape-shop-sign.png" id="84_desgp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oo5ie"]
@@ -1074,7 +1074,7 @@ polygon = PackedVector2Array(-1760, -112, -1696, -112, -1696, -48, -1760, -48)
 
 [node name="Sign 1" type="Sprite2D" parent="Building 1"]
 position = Vector2(-1888, -120)
-texture = ExtResource("83_x5quy")
+texture = ExtResource("83_8tsxm")
 
 [node name="Shadow" type="Polygon2D" parent="Building 1/Sign 1"]
 polygon = PackedVector2Array(-32, 16, 32, 16, 32, 20, -32, 20)
