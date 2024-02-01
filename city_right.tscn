@@ -1,4 +1,4 @@
-[gd_scene load_steps=93 format=3 uid="uid://dq083vadn4wg6"]
+[gd_scene load_steps=96 format=3 uid="uid://dq083vadn4wg6"]
 
 [ext_resource type="TileSet" uid="uid://bbcmc4vabwnbb" path="res://Tilesets/world_graphics.tres" id="1_3n3y5"]
 [ext_resource type="Script" path="res://area.gd" id="2_f8vse"]
@@ -84,6 +84,8 @@
 [ext_resource type="Texture2D" uid="uid://cw3x3glx7rkhf" path="res://Sprites/window-door.png" id="82_b8ntl"]
 [ext_resource type="Texture2D" uid="uid://bmwv5pxjr1yja" path="res://Sprites/bar-sign.png" id="83_8tsxm"]
 [ext_resource type="Texture2D" uid="uid://dykc62t76v11e" path="res://Sprites/vape-shop-sign.png" id="84_desgp"]
+[ext_resource type="Shader" uid="uid://dj3fy330okrdu" path="res://glow.tres" id="85_r7hss"]
+[ext_resource type="Texture2D" uid="uid://dkslc4inq6lmg" path="res://shader-test.png" id="86_va3m3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oo5ie"]
 size = Vector2(2320, 1876)
@@ -107,6 +109,9 @@ size = Vector2(448, 112)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_mw6eu"]
 b = Vector2(81, 0)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_xdhcs"]
+shader = ExtResource("85_r7hss")
 
 [node name="City Right" type="TileMap"]
 tile_set = ExtResource("1_3n3y5")
@@ -1087,6 +1092,11 @@ texture = ExtResource("84_desgp")
 [node name="Shadow" type="Polygon2D" parent="Building 1/Sign 2"]
 polygon = PackedVector2Array(-32, 16, 32, 16, 32, 20, -32, 20)
 vertex_colors = PackedColorArray(0, 0, 0, 0.498039, 0, 0, 0, 0.498039, 0, 0, 0, 0, 0, 0, 0, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_xdhcs")
+position = Vector2(-1845, -125)
+texture = ExtResource("86_va3m3")
 
 [connection signal="body_entered" from="BG Upper/Grass BG 1/BG Trees 13/Area2D" to="BG Upper/Grass BG 1/BG Trees 13" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="BG Upper/Grass BG 1/BG Trees 13/Area2D" to="BG Upper/Grass BG 1/BG Trees 13" method="_on_area_2d_body_exited"]
