@@ -1087,7 +1087,13 @@ vertex_colors = PackedColorArray(0, 0, 0, 0.498039, 0, 0, 0, 0.498039, 0, 0, 0, 
 
 [node name="Sprite2D" type="Sprite2D" parent="Building 1"]
 material = SubResource("ShaderMaterial_xdhcs")
-position = Vector2(-1868, -69)
+position = Vector2(-1866, -85)
+texture = ExtResource("85_a8kkp")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Building 1"]
+z_index = -1
+material = SubResource("ShaderMaterial_xdhcs")
+position = Vector2(-1861, -92)
 texture = ExtResource("85_a8kkp")
 
 [node name="Sign 2" type="Sprite2D" parent="Building 1"]
