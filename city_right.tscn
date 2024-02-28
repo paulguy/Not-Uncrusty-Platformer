@@ -1,4 +1,4 @@
-[gd_scene load_steps=96 format=3 uid="uid://dq083vadn4wg6"]
+[gd_scene load_steps=103 format=3 uid="uid://dq083vadn4wg6"]
 
 [ext_resource type="TileSet" uid="uid://bbcmc4vabwnbb" path="res://Tilesets/world_graphics.tres" id="1_3n3y5"]
 [ext_resource type="Script" path="res://area.gd" id="2_f8vse"]
@@ -79,8 +79,15 @@
 [ext_resource type="Texture2D" uid="uid://csgs6uujcs65" path="res://Sprites/scratch-off-stand.png" id="57_smm5x"]
 [ext_resource type="Texture2D" uid="uid://ckkfv8b5444u7" path="res://Sprites/salty-crackers.png" id="60_bhkjw"]
 [ext_resource type="Texture2D" uid="uid://drh7yedqpftbb" path="res://Sprites/cheese-crackers.png" id="61_rsa72"]
+[ext_resource type="Texture2D" uid="uid://vyor4r86e3wl" path="res://Sprites/ketchup-bottle.png" id="75_ochby"]
 [ext_resource type="PackedScene" uid="uid://dq8hcjpa1yc7f" path="res://Animations/action_particles.tscn" id="76_bdtre"]
 [ext_resource type="Script" path="res://Lottery Ticket Trigger.gd" id="76_dj4sg"]
+[ext_resource type="Texture2D" uid="uid://0f36a7emqol3" path="res://Sprites/bbq-sauce-bottle.png" id="76_rqytg"]
+[ext_resource type="Texture2D" uid="uid://ckkkhmuticjff" path="res://Sprites/mustard-bottle.png" id="77_lvo11"]
+[ext_resource type="Texture2D" uid="uid://cxi0swt6qssew" path="res://Sprites/hot-sauce-bottle.png" id="77_oegqx"]
+[ext_resource type="Texture2D" uid="uid://bmrpwd351ru8a" path="res://Sprites/mayonnaise-bottle.png" id="78_eemrt"]
+[ext_resource type="Texture2D" uid="uid://b50nw5r1r4koo" path="res://Sprites/salt-container.png" id="79_4vi64"]
+[ext_resource type="Texture2D" uid="uid://ch6ya5fgyyxir" path="res://Sprites/pepper-grinder.png" id="80_32k3d"]
 [ext_resource type="Texture2D" uid="uid://cw3x3glx7rkhf" path="res://Sprites/window-door.png" id="82_b8ntl"]
 [ext_resource type="Texture2D" uid="uid://cwi6us4ormfsr" path="res://Sprites/liquor-store-sign.png" id="83_agxbn"]
 [ext_resource type="Texture2D" uid="uid://dykc62t76v11e" path="res://Sprites/vape-shop-sign.png" id="84_desgp"]
@@ -937,6 +944,62 @@ texture = ExtResource("52_8xsh4")
 [node name="Bread 7" type="Sprite2D" parent="Gas Station Sprites/Shelf 3"]
 position = Vector2(35, -7.5)
 texture = ExtResource("52_8xsh4")
+
+[node name="Condiment 1" type="Sprite2D" parent="Gas Station Sprites/Shelf 3"]
+position = Vector2(-22, 5)
+texture = ExtResource("75_ochby")
+
+[node name="Condiment 11" type="Sprite2D" parent="Gas Station Sprites/Shelf 3"]
+position = Vector2(-28, 5)
+texture = ExtResource("76_rqytg")
+
+[node name="Condiment 12" type="Sprite2D" parent="Gas Station Sprites/Shelf 3"]
+position = Vector2(-35, 5)
+texture = ExtResource("76_rqytg")
+
+[node name="Condiment 13" type="Sprite2D" parent="Gas Station Sprites/Shelf 3"]
+position = Vector2(-34, 17)
+texture = ExtResource("77_oegqx")
+
+[node name="Condiment 14" type="Sprite2D" parent="Gas Station Sprites/Shelf 3"]
+position = Vector2(-28, 17)
+texture = ExtResource("77_oegqx")
+
+[node name="Condiment 6" type="Sprite2D" parent="Gas Station Sprites/Shelf 3"]
+position = Vector2(-15, 5)
+texture = ExtResource("75_ochby")
+
+[node name="Condiment 2" type="Sprite2D" parent="Gas Station Sprites/Shelf 3"]
+position = Vector2(-9, 5)
+texture = ExtResource("77_lvo11")
+
+[node name="Condiment 7" type="Sprite2D" parent="Gas Station Sprites/Shelf 3"]
+position = Vector2(-2, 5)
+texture = ExtResource("77_lvo11")
+
+[node name="Condiment 3" type="Sprite2D" parent="Gas Station Sprites/Shelf 3"]
+position = Vector2(5, 5)
+texture = ExtResource("78_eemrt")
+
+[node name="Condiment 8" type="Sprite2D" parent="Gas Station Sprites/Shelf 3"]
+position = Vector2(11, 5)
+texture = ExtResource("78_eemrt")
+
+[node name="Condiment 4" type="Sprite2D" parent="Gas Station Sprites/Shelf 3"]
+position = Vector2(18, 5)
+texture = ExtResource("79_4vi64")
+
+[node name="Condiment 9" type="Sprite2D" parent="Gas Station Sprites/Shelf 3"]
+position = Vector2(24, 5)
+texture = ExtResource("79_4vi64")
+
+[node name="Condiment 5" type="Sprite2D" parent="Gas Station Sprites/Shelf 3"]
+position = Vector2(30, 5)
+texture = ExtResource("80_32k3d")
+
+[node name="Condiment 10" type="Sprite2D" parent="Gas Station Sprites/Shelf 3"]
+position = Vector2(36, 5)
+texture = ExtResource("80_32k3d")
 
 [node name="Countertop" type="Polygon2D" parent="Gas Station Sprites"]
 color = Color(0.858824, 0.823529, 0.768627, 1)
