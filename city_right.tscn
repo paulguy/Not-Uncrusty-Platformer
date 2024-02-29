@@ -1,4 +1,4 @@
-[gd_scene load_steps=103 format=3 uid="uid://dq083vadn4wg6"]
+[gd_scene load_steps=113 format=3 uid="uid://dq083vadn4wg6"]
 
 [ext_resource type="TileSet" uid="uid://bbcmc4vabwnbb" path="res://Tilesets/world_graphics.tres" id="1_3n3y5"]
 [ext_resource type="Script" path="res://area.gd" id="2_f8vse"]
@@ -79,7 +79,10 @@
 [ext_resource type="Texture2D" uid="uid://csgs6uujcs65" path="res://Sprites/scratch-off-stand.png" id="57_smm5x"]
 [ext_resource type="Texture2D" uid="uid://ckkfv8b5444u7" path="res://Sprites/salty-crackers.png" id="60_bhkjw"]
 [ext_resource type="Texture2D" uid="uid://drh7yedqpftbb" path="res://Sprites/cheese-crackers.png" id="61_rsa72"]
+[ext_resource type="Texture2D" uid="uid://cpg6xojsqpel3" path="res://Sprites/blue-cookies-box.png" id="62_jmmwh"]
+[ext_resource type="Texture2D" uid="uid://c3ghxw10rplx" path="res://Sprites/red-cookies-box.png" id="63_inisw"]
 [ext_resource type="Texture2D" uid="uid://vyor4r86e3wl" path="res://Sprites/ketchup-bottle.png" id="75_ochby"]
+[ext_resource type="Texture2D" uid="uid://cicy3qqarjjx7" path="res://Sprites/seasoning-bottle.png" id="76_80odt"]
 [ext_resource type="PackedScene" uid="uid://dq8hcjpa1yc7f" path="res://Animations/action_particles.tscn" id="76_bdtre"]
 [ext_resource type="Script" path="res://Lottery Ticket Trigger.gd" id="76_dj4sg"]
 [ext_resource type="Texture2D" uid="uid://0f36a7emqol3" path="res://Sprites/bbq-sauce-bottle.png" id="76_rqytg"]
@@ -92,7 +95,14 @@
 [ext_resource type="Texture2D" uid="uid://cwi6us4ormfsr" path="res://Sprites/liquor-store-sign.png" id="83_agxbn"]
 [ext_resource type="Texture2D" uid="uid://dykc62t76v11e" path="res://Sprites/vape-shop-sign.png" id="84_desgp"]
 [ext_resource type="Texture2D" uid="uid://dekqi8kfkuphj" path="res://Sprites/open-sign.png" id="85_a8kkp"]
+[ext_resource type="Texture2D" uid="uid://dkryq4632vs4i" path="res://Sprites/toothpaste-box.png" id="85_q6g21"]
 [ext_resource type="Shader" uid="uid://dj3fy330okrdu" path="res://glow.tres" id="85_r7hss"]
+[ext_resource type="Texture2D" uid="uid://bufvgykvwlejf" path="res://Sprites/toothbrush-package.png" id="86_i4soi"]
+[ext_resource type="Texture2D" uid="uid://xxfwox3dn4y6" path="res://Sprites/deodorant.png" id="87_l2son"]
+[ext_resource type="Texture2D" uid="uid://d28d3ib2an48m" path="res://Sprites/soap-container.png" id="88_po2n0"]
+[ext_resource type="Texture2D" uid="uid://cbguc8462td04" path="res://Sprites/shampoo-bottle.png" id="89_squtn"]
+[ext_resource type="Texture2D" uid="uid://cf5csf3g3gutq" path="res://Sprites/toilet-paper.png" id="90_d1pck"]
+[ext_resource type="Texture2D" uid="uid://bc33bxoduqav2" path="res://Sprites/trash can.png" id="98_d8b4j"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oo5ie"]
 size = Vector2(2320, 1876)
@@ -345,712 +355,785 @@ collision_mask = 2
 position = Vector2(-992, -88)
 shape = SubResource("RectangleShape2D_tk1o6")
 
-[node name="Gas Station Sprites" type="Node2D" parent="."]
+[node name="Gas Station Store Objects" type="Node2D" parent="."]
 position = Vector2(-1180, -96)
 
-[node name="Cooler Back 1" type="Sprite2D" parent="Gas Station Sprites"]
+[node name="Cooler Back 1" type="Sprite2D" parent="Gas Station Store Objects"]
 position = Vector2(16, 16)
 texture = ExtResource("16_ilrly")
 
-[node name="Box 1" type="Sprite2D" parent="Gas Station Sprites/Cooler Back 1"]
+[node name="Box 1" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 1"]
 position = Vector2(-12, -6)
 texture = ExtResource("17_cwgow")
 
-[node name="Box 2" type="Sprite2D" parent="Gas Station Sprites/Cooler Back 1"]
+[node name="Box 2" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 1"]
 position = Vector2(-12, -14)
 texture = ExtResource("17_cwgow")
 
-[node name="Box 3" type="Sprite2D" parent="Gas Station Sprites/Cooler Back 1"]
+[node name="Box 3" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 1"]
 position = Vector2(-12, 6)
 texture = ExtResource("18_sj2kx")
 
-[node name="Box 4" type="Sprite2D" parent="Gas Station Sprites/Cooler Back 1"]
+[node name="Box 4" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 1"]
 position = Vector2(-12, 2)
 texture = ExtResource("18_sj2kx")
 
-[node name="Box 5" type="Sprite2D" parent="Gas Station Sprites/Cooler Back 1"]
+[node name="Box 5" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 1"]
 position = Vector2(-12, 16)
 texture = ExtResource("18_sj2kx")
 
-[node name="Box 6" type="Sprite2D" parent="Gas Station Sprites/Cooler Back 1"]
+[node name="Box 6" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 1"]
 position = Vector2(-12, 12)
 texture = ExtResource("18_sj2kx")
 
-[node name="Box 9" type="Sprite2D" parent="Gas Station Sprites/Cooler Back 1"]
+[node name="Box 9" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 1"]
 position = Vector2(12, -24)
 texture = ExtResource("18_sj2kx")
 
-[node name="Box 10" type="Sprite2D" parent="Gas Station Sprites/Cooler Back 1"]
+[node name="Box 10" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 1"]
 position = Vector2(12, -28)
 texture = ExtResource("18_sj2kx")
 
-[node name="Box 7" type="Sprite2D" parent="Gas Station Sprites/Cooler Back 1"]
+[node name="Box 7" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 1"]
 position = Vector2(-6, -24)
 texture = ExtResource("19_ajeqg")
 
-[node name="Box 8" type="Sprite2D" parent="Gas Station Sprites/Cooler Back 1"]
+[node name="Box 8" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 1"]
 position = Vector2(-6, -28)
 texture = ExtResource("19_ajeqg")
 
-[node name="Cooler Door 1" type="Sprite2D" parent="Gas Station Sprites/Cooler Back 1"]
+[node name="Cooler Door 1" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 1"]
 position = Vector2(0, -5)
 texture = ExtResource("17_h7qmw")
 
-[node name="Cooler Back 2" type="Sprite2D" parent="Gas Station Sprites"]
+[node name="Cooler Back 2" type="Sprite2D" parent="Gas Station Store Objects"]
 position = Vector2(56, 16)
 texture = ExtResource("16_ilrly")
 
-[node name="Ice Crem 1" type="Sprite2D" parent="Gas Station Sprites/Cooler Back 2"]
+[node name="Ice Crem 1" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 2"]
 position = Vector2(-12, -26)
 texture = ExtResource("21_b0kxp")
 
-[node name="Ice Crem 2" type="Sprite2D" parent="Gas Station Sprites/Cooler Back 2"]
+[node name="Ice Crem 2" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 2"]
 position = Vector2(-4, -26)
 texture = ExtResource("21_b0kxp")
 
-[node name="Ice Crem 3" type="Sprite2D" parent="Gas Station Sprites/Cooler Back 2"]
+[node name="Ice Crem 3" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 2"]
 position = Vector2(4, -26)
 texture = ExtResource("21_b0kxp")
 
-[node name="Ice Crem 4" type="Sprite2D" parent="Gas Station Sprites/Cooler Back 2"]
+[node name="Ice Crem 4" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 2"]
 position = Vector2(12, -26)
 texture = ExtResource("22_bqhg7")
 
-[node name="Cooler Door 2" type="Sprite2D" parent="Gas Station Sprites/Cooler Back 2"]
+[node name="Cooler Door 2" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 2"]
 position = Vector2(0, -5)
 texture = ExtResource("17_h7qmw")
 
-[node name="Cooler Back 3" type="Sprite2D" parent="Gas Station Sprites"]
+[node name="Cooler Back 3" type="Sprite2D" parent="Gas Station Store Objects"]
 position = Vector2(96, 16)
 texture = ExtResource("16_ilrly")
 
-[node name="Drinks 1" type="Sprite2D" parent="Gas Station Sprites/Cooler Back 3"]
+[node name="Drinks 1" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 3"]
 position = Vector2(-6, 4)
 texture = ExtResource("18_ocit6")
 
-[node name="Drinks 2" type="Sprite2D" parent="Gas Station Sprites/Cooler Back 3"]
+[node name="Drinks 2" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 3"]
 position = Vector2(6, 14)
 texture = ExtResource("19_8k70h")
 
-[node name="Drinks 3" type="Sprite2D" parent="Gas Station Sprites/Cooler Back 3"]
+[node name="Drinks 3" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 3"]
 position = Vector2(-6, -26)
 texture = ExtResource("20_24fyv")
 
-[node name="Drinks 4" type="Sprite2D" parent="Gas Station Sprites/Cooler Back 3"]
+[node name="Drinks 4" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 3"]
 position = Vector2(9, 4)
 texture = ExtResource("21_ytx31")
 
-[node name="Drinks 5" type="Sprite2D" parent="Gas Station Sprites/Cooler Back 3"]
+[node name="Drinks 5" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 3"]
 position = Vector2(-9, 14)
 texture = ExtResource("22_0rgdu")
 
-[node name="Drinks 6" type="Sprite2D" parent="Gas Station Sprites/Cooler Back 3"]
+[node name="Drinks 6" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 3"]
 position = Vector2(9, -26)
 texture = ExtResource("22_0rgdu")
 
-[node name="Drinks 7" type="Sprite2D" parent="Gas Station Sprites/Cooler Back 3"]
+[node name="Drinks 7" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 3"]
 position = Vector2(15, -26)
 texture = ExtResource("22_0rgdu")
 
-[node name="Drinks 8" type="Sprite2D" parent="Gas Station Sprites/Cooler Back 3"]
+[node name="Drinks 8" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 3"]
 position = Vector2(-5, -11)
 texture = ExtResource("23_cl343")
 
-[node name="Drinks 9" type="Sprite2D" parent="Gas Station Sprites/Cooler Back 3"]
+[node name="Drinks 9" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 3"]
 position = Vector2(12, -11)
 texture = ExtResource("24_chjp3")
 
-[node name="Cooler Door 3" type="Sprite2D" parent="Gas Station Sprites/Cooler Back 3"]
+[node name="Cooler Door 3" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 3"]
 position = Vector2(0, -5)
 texture = ExtResource("17_h7qmw")
 
-[node name="Cooler Back 4" type="Sprite2D" parent="Gas Station Sprites"]
+[node name="Cooler Back 4" type="Sprite2D" parent="Gas Station Store Objects"]
 position = Vector2(136, 16)
 texture = ExtResource("16_ilrly")
 
-[node name="Drink 1" type="Sprite2D" parent="Gas Station Sprites/Cooler Back 4"]
+[node name="Drink 1" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 4"]
 position = Vector2(-15, -26)
 texture = ExtResource("28_3bbh3")
 
-[node name="Drink 2" type="Sprite2D" parent="Gas Station Sprites/Cooler Back 4"]
+[node name="Drink 2" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 4"]
 position = Vector2(-9, -26)
 texture = ExtResource("29_x6ocx")
 
-[node name="Drink 3" type="Sprite2D" parent="Gas Station Sprites/Cooler Back 4"]
+[node name="Drink 3" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 4"]
 position = Vector2(-3, -26)
 texture = ExtResource("30_0d7cp")
 
-[node name="Drink 4" type="Sprite2D" parent="Gas Station Sprites/Cooler Back 4"]
+[node name="Drink 4" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 4"]
 position = Vector2(3, -26)
 texture = ExtResource("31_spi3q")
 
-[node name="Drink 5" type="Sprite2D" parent="Gas Station Sprites/Cooler Back 4"]
+[node name="Drink 5" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 4"]
 position = Vector2(9, -26)
 texture = ExtResource("32_het72")
 
-[node name="Drink 6" type="Sprite2D" parent="Gas Station Sprites/Cooler Back 4"]
+[node name="Drink 6" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 4"]
 position = Vector2(15, -26)
 texture = ExtResource("33_ggp8o")
 
-[node name="Drink 7" type="Sprite2D" parent="Gas Station Sprites/Cooler Back 4"]
+[node name="Drink 7" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 4"]
 position = Vector2(-12, -11)
 texture = ExtResource("34_fr8b6")
 
-[node name="Drink 8" type="Sprite2D" parent="Gas Station Sprites/Cooler Back 4"]
+[node name="Drink 8" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 4"]
 position = Vector2(-4, -11)
 texture = ExtResource("35_7hjy1")
 
-[node name="Drink 9" type="Sprite2D" parent="Gas Station Sprites/Cooler Back 4"]
+[node name="Drink 9" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 4"]
 position = Vector2(4, -11)
 texture = ExtResource("36_ohllb")
 
-[node name="Drink 10" type="Sprite2D" parent="Gas Station Sprites/Cooler Back 4"]
+[node name="Drink 10" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 4"]
 position = Vector2(12, -11)
 texture = ExtResource("37_6rvdo")
 
-[node name="Cooler Door 4" type="Sprite2D" parent="Gas Station Sprites/Cooler Back 4"]
+[node name="Cooler Door 4" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 4"]
 position = Vector2(0, -5)
 texture = ExtResource("17_h7qmw")
 
-[node name="Cooler Back 5" type="Sprite2D" parent="Gas Station Sprites"]
+[node name="Cooler Back 5" type="Sprite2D" parent="Gas Station Store Objects"]
 position = Vector2(176, 16)
 texture = ExtResource("16_ilrly")
 
-[node name="Milk 1" type="Sprite2D" parent="Gas Station Sprites/Cooler Back 5"]
+[node name="Milk 1" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 5"]
 position = Vector2(12, -11)
 texture = ExtResource("25_oksrt")
 
-[node name="Milk 2" type="Sprite2D" parent="Gas Station Sprites/Cooler Back 5"]
+[node name="Milk 2" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 5"]
 position = Vector2(0, -11)
 texture = ExtResource("26_hko01")
 
-[node name="Milk 3" type="Sprite2D" parent="Gas Station Sprites/Cooler Back 5"]
+[node name="Milk 3" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 5"]
 position = Vector2(-12, -11)
 texture = ExtResource("27_8ms3a")
 
-[node name="Milk 4" type="Sprite2D" parent="Gas Station Sprites/Cooler Back 5"]
+[node name="Milk 4" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 5"]
 position = Vector2(15, -26)
 texture = ExtResource("28_768ny")
 
-[node name="Milk 5" type="Sprite2D" parent="Gas Station Sprites/Cooler Back 5"]
+[node name="Milk 5" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 5"]
 position = Vector2(9, -26)
 texture = ExtResource("29_1ems6")
 
-[node name="Milk 6" type="Sprite2D" parent="Gas Station Sprites/Cooler Back 5"]
+[node name="Milk 6" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 5"]
 position = Vector2(3, -26)
 texture = ExtResource("30_pw52d")
 
-[node name="Milk 7" type="Sprite2D" parent="Gas Station Sprites/Cooler Back 5"]
+[node name="Milk 7" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 5"]
 position = Vector2(-3, -26)
 texture = ExtResource("30_pw52d")
 
-[node name="Milk 8" type="Sprite2D" parent="Gas Station Sprites/Cooler Back 5"]
+[node name="Milk 8" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 5"]
 position = Vector2(-9, -26)
 texture = ExtResource("31_xi6mo")
 
-[node name="Milk 9" type="Sprite2D" parent="Gas Station Sprites/Cooler Back 5"]
+[node name="Milk 9" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 5"]
 position = Vector2(-15, -26)
 texture = ExtResource("31_xi6mo")
 
-[node name="Tub 1" type="Sprite2D" parent="Gas Station Sprites/Cooler Back 5"]
+[node name="Tub 1" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 5"]
 position = Vector2(12, 4)
 texture = ExtResource("32_pwhtx")
 
-[node name="Tub 2" type="Sprite2D" parent="Gas Station Sprites/Cooler Back 5"]
+[node name="Tub 2" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 5"]
 position = Vector2(12, 16)
 texture = ExtResource("33_p7h08")
 
-[node name="Tub 3" type="Sprite2D" parent="Gas Station Sprites/Cooler Back 5"]
+[node name="Tub 3" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 5"]
 position = Vector2(12, 12)
 texture = ExtResource("33_p7h08")
 
-[node name="Cooler Door 5" type="Sprite2D" parent="Gas Station Sprites/Cooler Back 5"]
+[node name="Cooler Door 5" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 5"]
 position = Vector2(0, -5)
 texture = ExtResource("17_h7qmw")
 
-[node name="Cooler Back 6" type="Sprite2D" parent="Gas Station Sprites"]
+[node name="Cooler Back 6" type="Sprite2D" parent="Gas Station Store Objects"]
 position = Vector2(216, 16)
 texture = ExtResource("16_ilrly")
 
-[node name="Tea" type="Sprite2D" parent="Gas Station Sprites/Cooler Back 6"]
+[node name="Tea" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 6"]
 position = Vector2(-12, -11)
 texture = ExtResource("25_k6s6f")
 
-[node name="Tea2" type="Sprite2D" parent="Gas Station Sprites/Cooler Back 6"]
+[node name="Tea2" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 6"]
 position = Vector2(-4, -11)
 texture = ExtResource("25_k6s6f")
 
-[node name="Tea3" type="Sprite2D" parent="Gas Station Sprites/Cooler Back 6"]
+[node name="Tea3" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 6"]
 position = Vector2(4, -11)
 texture = ExtResource("25_k6s6f")
 
-[node name="Juice 1" type="Sprite2D" parent="Gas Station Sprites/Cooler Back 6"]
+[node name="Juice 1" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 6"]
 position = Vector2(-15, -26)
 texture = ExtResource("50_d6iwb")
 
-[node name="Juice 2" type="Sprite2D" parent="Gas Station Sprites/Cooler Back 6"]
+[node name="Juice 2" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 6"]
 position = Vector2(-9, -26)
 texture = ExtResource("50_d6iwb")
 
-[node name="Juice 3" type="Sprite2D" parent="Gas Station Sprites/Cooler Back 6"]
+[node name="Juice 3" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 6"]
 position = Vector2(-3, -26)
 texture = ExtResource("50_d6iwb")
 
-[node name="Juice 4" type="Sprite2D" parent="Gas Station Sprites/Cooler Back 6"]
+[node name="Juice 4" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 6"]
 position = Vector2(3, -26)
 texture = ExtResource("51_mwe8a")
 
-[node name="Juice 5" type="Sprite2D" parent="Gas Station Sprites/Cooler Back 6"]
+[node name="Juice 5" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 6"]
 position = Vector2(9, -26)
 texture = ExtResource("51_mwe8a")
 
-[node name="Juice 6" type="Sprite2D" parent="Gas Station Sprites/Cooler Back 6"]
+[node name="Juice 6" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 6"]
 position = Vector2(15, -26)
 texture = ExtResource("51_mwe8a")
 
-[node name="Juice 7" type="Sprite2D" parent="Gas Station Sprites/Cooler Back 6"]
+[node name="Juice 7" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 6"]
 position = Vector2(-15, 4)
 texture = ExtResource("52_8r8xs")
 
-[node name="Juice 8" type="Sprite2D" parent="Gas Station Sprites/Cooler Back 6"]
+[node name="Juice 8" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 6"]
 position = Vector2(-9, 4)
 texture = ExtResource("52_8r8xs")
 
-[node name="Juice 9" type="Sprite2D" parent="Gas Station Sprites/Cooler Back 6"]
+[node name="Juice 9" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 6"]
 position = Vector2(-3, 4)
 texture = ExtResource("52_8r8xs")
 
-[node name="Juice 10" type="Sprite2D" parent="Gas Station Sprites/Cooler Back 6"]
+[node name="Juice 10" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 6"]
 position = Vector2(-15, 14)
 texture = ExtResource("53_d78nl")
 
-[node name="Juice 11" type="Sprite2D" parent="Gas Station Sprites/Cooler Back 6"]
+[node name="Juice 11" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 6"]
 position = Vector2(-9, 14)
 texture = ExtResource("53_d78nl")
 
-[node name="Juice 12" type="Sprite2D" parent="Gas Station Sprites/Cooler Back 6"]
+[node name="Juice 12" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 6"]
 position = Vector2(-3, 14)
 texture = ExtResource("53_d78nl")
 
-[node name="Cooler Door 6" type="Sprite2D" parent="Gas Station Sprites/Cooler Back 6"]
+[node name="Cooler Door 6" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 6"]
 position = Vector2(0, -5)
 texture = ExtResource("17_h7qmw")
 
-[node name="Cooler Back 7" type="Sprite2D" parent="Gas Station Sprites"]
+[node name="Cooler Back 7" type="Sprite2D" parent="Gas Station Store Objects"]
 position = Vector2(256, 16)
 texture = ExtResource("16_ilrly")
 
-[node name="Eggs 1" type="Sprite2D" parent="Gas Station Sprites/Cooler Back 7"]
+[node name="Eggs 1" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 7"]
 position = Vector2(-9, -24)
 texture = ExtResource("38_j5kj3")
 
-[node name="Eggs 2" type="Sprite2D" parent="Gas Station Sprites/Cooler Back 7"]
+[node name="Eggs 2" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 7"]
 position = Vector2(-9, -28)
 texture = ExtResource("38_j5kj3")
 
-[node name="Eggs 3" type="Sprite2D" parent="Gas Station Sprites/Cooler Back 7"]
+[node name="Eggs 3" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 7"]
 position = Vector2(9, -24)
 texture = ExtResource("38_j5kj3")
 
-[node name="Eggs 4" type="Sprite2D" parent="Gas Station Sprites/Cooler Back 7"]
+[node name="Eggs 4" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 7"]
 position = Vector2(9, -28)
 texture = ExtResource("38_j5kj3")
 
-[node name="Tub 1" type="Sprite2D" parent="Gas Station Sprites/Cooler Back 7"]
+[node name="Tub 1" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 7"]
 position = Vector2(0, -14)
 texture = ExtResource("32_pwhtx")
 
-[node name="Cooler Door 7" type="Sprite2D" parent="Gas Station Sprites/Cooler Back 7"]
+[node name="Cooler Door 7" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 7"]
 position = Vector2(0, -5)
 texture = ExtResource("17_h7qmw")
 
-[node name="Shelf 1" type="Sprite2D" parent="Gas Station Sprites"]
+[node name="Shelf 1" type="Sprite2D" parent="Gas Station Store Objects"]
 position = Vector2(256, 24)
 texture = ExtResource("18_nvyu2")
 
-[node name="Chips 1" type="Polygon2D" parent="Gas Station Sprites/Shelf 1"]
+[node name="Chips 1" type="Polygon2D" parent="Gas Station Store Objects/Shelf 1"]
 texture_repeat = 2
 position = Vector2(2, -12)
 texture = ExtResource("30_reikh")
 polygon = PackedVector2Array(0, 0, 32, 0, 32, 9, 0, 9)
 uv = PackedVector2Array(0, 0, 32, 0, 32, 9, 0, 9)
 
-[node name="Chips 2" type="Polygon2D" parent="Gas Station Sprites/Shelf 1"]
+[node name="Chips 2" type="Polygon2D" parent="Gas Station Store Objects/Shelf 1"]
 texture_repeat = 2
 position = Vector2(-34, -12)
 texture = ExtResource("31_5qxgh")
 polygon = PackedVector2Array(0, 0, 32, 0, 32, 9, 0, 9)
 uv = PackedVector2Array(0, 0, 32, 0, 32, 9, 0, 9)
 
-[node name="Chips 3" type="Polygon2D" parent="Gas Station Sprites/Shelf 1"]
+[node name="Chips 3" type="Polygon2D" parent="Gas Station Store Objects/Shelf 1"]
 texture_repeat = 2
 position = Vector2(2, -33)
 texture = ExtResource("32_38ei1")
 polygon = PackedVector2Array(0, 0, 32, 0, 32, 18, 0, 18)
 uv = PackedVector2Array(0, 0, 32, 0, 32, 18, 0, 18)
 
-[node name="Chips 4" type="Polygon2D" parent="Gas Station Sprites/Shelf 1"]
+[node name="Chips 4" type="Polygon2D" parent="Gas Station Store Objects/Shelf 1"]
 texture_repeat = 2
 position = Vector2(-34, -33)
 texture = ExtResource("33_obiun")
 polygon = PackedVector2Array(0, 0, 32, 0, 32, 18, 0, 18)
 uv = PackedVector2Array(0, 0, 32, 0, 32, 18, 0, 18)
 
-[node name="Crackers 1" type="Sprite2D" parent="Gas Station Sprites/Shelf 1"]
+[node name="Crackers 1" type="Sprite2D" parent="Gas Station Store Objects/Shelf 1"]
 position = Vector2(-31, 5)
 texture = ExtResource("60_bhkjw")
 
-[node name="Crackers 2" type="Sprite2D" parent="Gas Station Sprites/Shelf 1"]
+[node name="Crackers 2" type="Sprite2D" parent="Gas Station Store Objects/Shelf 1"]
 position = Vector2(-22, 5)
 texture = ExtResource("60_bhkjw")
 
-[node name="Crackers 3" type="Sprite2D" parent="Gas Station Sprites/Shelf 1"]
+[node name="Crackers 3" type="Sprite2D" parent="Gas Station Store Objects/Shelf 1"]
 position = Vector2(-14, 5)
 texture = ExtResource("60_bhkjw")
 
-[node name="Crackers 4" type="Sprite2D" parent="Gas Station Sprites/Shelf 1"]
+[node name="Crackers 4" type="Sprite2D" parent="Gas Station Store Objects/Shelf 1"]
 position = Vector2(-4, 5)
 texture = ExtResource("60_bhkjw")
 
-[node name="Crackers 5" type="Sprite2D" parent="Gas Station Sprites/Shelf 1"]
+[node name="Crackers 5" type="Sprite2D" parent="Gas Station Store Objects/Shelf 1"]
 position = Vector2(7, 5)
 texture = ExtResource("61_rsa72")
 
-[node name="Crackers 6" type="Sprite2D" parent="Gas Station Sprites/Shelf 1"]
+[node name="Crackers 6" type="Sprite2D" parent="Gas Station Store Objects/Shelf 1"]
 position = Vector2(16, 5)
 texture = ExtResource("61_rsa72")
 
-[node name="Crackers 7" type="Sprite2D" parent="Gas Station Sprites/Shelf 1"]
+[node name="Crackers 7" type="Sprite2D" parent="Gas Station Store Objects/Shelf 1"]
 position = Vector2(26, 5)
 texture = ExtResource("61_rsa72")
 
-[node name="Crackers 8" type="Sprite2D" parent="Gas Station Sprites/Shelf 1"]
+[node name="Crackers 8" type="Sprite2D" parent="Gas Station Store Objects/Shelf 1"]
 position = Vector2(34, 5)
 texture = ExtResource("61_rsa72")
 
-[node name="Shelf 2" type="Sprite2D" parent="Gas Station Sprites"]
+[node name="Cookies 1" type="Sprite2D" parent="Gas Station Store Objects/Shelf 1"]
+position = Vector2(-28, 17)
+texture = ExtResource("62_jmmwh")
+
+[node name="Cookies 2" type="Sprite2D" parent="Gas Station Store Objects/Shelf 1"]
+position = Vector2(-10, 17)
+texture = ExtResource("62_jmmwh")
+
+[node name="Cookies 3" type="Sprite2D" parent="Gas Station Store Objects/Shelf 1"]
+position = Vector2(10, 17)
+texture = ExtResource("63_inisw")
+
+[node name="Cookies 4" type="Sprite2D" parent="Gas Station Store Objects/Shelf 1"]
+position = Vector2(28, 17)
+texture = ExtResource("63_inisw")
+
+[node name="Shelf 2" type="Sprite2D" parent="Gas Station Store Objects"]
 position = Vector2(145, 24)
 texture = ExtResource("18_nvyu2")
 
-[node name="Red Apple Basket" type="Sprite2D" parent="Gas Station Sprites/Shelf 2"]
+[node name="Red Apple Basket" type="Sprite2D" parent="Gas Station Store Objects/Shelf 2"]
 z_index = 1
 position = Vector2(-26, -18)
 texture = ExtResource("34_osal5")
 
-[node name="Red Apple 1" type="Sprite2D" parent="Gas Station Sprites/Shelf 2/Red Apple Basket"]
+[node name="Red Apple 1" type="Sprite2D" parent="Gas Station Store Objects/Shelf 2/Red Apple Basket"]
 z_index = -1
 position = Vector2(-7, -2)
 texture = ExtResource("35_7lp00")
 
-[node name="Red Apple 2" type="Sprite2D" parent="Gas Station Sprites/Shelf 2/Red Apple Basket"]
+[node name="Red Apple 2" type="Sprite2D" parent="Gas Station Store Objects/Shelf 2/Red Apple Basket"]
 z_index = -1
 position = Vector2(6, -2)
 texture = ExtResource("35_7lp00")
 
-[node name="Red Apple 3" type="Sprite2D" parent="Gas Station Sprites/Shelf 2/Red Apple Basket"]
+[node name="Red Apple 3" type="Sprite2D" parent="Gas Station Store Objects/Shelf 2/Red Apple Basket"]
 z_index = -1
 position = Vector2(-1, -5)
 texture = ExtResource("35_7lp00")
 
-[node name="Red Apple 4" type="Sprite2D" parent="Gas Station Sprites/Shelf 2/Red Apple Basket"]
+[node name="Red Apple 4" type="Sprite2D" parent="Gas Station Store Objects/Shelf 2/Red Apple Basket"]
 z_index = -1
 position = Vector2(-5, -4)
 texture = ExtResource("35_7lp00")
 
-[node name="Red Apple 5" type="Sprite2D" parent="Gas Station Sprites/Shelf 2/Red Apple Basket"]
+[node name="Red Apple 5" type="Sprite2D" parent="Gas Station Store Objects/Shelf 2/Red Apple Basket"]
 z_index = -1
 position = Vector2(-1, -1)
 texture = ExtResource("35_7lp00")
 
-[node name="Red Apple 6" type="Sprite2D" parent="Gas Station Sprites/Shelf 2/Red Apple Basket"]
+[node name="Red Apple 6" type="Sprite2D" parent="Gas Station Store Objects/Shelf 2/Red Apple Basket"]
 z_index = -1
 position = Vector2(3, -3)
 texture = ExtResource("35_7lp00")
 
-[node name="Green Apple Basket" type="Sprite2D" parent="Gas Station Sprites/Shelf 2"]
+[node name="Green Apple Basket" type="Sprite2D" parent="Gas Station Store Objects/Shelf 2"]
 z_index = 1
 position = Vector2(-1, -18)
 texture = ExtResource("34_osal5")
 
-[node name="Green Apple 1" type="Sprite2D" parent="Gas Station Sprites/Shelf 2/Green Apple Basket"]
+[node name="Green Apple 1" type="Sprite2D" parent="Gas Station Store Objects/Shelf 2/Green Apple Basket"]
 z_index = -1
 position = Vector2(-7, -3)
 texture = ExtResource("36_dynrd")
 
-[node name="Green Apple 2" type="Sprite2D" parent="Gas Station Sprites/Shelf 2/Green Apple Basket"]
+[node name="Green Apple 2" type="Sprite2D" parent="Gas Station Store Objects/Shelf 2/Green Apple Basket"]
 z_index = -1
 position = Vector2(6, -2)
 texture = ExtResource("36_dynrd")
 
-[node name="Green Apple 3" type="Sprite2D" parent="Gas Station Sprites/Shelf 2/Green Apple Basket"]
+[node name="Green Apple 3" type="Sprite2D" parent="Gas Station Store Objects/Shelf 2/Green Apple Basket"]
 z_index = -1
 position = Vector2(-4, -5)
 texture = ExtResource("36_dynrd")
 
-[node name="Green Apple 4" type="Sprite2D" parent="Gas Station Sprites/Shelf 2/Green Apple Basket"]
+[node name="Green Apple 4" type="Sprite2D" parent="Gas Station Store Objects/Shelf 2/Green Apple Basket"]
 z_index = -1
 position = Vector2(3, -4)
 texture = ExtResource("36_dynrd")
 
-[node name="Green Apple 5" type="Sprite2D" parent="Gas Station Sprites/Shelf 2/Green Apple Basket"]
+[node name="Green Apple 5" type="Sprite2D" parent="Gas Station Store Objects/Shelf 2/Green Apple Basket"]
 z_index = -1
 position = Vector2(-5, -1)
 texture = ExtResource("36_dynrd")
 
-[node name="Green Apple 6" type="Sprite2D" parent="Gas Station Sprites/Shelf 2/Green Apple Basket"]
+[node name="Green Apple 6" type="Sprite2D" parent="Gas Station Store Objects/Shelf 2/Green Apple Basket"]
 z_index = -1
 position = Vector2(0, -3)
 texture = ExtResource("36_dynrd")
 
-[node name="Orange Basker" type="Sprite2D" parent="Gas Station Sprites/Shelf 2"]
+[node name="Orange Basker" type="Sprite2D" parent="Gas Station Store Objects/Shelf 2"]
 z_index = 1
 position = Vector2(1, -6)
 texture = ExtResource("34_osal5")
 
-[node name="Orange 1" type="Sprite2D" parent="Gas Station Sprites/Shelf 2/Orange Basker"]
+[node name="Orange 1" type="Sprite2D" parent="Gas Station Store Objects/Shelf 2/Orange Basker"]
 z_index = -1
 position = Vector2(-7, -1)
 texture = ExtResource("34_2nl77")
 
-[node name="Orange 2" type="Sprite2D" parent="Gas Station Sprites/Shelf 2/Orange Basker"]
+[node name="Orange 2" type="Sprite2D" parent="Gas Station Store Objects/Shelf 2/Orange Basker"]
 z_index = -1
 position = Vector2(6, -2)
 texture = ExtResource("34_2nl77")
 
-[node name="Orange 3" type="Sprite2D" parent="Gas Station Sprites/Shelf 2/Orange Basker"]
+[node name="Orange 3" type="Sprite2D" parent="Gas Station Store Objects/Shelf 2/Orange Basker"]
 z_index = -1
 position = Vector2(-3, -2)
 texture = ExtResource("34_2nl77")
 
-[node name="Orange 4" type="Sprite2D" parent="Gas Station Sprites/Shelf 2/Orange Basker"]
+[node name="Orange 4" type="Sprite2D" parent="Gas Station Store Objects/Shelf 2/Orange Basker"]
 z_index = -1
 position = Vector2(2, -1)
 texture = ExtResource("34_2nl77")
 
-[node name="Yellow Apple Basket" type="Sprite2D" parent="Gas Station Sprites/Shelf 2"]
+[node name="Yellow Apple Basket" type="Sprite2D" parent="Gas Station Store Objects/Shelf 2"]
 z_index = 1
 position = Vector2(-25, -6)
 texture = ExtResource("34_osal5")
 
-[node name="Yellow Apple 1" type="Sprite2D" parent="Gas Station Sprites/Shelf 2/Yellow Apple Basket"]
+[node name="Yellow Apple 1" type="Sprite2D" parent="Gas Station Store Objects/Shelf 2/Yellow Apple Basket"]
 z_index = -1
 position = Vector2(-6, -2)
 texture = ExtResource("37_1hbyi")
 
-[node name="Yellow Apple 2" type="Sprite2D" parent="Gas Station Sprites/Shelf 2/Yellow Apple Basket"]
+[node name="Yellow Apple 2" type="Sprite2D" parent="Gas Station Store Objects/Shelf 2/Yellow Apple Basket"]
 z_index = -1
 position = Vector2(7, -1)
 texture = ExtResource("37_1hbyi")
 
-[node name="Yellow Apple 3" type="Sprite2D" parent="Gas Station Sprites/Shelf 2/Yellow Apple Basket"]
+[node name="Yellow Apple 3" type="Sprite2D" parent="Gas Station Store Objects/Shelf 2/Yellow Apple Basket"]
 z_index = -1
 position = Vector2(-3, -1)
 texture = ExtResource("37_1hbyi")
 
-[node name="Yellow Apple 4" type="Sprite2D" parent="Gas Station Sprites/Shelf 2/Yellow Apple Basket"]
+[node name="Yellow Apple 4" type="Sprite2D" parent="Gas Station Store Objects/Shelf 2/Yellow Apple Basket"]
 z_index = -1
 position = Vector2(3, -2)
 texture = ExtResource("37_1hbyi")
 
-[node name="Banana 1" type="Sprite2D" parent="Gas Station Sprites/Shelf 2"]
+[node name="Banana 1" type="Sprite2D" parent="Gas Station Store Objects/Shelf 2"]
 position = Vector2(30, -21)
 texture = ExtResource("38_n1jnv")
 
-[node name="Banana 2" type="Sprite2D" parent="Gas Station Sprites/Shelf 2"]
+[node name="Banana 2" type="Sprite2D" parent="Gas Station Store Objects/Shelf 2"]
 position = Vector2(20, -21)
 texture = ExtResource("38_n1jnv")
 flip_h = true
 
-[node name="Banana 3" type="Sprite2D" parent="Gas Station Sprites/Shelf 2"]
+[node name="Banana 3" type="Sprite2D" parent="Gas Station Store Objects/Shelf 2"]
 position = Vector2(18, -30)
 texture = ExtResource("38_n1jnv")
 centered = false
 flip_h = true
 
-[node name="Banana 4" type="Sprite2D" parent="Gas Station Sprites/Shelf 2"]
+[node name="Banana 4" type="Sprite2D" parent="Gas Station Store Objects/Shelf 2"]
 position = Vector2(16, -11)
 texture = ExtResource("39_g14cf")
 centered = false
 flip_h = true
 
-[node name="Banana 5" type="Sprite2D" parent="Gas Station Sprites/Shelf 2"]
+[node name="Banana 5" type="Sprite2D" parent="Gas Station Store Objects/Shelf 2"]
 position = Vector2(22, -11)
 texture = ExtResource("39_g14cf")
 centered = false
 
-[node name="Banana 6" type="Sprite2D" parent="Gas Station Sprites/Shelf 2"]
+[node name="Banana 6" type="Sprite2D" parent="Gas Station Store Objects/Shelf 2"]
 position = Vector2(26, -11)
 texture = ExtResource("39_g14cf")
 centered = false
 
-[node name="Banana 7" type="Sprite2D" parent="Gas Station Sprites/Shelf 2"]
-position = Vector2(8, 6)
+[node name="Banana 7" type="Sprite2D" parent="Gas Station Store Objects/Shelf 2"]
+z_index = 1
+position = Vector2(5, -6)
 texture = ExtResource("40_8cunj")
 centered = false
 flip_h = true
 
-[node name="Shelf 3" type="Sprite2D" parent="Gas Station Sprites"]
+[node name="Bread 3" type="Sprite2D" parent="Gas Station Store Objects/Shelf 2"]
+position = Vector2(-8, 4.5)
+texture = ExtResource("51_2e81e")
+
+[node name="Bread 4" type="Sprite2D" parent="Gas Station Store Objects/Shelf 2"]
+position = Vector2(4, 4.5)
+texture = ExtResource("51_2e81e")
+
+[node name="Bread 5" type="Sprite2D" parent="Gas Station Store Objects/Shelf 2"]
+position = Vector2(15, 4.5)
+texture = ExtResource("52_8xsh4")
+
+[node name="Bread 6" type="Sprite2D" parent="Gas Station Store Objects/Shelf 2"]
+position = Vector2(25, 4.5)
+texture = ExtResource("52_8xsh4")
+
+[node name="Bread 7" type="Sprite2D" parent="Gas Station Store Objects/Shelf 2"]
+position = Vector2(34, 4.5)
+texture = ExtResource("52_8xsh4")
+
+[node name="Condiment 4" type="Sprite2D" parent="Gas Station Store Objects/Shelf 2"]
+position = Vector2(-34, 5)
+texture = ExtResource("79_4vi64")
+
+[node name="Condiment 9" type="Sprite2D" parent="Gas Station Store Objects/Shelf 2"]
+position = Vector2(-28, 5)
+texture = ExtResource("79_4vi64")
+
+[node name="Condiment 5" type="Sprite2D" parent="Gas Station Store Objects/Shelf 2"]
+position = Vector2(-22, 5)
+texture = ExtResource("80_32k3d")
+
+[node name="Condiment 10" type="Sprite2D" parent="Gas Station Store Objects/Shelf 2"]
+position = Vector2(-16, 5)
+texture = ExtResource("80_32k3d")
+
+[node name="Condiment 15" type="Sprite2D" parent="Gas Station Store Objects/Shelf 2"]
+position = Vector2(-35, 17)
+texture = ExtResource("76_80odt")
+
+[node name="Condiment 16" type="Sprite2D" parent="Gas Station Store Objects/Shelf 2"]
+position = Vector2(-28, 17)
+texture = ExtResource("76_80odt")
+
+[node name="Condiment 1" type="Sprite2D" parent="Gas Station Store Objects/Shelf 2"]
+position = Vector2(-9, 17)
+texture = ExtResource("75_ochby")
+
+[node name="Condiment 11" type="Sprite2D" parent="Gas Station Store Objects/Shelf 2"]
+position = Vector2(-15, 17)
+texture = ExtResource("76_rqytg")
+
+[node name="Condiment 12" type="Sprite2D" parent="Gas Station Store Objects/Shelf 2"]
+position = Vector2(-22, 17)
+texture = ExtResource("76_rqytg")
+
+[node name="Condiment 6" type="Sprite2D" parent="Gas Station Store Objects/Shelf 2"]
+position = Vector2(-2, 17)
+texture = ExtResource("75_ochby")
+
+[node name="Condiment 2" type="Sprite2D" parent="Gas Station Store Objects/Shelf 2"]
+position = Vector2(4, 17)
+texture = ExtResource("77_lvo11")
+
+[node name="Condiment 7" type="Sprite2D" parent="Gas Station Store Objects/Shelf 2"]
+position = Vector2(11, 17)
+texture = ExtResource("77_lvo11")
+
+[node name="Condiment 3" type="Sprite2D" parent="Gas Station Store Objects/Shelf 2"]
+position = Vector2(18, 17)
+texture = ExtResource("78_eemrt")
+
+[node name="Condiment 8" type="Sprite2D" parent="Gas Station Store Objects/Shelf 2"]
+position = Vector2(24, 17)
+texture = ExtResource("78_eemrt")
+
+[node name="Condiment 13" type="Sprite2D" parent="Gas Station Store Objects/Shelf 2"]
+position = Vector2(31, 17)
+texture = ExtResource("77_oegqx")
+
+[node name="Condiment 14" type="Sprite2D" parent="Gas Station Store Objects/Shelf 2"]
+position = Vector2(36, 17)
+texture = ExtResource("77_oegqx")
+
+[node name="Shelf 3" type="Sprite2D" parent="Gas Station Store Objects"]
 position = Vector2(45, 24)
 texture = ExtResource("18_nvyu2")
 
-[node name="Cereal 1" type="Sprite2D" parent="Gas Station Sprites/Shelf 3"]
+[node name="Cereal 1" type="Sprite2D" parent="Gas Station Store Objects/Shelf 3"]
 position = Vector2(19, -24)
 texture = ExtResource("27_xb6ko")
 
-[node name="Cereal 6" type="Sprite2D" parent="Gas Station Sprites/Shelf 3"]
+[node name="Cereal 6" type="Sprite2D" parent="Gas Station Store Objects/Shelf 3"]
 position = Vector2(31, -24)
 texture = ExtResource("27_xb6ko")
 
-[node name="Cereal 2" type="Sprite2D" parent="Gas Station Sprites/Shelf 3"]
+[node name="Cereal 2" type="Sprite2D" parent="Gas Station Store Objects/Shelf 3"]
 position = Vector2(7, -24)
 texture = ExtResource("28_0xlxs")
 
-[node name="Cereal 3" type="Sprite2D" parent="Gas Station Sprites/Shelf 3"]
+[node name="Cereal 3" type="Sprite2D" parent="Gas Station Store Objects/Shelf 3"]
 position = Vector2(-7, -24)
 texture = ExtResource("28_0xlxs")
 
-[node name="Cereal 4" type="Sprite2D" parent="Gas Station Sprites/Shelf 3"]
+[node name="Cereal 4" type="Sprite2D" parent="Gas Station Store Objects/Shelf 3"]
 position = Vector2(-19, -24)
 texture = ExtResource("29_gusal")
 
-[node name="Cereal 5" type="Sprite2D" parent="Gas Station Sprites/Shelf 3"]
+[node name="Cereal 5" type="Sprite2D" parent="Gas Station Store Objects/Shelf 3"]
 position = Vector2(-32, -24)
 texture = ExtResource("29_gusal")
 
-[node name="Bread 1" type="Sprite2D" parent="Gas Station Sprites/Shelf 3"]
-position = Vector2(-32, -7.5)
-texture = ExtResource("51_2e81e")
+[node name="Toiletry 1" type="Sprite2D" parent="Gas Station Store Objects/Shelf 3"]
+position = Vector2(-29, -5)
+texture = ExtResource("85_q6g21")
 
-[node name="Bread 2" type="Sprite2D" parent="Gas Station Sprites/Shelf 3"]
-position = Vector2(-20, -7.5)
-texture = ExtResource("51_2e81e")
+[node name="Toiletry 2" type="Sprite2D" parent="Gas Station Store Objects/Shelf 3"]
+position = Vector2(-29, -9)
+texture = ExtResource("85_q6g21")
 
-[node name="Bread 3" type="Sprite2D" parent="Gas Station Sprites/Shelf 3"]
-position = Vector2(-7, -7.5)
-texture = ExtResource("51_2e81e")
+[node name="Toiletry 3" type="Sprite2D" parent="Gas Station Store Objects/Shelf 3"]
+position = Vector2(-12, -10)
+texture = ExtResource("86_i4soi")
 
-[node name="Bread 4" type="Sprite2D" parent="Gas Station Sprites/Shelf 3"]
-position = Vector2(5, -7.5)
-texture = ExtResource("51_2e81e")
+[node name="Toiletry 4" type="Sprite2D" parent="Gas Station Store Objects/Shelf 3"]
+position = Vector2(-13, -7)
+texture = ExtResource("86_i4soi")
 
-[node name="Bread 5" type="Sprite2D" parent="Gas Station Sprites/Shelf 3"]
-position = Vector2(16, -7.5)
-texture = ExtResource("52_8xsh4")
+[node name="Toiletry 5" type="Sprite2D" parent="Gas Station Store Objects/Shelf 3"]
+position = Vector2(-12, -5)
+texture = ExtResource("86_i4soi")
 
-[node name="Bread 6" type="Sprite2D" parent="Gas Station Sprites/Shelf 3"]
-position = Vector2(26, -7.5)
-texture = ExtResource("52_8xsh4")
+[node name="Toiletry 6" type="Sprite2D" parent="Gas Station Store Objects/Shelf 3"]
+position = Vector2(1, -7)
+texture = ExtResource("87_l2son")
 
-[node name="Bread 7" type="Sprite2D" parent="Gas Station Sprites/Shelf 3"]
-position = Vector2(35, -7.5)
-texture = ExtResource("52_8xsh4")
+[node name="Toiletry 7" type="Sprite2D" parent="Gas Station Store Objects/Shelf 3"]
+position = Vector2(9, -7)
+texture = ExtResource("87_l2son")
 
-[node name="Condiment 1" type="Sprite2D" parent="Gas Station Sprites/Shelf 3"]
-position = Vector2(-22, 5)
-texture = ExtResource("75_ochby")
+[node name="Toiletry 8" type="Sprite2D" parent="Gas Station Store Objects/Shelf 3"]
+position = Vector2(18, -5)
+texture = ExtResource("88_po2n0")
 
-[node name="Condiment 11" type="Sprite2D" parent="Gas Station Sprites/Shelf 3"]
-position = Vector2(-28, 5)
-texture = ExtResource("76_rqytg")
+[node name="Toiletry 9" type="Sprite2D" parent="Gas Station Store Objects/Shelf 3"]
+position = Vector2(17, -9)
+texture = ExtResource("88_po2n0")
 
-[node name="Condiment 12" type="Sprite2D" parent="Gas Station Sprites/Shelf 3"]
-position = Vector2(-35, 5)
-texture = ExtResource("76_rqytg")
+[node name="Toiletry 10" type="Sprite2D" parent="Gas Station Store Objects/Shelf 3"]
+position = Vector2(26, -7)
+texture = ExtResource("89_squtn")
 
-[node name="Condiment 13" type="Sprite2D" parent="Gas Station Sprites/Shelf 3"]
-position = Vector2(-34, 17)
-texture = ExtResource("77_oegqx")
+[node name="Toiletry 11" type="Sprite2D" parent="Gas Station Store Objects/Shelf 3"]
+position = Vector2(35, -7)
+texture = ExtResource("89_squtn")
 
-[node name="Condiment 14" type="Sprite2D" parent="Gas Station Sprites/Shelf 3"]
-position = Vector2(-28, 17)
-texture = ExtResource("77_oegqx")
+[node name="Toiletry 12" type="Sprite2D" parent="Gas Station Store Objects/Shelf 3"]
+position = Vector2(-29, 5)
+texture = ExtResource("90_d1pck")
 
-[node name="Condiment 6" type="Sprite2D" parent="Gas Station Sprites/Shelf 3"]
-position = Vector2(-15, 5)
-texture = ExtResource("75_ochby")
+[node name="Toiletry 13" type="Sprite2D" parent="Gas Station Store Objects/Shelf 3"]
+position = Vector2(-12, 5)
+texture = ExtResource("90_d1pck")
 
-[node name="Condiment 2" type="Sprite2D" parent="Gas Station Sprites/Shelf 3"]
-position = Vector2(-9, 5)
-texture = ExtResource("77_lvo11")
-
-[node name="Condiment 7" type="Sprite2D" parent="Gas Station Sprites/Shelf 3"]
-position = Vector2(-2, 5)
-texture = ExtResource("77_lvo11")
-
-[node name="Condiment 3" type="Sprite2D" parent="Gas Station Sprites/Shelf 3"]
-position = Vector2(5, 5)
-texture = ExtResource("78_eemrt")
-
-[node name="Condiment 8" type="Sprite2D" parent="Gas Station Sprites/Shelf 3"]
-position = Vector2(11, 5)
-texture = ExtResource("78_eemrt")
-
-[node name="Condiment 4" type="Sprite2D" parent="Gas Station Sprites/Shelf 3"]
-position = Vector2(18, 5)
-texture = ExtResource("79_4vi64")
-
-[node name="Condiment 9" type="Sprite2D" parent="Gas Station Sprites/Shelf 3"]
-position = Vector2(24, 5)
-texture = ExtResource("79_4vi64")
-
-[node name="Condiment 5" type="Sprite2D" parent="Gas Station Sprites/Shelf 3"]
-position = Vector2(30, 5)
-texture = ExtResource("80_32k3d")
-
-[node name="Condiment 10" type="Sprite2D" parent="Gas Station Sprites/Shelf 3"]
-position = Vector2(36, 5)
-texture = ExtResource("80_32k3d")
-
-[node name="Countertop" type="Polygon2D" parent="Gas Station Sprites"]
+[node name="Countertop" type="Polygon2D" parent="Gas Station Store Objects"]
 color = Color(0.858824, 0.823529, 0.768627, 1)
 polygon = PackedVector2Array(315, 16, 396, 16, 396, 18, 315, 18)
 
-[node name="PC" type="Sprite2D" parent="Gas Station Sprites/Countertop"]
+[node name="PC" type="Sprite2D" parent="Gas Station Store Objects/Countertop"]
 position = Vector2(343, 12)
 texture = ExtResource("51_sojef")
 
-[node name="monitor" type="Sprite2D" parent="Gas Station Sprites/Countertop/PC"]
+[node name="monitor" type="Sprite2D" parent="Gas Station Store Objects/Countertop/PC"]
 position = Vector2(1, -12)
 texture = ExtResource("52_fmovk")
 
-[node name="printer" type="Sprite2D" parent="Gas Station Sprites/Countertop/PC"]
+[node name="printer" type="Sprite2D" parent="Gas Station Store Objects/Countertop/PC"]
 position = Vector2(-10, -4)
 texture = ExtResource("53_c7y1i")
 
-[node name="pin pad" type="Sprite2D" parent="Gas Station Sprites/Countertop/PC"]
+[node name="pin pad" type="Sprite2D" parent="Gas Station Store Objects/Countertop/PC"]
 position = Vector2(19, -4)
 texture = ExtResource("54_mlxib")
 
-[node name="lottery tickets" type="Sprite2D" parent="Gas Station Sprites/Countertop"]
+[node name="lottery tickets" type="Sprite2D" parent="Gas Station Store Objects/Countertop"]
 position = Vector2(380, 0)
 texture = ExtResource("57_smm5x")
 script = ExtResource("76_dj4sg")
 
-[node name="Lottery Ticket Trigger" type="Area2D" parent="Gas Station Sprites/Countertop/lottery tickets"]
+[node name="Lottery Ticket Trigger" type="Area2D" parent="Gas Station Store Objects/Countertop/lottery tickets"]
 collision_layer = 0
 collision_mask = 2
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Gas Station Sprites/Countertop/lottery tickets/Lottery Ticket Trigger"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Gas Station Store Objects/Countertop/lottery tickets/Lottery Ticket Trigger"]
 position = Vector2(0, -16)
 shape = SubResource("CircleShape2D_npt17")
 
-[node name="ActionParticles" parent="Gas Station Sprites/Countertop/lottery tickets" instance=ExtResource("76_bdtre")]
+[node name="ActionParticles" parent="Gas Station Store Objects/Countertop/lottery tickets" instance=ExtResource("76_bdtre")]
 position = Vector2(0, -16)
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Gas Station Sprites/Countertop"]
+[node name="StaticBody2D" type="StaticBody2D" parent="Gas Station Store Objects/Countertop"]
 position = Vector2(316, 18)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Gas Station Sprites/Countertop/StaticBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Gas Station Store Objects/Countertop/StaticBody2D"]
 position = Vector2(-1, -2)
 shape = SubResource("SegmentShape2D_mw6eu")
 one_way_collision = true
 
-[node name="Countertop Shadow" type="Polygon2D" parent="Gas Station Sprites"]
+[node name="Countertop Shadow" type="Polygon2D" parent="Gas Station Store Objects/Countertop"]
 z_index = 1
 position = Vector2(316, 18)
 polygon = PackedVector2Array(0, 0, 80, 0, 80, 2, 80, 4, 0, 4, 0, 2)
 vertex_colors = PackedColorArray(0, 0, 0, 0.258824, 0, 0, 0, 0.247059, 0, 0, 0, 0.247059, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.247059)
 polygons = [PackedInt32Array(0, 1, 2, 5), PackedInt32Array(5, 2, 3, 4)]
+
+[node name="Trash Can" type="Sprite2D" parent="Gas Station Store Objects"]
+position = Vector2(306, 36)
+texture = ExtResource("98_d8b4j")
 
 [node name="Building 1" type="TileMap" parent="."]
 tile_set = ExtResource("1_3n3y5")
@@ -1171,4 +1254,4 @@ vertex_colors = PackedColorArray(0, 0, 0, 0.498039, 0, 0, 0, 0.498039, 0, 0, 0, 
 [connection signal="body_exited" from="BG Upper/Grass BG 1/BG Trees 13/Area2D" to="BG Upper/Grass BG 1/BG Trees 13" method="_on_area_2d_body_exited"]
 [connection signal="body_entered" from="Gas Station Store FG/Revealer" to="Gas Station Store FG" method="_on_revealer_body_entered"]
 [connection signal="body_exited" from="Gas Station Store FG/Revealer" to="Gas Station Store FG" method="_on_revealer_body_exited"]
-[connection signal="body_entered" from="Gas Station Sprites/Countertop/lottery tickets/Lottery Ticket Trigger" to="Gas Station Sprites/Countertop/lottery tickets" method="_on_lottery_ticket_trigger_body_entered"]
+[connection signal="body_entered" from="Gas Station Store Objects/Countertop/lottery tickets/Lottery Ticket Trigger" to="Gas Station Store Objects/Countertop/lottery tickets" method="_on_lottery_ticket_trigger_body_entered"]
