@@ -143,7 +143,6 @@ layer_2/tile_data = PackedInt32Array(-65544, 262144, 65538, -65545, 196609, 1, -
 script = ExtResource("2_f8vse")
 
 [node name="Map Area" type="Area2D" parent="."]
-visible = false
 collision_layer = 32768
 collision_mask = 0
 monitoring = false
@@ -154,7 +153,6 @@ shape = SubResource("RectangleShape2D_oo5ie")
 
 [node name="Sky" type="Polygon2D" parent="."]
 z_index = -2
-position = Vector2(31, 30)
 polygon = PackedVector2Array(-2320, 432, 0, 432, 0, -1444, -2320, -1444)
 vertex_colors = PackedColorArray(0.352941, 0.709804, 1, 1, 0.352941, 0.709804, 1, 1, 0.0392157, 0.137255, 0.360784, 1, 0.0392157, 0.137255, 0.360784, 1)
 

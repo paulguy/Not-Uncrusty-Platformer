@@ -96,6 +96,7 @@ left_analog_down={
 2d_physics/layer_1="World"
 2d_physics/layer_2="Player"
 2d_physics/layer_3="Mobs"
+2d_physics/layer_16="Map Areas"
 
 [physics]
 
