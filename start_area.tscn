@@ -1,11 +1,10 @@
-[gd_scene load_steps=91 format=3 uid="uid://b6hlh6i6qfo30"]
+[gd_scene load_steps=90 format=3 uid="uid://b6hlh6i6qfo30"]
 
 [ext_resource type="TileSet" uid="uid://bbcmc4vabwnbb" path="res://Tilesets/world_graphics.tres" id="1_t5bgk"]
 [ext_resource type="Texture2D" uid="uid://bva4eu7uh6cub" path="res://Sprites/street light.png" id="4_ej1wx"]
 [ext_resource type="Texture2D" uid="uid://dvlm73gxlboqv" path="res://Sprites/bench.png" id="5_iirfb"]
 [ext_resource type="Texture2D" uid="uid://bc33bxoduqav2" path="res://Sprites/trash can.png" id="6_3vghe"]
 [ext_resource type="PackedScene" uid="uid://bk13qyh8h8uqw" path="res://Mobs/crawly_mob.tscn" id="6_5p8nw"]
-[ext_resource type="Script" path="res://start_area.gd" id="6_x5dqp"]
 [ext_resource type="Texture2D" uid="uid://c7a6lo8bnjivp" path="res://Sprites/poofy tree.png" id="7_qy6th"]
 [ext_resource type="Shader" uid="uid://dj3fy330okrdu" path="res://glow.tres" id="8_xa6fp"]
 [ext_resource type="Texture2D" uid="uid://b0cvngn7tfndv" path="res://Sprites/d-pad.png" id="9_5bfpj"]
@@ -572,7 +571,6 @@ layer_3/tile_data = PackedInt32Array(131074, 262144, 65538, 131075, 262144, 6553
 layer_4/name = "fg2"
 layer_4/z_index = 1
 layer_4/tile_data = PackedInt32Array(-524283, 262144, 131076, -524282, 262144, 131076, -524281, 262144, 131076, -524280, 262144, 131076, -524279, 262144, 131076, -524278, 131072, 65539, -524284, 196608, 65539)
-script = ExtResource("6_x5dqp")
 
 [node name="Map Area" type="Area2D" parent="."]
 collision_layer = 32768

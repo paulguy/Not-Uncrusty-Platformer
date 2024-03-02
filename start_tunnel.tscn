@@ -1,7 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://b6pgwmljiikrp"]
+[gd_scene load_steps=3 format=3 uid="uid://b6pgwmljiikrp"]
 
 [ext_resource type="TileSet" uid="uid://bbcmc4vabwnbb" path="res://Tilesets/world_graphics.tres" id="1_heqta"]
-[ext_resource type="Script" path="res://start_tunnel.gd" id="2_qsvlr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xqih0"]
 size = Vector2(784, 1120)
@@ -23,7 +22,6 @@ layer_3/tile_data = PackedInt32Array(-1769451, 262144, 65538, -1769452, 262144, 
 layer_4/name = "decor 2"
 layer_4/z_index = 10
 layer_4/tile_data = PackedInt32Array(-1834988, 65537, 6, -1900532, 65537, 6, -1900536, 65537, 6, -1900533, 1, 6, -1834989, 1, 6, -1900535, 458753, 5)
-script = ExtResource("2_qsvlr")
 
 [node name="Map Area" type="Area2D" parent="."]
 collision_layer = 32768

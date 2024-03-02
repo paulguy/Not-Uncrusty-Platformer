@@ -1,7 +1,6 @@
-[gd_scene load_steps=50 format=3 uid="uid://d0t3u3e50ljbk"]
+[gd_scene load_steps=49 format=3 uid="uid://d0t3u3e50ljbk"]
 
 [ext_resource type="TileSet" uid="uid://bbcmc4vabwnbb" path="res://Tilesets/world_graphics.tres" id="1_3d2wv"]
-[ext_resource type="Script" path="res://start_area.gd" id="2_nxej3"]
 [ext_resource type="PackedScene" uid="uid://8u7vcedlhsu4" path="res://Mobs/worm.tscn" id="3_7451u"]
 [ext_resource type="TileSet" uid="uid://dqx4iwi5r15fh" path="res://Tilesets/water.tres" id="5_k050t"]
 [ext_resource type="PackedScene" uid="uid://wvpa0pvyksvb" path="res://Mobs/fish.tscn" id="6_krxrc"]
@@ -114,7 +113,6 @@ layer_3/tile_data = PackedInt32Array(-2162718, 393216, 65539, -2162717, 327680, 
 layer_4/name = "water"
 layer_4/z_index = -1
 layer_4/tile_data = PackedInt32Array()
-script = ExtResource("2_nxej3")
 
 [node name="Map Area" type="Area2D" parent="."]
 collision_layer = 32768
