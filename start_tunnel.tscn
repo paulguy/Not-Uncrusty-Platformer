@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://start_tunnel.gd" id="2_qsvlr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xqih0"]
-size = Vector2(352, 464)
+size = Vector2(784, 1120)
 
 [node name="Start Tunnel" type="TileMap"]
 tile_set = ExtResource("1_heqta")
@@ -26,10 +26,12 @@ layer_4/tile_data = PackedInt32Array(-1834988, 65537, 6, -1900532, 65537, 6, -19
 script = ExtResource("2_qsvlr")
 
 [node name="Map Area" type="Area2D" parent="."]
-visible = false
 collision_layer = 32768
 collision_mask = 0
 
 [node name="Map Shape" type="CollisionShape2D" parent="Map Area"]
-position = Vector2(-80, -200)
+position = Vector2(8, -464)
 shape = SubResource("RectangleShape2D_xqih0")
+debug_color = Color(0, 0.6, 0.701961, 0)
+
+[node name="Mobs" type="Node2D" parent="."]

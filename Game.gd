@@ -9,6 +9,7 @@ const RESETTLE_TIME = 0.5
 
 # used as more of a set with some extended data
 var maps : Dictionary = {}
+var mobs : Dictionary = {}
 var player_offset : Vector2i = Vector2i.ZERO
 var rect_size : Vector2i = Vector2i.ZERO
 var to_add : Array = []
@@ -19,6 +20,7 @@ func adjust_player():
 	# player position to the fractional error to make sure the player starts as
 	# near to the origin as possible without upsetting the value _too_ much
 	var player_pos = Vector2i(player.position)
+	print(player_pos)
 	player.position -= Vector2(player_pos)
 	player_offset += player_pos
 
@@ -28,6 +30,8 @@ func adjust_player_and_maps():
 	# adjust active map positions
 	for map in $'Maps'.get_children():
 		map.position = Vector2(maps[map].pos - player_offset)
+		# update the mobs node too
+		$'Mobs'.get_node(NodePath(map.name)).position = map.position
 
 	# adjust area positions
 	for map in maps.keys():
@@ -35,9 +39,21 @@ func adjust_player_and_maps():
 
 func add_map_to_scene(map : Node2D):
 	$'Maps'.add_child(map)
+	# add the mobs too
+	var mobs_node = $'Mobs'.get_node(NodePath(map.name))
+	for mob in mobs[map]:
+		if not mob.is_inside_tree():
+			mob.activate()
+			mobs_node.add_child(mob)
 
-func remove_map_from_scene(map : Node2D):
+func remove_map_from_scene(map : Node2D, always_remove : bool = false):
 	$'Maps'.remove_child(map)
+	# remove the mobs too
+	var mobs_node = $'Mobs'.get_node(NodePath(map.name))
+	for mob in mobs[map]:
+		# TODO: Only remove mobs which are off screen
+		mobs_node.remove_child(mob)
+		mob.deactivate()
 
 func scan_area() -> Array:
 	# probably a crummy way to do this but there'll never be a huge
@@ -61,15 +77,11 @@ func update_active_maps():
 
 	for map in active_maps:
 		if map not in visible_maps:
-			print("removing")
-			print(map)
 			remove_map_from_scene(map)
 
 	var added : bool = false
 	for map in visible_maps:
 		if map not in active_maps:
-			print("adding")
-			print(map)
 			add_map_to_scene(map)
 			added = true
 
@@ -88,7 +100,7 @@ func _ready():
 	remove_child(area)
 
 	var shape : CollisionShape2D
-	# gather all the maps and map areas
+	# gather all the maps and map areas and mobs
 	var i = 0
 	for map in $'Maps'.get_children():
 		var map_area : Area2D = map.get_node("Map Area")
@@ -109,11 +121,22 @@ func _ready():
 										area_pos, shape.shape.size)
 		# give it a unique name
 		map_area.name = map.name
+		# get the mobs node from the map, remove it from there and take the mobs
+		# and put them in a dictionary and reparent them to the new nodes for them
+		var mobs_node = map.get_node("Mobs")
+		map.remove_child(mobs_node)
+		var new_mobs_node = Node2D.new()
+		new_mobs_node.name = map.name
+		$'Mobs'.add_child(new_mobs_node)
+		mobs[map] = mobs_node.get_children()
+		for mob in mobs_node.get_children():
+			mob.reparent(new_mobs_node, false)
+			new_mobs_node.remove_child(mob)
 		i += 1
 
 	# remove all for now, the relevant ones will be re-added
 	for map in maps.keys():
-		remove_map_from_scene(map)
+		remove_map_from_scene(map, true)
 
 	# Set everything up for the first time
 	adjust_player_and_maps()

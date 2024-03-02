@@ -117,7 +117,6 @@ layer_4/tile_data = PackedInt32Array()
 script = ExtResource("2_nxej3")
 
 [node name="Map Area" type="Area2D" parent="."]
-visible = false
 collision_layer = 32768
 collision_mask = 0
 monitoring = false
@@ -125,28 +124,7 @@ monitoring = false
 [node name="Map Shape" type="CollisionShape2D" parent="Map Area"]
 position = Vector2(1176, -1226)
 shape = SubResource("RectangleShape2D_mx0sb")
-
-[node name="Worm" parent="." instance=ExtResource("3_7451u")]
-position = Vector2(-236, -484)
-
-[node name="Worm2" parent="." instance=ExtResource("3_7451u")]
-position = Vector2(-448, -532)
-
-[node name="Fish" parent="." instance=ExtResource("6_krxrc")]
-z_index = 1
-position = Vector2(2781, -523)
-
-[node name="Fish2" parent="." instance=ExtResource("6_krxrc")]
-z_index = 1
-position = Vector2(2982, -453)
-
-[node name="Fish3" parent="." instance=ExtResource("6_krxrc")]
-z_index = 1
-position = Vector2(3014, -561)
-
-[node name="Fish4" parent="." instance=ExtResource("6_krxrc")]
-z_index = 1
-position = Vector2(2649, -520)
+debug_color = Color(0, 0.6, 0.701961, 0)
 
 [node name="Water Surface" type="TileMap" parent="."]
 tile_set = ExtResource("5_k050t")
@@ -836,12 +814,6 @@ texture = SubResource("AnimatedTexture_h2hxm")
 polygon = PackedVector2Array(3168, -656, 2176, -656, 2176, -624, 3168, -624)
 uv = PackedVector2Array(0, 0, 996, 0, 996, 32, 0, 32)
 
-[node name="Bird" parent="." instance=ExtResource("30_rr1dr")]
-position = Vector2(458, -1035)
-
-[node name="Bird2" parent="." instance=ExtResource("30_rr1dr")]
-position = Vector2(407, -1048)
-
 [node name="Starfish 1" type="Sprite2D" parent="."]
 z_index = 13
 position = Vector2(2220, -597)
@@ -896,3 +868,33 @@ texture = ExtResource("37_7o8wb")
 [node name="Trash Can 5" type="Sprite2D" parent="."]
 position = Vector2(623, -987)
 texture = ExtResource("38_x84id")
+
+[node name="Mobs" type="Node2D" parent="."]
+
+[node name="Worm" parent="Mobs" instance=ExtResource("3_7451u")]
+position = Vector2(-236, -484)
+
+[node name="Worm2" parent="Mobs" instance=ExtResource("3_7451u")]
+position = Vector2(-448, -532)
+
+[node name="Fish" parent="Mobs" instance=ExtResource("6_krxrc")]
+z_index = 1
+position = Vector2(2781, -523)
+
+[node name="Fish2" parent="Mobs" instance=ExtResource("6_krxrc")]
+z_index = 1
+position = Vector2(2982, -453)
+
+[node name="Fish3" parent="Mobs" instance=ExtResource("6_krxrc")]
+z_index = 1
+position = Vector2(3014, -561)
+
+[node name="Fish4" parent="Mobs" instance=ExtResource("6_krxrc")]
+z_index = 1
+position = Vector2(2649, -520)
+
+[node name="Bird" parent="Mobs" instance=ExtResource("30_rr1dr")]
+position = Vector2(458, -1035)
+
+[node name="Bird2" parent="Mobs" instance=ExtResource("30_rr1dr")]
+position = Vector2(407, -1048)

@@ -30,6 +30,8 @@ position = Vector2(-944, -2128)
 [node name="City Right" parent="Maps" instance=ExtResource("8_l7vx2")]
 position = Vector2(-3264, -2128)
 
+[node name="Mobs" type="Node2D" parent="."]
+
 [node name="Screen Area" type="Area2D" parent="."]
 collision_layer = 0
 collision_mask = 32772
@@ -37,6 +39,7 @@ monitorable = false
 
 [node name="Screen Shape" type="CollisionShape2D" parent="Screen Area"]
 shape = SubResource("RectangleShape2D_b62dn")
+debug_color = Color(0.768627, 0.247059, 0.470588, 0)
 
 [node name="Player" parent="." instance=ExtResource("2_g2lhd")]
 position = Vector2(-4003, -2192)
