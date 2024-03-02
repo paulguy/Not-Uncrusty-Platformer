@@ -34,7 +34,7 @@ position = Vector2(-3264, -2128)
 
 [node name="Screen Area" type="Area2D" parent="."]
 collision_layer = 0
-collision_mask = 32772
+collision_mask = 4
 monitorable = false
 
 [node name="Screen Shape" type="CollisionShape2D" parent="Screen Area"]

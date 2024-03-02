@@ -1,11 +1,7 @@
 extends Node2D
 
-const TARGET_WIDTH = 400.0
-const TARGET_HEIGHT = 300.0
-const ASPECT_RATIO = TARGET_WIDTH / TARGET_HEIGHT
-const RESETTLE_TIME = 0.5
-
 @onready var player : Player = $"Player"
+@onready var area : Area2D = $"Screen Area"
 
 # used as more of a set with some extended data
 var maps : Dictionary = {}
@@ -20,7 +16,6 @@ func adjust_player():
 	# player position to the fractional error to make sure the player starts as
 	# near to the origin as possible without upsetting the value _too_ much
 	var player_pos = Vector2i(player.position)
-	print(player_pos)
 	player.position -= Vector2(player_pos)
 	player_offset += player_pos
 
@@ -37,23 +32,30 @@ func adjust_player_and_maps():
 	for map in maps.keys():
 		maps[map].adjust(player_offset)
 
+func add_mob(mobs_node : Node2D, mob : Node2D):
+	mob.activate()
+	mobs_node.add_child(mob)
+
+func remove_mob(mobs_node : Node2D, mob : Node2D):
+	mobs_node.remove_child(mob)
+	mob.deactivate()
+
 func add_map_to_scene(map : Node2D):
 	$'Maps'.add_child(map)
 	# add the mobs too
 	var mobs_node = $'Mobs'.get_node(NodePath(map.name))
 	for mob in mobs[map]:
 		if not mob.is_inside_tree():
-			mob.activate()
-			mobs_node.add_child(mob)
+			add_mob(mobs_node, mob)
 
 func remove_map_from_scene(map : Node2D, always_remove : bool = false):
 	$'Maps'.remove_child(map)
 	# remove the mobs too
 	var mobs_node = $'Mobs'.get_node(NodePath(map.name))
 	for mob in mobs[map]:
-		# TODO: Only remove mobs which are off screen
-		mobs_node.remove_child(mob)
-		mob.deactivate()
+		# Only remove mobs which are off screen
+		if mob not in area.get_overlapping_bodies():
+			remove_mob(mobs_node, mob)
 
 func scan_area() -> Array:
 	# probably a crummy way to do this but there'll never be a huge
@@ -85,6 +87,16 @@ func update_active_maps():
 			add_map_to_scene(map)
 			added = true
 
+	# clean up mobs which were previously visible from other maps but which have
+	# gone off screen
+	for map in maps:
+		if map in visible_maps:
+			continue
+		var mobs_node = $'Mobs'.get_node(NodePath(map.name))
+		for mob in mobs_node.get_children():
+			if mob not in area.get_overlapping_bodies():
+				remove_mob(mobs_node, mob)
+
 	if added:
 		# readjust everything with the player about the origin
 		adjust_player_and_maps()
@@ -94,10 +106,9 @@ func _ready():
 	# prevent things triggering
 	remove_child(player)
 
-	var area : Area2D = $"Screen Area"
 	rect_size = area.get_node("Screen Shape").shape.size
 	# don't need it
-	remove_child(area)
+	#remove_child(area)
 
 	var shape : CollisionShape2D
 	# gather all the maps and map areas and mobs
@@ -147,6 +158,7 @@ func _ready():
 
 func _process(_delta : float):
 	update_active_maps()
+	area.position = player.position
 
 func pause(paused : bool):
 	if paused:
