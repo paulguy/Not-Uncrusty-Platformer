@@ -1,4 +1,4 @@
-[gd_scene load_steps=112 format=3 uid="uid://dq083vadn4wg6"]
+[gd_scene load_steps=118 format=3 uid="uid://dq083vadn4wg6"]
 
 [ext_resource type="TileSet" uid="uid://bbcmc4vabwnbb" path="res://Tilesets/world_graphics.tres" id="1_3n3y5"]
 [ext_resource type="Script" path="res://BG Textures/BG Texture.gd" id="3_5q7w5"]
@@ -101,6 +101,12 @@
 [ext_resource type="Texture2D" uid="uid://d28d3ib2an48m" path="res://Sprites/soap-container.png" id="88_po2n0"]
 [ext_resource type="Texture2D" uid="uid://cbguc8462td04" path="res://Sprites/shampoo-bottle.png" id="89_squtn"]
 [ext_resource type="Texture2D" uid="uid://cf5csf3g3gutq" path="res://Sprites/toilet-paper.png" id="90_d1pck"]
+[ext_resource type="Texture2D" uid="uid://en3j7rvv5wb5" path="res://Sprites/vegetable-soup-can.png" id="90_j05kk"]
+[ext_resource type="Texture2D" uid="uid://cxxoaxusm0cb" path="res://Sprites/spaghetti-box.png" id="90_vaa0i"]
+[ext_resource type="Texture2D" uid="uid://b3uuyhicx2c1p" path="res://Sprites/pasta-box.png" id="91_xemnf"]
+[ext_resource type="Texture2D" uid="uid://casns13opavf8" path="res://Sprites/mushroome-soup-can.png" id="91_yo5xy"]
+[ext_resource type="Texture2D" uid="uid://bsvbywwsviros" path="res://Sprites/tomato-soup-can.png" id="92_6ph0l"]
+[ext_resource type="Texture2D" uid="uid://wb6p57hme3ib" path="res://Sprites/rice-bag.png" id="95_tpb6a"]
 [ext_resource type="Texture2D" uid="uid://bc33bxoduqav2" path="res://Sprites/trash can.png" id="98_d8b4j"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oo5ie"]
@@ -1077,6 +1083,50 @@ texture = ExtResource("90_d1pck")
 [node name="Toiletry 13" type="Sprite2D" parent="Gas Station Store Objects/Shelf 3"]
 position = Vector2(-12, 5)
 texture = ExtResource("90_d1pck")
+
+[node name="Pasta 1" type="Sprite2D" parent="Gas Station Store Objects/Shelf 3"]
+position = Vector2(4, 5)
+texture = ExtResource("90_vaa0i")
+
+[node name="Pasta 2" type="Sprite2D" parent="Gas Station Store Objects/Shelf 3"]
+position = Vector2(18, 5)
+texture = ExtResource("91_xemnf")
+
+[node name="Pasta 3" type="Sprite2D" parent="Gas Station Store Objects/Shelf 3"]
+position = Vector2(26, 5)
+texture = ExtResource("91_xemnf")
+
+[node name="Pasta 4" type="Sprite2D" parent="Gas Station Store Objects/Shelf 3"]
+position = Vector2(35, 5)
+texture = ExtResource("91_xemnf")
+
+[node name="Soup Can 1" type="Sprite2D" parent="Gas Station Store Objects/Shelf 3"]
+position = Vector2(-32, 17)
+texture = ExtResource("90_j05kk")
+
+[node name="Soup Can 2" type="Sprite2D" parent="Gas Station Store Objects/Shelf 3"]
+position = Vector2(-23, 17)
+texture = ExtResource("90_j05kk")
+
+[node name="Soup Can 3" type="Sprite2D" parent="Gas Station Store Objects/Shelf 3"]
+position = Vector2(-13, 17)
+texture = ExtResource("91_yo5xy")
+
+[node name="Soup Can 4" type="Sprite2D" parent="Gas Station Store Objects/Shelf 3"]
+position = Vector2(-4, 17)
+texture = ExtResource("91_yo5xy")
+
+[node name="Soup Can 5" type="Sprite2D" parent="Gas Station Store Objects/Shelf 3"]
+position = Vector2(4, 17)
+texture = ExtResource("92_6ph0l")
+
+[node name="Soup Can 6" type="Sprite2D" parent="Gas Station Store Objects/Shelf 3"]
+position = Vector2(13, 17)
+texture = ExtResource("92_6ph0l")
+
+[node name="Rice" type="Sprite2D" parent="Gas Station Store Objects/Shelf 3"]
+position = Vector2(28, 17)
+texture = ExtResource("95_tpb6a")
 
 [node name="Countertop" type="Polygon2D" parent="Gas Station Store Objects"]
 color = Color(0.858824, 0.823529, 0.768627, 1)
