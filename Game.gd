@@ -48,7 +48,7 @@ func add_map_to_scene(map : Node2D):
 		if not mob.is_inside_tree():
 			add_mob(mobs_node, mob)
 
-func remove_map_from_scene(map : Node2D, always_remove : bool = false):
+func remove_map_from_scene(map : Node2D):
 	$'Maps'.remove_child(map)
 	# remove the mobs too
 	var mobs_node = $'Mobs'.get_node(NodePath(map.name))
@@ -147,7 +147,7 @@ func _ready():
 
 	# remove all for now, the relevant ones will be re-added
 	for map in maps.keys():
-		remove_map_from_scene(map, true)
+		remove_map_from_scene(map)
 
 	# Set everything up for the first time
 	adjust_player_and_maps()
