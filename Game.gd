@@ -33,12 +33,12 @@ func adjust_player_and_maps():
 		maps[map].adjust(player_offset)
 
 func add_mob(mobs_node : Node2D, mob : Node2D):
-	mob.activate()
 	mobs_node.add_child(mob)
+	mob.activate()
 
 func remove_mob(mobs_node : Node2D, mob : Node2D):
-	mobs_node.remove_child(mob)
 	mob.deactivate()
+	mobs_node.remove_child(mob)
 
 func add_map_to_scene(map : Node2D):
 	$'Maps'.add_child(map)
@@ -49,13 +49,14 @@ func add_map_to_scene(map : Node2D):
 			add_mob(mobs_node, mob)
 
 func remove_map_from_scene(map : Node2D):
-	$'Maps'.remove_child(map)
-	# remove the mobs too
-	var mobs_node = $'Mobs'.get_node(NodePath(map.name))
+	# remove the mobs
+	var mobs_node : Node2D = $'Mobs'.get_node(NodePath(map.name))
 	for mob in mobs[map]:
-		# Only remove mobs which are off screen
-		if mob not in area.get_overlapping_bodies():
+		# Only remove mobs which are in place and off screen
+		if mob.get_parent() == mobs_node and mob not in area.get_overlapping_bodies():
 			remove_mob(mobs_node, mob)
+	# and the rest of the map
+	$'Maps'.remove_child(map)
 
 func scan_area() -> Array:
 	# probably a crummy way to do this but there'll never be a huge

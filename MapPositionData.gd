@@ -6,12 +6,12 @@ var adjusted_area : Rect2i
 var pos : Vector2i
 var area_node : Area2D
 
-func _init(index : int,
-		   pos : Vector2i,
+func _init(init_index : int,
+		   init_pos : Vector2i,
 		   area_pos : Vector2i,
 		   size : Vector2i) -> void:
-	self.index = index
-	self.pos = pos
+	self.index = init_index
+	self.pos = init_pos
 	self.area = Rect2i(area_pos, size)
 	self.adjusted_area = Rect2i(self.area)
 
