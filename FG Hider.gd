@@ -1,4 +1,4 @@
-extends TileMap
+extends TileMapLayer
 
 func _init():
 	# set visible in case it was hidden in editing

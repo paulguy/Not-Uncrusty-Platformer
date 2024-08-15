@@ -17,7 +17,6 @@ floor_max_angle = 1.55334
 floor_snap_length = 0.0
 script = ExtResource("1_28un7")
 speed = 6169.58
-health = 20
 
 [node name="Mob Collision" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_uuscn")

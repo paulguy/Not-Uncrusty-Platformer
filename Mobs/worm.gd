@@ -1,6 +1,7 @@
 extends Mob
 
 const SPEED = 30.0
+const TURNAROUND_THRESHOLD = PI * 0.05
 
 @export var startDirection : MovementDirection = MovementDirection.RIGHT
 
@@ -63,12 +64,6 @@ func start_move():
 	velocity.x = dir_to_vec(direction).x * SPEED
 
 func _physics_process(delta):
-	if is_on_wall():
-		direction = opp_dir(direction)
-		play()
-		animForward = true
-		velocity.x = 0.0
-
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y += gravity * delta
@@ -83,6 +78,19 @@ func _physics_process(delta):
 		anim.rotation = rot
 
 	move_and_slide()
+
+	var turnaround : bool = false
+	var opp_vec : Vector2 = dir_to_vec(opp_dir(direction))
+	for i in get_slide_collision_count():
+		if abs(get_slide_collision(i).get_normal().angle_to(opp_vec)) < TURNAROUND_THRESHOLD:
+			turnaround = true
+			break
+
+	if turnaround:
+		direction = opp_dir(direction)
+		play()
+		animForward = true
+		velocity.x = 0.0
 
 func _on_animated_sprite_2d_animation_finished():
 	animForward = not animForward

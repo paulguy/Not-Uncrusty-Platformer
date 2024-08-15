@@ -120,7 +120,7 @@ func _physics_process(delta):
 				# signal player to not collide with mobs
 				collider.hit(position)
 				hit_player = true
-			elif collider is TileMap:
+			elif collider is TileMapLayer:
 				normal = collision.get_normal()
 
 		if hit_player:
@@ -147,7 +147,7 @@ func _physics_process(delta):
 					for j in get_slide_collision_count():
 						var collision = get_slide_collision(j)
 						var collider = collision.get_collider()
-						if collider is TileMap:
+						if collider is TileMapLayer :
 							normal = collision.get_normal()
 		else:
 			if is_on_floor():
