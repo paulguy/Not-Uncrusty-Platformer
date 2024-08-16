@@ -42,4 +42,4 @@ shape = SubResource("RectangleShape2D_b62dn")
 debug_color = Color(0.768627, 0.247059, 0.470588, 0)
 
 [node name="Player" parent="." instance=ExtResource("2_g2lhd")]
-position = Vector2(-3979, -2239)
+position = Vector2(349, 5)

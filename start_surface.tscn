@@ -167,7 +167,6 @@ texture = ExtResource("32_7gmre")
 [node name="Shell 3" type="Sprite2D" parent="fg"]
 position = Vector2(1935, -683)
 rotation = -3.04735
-scale = Vector2(1, 1)
 texture = ExtResource("32_7gmre")
 
 [node name="Sky" type="Polygon2D" parent="."]
