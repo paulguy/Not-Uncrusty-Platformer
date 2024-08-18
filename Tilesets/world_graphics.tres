@@ -816,6 +816,10 @@ texture = ExtResource("10_rtur7")
 2:7/0 = 0
 1:7/0 = 0
 0:7/0 = 0
+7:0/next_alternative_id = 2
+7:0/0 = 0
+7:0/1 = 1
+7:0/1/modulate = Color(0.137255, 0.321569, 0.529412, 1)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rkwx5"]
 texture = ExtResource("13_41f02")

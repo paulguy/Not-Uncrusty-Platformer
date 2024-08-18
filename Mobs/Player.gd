@@ -1,12 +1,12 @@
 class_name Player
 extends CharacterBody2D
 
-const FLOOR_SPEED = 1200.0
-const AIR_SPEED = 400.0
+const FLOOR_SPEED = 800.0
+const AIR_SPEED = 300.0
 const JUMP_VELOCITY = 300.0
-const THRUST = Vector2(500.0, 1700.0)
-const AIR_DECELERATION = Vector2(1.0, 1.0)
-const FLOOR_DECELERATION = Vector2(3.0, 1.0)
+const THRUST = Vector2(300.0, 1300.0)
+const AIR_DECELERATION = Vector2(0.5, 0.5)
+const FLOOR_DECELERATION = Vector2(3.0, 0.5)
 const FLOOR_FRICTION_MAX_SPEED = 20.0
 const FLOOR_FRICTION_FACTOR = 1.7
 const FLOOR_FRICTION_FACTOR2 = 0.08
