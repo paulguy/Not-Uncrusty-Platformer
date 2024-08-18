@@ -11,6 +11,7 @@ const FLOOR_FRICTION_MAX_SPEED = 20.0
 const FLOOR_FRICTION_FACTOR = 1.7
 const FLOOR_FRICTION_FACTOR2 = 0.08
 const FLOOR_FRICTION_STRENGTH = 80.0
+const COLLISION_FRICTION_FACTOR = 0.4
 const MAX_ANIM_TIME = 0.15
 const ACTOR_COLLISION_LAYER = 2
 const KNOCK_BACK = Vector2(200.0, -120.0)
@@ -107,14 +108,18 @@ func _physics_process(delta):
 	# decrease consumed thrust
 	# if depleted, enable slow recharge/no thrust until full
 	# if not thrusting, recharge
-	if thrust_power != 0:
+	if thrust_power != 0.0:
 		if not thrust_depleted:
-			if thrust_remaining > 0:
-				thrust_dec = thrust_power * (THRUST_PER_SECOND * delta)
+			if thrust_remaining > 0.0:
+				# get amount of thrust
+				thrust_dec = thrust_power * THRUST_PER_SECOND * delta
 				thrust_remaining -= thrust_dec
-				if thrust_remaining < 0:
+				if thrust_remaining < 0.0:
 					thrust_dec = -thrust_remaining
+					thrust_remaining = 0.0
 					thrust_depleted = true
+				# get it in terms of a ratio of how much thrust could be available
+				thrust_dec /= thrust_power * THRUST_PER_SECOND * delta
 
 				thrust = Vector2.RIGHT.rotated(thrust_angle) * (THRUST * thrust_dec)
 
@@ -214,20 +219,16 @@ func _physics_process(delta):
 	# move
 	move_and_slide()
 
-	# do collisions
 	for i in get_slide_collision_count():
+		if velocity.length() == 0.0:
+			break
 		var collision : KinematicCollision2D = get_slide_collision(i)
 		# get absolute value of the distance off-center
-		var angle : float = 0.0
-		# suppress an error
-		if velocity != Vector2():
-			angle = collision.get_angle(velocity)
-		if angle > PI:
-			angle = TAU - angle
+		var angle = abs(collision.get_normal().angle_to(velocity))
+
 		# get off-center-ness in terms of 0.0 to 1.0ish
 		# but only for a semicircle
-		angle = max(angle, PI / 2.0) / (PI / 2.0)
-		# TODO: probably some kind of curve for how much player speed is affected
+		angle = pow(min(angle, PI / 2.0) / (PI / 2.0), COLLISION_FRICTION_FACTOR)
 		# multiply velocity by collision to reduce/remove speed
 		velocity *= angle
 
