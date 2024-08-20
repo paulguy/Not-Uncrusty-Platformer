@@ -1,4 +1,4 @@
-[gd_scene load_steps=120 format=4 uid="uid://dq083vadn4wg6"]
+[gd_scene load_steps=123 format=4 uid="uid://dq083vadn4wg6"]
 
 [ext_resource type="TileSet" uid="uid://bbcmc4vabwnbb" path="res://Tilesets/world_graphics.tres" id="1_3n3y5"]
 [ext_resource type="Script" path="res://BG Textures/BG Texture.gd" id="3_5q7w5"]
@@ -108,6 +108,7 @@
 [ext_resource type="Texture2D" uid="uid://bsvbywwsviros" path="res://Sprites/tomato-soup-can.png" id="92_6ph0l"]
 [ext_resource type="Texture2D" uid="uid://wb6p57hme3ib" path="res://Sprites/rice-bag.png" id="95_tpb6a"]
 [ext_resource type="Texture2D" uid="uid://bc33bxoduqav2" path="res://Sprites/trash can.png" id="98_d8b4j"]
+[ext_resource type="Shader" uid="uid://cu0gxnifmydjf" path="res://Tilesets/building marble.tres" id="106_ywlgi"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oo5ie"]
 size = Vector2(2320, 1876)
@@ -124,16 +125,19 @@ size = Vector2(256, 18)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l6fod"]
 size = Vector2(480, 18)
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_npt17"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_mw6eu"]
+b = Vector2(81, 0)
+
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_hpfib"]
 shader = ExtResource("85_r7hss")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tk1o6"]
 size = Vector2(448, 112)
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_npt17"]
-
-[sub_resource type="SegmentShape2D" id="SegmentShape2D_mw6eu"]
-b = Vector2(81, 0)
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_x5ril"]
+shader = ExtResource("106_ywlgi")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_5bgyf"]
 shader = ExtResource("85_r7hss")
@@ -141,22 +145,10 @@ shader = ExtResource("85_r7hss")
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_4xvrk"]
 shader = ExtResource("85_r7hss")
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_s0j0x"]
+shader = ExtResource("85_r7hss")
+
 [node name="City Right" type="Node2D"]
-
-[node name="fg" type="TileMapLayer" parent="."]
-use_parent_material = true
-tile_map_data = PackedByteArray("AAD///7/AAAAAAYACQD+//7/AAAAAAYACQD9//7/AAAAAAYACQD8//7/AAAAAAYACQD7//7/AAAAAAYACQD6//7/AAAAAAYACQD5//7/AAAAAAYACQD4//7/AAAAAAYACQD3//7/AAAAAAYACQD2//7/AAAAAAYACQD1//7/AAAAAAYACQD0//7/AAAAAAYACQDz//7/AAAAAAYACQDy//7/AAAAAAYACQDx//7/AAAAAAYACQDw//7/AAAAAAYACQDv//7/AAAAAAYACQDu//7/AAAAAAYACQDt//7/AAAAAAYACQDs//7/AAAAAAYACQDr//7/AAAAAAYACQD/////AAAAAAQABAD+////AAAAAAQABAD9////AAAAAAQABAD8////AAAAAAQABAD7////AAAAAAQABAD6////AAAAAAQABAD5////AAAAAAQABAD4////AAAAAAQABAD3////AAAAAAQABAD2////AAAAAAQABAD1////AAAAAAQABAD0////AAAAAAQABADz////AAAAAAQABADy////AAAAAAQABADx////AAAAAAQABADw////AAAAAAQABADv////AAAAAAQABADu////AAAAAAQABADt////AAAAAAQABADs////AAAAAAQABADr////AAAAAAQABAD3//3/AQAEAAAAAAD0//3/AQABAAAAAAD1//3/AQACAAAAAAD2//3/AQADAAAAAADq//7/AAAAAAYACQDp//7/AAAAAAYACQDo//7/AAAAAAYACQDn//7/AAAAAAYACQDm//7/AAAAAAYACQDl//7/AAAAAAYACQDk//7/AAAAAAYACQDj//7/AAAAAAYACQDi//7/AAAAAAYACQDh//7/AAAAAAYACQDg//7/AAAAAAYACQDf//7/AAAAAAYACQDe//7/AAAAAAYACQDq////AAAAAAQABADp////AAAAAAQABADo////AAAAAAQABADn////AAAAAAQABADm////AAAAAAQABADl////AAAAAAQABADk////AAAAAAQABADj////AAAAAAQABADi////AAAAAAQABADh////AAAAAAQABADg////AAAAAAQABADf////AAAAAAQABADe////AAAAAAQABADl//n/AQAEAAUAAQDl//r/AQAGAAUAAADl//v/AQAAAAUAAADl//z/AQAAAAUAAADl//3/AQABAAUAAADy//n/AQAEAAUAAQDy//r/AQAGAAUAAADy//v/AQAAAAUAAADy//z/AQAAAAUAAADy//3/AQABAAUAAADd//7/AAAAAAYACQDc//7/AAAAAAYACQDb//7/AAAAAAYACQDa//7/AAAAAAYACQDZ//7/AAAAAAYACQDY//7/AAAAAAYACQDX//7/AAAAAAYACQDW//7/AAAAAAYACQDV//7/AAAAAAYACQDU//7/AAAAAAYACQDT//7/AAAAAAYACQDS//7/AAAAAAYACQDR//7/AAAAAAYACQDQ//7/AAAAAAYACQDP//7/AAAAAAYACQDO//7/AAAAAAYACQDN//7/AAAAAAYACQDM//7/AAAAAAYACQDL//7/AAAAAAYACQDK//7/AAAAAAYACQDJ//7/AAAAAAYACQDI//7/AAAAAAYACQDH//7/AAAAAAYACQDG//7/AAAAAAYACQDF//7/AAAAAAYACQDE//7/AAAAAAYACQDD//7/AAAAAAYACQDC//7/AAAAAAYACQDB//7/AAAAAAYACQDA//7/AAAAAAYACQC///7/AAAAAAYACQC+//7/AAAAAAYACQC9//7/AAAAAAYACQC8//7/AAAAAAYACQC7//7/AAAAAAYACQC6//7/AAAAAAYACQC5//7/AAAAAAYACQC4//7/AAAAAAYACQC3//7/AAAAAAYACQC2//7/AAAAAAYACQC1//7/AAAAAAYACQC0//7/AAAAAAYACQCz//7/AAAAAAYACQCy//7/AAAAAAYACQCx//7/AAAAAAYACQCw//7/AAAAAAYACQCv//7/AAAAAAYACQCu//7/AAAAAAYACQCt//7/AAAAAAYACQCs//7/AAAAAAYACQCr//7/AAAAAAYACQCq//7/AAAAAAYACQDT//3/AQAEAAAAAADS//3/AQACAAAAAADR//3/AQACAAAAAADQ//3/AQACAAAAAADP//3/AwAEAAAAAADO//3/AwAEAAAAAADN//3/AwAEAAAAAADM//3/AwAEAAAAAADL//3/AwAEAAAAAADK//3/AwAEAAAAAADJ//3/AwAEAAAAAADI//3/AwAEAAAAAADH//3/AwAEAAAAAADG//3/AwAEAAAAAADF//3/AwAEAAAAAADE//3/AwAEAAAAAADD//3/AwAEAAAAAADC//3/AwAEAAAAAADB//3/AwAEAAAAAADA//3/AwAEAAAAAAC///3/AwAEAAAAAAC+//3/AwAEAAAAAAC9//3/AwAEAAAAAAC8//3/AwAEAAAAAAC7//3/AwAEAAAAAAC6//3/AwAEAAAAAAC5//3/AwAEAAAAAAC4//3/AwAEAAAAAAC3//3/AwAEAAAAAAC2//3/AwAEAAAAAAC1//3/AwAEAAAAAAC0//3/AwAEAAAAAACz//3/AQACAAAAAACy//3/AQACAAAAAACx//3/AQACAAAAAACw//3/AQABAAAAAADP//n/AwADAAAAAgDP//j/AwADAAAAAgDP//f/AwAGAAAAAQDO//f/AwADAAAAAADN//f/AwADAAAAAADM//f/AwADAAAAAADL//f/AwADAAAAAADK//f/AwADAAAAAADJ//f/AwADAAAAAADI//f/AwADAAAAAADH//f/AwADAAAAAADG//f/AwADAAAAAADF//f/AwADAAAAAADE//f/AwADAAAAAADD//f/AwADAAAAAADC//f/AwADAAAAAADB//f/AwADAAAAAADA//f/AwADAAAAAAC///f/AwADAAAAAAC+//f/AwADAAAAAAC9//f/AwADAAAAAAC8//f/AwADAAAAAAC7//f/AwADAAAAAAC6//f/AwADAAAAAAC5//f/AwADAAAAAAC4//f/AwADAAAAAAC3//f/AwADAAAAAAC2//f/AwADAAAAAAC1//f/AwADAAAAAAC0//n/AwADAAAAAgC0//j/AwADAAAAAgC0//f/AwAGAAAAAAC1//j/AwAAAAAAAQC2//j/AwAAAAAAAQC2//n/AwAAAAAAAQC3//n/AwAAAAAAAQC3//r/AwAAAAAAAQC2//r/AwAAAAAAAQC1//n/AwAAAAAAAQC1//r/AwAAAAAAAQC1//v/AwAAAAAAAQC1//z/AwAAAAAAAQC2//z/AwAAAAAAAQC2//v/AwAAAAAAAQC3//v/AwAAAAAAAQC4//v/AwAAAAAAAQC4//z/AwAAAAAAAQC3//z/AwAAAAAAAQC5//z/AwAAAAAAAQC6//z/AwAAAAAAAQC7//z/AwAAAAAAAQC8//z/AwAAAAAAAQC9//z/AwAAAAAAAQC+//z/AwAAAAAAAQC///z/AwAAAAAAAQDA//z/AwAAAAAAAQDB//z/AwAAAAAAAQDC//z/AwAAAAAAAQDD//z/AwAAAAAAAQDE//z/AwAAAAAAAQDF//z/AwAAAAAAAQDG//z/AwAAAAAAAQDH//z/AwAAAAAAAQDI//z/AwAAAAAAAQDJ//z/AwAAAAAAAQDK//z/AwACAAMAAADL//z/AwACAAMAAADM//z/AwACAAMAAADN//z/AwACAAMAAADO//z/AwACAAMAAADO//v/AwACAAMAAADO//r/AwAAAAAAAQDO//n/AwAAAAAAAQDO//j/AwAAAAAAAQDN//j/AwAAAAAAAQDM//j/AwAAAAAAAQDL//j/AwAAAAAAAQDK//j/AwAAAAAAAQDJ//j/AwAAAAAAAQDI//j/AwAAAAAAAQDH//j/AwAAAAAAAQDG//j/AwAAAAAAAQDF//j/AwAAAAAAAQDE//j/AwAAAAAAAQDD//j/AwAAAAAAAQDC//j/AwAAAAAAAQDB//j/AwAAAAAAAQDA//j/AwAAAAAAAQC///j/AwAAAAAAAQC+//j/AwAAAAAAAQC9//j/AwAAAAAAAQC8//j/AwAAAAAAAQC7//j/AwAAAAAAAQC6//j/AwAAAAAAAQC5//j/AwAAAAAAAQC4//j/AwAAAAAAAQC3//j/AwAAAAAAAQC4//n/AwAAAAAAAQC5//n/AwAAAAAAAQC6//n/AwAAAAAAAQC7//n/AwAAAAAAAQC8//n/AwAAAAAAAQC9//n/AwAAAAAAAQC+//n/AwAAAAAAAQC///n/AwAAAAAAAQDA//n/AwAAAAAAAQDB//n/AwAAAAAAAQDC//n/AwAAAAAAAQDD//n/AwAAAAAAAQDE//n/AwAAAAAAAQDF//n/AwAAAAAAAQDG//n/AwAAAAAAAQDH//n/AwAAAAAAAQDI//n/AwAAAAAAAQDJ//n/AwAAAAAAAQDK//n/AwAAAAAAAQDL//n/AwAAAAAAAQDM//n/AwAAAAAAAQDN//n/AwAAAAAAAQDN//r/AwAAAAAAAQDM//r/AwAAAAAAAQDL//r/AwAAAAAAAQDK//r/AwAAAAAAAQDJ//r/AwAAAAAAAQDI//r/AwAAAAAAAQDH//r/AwAAAAAAAQDG//r/AwAAAAAAAQDF//r/AwAAAAAAAQDE//r/AwAAAAAAAQDD//r/AwAAAAAAAQDC//r/AwAAAAAAAQDB//r/AwAAAAAAAQDA//r/AwAAAAAAAQC///r/AwAAAAAAAQC+//r/AwAAAAAAAQC9//r/AwAAAAAAAQC8//r/AwAAAAAAAQC7//r/AwAAAAAAAQC6//r/AwAAAAAAAQC5//r/AwAAAAAAAQC4//r/AwAAAAAAAQC5//v/AwAAAAAAAQC6//v/AwAAAAAAAQC7//v/AwAAAAAAAQC8//v/AwAAAAAAAQC9//v/AwAAAAAAAQC+//v/AwAAAAAAAQC///v/AwAAAAAAAQDA//v/AwAAAAAAAQDB//v/AwAAAAAAAQDC//v/AwAAAAAAAQDD//v/AwAAAAAAAQDE//v/AwAAAAAAAQDF//v/AwAAAAAAAQDG//v/AwAAAAAAAQDH//v/AwAAAAAAAQDI//v/AwAAAAAAAQDJ//v/AwAAAAAAAQDK//v/AwACAAMAAADL//v/AwACAAMAAADM//v/AwACAAMAAADN//v/AwACAAMAAAC0//r/AwAAAAMAAAC0//v/AwAAAAMAAAC0//z/AwAAAAMAAADP//r/AwAAAAMAAADP//v/AwAAAAMAAADP//z/AwAAAAMAAACp//7/AAAAAAYACQCo//7/AAAAAAYACQCn//7/AAAAAAYACQCm//7/AAAAAAYACQCl//7/AAAAAAYACQCk//7/AAAAAAYACQCj//7/AAAAAAYACQCi//7/AAAAAAYACQCh//7/AAAAAAYACQCg//7/AAAAAAYACQCf//7/AAAAAAYACQCe//7/AAAAAAYACQCd//7/AAAAAAYACQCc//7/AAAAAAYACQCb//7/AAAAAAYACQCa//7/AAAAAAYACQCZ//7/AAAAAAYACQCY//7/AAAAAAYACQCX//7/AAAAAAYACQCW//7/AAAAAAYACQCV//7/AAAAAAYACQCU//7/AAAAAAYACQCT//7/AAAAAAYACQCS//7/AAAAAAYACQCR//7/AAAAAAYACQCQ//7/AAAAAAYACQCP//7/AAAAAAYACQCO//7/AAAAAAYACQCN//7/AAAAAAYACQCM//7/AAAAAAYACQCL//7/AAAAAAYACQCK//7/AAAAAAYACQCJ//7/AAAAAAYACQCI//7/AAAAAAYACQCH//7/AAAAAAYACQCG//7/AAAAAAYACQCF//7/AAAAAAYACQCE//7/AAAAAAYACQCD//7/AAAAAAYACQCC//7/AAAAAAYACQCB//7/AAAAAAYACQCA//7/AAAAAAYACQB///7/AAAAAAYACQB+//7/AAAAAAYACQA=")
-tile_set = ExtResource("1_3n3y5")
-
-[node name="bg decor" type="TileMapLayer" parent="."]
-use_parent_material = true
-tile_set = ExtResource("1_3n3y5")
-
-[node name="decor 1" type="TileMapLayer" parent="."]
-z_index = 11
-use_parent_material = true
-tile_map_data = PackedByteArray("AAD4//7/AAAEAAIAAQD3//7/AQADAAEAAAD2//7/AQAAAAEAAAD1//7/AQAEAAEAAAD0//7/AQACAAEAAADz//7/AQAGAAEAAADy//7/AQAFAAEAAADx//7/AQAFAAEAAADw//7/AQAFAAEAAADv//7/AQAFAAEAAADu//7/AQAFAAEAAADt//7/AQAFAAEAAADs//7/AQAGAAEAAADr//7/AQAFAAEAAAD5//7/AAAEAAIAAQD6//7/AAAEAAIAAQD7//7/AAAFAAIAAQD8//7/AAAEAAIAAQD9//7/AAAFAAIAAQD+//7/AAAFAAIAAQD///7/AAAEAAIAAQD///3/AAAEAAEAAQD+//3/AAAFAAEAAQD9//3/AAAFAAEAAQD8//3/AAAFAAEAAQD7//3/AAAEAAEAAQD6//3/AAAEAAEAAQD5//3/AAAEAAEAAQD4//3/AAAEAAEAAQD3//3/AAAGAAEAAQDq//7/AQAGAAEAAADp//7/AQAGAAEAAADo//7/AQAGAAEAAADn//7/AQAFAAEAAADm//7/AQAFAAEAAADl//7/AQAGAAEAAADk//7/AQAFAAEAAADj//7/AQAFAAEAAADi//7/AQAGAAEAAADh//7/AQAGAAEAAADg//7/AQAGAAEAAADf//7/AQAFAAEAAADe//7/AQAFAAEAAAC1//3/AwABAAMAAAC2//3/AwABAAMAAAC3//3/AwABAAMAAAC4//3/AwABAAMAAAC5//3/AwABAAMAAAC6//3/AwABAAMAAAC7//3/AwABAAMAAAC8//3/AwABAAMAAAC9//3/AwABAAMAAAC+//3/AwABAAMAAAC///3/AwABAAMAAADA//3/AwABAAMAAADB//3/AwABAAMAAADC//3/AwABAAMAAADD//3/AwABAAMAAADE//3/AwABAAMAAADF//3/AwABAAMAAADG//3/AwABAAMAAADH//3/AwABAAMAAADI//3/AwABAAMAAADJ//3/AwABAAMAAADK//3/AwABAAMAAADL//3/AwABAAMAAADM//3/AwABAAMAAADN//3/AwABAAMAAADO//3/AwABAAMAAAA=")
-tile_set = ExtResource("1_3n3y5")
 
 [node name="Map Area" type="Area2D" parent="."]
 collision_layer = 32768
@@ -325,891 +317,894 @@ shape = SubResource("RectangleShape2D_mn6p3")
 position = Vector2(224, 8)
 texture = ExtResource("11_iedvm")
 
-[node name="Gas Station Store Awning" type="Polygon2D" parent="."]
+[node name="Gas Station Store" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AAC0//f/AwAGAAAAAAC0//j/AwADAAAAAgC0//n/AwADAAAAAgC0//r/AwAAAAMAAAC0//v/AwAAAAMAAAC0//z/AwAAAAMAAAC0//3/AwAEAAAAAAC1//f/AwADAAAAAAC1//j/AwAAAAAAAQC1//n/AwAAAAAAAQC1//r/AwAAAAAAAQC1//v/AwAAAAAAAQC1//z/AwAAAAAAAQC1//3/AwAEAAAAAAC2//f/AwADAAAAAAC2//j/AwAAAAAAAQC2//n/AwAAAAAAAQC2//r/AwAAAAAAAQC2//v/AwAAAAAAAQC2//z/AwAAAAAAAQC2//3/AwAEAAAAAAC3//f/AwADAAAAAAC3//j/AwAAAAAAAQC3//n/AwAAAAAAAQC3//r/AwAAAAAAAQC3//v/AwAAAAAAAQC3//z/AwAAAAAAAQC3//3/AwAEAAAAAAC4//f/AwADAAAAAAC4//j/AwAAAAAAAQC4//n/AwAAAAAAAQC4//r/AwAAAAAAAQC4//v/AwAAAAAAAQC4//z/AwAAAAAAAQC4//3/AwAEAAAAAAC5//f/AwADAAAAAAC5//j/AwAAAAAAAQC5//n/AwAAAAAAAQC5//r/AwAAAAAAAQC5//v/AwAAAAAAAQC5//z/AwAAAAAAAQC5//3/AwAEAAAAAAC6//f/AwADAAAAAAC6//j/AwAAAAAAAQC6//n/AwAAAAAAAQC6//r/AwAAAAAAAQC6//v/AwAAAAAAAQC6//z/AwAAAAAAAQC6//3/AwAEAAAAAAC7//f/AwADAAAAAAC7//j/AwAAAAAAAQC7//n/AwAAAAAAAQC7//r/AwAAAAAAAQC7//v/AwAAAAAAAQC7//z/AwAAAAAAAQC7//3/AwAEAAAAAAC8//f/AwADAAAAAAC8//j/AwAAAAAAAQC8//n/AwAAAAAAAQC8//r/AwAAAAAAAQC8//v/AwAAAAAAAQC8//z/AwAAAAAAAQC8//3/AwAEAAAAAAC9//f/AwADAAAAAAC9//j/AwAAAAAAAQC9//n/AwAAAAAAAQC9//r/AwAAAAAAAQC9//v/AwAAAAAAAQC9//z/AwAAAAAAAQC9//3/AwAEAAAAAAC+//f/AwADAAAAAAC+//j/AwAAAAAAAQC+//n/AwAAAAAAAQC+//r/AwAAAAAAAQC+//v/AwAAAAAAAQC+//z/AwAAAAAAAQC+//3/AwAEAAAAAAC///f/AwADAAAAAAC///j/AwAAAAAAAQC///n/AwAAAAAAAQC///r/AwAAAAAAAQC///v/AwAAAAAAAQC///z/AwAAAAAAAQC///3/AwAEAAAAAADA//f/AwADAAAAAADA//j/AwAAAAAAAQDA//n/AwAAAAAAAQDA//r/AwAAAAAAAQDA//v/AwAAAAAAAQDA//z/AwAAAAAAAQDA//3/AwAEAAAAAADB//f/AwADAAAAAADB//j/AwAAAAAAAQDB//n/AwAAAAAAAQDB//r/AwAAAAAAAQDB//v/AwAAAAAAAQDB//z/AwAAAAAAAQDB//3/AwAEAAAAAADC//f/AwADAAAAAADC//j/AwAAAAAAAQDC//n/AwAAAAAAAQDC//r/AwAAAAAAAQDC//v/AwAAAAAAAQDC//z/AwAAAAAAAQDC//3/AwAEAAAAAADD//f/AwADAAAAAADD//j/AwAAAAAAAQDD//n/AwAAAAAAAQDD//r/AwAAAAAAAQDD//v/AwAAAAAAAQDD//z/AwAAAAAAAQDD//3/AwAEAAAAAADE//f/AwADAAAAAADE//j/AwAAAAAAAQDE//n/AwAAAAAAAQDE//r/AwAAAAAAAQDE//v/AwAAAAAAAQDE//z/AwAAAAAAAQDE//3/AwAEAAAAAADF//f/AwADAAAAAADF//j/AwAAAAAAAQDF//n/AwAAAAAAAQDF//r/AwAAAAAAAQDF//v/AwAAAAAAAQDF//z/AwAAAAAAAQDF//3/AwAEAAAAAADG//f/AwADAAAAAADG//j/AwAAAAAAAQDG//n/AwAAAAAAAQDG//r/AwAAAAAAAQDG//v/AwAAAAAAAQDG//z/AwAAAAAAAQDG//3/AwAEAAAAAADH//f/AwADAAAAAADH//j/AwAAAAAAAQDH//n/AwAAAAAAAQDH//r/AwAAAAAAAQDH//v/AwAAAAAAAQDH//z/AwAAAAAAAQDH//3/AwAEAAAAAADI//f/AwADAAAAAADI//j/AwAAAAAAAQDI//n/AwAAAAAAAQDI//r/AwAAAAAAAQDI//v/AwAAAAAAAQDI//z/AwAAAAAAAQDI//3/AwAEAAAAAADJ//f/AwADAAAAAADJ//j/AwAAAAAAAQDJ//n/AwAAAAAAAQDJ//r/AwAAAAAAAQDJ//v/AwAAAAAAAQDJ//z/AwAAAAAAAQDJ//3/AwAEAAAAAADK//f/AwADAAAAAADK//j/AwAAAAAAAQDK//n/AwAAAAAAAQDK//r/AwAAAAAAAQDK//v/AwACAAMAAADK//z/AwACAAMAAADK//3/AwAEAAAAAADL//f/AwADAAAAAADL//j/AwAAAAAAAQDL//n/AwAAAAAAAQDL//r/AwAAAAAAAQDL//v/AwACAAMAAADL//z/AwACAAMAAADL//3/AwAEAAAAAADM//f/AwADAAAAAADM//j/AwAAAAAAAQDM//n/AwAAAAAAAQDM//r/AwAAAAAAAQDM//v/AwACAAMAAADM//z/AwACAAMAAADM//3/AwAEAAAAAADN//f/AwADAAAAAADN//j/AwAAAAAAAQDN//n/AwAAAAAAAQDN//r/AwAAAAAAAQDN//v/AwACAAMAAADN//z/AwACAAMAAADN//3/AwAEAAAAAADO//f/AwADAAAAAADO//j/AwAAAAAAAQDO//n/AwAAAAAAAQDO//r/AwAAAAAAAQDO//v/AwACAAMAAADO//z/AwACAAMAAADO//3/AwAEAAAAAADP//f/AwAGAAAAAQDP//j/AwADAAAAAgDP//n/AwADAAAAAgDP//r/AwAAAAMAAADP//v/AwAAAAMAAADP//z/AwAAAAMAAADP//3/AwAEAAAAAAA=")
+tile_set = ExtResource("1_3n3y5")
+
+[node name="Floor" type="TileMapLayer" parent="Gas Station Store"]
+tile_map_data = PackedByteArray("AAC1//3/AwABAAMAAAC2//3/AwABAAMAAAC3//3/AwABAAMAAAC4//3/AwABAAMAAAC5//3/AwABAAMAAAC6//3/AwABAAMAAAC7//3/AwABAAMAAAC8//3/AwABAAMAAAC9//3/AwABAAMAAAC+//3/AwABAAMAAAC///3/AwABAAMAAADA//3/AwABAAMAAADB//3/AwABAAMAAADC//3/AwABAAMAAADD//3/AwABAAMAAADE//3/AwABAAMAAADF//3/AwABAAMAAADG//3/AwABAAMAAADH//3/AwABAAMAAADI//3/AwABAAMAAADJ//3/AwABAAMAAADK//3/AwABAAMAAADL//3/AwABAAMAAADM//3/AwABAAMAAADN//3/AwABAAMAAADO//3/AwABAAMAAAA=")
+tile_set = ExtResource("1_3n3y5")
+
+[node name="Gas Station Store Awning" type="Polygon2D" parent="Gas Station Store"]
 position = Vector2(-1232, -160)
 color = Color(0, 0, 0.654902, 1)
 polygon = PackedVector2Array(0, 0, 480, 0, 480, 16, 0, 16)
 
-[node name="Gas Station Awning Top" type="Polygon2D" parent="Gas Station Store Awning"]
+[node name="Gas Station Awning Top" type="Polygon2D" parent="Gas Station Store/Gas Station Store Awning"]
 position = Vector2(0, -2)
 color = Color(0.72549, 0.72549, 0.72549, 1)
 polygon = PackedVector2Array(0, 0, 480, 0, 480, 2, 0, 2)
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Gas Station Store Awning"]
+[node name="StaticBody2D" type="StaticBody2D" parent="Gas Station Store/Gas Station Store Awning"]
 position = Vector2(128, 7)
 collision_mask = 0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Gas Station Store Awning/StaticBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Gas Station Store/Gas Station Store Awning/StaticBody2D"]
 position = Vector2(112, 0)
 shape = SubResource("RectangleShape2D_l6fod")
 
-[node name="Gas Station Awning Logo" type="Sprite2D" parent="Gas Station Store Awning"]
+[node name="Gas Station Awning Logo" type="Sprite2D" parent="Gas Station Store/Gas Station Store Awning"]
 position = Vector2(448, 8)
 texture = ExtResource("11_iedvm")
 
-[node name="Gas Station Awning Shadow" type="Polygon2D" parent="Gas Station Store Awning"]
-z_index = 1
-position = Vector2(16, 16)
-polygon = PackedVector2Array(0, 0, 448, 0, 448, 12, 448, 16, 0, 16, 0, 12)
-vertex_colors = PackedColorArray(0, 0, 0, 0.258824, 0, 0, 0, 0.247059, 0, 0, 0, 0.247059, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.247059)
-polygons = [PackedInt32Array(0, 1, 2, 5), PackedInt32Array(5, 2, 3, 4)]
-
-[node name="fg2" type="TileMapLayer" parent="."]
-z_index = 20
-use_parent_material = true
-tile_map_data = PackedByteArray("AAC0//3/AwAAAAAAAAC1//3/AwAAAAAAAAC1//z/AwAAAAAAAAC1//v/AwAAAAAAAAC1//r/AwAAAAAAAAC1//n/AwAAAAAAAAC0//n/AwAAAAAAAAC0//j/AwAAAAAAAAC0//f/AwAAAAAAAAC1//f/AwAAAAAAAAC2//f/AwAAAAAAAAC3//f/AwAAAAAAAAC4//f/AwAAAAAAAAC5//f/AwAAAAAAAAC6//f/AwAAAAAAAAC7//f/AwAAAAAAAAC8//f/AwAAAAAAAAC9//f/AwAAAAAAAAC+//f/AwAAAAAAAAC///f/AwAAAAAAAADA//f/AwAAAAAAAADB//f/AwAAAAAAAADC//f/AwAAAAAAAADD//f/AwAAAAAAAADE//f/AwAAAAAAAADF//f/AwAAAAAAAADG//f/AwAAAAAAAADH//f/AwAAAAAAAADI//f/AwAAAAAAAADJ//f/AwAAAAAAAADK//f/AwAAAAAAAADL//f/AwAAAAAAAADM//f/AwAAAAAAAADN//f/AwAAAAAAAADO//f/AwAAAAAAAADP//f/AwAAAAAAAADP//j/AwAAAAAAAADP//n/AwAAAAAAAADO//n/AwAAAAAAAADO//r/AwAAAAAAAADO//z/AwAAAAAAAADO//v/AwAAAAAAAADO//3/AwAAAAAAAADP//3/AwAAAAAAAADN//3/AwAAAAAAAADM//3/AwAAAAAAAADL//3/AwAAAAAAAADK//3/AwAAAAAAAADJ//3/AwAAAAAAAADI//3/AwAAAAAAAADH//3/AwAAAAAAAADG//3/AwAAAAAAAADF//3/AwAAAAAAAADE//3/AwAAAAAAAADD//3/AwAAAAAAAADC//3/AwAAAAAAAADB//3/AwAAAAAAAADA//3/AwAAAAAAAAC///3/AwAAAAAAAAC+//3/AwAAAAAAAAC9//3/AwAAAAAAAAC8//3/AwAAAAAAAAC7//3/AwAAAAAAAAC6//3/AwAAAAAAAAC5//3/AwAAAAAAAAC4//3/AwAAAAAAAAC3//3/AwAAAAAAAAC2//3/AwAAAAAAAAC2//j/AwAAAAAAAAC1//j/AwAAAAAAAAC3//j/AwAAAAAAAAC4//j/AwAAAAAAAAC5//j/AwAAAAAAAAC6//j/AwAAAAAAAAC7//j/AwAAAAAAAAC8//j/AwAAAAAAAAC9//j/AwAAAAAAAAC+//j/AwAAAAAAAAC///j/AwAAAAAAAADA//j/AwAAAAAAAADB//j/AwAAAAAAAADC//j/AwAAAAAAAADD//j/AwAAAAAAAADE//j/AwAAAAAAAADF//j/AwAAAAAAAADG//j/AwAAAAAAAADL//j/AwAAAAAAAADM//j/AwAAAAAAAADN//j/AwAAAAAAAADO//j/AwAAAAAAAADK//j/AwAAAAAAAADJ//j/AwAAAAAAAADI//j/AwAAAAAAAADH//j/AwAAAAAAAAA=")
-tile_set = ExtResource("1_3n3y5")
-script = ExtResource("15_0j1js")
-
-[node name="windows" type="TileMapLayer" parent="fg2"]
-modulate = Color(1, 0.827451, 0.537255, 1)
-material = SubResource("ShaderMaterial_hpfib")
-tile_map_data = PackedByteArray("AABs//L/AAAAAAEAAABt//L/AAACAAAAAABu//L/AAACAAAAAABv//L/AAACAAAAAABw//L/AAACAAAAAABx//L/AAACAAAAAABy//L/AAACAAAAAABz//L/AAAAAAEAAQBs//P/AAACAAAAAgBs//T/AAACAAAAAgBs//X/AAACAAAAAgBs//b/AAACAAAAAgBs//f/AAACAAAAAgBs//j/AAACAAAAAgBs//n/AAAAAAEAAgBt//n/AAACAAAAAQBu//n/AAACAAAAAQBv//n/AAACAAAAAQBw//n/AAACAAAAAQBx//n/AAACAAAAAQBy//n/AAACAAAAAQBz//P/AAACAAAAAwBz//T/AAACAAAAAwBz//X/AAACAAAAAwBz//b/AAACAAAAAwBz//f/AAACAAAAAwBz//j/AAACAAAAAwBz//n/AAAAAAEAAwB0//L/AAAAAAEAAAB0//P/AAACAAAAAgB0//T/AAACAAAAAgB0//X/AAACAAAAAgB0//b/AAACAAAAAgB0//f/AAACAAAAAgB0//j/AAACAAAAAgB0//n/AAAAAAEAAgB1//L/AAACAAAAAAB1//n/AAACAAAAAQB2//L/AAACAAAAAAB2//n/AAACAAAAAQB3//L/AAACAAAAAAB3//n/AAACAAAAAQB4//L/AAACAAAAAAB4//n/AAACAAAAAQB5//L/AAACAAAAAAB5//n/AAACAAAAAQB6//L/AAACAAAAAAB6//n/AAACAAAAAQB7//L/AAAAAAEAAQB7//P/AAACAAAAAwB7//T/AAACAAAAAwB7//X/AAACAAAAAwB7//b/AAACAAAAAwB7//f/AAACAAAAAwB7//j/AAACAAAAAwB7//n/AAAAAAEAAwB8//L/AAAAAAEAAAB8//P/AAACAAAAAgB8//T/AAACAAAAAgB8//X/AAACAAAAAgB8//b/AAACAAAAAgB8//f/AAACAAAAAgB8//j/AAACAAAAAgB8//n/AAAAAAEAAgB9//L/AAACAAAAAAB9//n/AAACAAAAAQB+//L/AAACAAAAAAB+//n/AAACAAAAAQB///L/AAACAAAAAAB///n/AAACAAAAAQCA//L/AAACAAAAAACA//n/AAACAAAAAQCB//L/AAACAAAAAACB//n/AAACAAAAAQCC//L/AAACAAAAAACC//n/AAACAAAAAQCD//L/AAAAAAEAAQCD//P/AAACAAAAAwCD//T/AAACAAAAAwCD//X/AAACAAAAAwCD//b/AAACAAAAAwCD//f/AAACAAAAAwCD//j/AAACAAAAAwCD//n/AAAAAAEAAwCE//L/AAAAAAEAAACE//P/AAACAAAAAgCE//T/AAACAAAAAgCE//X/AAACAAAAAgCE//b/AAACAAAAAgCE//f/AAACAAAAAgCE//j/AAACAAAAAgCE//n/AAAAAAEAAgCF//L/AAACAAAAAACF//n/AAACAAAAAQCG//L/AAACAAAAAACG//n/AAACAAAAAQCH//L/AAACAAAAAACH//n/AAACAAAAAQCI//L/AAACAAAAAACI//n/AAACAAAAAQCJ//L/AAACAAAAAACJ//n/AAACAAAAAQCK//L/AAACAAAAAACK//n/AAACAAAAAQCL//L/AAAAAAEAAQCL//P/AAACAAAAAwCL//T/AAACAAAAAwCL//X/AAACAAAAAwCL//b/AAACAAAAAwCL//f/AAACAAAAAwCL//j/AAACAAAAAwCL//n/AAAAAAEAAwCM//L/AAAAAAEAAACM//P/AAACAAAAAgCM//T/AAACAAAAAgCM//X/AAACAAAAAgCM//b/AAACAAAAAgCM//f/AAACAAAAAgCM//j/AAACAAAAAgCM//n/AAAAAAEAAgCN//L/AAACAAAAAACN//n/AAACAAAAAQCO//L/AAACAAAAAACO//n/AAACAAAAAQCP//L/AAACAAAAAACP//n/AAACAAAAAQCQ//L/AAACAAAAAACQ//n/AAACAAAAAQCR//L/AAACAAAAAACR//n/AAACAAAAAQCS//L/AAACAAAAAACS//n/AAACAAAAAQCT//L/AAAAAAEAAQCT//P/AAACAAAAAwCT//T/AAACAAAAAwCT//X/AAACAAAAAwCT//b/AAACAAAAAwCT//f/AAACAAAAAwCT//j/AAACAAAAAwCT//n/AAAAAAEAAwCU//L/AAAAAAEAAACU//P/AAACAAAAAgCU//T/AAACAAAAAgCU//X/AAACAAAAAgCU//b/AAACAAAAAgCU//f/AAACAAAAAgCU//j/AAACAAAAAgCU//n/AAAAAAEAAgCV//L/AAACAAAAAACV//n/AAACAAAAAQCW//L/AAACAAAAAACW//n/AAACAAAAAQCX//L/AAACAAAAAACX//n/AAACAAAAAQCY//L/AAACAAAAAACY//n/AAACAAAAAQCZ//L/AAACAAAAAACZ//n/AAACAAAAAQCa//L/AAACAAAAAACa//n/AAACAAAAAQCb//L/AAAAAAEAAQCb//P/AAACAAAAAwCb//T/AAACAAAAAwCb//X/AAACAAAAAwCb//b/AAACAAAAAwCb//f/AAACAAAAAwCb//j/AAACAAAAAwCb//n/AAAAAAEAAwA=")
-tile_set = ExtResource("16_rsfcx")
-
-[node name="Revealer" type="Area2D" parent="fg2"]
-collision_layer = 0
-collision_mask = 2
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="fg2/Revealer"]
-visible = false
-position = Vector2(-992, -88)
-shape = SubResource("RectangleShape2D_tk1o6")
-
-[node name="Gas Station Store Objects" type="Node2D" parent="."]
+[node name="Gas Station Store Objects" type="Node2D" parent="Gas Station Store"]
 position = Vector2(-1180, -96)
 
-[node name="Cooler Back 1" type="Sprite2D" parent="Gas Station Store Objects"]
+[node name="Cooler Back 1" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects"]
 position = Vector2(16, 16)
 texture = ExtResource("16_ilrly")
 
-[node name="Box 1" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 1"]
+[node name="Box 1" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Cooler Back 1"]
 position = Vector2(-12, -6)
 texture = ExtResource("17_cwgow")
 
-[node name="Box 2" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 1"]
+[node name="Box 2" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Cooler Back 1"]
 position = Vector2(-12, -14)
 texture = ExtResource("17_cwgow")
 
-[node name="Box 3" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 1"]
+[node name="Box 3" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Cooler Back 1"]
 position = Vector2(-12, 6)
 texture = ExtResource("18_sj2kx")
 
-[node name="Box 4" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 1"]
+[node name="Box 4" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Cooler Back 1"]
 position = Vector2(-12, 2)
 texture = ExtResource("18_sj2kx")
 
-[node name="Box 5" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 1"]
+[node name="Box 5" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Cooler Back 1"]
 position = Vector2(-12, 16)
 texture = ExtResource("18_sj2kx")
 
-[node name="Box 6" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 1"]
+[node name="Box 6" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Cooler Back 1"]
 position = Vector2(-12, 12)
 texture = ExtResource("18_sj2kx")
 
-[node name="Box 9" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 1"]
+[node name="Box 9" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Cooler Back 1"]
 position = Vector2(12, -24)
 texture = ExtResource("18_sj2kx")
 
-[node name="Box 10" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 1"]
+[node name="Box 10" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Cooler Back 1"]
 position = Vector2(12, -28)
 texture = ExtResource("18_sj2kx")
 
-[node name="Box 7" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 1"]
+[node name="Box 7" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Cooler Back 1"]
 position = Vector2(-6, -24)
 texture = ExtResource("19_ajeqg")
 
-[node name="Box 8" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 1"]
+[node name="Box 8" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Cooler Back 1"]
 position = Vector2(-6, -28)
 texture = ExtResource("19_ajeqg")
 
-[node name="Cooler Door 1" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 1"]
+[node name="Cooler Door 1" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Cooler Back 1"]
 position = Vector2(0, -5)
 texture = ExtResource("17_h7qmw")
 
-[node name="Cooler Back 2" type="Sprite2D" parent="Gas Station Store Objects"]
+[node name="Cooler Back 2" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects"]
 position = Vector2(56, 16)
 texture = ExtResource("16_ilrly")
 
-[node name="Ice Crem 1" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 2"]
+[node name="Ice Crem 1" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Cooler Back 2"]
 position = Vector2(-12, -26)
 texture = ExtResource("21_b0kxp")
 
-[node name="Ice Crem 2" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 2"]
+[node name="Ice Crem 2" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Cooler Back 2"]
 position = Vector2(-4, -26)
 texture = ExtResource("21_b0kxp")
 
-[node name="Ice Crem 3" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 2"]
+[node name="Ice Crem 3" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Cooler Back 2"]
 position = Vector2(4, -26)
 texture = ExtResource("21_b0kxp")
 
-[node name="Ice Crem 4" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 2"]
+[node name="Ice Crem 4" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Cooler Back 2"]
 position = Vector2(12, -26)
 texture = ExtResource("22_bqhg7")
 
-[node name="Cooler Door 2" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 2"]
+[node name="Cooler Door 2" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Cooler Back 2"]
 position = Vector2(0, -5)
 texture = ExtResource("17_h7qmw")
 
-[node name="Cooler Back 3" type="Sprite2D" parent="Gas Station Store Objects"]
+[node name="Cooler Back 3" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects"]
 position = Vector2(96, 16)
 texture = ExtResource("16_ilrly")
 
-[node name="Drinks 1" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 3"]
+[node name="Drinks 1" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Cooler Back 3"]
 position = Vector2(-6, 4)
 texture = ExtResource("18_ocit6")
 
-[node name="Drinks 2" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 3"]
+[node name="Drinks 2" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Cooler Back 3"]
 position = Vector2(6, 14)
 texture = ExtResource("19_8k70h")
 
-[node name="Drinks 3" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 3"]
+[node name="Drinks 3" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Cooler Back 3"]
 position = Vector2(-6, -26)
 texture = ExtResource("20_24fyv")
 
-[node name="Drinks 4" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 3"]
+[node name="Drinks 4" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Cooler Back 3"]
 position = Vector2(9, 4)
 texture = ExtResource("21_ytx31")
 
-[node name="Drinks 5" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 3"]
+[node name="Drinks 5" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Cooler Back 3"]
 position = Vector2(-9, 14)
 texture = ExtResource("22_0rgdu")
 
-[node name="Drinks 6" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 3"]
+[node name="Drinks 6" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Cooler Back 3"]
 position = Vector2(9, -26)
 texture = ExtResource("22_0rgdu")
 
-[node name="Drinks 7" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 3"]
+[node name="Drinks 7" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Cooler Back 3"]
 position = Vector2(15, -26)
 texture = ExtResource("22_0rgdu")
 
-[node name="Drinks 8" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 3"]
+[node name="Drinks 8" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Cooler Back 3"]
 position = Vector2(-5, -11)
 texture = ExtResource("23_cl343")
 
-[node name="Drinks 9" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 3"]
+[node name="Drinks 9" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Cooler Back 3"]
 position = Vector2(12, -11)
 texture = ExtResource("24_chjp3")
 
-[node name="Cooler Door 3" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 3"]
+[node name="Cooler Door 3" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Cooler Back 3"]
 position = Vector2(0, -5)
 texture = ExtResource("17_h7qmw")
 
-[node name="Cooler Back 4" type="Sprite2D" parent="Gas Station Store Objects"]
+[node name="Cooler Back 4" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects"]
 position = Vector2(136, 16)
 texture = ExtResource("16_ilrly")
 
-[node name="Drink 1" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 4"]
+[node name="Drink 1" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Cooler Back 4"]
 position = Vector2(-15, -26)
 texture = ExtResource("28_3bbh3")
 
-[node name="Drink 2" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 4"]
+[node name="Drink 2" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Cooler Back 4"]
 position = Vector2(-9, -26)
 texture = ExtResource("29_x6ocx")
 
-[node name="Drink 3" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 4"]
+[node name="Drink 3" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Cooler Back 4"]
 position = Vector2(-3, -26)
 texture = ExtResource("30_0d7cp")
 
-[node name="Drink 4" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 4"]
+[node name="Drink 4" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Cooler Back 4"]
 position = Vector2(3, -26)
 texture = ExtResource("31_spi3q")
 
-[node name="Drink 5" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 4"]
+[node name="Drink 5" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Cooler Back 4"]
 position = Vector2(9, -26)
 texture = ExtResource("32_het72")
 
-[node name="Drink 6" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 4"]
+[node name="Drink 6" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Cooler Back 4"]
 position = Vector2(15, -26)
 texture = ExtResource("33_ggp8o")
 
-[node name="Drink 7" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 4"]
+[node name="Drink 7" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Cooler Back 4"]
 position = Vector2(-12, -11)
 texture = ExtResource("34_fr8b6")
 
-[node name="Drink 8" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 4"]
+[node name="Drink 8" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Cooler Back 4"]
 position = Vector2(-4, -11)
 texture = ExtResource("35_7hjy1")
 
-[node name="Drink 9" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 4"]
+[node name="Drink 9" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Cooler Back 4"]
 position = Vector2(4, -11)
 texture = ExtResource("36_ohllb")
 
-[node name="Drink 10" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 4"]
+[node name="Drink 10" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Cooler Back 4"]
 position = Vector2(12, -11)
 texture = ExtResource("37_6rvdo")
 
-[node name="Cooler Door 4" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 4"]
+[node name="Cooler Door 4" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Cooler Back 4"]
 position = Vector2(0, -5)
 texture = ExtResource("17_h7qmw")
 
-[node name="Cooler Back 5" type="Sprite2D" parent="Gas Station Store Objects"]
+[node name="Cooler Back 5" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects"]
 position = Vector2(176, 16)
 texture = ExtResource("16_ilrly")
 
-[node name="Milk 1" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 5"]
+[node name="Milk 1" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Cooler Back 5"]
 position = Vector2(12, -11)
 texture = ExtResource("25_oksrt")
 
-[node name="Milk 2" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 5"]
+[node name="Milk 2" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Cooler Back 5"]
 position = Vector2(0, -11)
 texture = ExtResource("26_hko01")
 
-[node name="Milk 3" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 5"]
+[node name="Milk 3" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Cooler Back 5"]
 position = Vector2(-12, -11)
 texture = ExtResource("27_8ms3a")
 
-[node name="Milk 4" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 5"]
+[node name="Milk 4" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Cooler Back 5"]
 position = Vector2(15, -26)
 texture = ExtResource("28_768ny")
 
-[node name="Milk 5" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 5"]
+[node name="Milk 5" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Cooler Back 5"]
 position = Vector2(9, -26)
 texture = ExtResource("29_1ems6")
 
-[node name="Milk 6" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 5"]
+[node name="Milk 6" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Cooler Back 5"]
 position = Vector2(3, -26)
 texture = ExtResource("30_pw52d")
 
-[node name="Milk 7" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 5"]
+[node name="Milk 7" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Cooler Back 5"]
 position = Vector2(-3, -26)
 texture = ExtResource("30_pw52d")
 
-[node name="Milk 8" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 5"]
+[node name="Milk 8" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Cooler Back 5"]
 position = Vector2(-9, -26)
 texture = ExtResource("31_xi6mo")
 
-[node name="Milk 9" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 5"]
+[node name="Milk 9" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Cooler Back 5"]
 position = Vector2(-15, -26)
 texture = ExtResource("31_xi6mo")
 
-[node name="Tub 1" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 5"]
+[node name="Tub 1" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Cooler Back 5"]
 position = Vector2(12, 4)
 texture = ExtResource("32_pwhtx")
 
-[node name="Tub 2" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 5"]
+[node name="Tub 2" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Cooler Back 5"]
 position = Vector2(12, 16)
 texture = ExtResource("33_p7h08")
 
-[node name="Tub 3" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 5"]
+[node name="Tub 3" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Cooler Back 5"]
 position = Vector2(12, 12)
 texture = ExtResource("33_p7h08")
 
-[node name="Cooler Door 5" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 5"]
+[node name="Cooler Door 5" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Cooler Back 5"]
 position = Vector2(0, -5)
 texture = ExtResource("17_h7qmw")
 
-[node name="Cooler Back 6" type="Sprite2D" parent="Gas Station Store Objects"]
+[node name="Cooler Back 6" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects"]
 position = Vector2(216, 16)
 texture = ExtResource("16_ilrly")
 
-[node name="Tea" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 6"]
+[node name="Tea" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Cooler Back 6"]
 position = Vector2(-12, -11)
 texture = ExtResource("25_k6s6f")
 
-[node name="Tea2" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 6"]
+[node name="Tea2" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Cooler Back 6"]
 position = Vector2(-4, -11)
 texture = ExtResource("25_k6s6f")
 
-[node name="Tea3" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 6"]
+[node name="Tea3" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Cooler Back 6"]
 position = Vector2(4, -11)
 texture = ExtResource("25_k6s6f")
 
-[node name="Juice 1" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 6"]
+[node name="Juice 1" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Cooler Back 6"]
 position = Vector2(-15, -26)
 texture = ExtResource("50_d6iwb")
 
-[node name="Juice 2" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 6"]
+[node name="Juice 2" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Cooler Back 6"]
 position = Vector2(-9, -26)
 texture = ExtResource("50_d6iwb")
 
-[node name="Juice 3" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 6"]
+[node name="Juice 3" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Cooler Back 6"]
 position = Vector2(-3, -26)
 texture = ExtResource("50_d6iwb")
 
-[node name="Juice 4" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 6"]
+[node name="Juice 4" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Cooler Back 6"]
 position = Vector2(3, -26)
 texture = ExtResource("51_mwe8a")
 
-[node name="Juice 5" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 6"]
+[node name="Juice 5" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Cooler Back 6"]
 position = Vector2(9, -26)
 texture = ExtResource("51_mwe8a")
 
-[node name="Juice 6" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 6"]
+[node name="Juice 6" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Cooler Back 6"]
 position = Vector2(15, -26)
 texture = ExtResource("51_mwe8a")
 
-[node name="Juice 7" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 6"]
+[node name="Juice 7" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Cooler Back 6"]
 position = Vector2(-15, 4)
 texture = ExtResource("52_8r8xs")
 
-[node name="Juice 8" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 6"]
+[node name="Juice 8" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Cooler Back 6"]
 position = Vector2(-9, 4)
 texture = ExtResource("52_8r8xs")
 
-[node name="Juice 9" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 6"]
+[node name="Juice 9" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Cooler Back 6"]
 position = Vector2(-3, 4)
 texture = ExtResource("52_8r8xs")
 
-[node name="Juice 10" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 6"]
+[node name="Juice 10" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Cooler Back 6"]
 position = Vector2(-15, 14)
 texture = ExtResource("53_d78nl")
 
-[node name="Juice 11" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 6"]
+[node name="Juice 11" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Cooler Back 6"]
 position = Vector2(-9, 14)
 texture = ExtResource("53_d78nl")
 
-[node name="Juice 12" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 6"]
+[node name="Juice 12" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Cooler Back 6"]
 position = Vector2(-3, 14)
 texture = ExtResource("53_d78nl")
 
-[node name="Cooler Door 6" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 6"]
+[node name="Cooler Door 6" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Cooler Back 6"]
 position = Vector2(0, -5)
 texture = ExtResource("17_h7qmw")
 
-[node name="Cooler Back 7" type="Sprite2D" parent="Gas Station Store Objects"]
+[node name="Cooler Back 7" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects"]
 position = Vector2(256, 16)
 texture = ExtResource("16_ilrly")
 
-[node name="Eggs 1" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 7"]
+[node name="Eggs 1" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Cooler Back 7"]
 position = Vector2(-9, -24)
 texture = ExtResource("38_j5kj3")
 
-[node name="Eggs 2" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 7"]
+[node name="Eggs 2" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Cooler Back 7"]
 position = Vector2(-9, -28)
 texture = ExtResource("38_j5kj3")
 
-[node name="Eggs 3" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 7"]
+[node name="Eggs 3" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Cooler Back 7"]
 position = Vector2(9, -24)
 texture = ExtResource("38_j5kj3")
 
-[node name="Eggs 4" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 7"]
+[node name="Eggs 4" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Cooler Back 7"]
 position = Vector2(9, -28)
 texture = ExtResource("38_j5kj3")
 
-[node name="Tub 1" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 7"]
+[node name="Tub 1" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Cooler Back 7"]
 position = Vector2(0, -14)
 texture = ExtResource("32_pwhtx")
 
-[node name="Cooler Door 7" type="Sprite2D" parent="Gas Station Store Objects/Cooler Back 7"]
+[node name="Cooler Door 7" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Cooler Back 7"]
 position = Vector2(0, -5)
 texture = ExtResource("17_h7qmw")
 
-[node name="Shelf 1" type="Sprite2D" parent="Gas Station Store Objects"]
+[node name="Shelf 1" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects"]
 position = Vector2(256, 24)
 texture = ExtResource("18_nvyu2")
 
-[node name="Chips 1" type="Polygon2D" parent="Gas Station Store Objects/Shelf 1"]
+[node name="Chips 1" type="Polygon2D" parent="Gas Station Store/Gas Station Store Objects/Shelf 1"]
 texture_repeat = 2
 position = Vector2(2, -12)
 texture = ExtResource("30_reikh")
 polygon = PackedVector2Array(0, 0, 32, 0, 32, 9, 0, 9)
 uv = PackedVector2Array(0, 0, 32, 0, 32, 9, 0, 9)
 
-[node name="Chips 2" type="Polygon2D" parent="Gas Station Store Objects/Shelf 1"]
+[node name="Chips 2" type="Polygon2D" parent="Gas Station Store/Gas Station Store Objects/Shelf 1"]
 texture_repeat = 2
 position = Vector2(-34, -12)
 texture = ExtResource("31_5qxgh")
 polygon = PackedVector2Array(0, 0, 32, 0, 32, 9, 0, 9)
 uv = PackedVector2Array(0, 0, 32, 0, 32, 9, 0, 9)
 
-[node name="Chips 3" type="Polygon2D" parent="Gas Station Store Objects/Shelf 1"]
+[node name="Chips 3" type="Polygon2D" parent="Gas Station Store/Gas Station Store Objects/Shelf 1"]
 texture_repeat = 2
 position = Vector2(2, -33)
 texture = ExtResource("32_38ei1")
 polygon = PackedVector2Array(0, 0, 32, 0, 32, 18, 0, 18)
 uv = PackedVector2Array(0, 0, 32, 0, 32, 18, 0, 18)
 
-[node name="Chips 4" type="Polygon2D" parent="Gas Station Store Objects/Shelf 1"]
+[node name="Chips 4" type="Polygon2D" parent="Gas Station Store/Gas Station Store Objects/Shelf 1"]
 texture_repeat = 2
 position = Vector2(-34, -33)
 texture = ExtResource("33_obiun")
 polygon = PackedVector2Array(0, 0, 32, 0, 32, 18, 0, 18)
 uv = PackedVector2Array(0, 0, 32, 0, 32, 18, 0, 18)
 
-[node name="Crackers 1" type="Sprite2D" parent="Gas Station Store Objects/Shelf 1"]
+[node name="Crackers 1" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Shelf 1"]
 position = Vector2(-31, 5)
 texture = ExtResource("60_bhkjw")
 
-[node name="Crackers 2" type="Sprite2D" parent="Gas Station Store Objects/Shelf 1"]
+[node name="Crackers 2" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Shelf 1"]
 position = Vector2(-22, 5)
 texture = ExtResource("60_bhkjw")
 
-[node name="Crackers 3" type="Sprite2D" parent="Gas Station Store Objects/Shelf 1"]
+[node name="Crackers 3" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Shelf 1"]
 position = Vector2(-14, 5)
 texture = ExtResource("60_bhkjw")
 
-[node name="Crackers 4" type="Sprite2D" parent="Gas Station Store Objects/Shelf 1"]
+[node name="Crackers 4" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Shelf 1"]
 position = Vector2(-4, 5)
 texture = ExtResource("60_bhkjw")
 
-[node name="Crackers 5" type="Sprite2D" parent="Gas Station Store Objects/Shelf 1"]
+[node name="Crackers 5" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Shelf 1"]
 position = Vector2(7, 5)
 texture = ExtResource("61_rsa72")
 
-[node name="Crackers 6" type="Sprite2D" parent="Gas Station Store Objects/Shelf 1"]
+[node name="Crackers 6" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Shelf 1"]
 position = Vector2(16, 5)
 texture = ExtResource("61_rsa72")
 
-[node name="Crackers 7" type="Sprite2D" parent="Gas Station Store Objects/Shelf 1"]
+[node name="Crackers 7" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Shelf 1"]
 position = Vector2(26, 5)
 texture = ExtResource("61_rsa72")
 
-[node name="Crackers 8" type="Sprite2D" parent="Gas Station Store Objects/Shelf 1"]
+[node name="Crackers 8" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Shelf 1"]
 position = Vector2(34, 5)
 texture = ExtResource("61_rsa72")
 
-[node name="Cookies 1" type="Sprite2D" parent="Gas Station Store Objects/Shelf 1"]
+[node name="Cookies 1" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Shelf 1"]
 position = Vector2(-28, 17)
 texture = ExtResource("62_jmmwh")
 
-[node name="Cookies 2" type="Sprite2D" parent="Gas Station Store Objects/Shelf 1"]
+[node name="Cookies 2" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Shelf 1"]
 position = Vector2(-10, 17)
 texture = ExtResource("62_jmmwh")
 
-[node name="Cookies 3" type="Sprite2D" parent="Gas Station Store Objects/Shelf 1"]
+[node name="Cookies 3" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Shelf 1"]
 position = Vector2(10, 17)
 texture = ExtResource("63_inisw")
 
-[node name="Cookies 4" type="Sprite2D" parent="Gas Station Store Objects/Shelf 1"]
+[node name="Cookies 4" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Shelf 1"]
 position = Vector2(28, 17)
 texture = ExtResource("63_inisw")
 
-[node name="Shelf 2" type="Sprite2D" parent="Gas Station Store Objects"]
+[node name="Shelf 2" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects"]
 position = Vector2(145, 24)
 texture = ExtResource("18_nvyu2")
 
-[node name="Red Apple Basket" type="Sprite2D" parent="Gas Station Store Objects/Shelf 2"]
+[node name="Red Apple Basket" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Shelf 2"]
 z_index = 1
 position = Vector2(-26, -18)
 texture = ExtResource("34_osal5")
 
-[node name="Red Apple 1" type="Sprite2D" parent="Gas Station Store Objects/Shelf 2/Red Apple Basket"]
+[node name="Red Apple 1" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Shelf 2/Red Apple Basket"]
 z_index = -1
 position = Vector2(-7, -2)
 texture = ExtResource("35_7lp00")
 
-[node name="Red Apple 2" type="Sprite2D" parent="Gas Station Store Objects/Shelf 2/Red Apple Basket"]
+[node name="Red Apple 2" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Shelf 2/Red Apple Basket"]
 z_index = -1
 position = Vector2(6, -2)
 texture = ExtResource("35_7lp00")
 
-[node name="Red Apple 3" type="Sprite2D" parent="Gas Station Store Objects/Shelf 2/Red Apple Basket"]
+[node name="Red Apple 3" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Shelf 2/Red Apple Basket"]
 z_index = -1
 position = Vector2(-1, -5)
 texture = ExtResource("35_7lp00")
 
-[node name="Red Apple 4" type="Sprite2D" parent="Gas Station Store Objects/Shelf 2/Red Apple Basket"]
+[node name="Red Apple 4" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Shelf 2/Red Apple Basket"]
 z_index = -1
 position = Vector2(-5, -4)
 texture = ExtResource("35_7lp00")
 
-[node name="Red Apple 5" type="Sprite2D" parent="Gas Station Store Objects/Shelf 2/Red Apple Basket"]
+[node name="Red Apple 5" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Shelf 2/Red Apple Basket"]
 z_index = -1
 position = Vector2(-1, -1)
 texture = ExtResource("35_7lp00")
 
-[node name="Red Apple 6" type="Sprite2D" parent="Gas Station Store Objects/Shelf 2/Red Apple Basket"]
+[node name="Red Apple 6" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Shelf 2/Red Apple Basket"]
 z_index = -1
 position = Vector2(3, -3)
 texture = ExtResource("35_7lp00")
 
-[node name="Green Apple Basket" type="Sprite2D" parent="Gas Station Store Objects/Shelf 2"]
+[node name="Green Apple Basket" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Shelf 2"]
 z_index = 1
 position = Vector2(-1, -18)
 texture = ExtResource("34_osal5")
 
-[node name="Green Apple 1" type="Sprite2D" parent="Gas Station Store Objects/Shelf 2/Green Apple Basket"]
+[node name="Green Apple 1" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Shelf 2/Green Apple Basket"]
 z_index = -1
 position = Vector2(-7, -3)
 texture = ExtResource("36_dynrd")
 
-[node name="Green Apple 2" type="Sprite2D" parent="Gas Station Store Objects/Shelf 2/Green Apple Basket"]
+[node name="Green Apple 2" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Shelf 2/Green Apple Basket"]
 z_index = -1
 position = Vector2(6, -2)
 texture = ExtResource("36_dynrd")
 
-[node name="Green Apple 3" type="Sprite2D" parent="Gas Station Store Objects/Shelf 2/Green Apple Basket"]
+[node name="Green Apple 3" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Shelf 2/Green Apple Basket"]
 z_index = -1
 position = Vector2(-4, -5)
 texture = ExtResource("36_dynrd")
 
-[node name="Green Apple 4" type="Sprite2D" parent="Gas Station Store Objects/Shelf 2/Green Apple Basket"]
+[node name="Green Apple 4" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Shelf 2/Green Apple Basket"]
 z_index = -1
 position = Vector2(3, -4)
 texture = ExtResource("36_dynrd")
 
-[node name="Green Apple 5" type="Sprite2D" parent="Gas Station Store Objects/Shelf 2/Green Apple Basket"]
+[node name="Green Apple 5" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Shelf 2/Green Apple Basket"]
 z_index = -1
 position = Vector2(-5, -1)
 texture = ExtResource("36_dynrd")
 
-[node name="Green Apple 6" type="Sprite2D" parent="Gas Station Store Objects/Shelf 2/Green Apple Basket"]
+[node name="Green Apple 6" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Shelf 2/Green Apple Basket"]
 z_index = -1
 position = Vector2(0, -3)
 texture = ExtResource("36_dynrd")
 
-[node name="Orange Basker" type="Sprite2D" parent="Gas Station Store Objects/Shelf 2"]
+[node name="Orange Basker" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Shelf 2"]
 z_index = 1
 position = Vector2(1, -6)
 texture = ExtResource("34_osal5")
 
-[node name="Orange 1" type="Sprite2D" parent="Gas Station Store Objects/Shelf 2/Orange Basker"]
+[node name="Orange 1" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Shelf 2/Orange Basker"]
 z_index = -1
 position = Vector2(-7, -1)
 texture = ExtResource("34_2nl77")
 
-[node name="Orange 2" type="Sprite2D" parent="Gas Station Store Objects/Shelf 2/Orange Basker"]
+[node name="Orange 2" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Shelf 2/Orange Basker"]
 z_index = -1
 position = Vector2(6, -2)
 texture = ExtResource("34_2nl77")
 
-[node name="Orange 3" type="Sprite2D" parent="Gas Station Store Objects/Shelf 2/Orange Basker"]
+[node name="Orange 3" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Shelf 2/Orange Basker"]
 z_index = -1
 position = Vector2(-3, -2)
 texture = ExtResource("34_2nl77")
 
-[node name="Orange 4" type="Sprite2D" parent="Gas Station Store Objects/Shelf 2/Orange Basker"]
+[node name="Orange 4" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Shelf 2/Orange Basker"]
 z_index = -1
 position = Vector2(2, -1)
 texture = ExtResource("34_2nl77")
 
-[node name="Yellow Apple Basket" type="Sprite2D" parent="Gas Station Store Objects/Shelf 2"]
+[node name="Yellow Apple Basket" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Shelf 2"]
 z_index = 1
 position = Vector2(-25, -6)
 texture = ExtResource("34_osal5")
 
-[node name="Yellow Apple 1" type="Sprite2D" parent="Gas Station Store Objects/Shelf 2/Yellow Apple Basket"]
+[node name="Yellow Apple 1" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Shelf 2/Yellow Apple Basket"]
 z_index = -1
 position = Vector2(-6, -2)
 texture = ExtResource("37_1hbyi")
 
-[node name="Yellow Apple 2" type="Sprite2D" parent="Gas Station Store Objects/Shelf 2/Yellow Apple Basket"]
+[node name="Yellow Apple 2" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Shelf 2/Yellow Apple Basket"]
 z_index = -1
 position = Vector2(7, -1)
 texture = ExtResource("37_1hbyi")
 
-[node name="Yellow Apple 3" type="Sprite2D" parent="Gas Station Store Objects/Shelf 2/Yellow Apple Basket"]
+[node name="Yellow Apple 3" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Shelf 2/Yellow Apple Basket"]
 z_index = -1
 position = Vector2(-3, -1)
 texture = ExtResource("37_1hbyi")
 
-[node name="Yellow Apple 4" type="Sprite2D" parent="Gas Station Store Objects/Shelf 2/Yellow Apple Basket"]
+[node name="Yellow Apple 4" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Shelf 2/Yellow Apple Basket"]
 z_index = -1
 position = Vector2(3, -2)
 texture = ExtResource("37_1hbyi")
 
-[node name="Banana 1" type="Sprite2D" parent="Gas Station Store Objects/Shelf 2"]
+[node name="Banana 1" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Shelf 2"]
 position = Vector2(30, -21)
 texture = ExtResource("38_n1jnv")
 
-[node name="Banana 2" type="Sprite2D" parent="Gas Station Store Objects/Shelf 2"]
+[node name="Banana 2" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Shelf 2"]
 position = Vector2(20, -21)
 texture = ExtResource("38_n1jnv")
 flip_h = true
 
-[node name="Banana 3" type="Sprite2D" parent="Gas Station Store Objects/Shelf 2"]
+[node name="Banana 3" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Shelf 2"]
 position = Vector2(18, -30)
 texture = ExtResource("38_n1jnv")
 centered = false
 flip_h = true
 
-[node name="Banana 4" type="Sprite2D" parent="Gas Station Store Objects/Shelf 2"]
+[node name="Banana 4" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Shelf 2"]
 position = Vector2(16, -11)
 texture = ExtResource("39_g14cf")
 centered = false
 flip_h = true
 
-[node name="Banana 5" type="Sprite2D" parent="Gas Station Store Objects/Shelf 2"]
+[node name="Banana 5" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Shelf 2"]
 position = Vector2(22, -11)
 texture = ExtResource("39_g14cf")
 centered = false
 
-[node name="Banana 6" type="Sprite2D" parent="Gas Station Store Objects/Shelf 2"]
+[node name="Banana 6" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Shelf 2"]
 position = Vector2(26, -11)
 texture = ExtResource("39_g14cf")
 centered = false
 
-[node name="Banana 7" type="Sprite2D" parent="Gas Station Store Objects/Shelf 2"]
+[node name="Banana 7" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Shelf 2"]
 z_index = 1
 position = Vector2(5, -6)
 texture = ExtResource("40_8cunj")
 centered = false
 flip_h = true
 
-[node name="Bread 3" type="Sprite2D" parent="Gas Station Store Objects/Shelf 2"]
+[node name="Bread 3" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Shelf 2"]
 position = Vector2(-8, 4.5)
 texture = ExtResource("51_2e81e")
 
-[node name="Bread 4" type="Sprite2D" parent="Gas Station Store Objects/Shelf 2"]
+[node name="Bread 4" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Shelf 2"]
 position = Vector2(4, 4.5)
 texture = ExtResource("51_2e81e")
 
-[node name="Bread 5" type="Sprite2D" parent="Gas Station Store Objects/Shelf 2"]
+[node name="Bread 5" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Shelf 2"]
 position = Vector2(15, 4.5)
 texture = ExtResource("52_8xsh4")
 
-[node name="Bread 6" type="Sprite2D" parent="Gas Station Store Objects/Shelf 2"]
+[node name="Bread 6" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Shelf 2"]
 position = Vector2(25, 4.5)
 texture = ExtResource("52_8xsh4")
 
-[node name="Bread 7" type="Sprite2D" parent="Gas Station Store Objects/Shelf 2"]
+[node name="Bread 7" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Shelf 2"]
 position = Vector2(34, 4.5)
 texture = ExtResource("52_8xsh4")
 
-[node name="Condiment 4" type="Sprite2D" parent="Gas Station Store Objects/Shelf 2"]
+[node name="Condiment 4" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Shelf 2"]
 position = Vector2(-34, 5)
 texture = ExtResource("79_4vi64")
 
-[node name="Condiment 9" type="Sprite2D" parent="Gas Station Store Objects/Shelf 2"]
+[node name="Condiment 9" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Shelf 2"]
 position = Vector2(-28, 5)
 texture = ExtResource("79_4vi64")
 
-[node name="Condiment 5" type="Sprite2D" parent="Gas Station Store Objects/Shelf 2"]
+[node name="Condiment 5" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Shelf 2"]
 position = Vector2(-22, 5)
 texture = ExtResource("80_32k3d")
 
-[node name="Condiment 10" type="Sprite2D" parent="Gas Station Store Objects/Shelf 2"]
+[node name="Condiment 10" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Shelf 2"]
 position = Vector2(-16, 5)
 texture = ExtResource("80_32k3d")
 
-[node name="Condiment 15" type="Sprite2D" parent="Gas Station Store Objects/Shelf 2"]
+[node name="Condiment 15" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Shelf 2"]
 position = Vector2(-35, 17)
 texture = ExtResource("76_80odt")
 
-[node name="Condiment 16" type="Sprite2D" parent="Gas Station Store Objects/Shelf 2"]
+[node name="Condiment 16" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Shelf 2"]
 position = Vector2(-28, 17)
 texture = ExtResource("76_80odt")
 
-[node name="Condiment 1" type="Sprite2D" parent="Gas Station Store Objects/Shelf 2"]
+[node name="Condiment 1" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Shelf 2"]
 position = Vector2(-9, 17)
 texture = ExtResource("75_ochby")
 
-[node name="Condiment 11" type="Sprite2D" parent="Gas Station Store Objects/Shelf 2"]
+[node name="Condiment 11" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Shelf 2"]
 position = Vector2(-15, 17)
 texture = ExtResource("76_rqytg")
 
-[node name="Condiment 12" type="Sprite2D" parent="Gas Station Store Objects/Shelf 2"]
+[node name="Condiment 12" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Shelf 2"]
 position = Vector2(-22, 17)
 texture = ExtResource("76_rqytg")
 
-[node name="Condiment 6" type="Sprite2D" parent="Gas Station Store Objects/Shelf 2"]
+[node name="Condiment 6" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Shelf 2"]
 position = Vector2(-2, 17)
 texture = ExtResource("75_ochby")
 
-[node name="Condiment 2" type="Sprite2D" parent="Gas Station Store Objects/Shelf 2"]
+[node name="Condiment 2" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Shelf 2"]
 position = Vector2(4, 17)
 texture = ExtResource("77_lvo11")
 
-[node name="Condiment 7" type="Sprite2D" parent="Gas Station Store Objects/Shelf 2"]
+[node name="Condiment 7" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Shelf 2"]
 position = Vector2(11, 17)
 texture = ExtResource("77_lvo11")
 
-[node name="Condiment 3" type="Sprite2D" parent="Gas Station Store Objects/Shelf 2"]
+[node name="Condiment 3" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Shelf 2"]
 position = Vector2(18, 17)
 texture = ExtResource("78_eemrt")
 
-[node name="Condiment 8" type="Sprite2D" parent="Gas Station Store Objects/Shelf 2"]
+[node name="Condiment 8" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Shelf 2"]
 position = Vector2(24, 17)
 texture = ExtResource("78_eemrt")
 
-[node name="Condiment 13" type="Sprite2D" parent="Gas Station Store Objects/Shelf 2"]
+[node name="Condiment 13" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Shelf 2"]
 position = Vector2(31, 17)
 texture = ExtResource("77_oegqx")
 
-[node name="Condiment 14" type="Sprite2D" parent="Gas Station Store Objects/Shelf 2"]
+[node name="Condiment 14" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Shelf 2"]
 position = Vector2(36, 17)
 texture = ExtResource("77_oegqx")
 
-[node name="Shelf 3" type="Sprite2D" parent="Gas Station Store Objects"]
+[node name="Shelf 3" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects"]
 position = Vector2(45, 24)
 texture = ExtResource("18_nvyu2")
 
-[node name="Cereal 1" type="Sprite2D" parent="Gas Station Store Objects/Shelf 3"]
+[node name="Cereal 1" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Shelf 3"]
 position = Vector2(19, -24)
 texture = ExtResource("27_xb6ko")
 
-[node name="Cereal 6" type="Sprite2D" parent="Gas Station Store Objects/Shelf 3"]
+[node name="Cereal 6" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Shelf 3"]
 position = Vector2(31, -24)
 texture = ExtResource("27_xb6ko")
 
-[node name="Cereal 2" type="Sprite2D" parent="Gas Station Store Objects/Shelf 3"]
+[node name="Cereal 2" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Shelf 3"]
 position = Vector2(7, -24)
 texture = ExtResource("28_0xlxs")
 
-[node name="Cereal 3" type="Sprite2D" parent="Gas Station Store Objects/Shelf 3"]
+[node name="Cereal 3" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Shelf 3"]
 position = Vector2(-7, -24)
 texture = ExtResource("28_0xlxs")
 
-[node name="Cereal 4" type="Sprite2D" parent="Gas Station Store Objects/Shelf 3"]
+[node name="Cereal 4" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Shelf 3"]
 position = Vector2(-19, -24)
 texture = ExtResource("29_gusal")
 
-[node name="Cereal 5" type="Sprite2D" parent="Gas Station Store Objects/Shelf 3"]
+[node name="Cereal 5" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Shelf 3"]
 position = Vector2(-32, -24)
 texture = ExtResource("29_gusal")
 
-[node name="Toiletry 1" type="Sprite2D" parent="Gas Station Store Objects/Shelf 3"]
+[node name="Toiletry 1" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Shelf 3"]
 position = Vector2(-29, -5)
 texture = ExtResource("85_q6g21")
 
-[node name="Toiletry 2" type="Sprite2D" parent="Gas Station Store Objects/Shelf 3"]
+[node name="Toiletry 2" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Shelf 3"]
 position = Vector2(-29, -9)
 texture = ExtResource("85_q6g21")
 
-[node name="Toiletry 3" type="Sprite2D" parent="Gas Station Store Objects/Shelf 3"]
+[node name="Toiletry 3" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Shelf 3"]
 position = Vector2(-12, -10)
 texture = ExtResource("86_i4soi")
 
-[node name="Toiletry 4" type="Sprite2D" parent="Gas Station Store Objects/Shelf 3"]
+[node name="Toiletry 4" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Shelf 3"]
 position = Vector2(-13, -7)
 texture = ExtResource("86_i4soi")
 
-[node name="Toiletry 5" type="Sprite2D" parent="Gas Station Store Objects/Shelf 3"]
+[node name="Toiletry 5" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Shelf 3"]
 position = Vector2(-12, -5)
 texture = ExtResource("86_i4soi")
 
-[node name="Toiletry 6" type="Sprite2D" parent="Gas Station Store Objects/Shelf 3"]
+[node name="Toiletry 6" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Shelf 3"]
 position = Vector2(1, -7)
 texture = ExtResource("87_l2son")
 
-[node name="Toiletry 7" type="Sprite2D" parent="Gas Station Store Objects/Shelf 3"]
+[node name="Toiletry 7" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Shelf 3"]
 position = Vector2(9, -7)
 texture = ExtResource("87_l2son")
 
-[node name="Toiletry 8" type="Sprite2D" parent="Gas Station Store Objects/Shelf 3"]
+[node name="Toiletry 8" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Shelf 3"]
 position = Vector2(18, -5)
 texture = ExtResource("88_po2n0")
 
-[node name="Toiletry 9" type="Sprite2D" parent="Gas Station Store Objects/Shelf 3"]
+[node name="Toiletry 9" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Shelf 3"]
 position = Vector2(17, -9)
 texture = ExtResource("88_po2n0")
 
-[node name="Toiletry 10" type="Sprite2D" parent="Gas Station Store Objects/Shelf 3"]
+[node name="Toiletry 10" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Shelf 3"]
 position = Vector2(26, -7)
 texture = ExtResource("89_squtn")
 
-[node name="Toiletry 11" type="Sprite2D" parent="Gas Station Store Objects/Shelf 3"]
+[node name="Toiletry 11" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Shelf 3"]
 position = Vector2(35, -7)
 texture = ExtResource("89_squtn")
 
-[node name="Toiletry 12" type="Sprite2D" parent="Gas Station Store Objects/Shelf 3"]
+[node name="Toiletry 12" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Shelf 3"]
 position = Vector2(-29, 5)
 texture = ExtResource("90_d1pck")
 
-[node name="Toiletry 13" type="Sprite2D" parent="Gas Station Store Objects/Shelf 3"]
+[node name="Toiletry 13" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Shelf 3"]
 position = Vector2(-12, 5)
 texture = ExtResource("90_d1pck")
 
-[node name="Pasta 1" type="Sprite2D" parent="Gas Station Store Objects/Shelf 3"]
+[node name="Pasta 1" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Shelf 3"]
 position = Vector2(4, 5)
 texture = ExtResource("90_vaa0i")
 
-[node name="Pasta 2" type="Sprite2D" parent="Gas Station Store Objects/Shelf 3"]
+[node name="Pasta 2" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Shelf 3"]
 position = Vector2(18, 5)
 texture = ExtResource("91_xemnf")
 
-[node name="Pasta 3" type="Sprite2D" parent="Gas Station Store Objects/Shelf 3"]
+[node name="Pasta 3" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Shelf 3"]
 position = Vector2(26, 5)
 texture = ExtResource("91_xemnf")
 
-[node name="Pasta 4" type="Sprite2D" parent="Gas Station Store Objects/Shelf 3"]
+[node name="Pasta 4" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Shelf 3"]
 position = Vector2(35, 5)
 texture = ExtResource("91_xemnf")
 
-[node name="Soup Can 1" type="Sprite2D" parent="Gas Station Store Objects/Shelf 3"]
+[node name="Soup Can 1" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Shelf 3"]
 position = Vector2(-32, 17)
 texture = ExtResource("90_j05kk")
 
-[node name="Soup Can 2" type="Sprite2D" parent="Gas Station Store Objects/Shelf 3"]
+[node name="Soup Can 2" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Shelf 3"]
 position = Vector2(-23, 17)
 texture = ExtResource("90_j05kk")
 
-[node name="Soup Can 3" type="Sprite2D" parent="Gas Station Store Objects/Shelf 3"]
+[node name="Soup Can 3" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Shelf 3"]
 position = Vector2(-13, 17)
 texture = ExtResource("91_yo5xy")
 
-[node name="Soup Can 4" type="Sprite2D" parent="Gas Station Store Objects/Shelf 3"]
+[node name="Soup Can 4" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Shelf 3"]
 position = Vector2(-4, 17)
 texture = ExtResource("91_yo5xy")
 
-[node name="Soup Can 5" type="Sprite2D" parent="Gas Station Store Objects/Shelf 3"]
+[node name="Soup Can 5" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Shelf 3"]
 position = Vector2(4, 17)
 texture = ExtResource("92_6ph0l")
 
-[node name="Soup Can 6" type="Sprite2D" parent="Gas Station Store Objects/Shelf 3"]
+[node name="Soup Can 6" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Shelf 3"]
 position = Vector2(13, 17)
 texture = ExtResource("92_6ph0l")
 
-[node name="Rice" type="Sprite2D" parent="Gas Station Store Objects/Shelf 3"]
+[node name="Rice" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Shelf 3"]
 position = Vector2(28, 17)
 texture = ExtResource("95_tpb6a")
 
-[node name="Countertop" type="Polygon2D" parent="Gas Station Store Objects"]
+[node name="Countertop" type="Polygon2D" parent="Gas Station Store/Gas Station Store Objects"]
 color = Color(0.858824, 0.823529, 0.768627, 1)
 polygon = PackedVector2Array(315, 16, 396, 16, 396, 18, 315, 18)
 
-[node name="PC" type="Sprite2D" parent="Gas Station Store Objects/Countertop"]
+[node name="PC" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Countertop"]
 position = Vector2(343, 12)
 texture = ExtResource("51_sojef")
 
-[node name="monitor" type="Sprite2D" parent="Gas Station Store Objects/Countertop/PC"]
+[node name="monitor" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Countertop/PC"]
 position = Vector2(1, -12)
 texture = ExtResource("52_fmovk")
 
-[node name="printer" type="Sprite2D" parent="Gas Station Store Objects/Countertop/PC"]
+[node name="printer" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Countertop/PC"]
 position = Vector2(-10, -4)
 texture = ExtResource("53_c7y1i")
 
-[node name="pin pad" type="Sprite2D" parent="Gas Station Store Objects/Countertop/PC"]
+[node name="pin pad" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Countertop/PC"]
 position = Vector2(19, -4)
 texture = ExtResource("54_mlxib")
 
-[node name="lottery tickets" type="Sprite2D" parent="Gas Station Store Objects/Countertop"]
+[node name="lottery tickets" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects/Countertop"]
 position = Vector2(380, 0)
 texture = ExtResource("57_smm5x")
 script = ExtResource("76_dj4sg")
 
-[node name="Lottery Ticket Trigger" type="Area2D" parent="Gas Station Store Objects/Countertop/lottery tickets"]
+[node name="Lottery Ticket Trigger" type="Area2D" parent="Gas Station Store/Gas Station Store Objects/Countertop/lottery tickets"]
 collision_layer = 0
 collision_mask = 2
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Gas Station Store Objects/Countertop/lottery tickets/Lottery Ticket Trigger"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Gas Station Store/Gas Station Store Objects/Countertop/lottery tickets/Lottery Ticket Trigger"]
 position = Vector2(0, -16)
 shape = SubResource("CircleShape2D_npt17")
 
-[node name="ActionParticles" parent="Gas Station Store Objects/Countertop/lottery tickets" instance=ExtResource("76_bdtre")]
+[node name="ActionParticles" parent="Gas Station Store/Gas Station Store Objects/Countertop/lottery tickets" instance=ExtResource("76_bdtre")]
 position = Vector2(0, -16)
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Gas Station Store Objects/Countertop"]
+[node name="StaticBody2D" type="StaticBody2D" parent="Gas Station Store/Gas Station Store Objects/Countertop"]
 position = Vector2(316, 18)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Gas Station Store Objects/Countertop/StaticBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Gas Station Store/Gas Station Store Objects/Countertop/StaticBody2D"]
 position = Vector2(-1, -2)
 shape = SubResource("SegmentShape2D_mw6eu")
 one_way_collision = true
 
-[node name="Countertop Shadow" type="Polygon2D" parent="Gas Station Store Objects/Countertop"]
+[node name="Countertop Shadow" type="Polygon2D" parent="Gas Station Store/Gas Station Store Objects/Countertop"]
 z_index = 1
 position = Vector2(316, 18)
 polygon = PackedVector2Array(0, 0, 80, 0, 80, 2, 80, 4, 0, 4, 0, 2)
 vertex_colors = PackedColorArray(0, 0, 0, 0.258824, 0, 0, 0, 0.247059, 0, 0, 0, 0.247059, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.247059)
 polygons = [PackedInt32Array(0, 1, 2, 5), PackedInt32Array(5, 2, 3, 4)]
 
-[node name="Trash Can" type="Sprite2D" parent="Gas Station Store Objects"]
+[node name="Trash Can" type="Sprite2D" parent="Gas Station Store/Gas Station Store Objects"]
 position = Vector2(306, 36)
 texture = ExtResource("98_d8b4j")
 
-[node name="Building 1" type="Node2D" parent="."]
+[node name="Gas Station Outside" type="TileMapLayer" parent="Gas Station Store"]
+visible = false
+z_index = 2
+tile_map_data = PackedByteArray("AAC0//3/AwAAAAAAAAC1//3/AwAAAAAAAAC1//z/AwAAAAAAAAC1//v/AwAAAAAAAAC1//r/AwAAAAAAAAC1//n/AwAAAAAAAAC0//n/AwAAAAAAAAC0//j/AwAAAAAAAAC0//f/AwAAAAAAAAC1//f/AwAAAAAAAAC2//f/AwAAAAAAAAC3//f/AwAAAAAAAAC4//f/AwAAAAAAAAC5//f/AwAAAAAAAAC6//f/AwAAAAAAAAC7//f/AwAAAAAAAAC8//f/AwAAAAAAAAC9//f/AwAAAAAAAAC+//f/AwAAAAAAAAC///f/AwAAAAAAAADA//f/AwAAAAAAAADB//f/AwAAAAAAAADC//f/AwAAAAAAAADD//f/AwAAAAAAAADE//f/AwAAAAAAAADF//f/AwAAAAAAAADG//f/AwAAAAAAAADH//f/AwAAAAAAAADI//f/AwAAAAAAAADJ//f/AwAAAAAAAADK//f/AwAAAAAAAADL//f/AwAAAAAAAADM//f/AwAAAAAAAADN//f/AwAAAAAAAADO//f/AwAAAAAAAADP//f/AwAAAAAAAADP//j/AwAAAAAAAADP//n/AwAAAAAAAADO//n/AwAAAAAAAADO//r/AwAAAAAAAADO//z/AwAAAAAAAADO//v/AwAAAAAAAADO//3/AwAAAAAAAADP//3/AwAAAAAAAADN//3/AwAAAAAAAADM//3/AwAAAAAAAADL//3/AwAAAAAAAADK//3/AwAAAAAAAADJ//3/AwAAAAAAAADI//3/AwAAAAAAAADH//3/AwAAAAAAAADG//3/AwAAAAAAAADF//3/AwAAAAAAAADE//3/AwAAAAAAAADD//3/AwAAAAAAAADC//3/AwAAAAAAAADB//3/AwAAAAAAAADA//3/AwAAAAAAAAC///3/AwAAAAAAAAC+//3/AwAAAAAAAAC9//3/AwAAAAAAAAC8//3/AwAAAAAAAAC7//3/AwAAAAAAAAC6//3/AwAAAAAAAAC5//3/AwAAAAAAAAC4//3/AwAAAAAAAAC3//3/AwAAAAAAAAC2//3/AwAAAAAAAAC2//j/AwAAAAAAAAC1//j/AwAAAAAAAAC3//j/AwAAAAAAAAC4//j/AwAAAAAAAAC5//j/AwAAAAAAAAC6//j/AwAAAAAAAAC7//j/AwAAAAAAAAC8//j/AwAAAAAAAAC9//j/AwAAAAAAAAC+//j/AwAAAAAAAAC///j/AwAAAAAAAADA//j/AwAAAAAAAADB//j/AwAAAAAAAADC//j/AwAAAAAAAADD//j/AwAAAAAAAADE//j/AwAAAAAAAADF//j/AwAAAAAAAADG//j/AwAAAAAAAADL//j/AwAAAAAAAADM//j/AwAAAAAAAADN//j/AwAAAAAAAADO//j/AwAAAAAAAADK//j/AwAAAAAAAADJ//j/AwAAAAAAAADI//j/AwAAAAAAAADH//j/AwAAAAAAAAA=")
+tile_set = ExtResource("1_3n3y5")
+script = ExtResource("15_0j1js")
+
+[node name="windows" type="TileMapLayer" parent="Gas Station Store/Gas Station Outside"]
+modulate = Color(1, 0.827451, 0.537255, 1)
+material = SubResource("ShaderMaterial_hpfib")
+tile_map_data = PackedByteArray("AABs//L/AAAAAAEAAABt//L/AAACAAAAAABu//L/AAACAAAAAABv//L/AAACAAAAAABw//L/AAACAAAAAABx//L/AAACAAAAAABy//L/AAACAAAAAABz//L/AAAAAAEAAQBs//P/AAACAAAAAgBs//T/AAACAAAAAgBs//X/AAACAAAAAgBs//b/AAACAAAAAgBs//f/AAACAAAAAgBs//j/AAACAAAAAgBs//n/AAAAAAEAAgBt//n/AAACAAAAAQBu//n/AAACAAAAAQBv//n/AAACAAAAAQBw//n/AAACAAAAAQBx//n/AAACAAAAAQBy//n/AAACAAAAAQBz//P/AAACAAAAAwBz//T/AAACAAAAAwBz//X/AAACAAAAAwBz//b/AAACAAAAAwBz//f/AAACAAAAAwBz//j/AAACAAAAAwBz//n/AAAAAAEAAwB0//L/AAAAAAEAAAB0//P/AAACAAAAAgB0//T/AAACAAAAAgB0//X/AAACAAAAAgB0//b/AAACAAAAAgB0//f/AAACAAAAAgB0//j/AAACAAAAAgB0//n/AAAAAAEAAgB1//L/AAACAAAAAAB1//n/AAACAAAAAQB2//L/AAACAAAAAAB2//n/AAACAAAAAQB3//L/AAACAAAAAAB3//n/AAACAAAAAQB4//L/AAACAAAAAAB4//n/AAACAAAAAQB5//L/AAACAAAAAAB5//n/AAACAAAAAQB6//L/AAACAAAAAAB6//n/AAACAAAAAQB7//L/AAAAAAEAAQB7//P/AAACAAAAAwB7//T/AAACAAAAAwB7//X/AAACAAAAAwB7//b/AAACAAAAAwB7//f/AAACAAAAAwB7//j/AAACAAAAAwB7//n/AAAAAAEAAwB8//L/AAAAAAEAAAB8//P/AAACAAAAAgB8//T/AAACAAAAAgB8//X/AAACAAAAAgB8//b/AAACAAAAAgB8//f/AAACAAAAAgB8//j/AAACAAAAAgB8//n/AAAAAAEAAgB9//L/AAACAAAAAAB9//n/AAACAAAAAQB+//L/AAACAAAAAAB+//n/AAACAAAAAQB///L/AAACAAAAAAB///n/AAACAAAAAQCA//L/AAACAAAAAACA//n/AAACAAAAAQCB//L/AAACAAAAAACB//n/AAACAAAAAQCC//L/AAACAAAAAACC//n/AAACAAAAAQCD//L/AAAAAAEAAQCD//P/AAACAAAAAwCD//T/AAACAAAAAwCD//X/AAACAAAAAwCD//b/AAACAAAAAwCD//f/AAACAAAAAwCD//j/AAACAAAAAwCD//n/AAAAAAEAAwCE//L/AAAAAAEAAACE//P/AAACAAAAAgCE//T/AAACAAAAAgCE//X/AAACAAAAAgCE//b/AAACAAAAAgCE//f/AAACAAAAAgCE//j/AAACAAAAAgCE//n/AAAAAAEAAgCF//L/AAACAAAAAACF//n/AAACAAAAAQCG//L/AAACAAAAAACG//n/AAACAAAAAQCH//L/AAACAAAAAACH//n/AAACAAAAAQCI//L/AAACAAAAAACI//n/AAACAAAAAQCJ//L/AAACAAAAAACJ//n/AAACAAAAAQCK//L/AAACAAAAAACK//n/AAACAAAAAQCL//L/AAAAAAEAAQCL//P/AAACAAAAAwCL//T/AAACAAAAAwCL//X/AAACAAAAAwCL//b/AAACAAAAAwCL//f/AAACAAAAAwCL//j/AAACAAAAAwCL//n/AAAAAAEAAwCM//L/AAAAAAEAAACM//P/AAACAAAAAgCM//T/AAACAAAAAgCM//X/AAACAAAAAgCM//b/AAACAAAAAgCM//f/AAACAAAAAgCM//j/AAACAAAAAgCM//n/AAAAAAEAAgCN//L/AAACAAAAAACN//n/AAACAAAAAQCO//L/AAACAAAAAACO//n/AAACAAAAAQCP//L/AAACAAAAAACP//n/AAACAAAAAQCQ//L/AAACAAAAAACQ//n/AAACAAAAAQCR//L/AAACAAAAAACR//n/AAACAAAAAQCS//L/AAACAAAAAACS//n/AAACAAAAAQCT//L/AAAAAAEAAQCT//P/AAACAAAAAwCT//T/AAACAAAAAwCT//X/AAACAAAAAwCT//b/AAACAAAAAwCT//f/AAACAAAAAwCT//j/AAACAAAAAwCT//n/AAAAAAEAAwCU//L/AAAAAAEAAACU//P/AAACAAAAAgCU//T/AAACAAAAAgCU//X/AAACAAAAAgCU//b/AAACAAAAAgCU//f/AAACAAAAAgCU//j/AAACAAAAAgCU//n/AAAAAAEAAgCV//L/AAACAAAAAACV//n/AAACAAAAAQCW//L/AAACAAAAAACW//n/AAACAAAAAQCX//L/AAACAAAAAACX//n/AAACAAAAAQCY//L/AAACAAAAAACY//n/AAACAAAAAQCZ//L/AAACAAAAAACZ//n/AAACAAAAAQCa//L/AAACAAAAAACa//n/AAACAAAAAQCb//L/AAAAAAEAAQCb//P/AAACAAAAAwCb//T/AAACAAAAAwCb//X/AAACAAAAAwCb//b/AAACAAAAAwCb//f/AAACAAAAAwCb//j/AAACAAAAAwCb//n/AAAAAAEAAwA=")
+tile_set = ExtResource("16_rsfcx")
+
+[node name="Revealer" type="Area2D" parent="Gas Station Store/Gas Station Outside"]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Gas Station Store/Gas Station Outside/Revealer"]
+visible = false
+position = Vector2(-992, -88)
+shape = SubResource("RectangleShape2D_tk1o6")
+
+[node name="Building 1" type="Polygon2D" parent="."]
+color = Color(0.137255, 0.321569, 0.529412, 1)
+polygon = PackedVector2Array(-2096, -368, -1680, -368, -1680, -32, -2096, -32)
 
 [node name="Backing" type="TileMapLayer" parent="Building 1"]
-use_parent_material = true
-tile_map_data = PackedByteArray("AACW//X/AQAGAAAAAACW//T/AQAGAAAAAACW//P/AQAHAAIAAACW//L/AQAGAAAAAACW//H/AQAHAAIAAACW/+//AQAHAAIAAACW/+7/AQAHAAIAAACW/+3/AQAGAAAAAACW/+z/AQAHAAIAAACW/+v/AQAHAAIAAAB9//j/AQADAAYAAAB9//n/AQAAAAcAAAB9//r/AQAAAAcAAAB9//v/AQAAAAcAAAB9//z/AQAAAAcAAAB9//3/AQAAAAcAAAB+//j/AQACAAYAAAB+//n/AQABAAcAAAB+//r/AQABAAcAAAB+//v/AQABAAcAAAB+//z/AQABAAcAAAB+//3/AQABAAcAAAB///j/AQACAAYAAACA//j/AQACAAYAAACB//j/AQACAAYAAACC//j/AQACAAYAAACD//j/AQACAAYAAACE//j/AQACAAYAAACF//j/AQACAAYAAACF//n/AQAAAAcAAACF//r/AQAAAAcAAACF//v/AQAAAAcAAACF//z/AQAAAAcAAACF//3/AQAAAAcAAACG//j/AQACAAYAAACG//n/AQABAAcAAACG//r/AQABAAcAAACG//v/AQABAAcAAACG//z/AQABAAcAAACG//3/AQABAAcAAACH//j/AQACAAYAAACI//j/AQACAAYAAACJ//j/AQACAAYAAACK//j/AQACAAYAAACL//j/AQACAAYAAACM//j/AQACAAYAAACN//j/AQACAAYAAACN//n/AQAAAAcAAACN//r/AQAAAAcAAACN//v/AQAAAAcAAACN//z/AQAAAAcAAACN//3/AQAAAAcAAACO//j/AQAEAAYAAACO//n/AQABAAcAAACO//r/AQABAAcAAACO//v/AQABAAcAAACO//z/AQABAAcAAACO//3/AQABAAcAAAB9/+v/AQAGAAAAAAB9/+z/AQAHAAIAAAB9/+3/AQAHAAIAAAB9/+7/AQAGAAAAAAB9/+//AQAHAAIAAAB9//D/AQAGAAAAAAB9//H/AQAHAAIAAAB9//L/AQAHAAIAAAB9//P/AQAGAAAAAAB9//T/AQAHAAIAAAB9//X/AQAHAAIAAAB+/+v/AQAGAAAAAAB+/+z/AQAHAAIAAAB+/+3/AQAHAAIAAAB+/+7/AQAHAAIAAAB+/+//AQAGAAAAAAB+//D/AQAGAAAAAAB+//H/AQAGAAAAAAB+//L/AQAHAAIAAAB+//P/AQAHAAIAAAB+//T/AQAHAAIAAAB+//X/AQAHAAIAAACB/+v/AQAGAAAAAACB/+z/AQAGAAAAAACB/+3/AQAHAAIAAACB/+7/AQAHAAIAAACB/+//AQAHAAIAAACB//D/AQAGAAAAAACB//H/AQAGAAAAAACB//L/AQAHAAIAAACB//P/AQAHAAIAAACB//T/AQAHAAIAAACB//X/AQAHAAIAAACC/+v/AQAGAAAAAACC/+z/AQAHAAIAAACC/+3/AQAHAAIAAACC/+7/AQAGAAAAAACC/+//AQAHAAIAAACC//D/AQAHAAIAAACC//H/AQAGAAAAAACC//L/AQAGAAAAAACC//P/AQAHAAIAAACC//T/AQAGAAAAAACC//X/AQAHAAIAAACD/+v/AQAHAAIAAACD/+z/AQAHAAIAAACD/+3/AQAHAAIAAACD/+7/AQAHAAIAAACD/+//AQAGAAAAAACD//D/AQAHAAIAAACD//H/AQAHAAIAAACD//L/AQAHAAIAAACD//P/AQAHAAIAAACD//T/AQAGAAAAAACD//X/AQAGAAAAAACE/+v/AQAGAAAAAACE/+z/AQAHAAIAAACE/+3/AQAHAAIAAACE/+7/AQAHAAIAAACE/+//AQAGAAAAAACE//D/AQAHAAIAAACE//H/AQAGAAAAAACE//L/AQAHAAIAAACE//P/AQAHAAIAAACE//T/AQAHAAIAAACE//X/AQAHAAIAAACH/+v/AQAGAAAAAACH/+z/AQAHAAIAAACH/+3/AQAHAAIAAACH/+7/AQAHAAIAAACH/+//AQAHAAIAAACH//D/AQAHAAIAAACH//H/AQAHAAIAAACH//L/AQAHAAIAAACH//P/AQAGAAAAAACH//T/AQAGAAAAAACH//X/AQAHAAIAAACI/+v/AQAHAAIAAACI/+z/AQAGAAAAAACI/+3/AQAHAAIAAACI/+7/AQAGAAAAAACI/+//AQAHAAIAAACI//D/AQAHAAIAAACI//H/AQAGAAAAAACI//L/AQAHAAIAAACI//P/AQAHAAIAAACI//T/AQAHAAIAAACI//X/AQAHAAIAAACJ/+v/AQAGAAAAAACJ/+z/AQAHAAIAAACJ/+3/AQAGAAAAAACJ/+7/AQAGAAAAAACJ/+//AQAHAAIAAACJ//D/AQAHAAIAAACJ//H/AQAGAAAAAACJ//L/AQAGAAAAAACJ//P/AQAHAAIAAACJ//T/AQAHAAIAAACJ//X/AQAGAAAAAACK/+v/AQAHAAIAAACK/+z/AQAHAAIAAACK/+3/AQAHAAIAAACK/+7/AQAHAAIAAACK/+//AQAHAAIAAACK//D/AQAGAAAAAACK//H/AQAHAAIAAACK//L/AQAHAAIAAACK//P/AQAHAAIAAACK//T/AQAHAAIAAACK//X/AQAHAAIAAACN/+v/AQAGAAAAAACN/+z/AQAGAAAAAACN/+3/AQAHAAIAAACN/+7/AQAHAAIAAACN/+//AQAHAAIAAACN//D/AQAHAAIAAACN//H/AQAGAAAAAACN//L/AQAGAAAAAACN//P/AQAHAAIAAACN//T/AQAGAAAAAACN//X/AQAHAAIAAACO/+v/AQAHAAIAAACO/+z/AQAHAAIAAACO/+3/AQAHAAIAAACO/+7/AQAHAAIAAACO/+//AQAGAAAAAACO//D/AQAHAAIAAACO//H/AQAHAAIAAACO//L/AQAHAAIAAACO//P/AQAHAAIAAACO//T/AQAGAAAAAACO//X/AQAHAAIAAACP/+v/AQAHAAIAAACP/+z/AQAHAAIAAACP/+3/AQAHAAIAAACP/+7/AQAHAAIAAACP/+//AQAHAAIAAACP//D/AQAHAAIAAACP//H/AQAGAAAAAACP//L/AQAHAAIAAACP//P/AQAGAAAAAACP//T/AQAGAAAAAACP//X/AQAGAAAAAACQ/+v/AQAGAAAAAACQ/+z/AQAGAAAAAACQ/+3/AQAGAAAAAACQ/+7/AQAHAAIAAACQ/+//AQAHAAIAAACQ//D/AQAGAAAAAACQ//H/AQAGAAAAAACQ//L/AQAHAAIAAACQ//P/AQAGAAAAAACQ//T/AQAHAAIAAACQ//X/AQAGAAAAAACR/+v/AQAHAAIAAACR/+z/AQAHAAIAAACR/+3/AQAGAAAAAACR/+7/AQAHAAIAAACR/+//AQAGAAAAAACR//D/AQAGAAAAAACR//H/AQAHAAIAAACR//L/AQAGAAAAAACR//P/AQAHAAIAAACR//T/AQAGAAAAAACR//X/AQAHAAIAAACU/+v/AQAGAAAAAACU/+z/AQAGAAAAAACU/+3/AQAHAAIAAACU/+7/AQAHAAIAAACU/+//AQAHAAIAAACU//D/AQAHAAIAAACU//H/AQAHAAIAAACU//L/AQAGAAAAAACU//P/AQAGAAAAAACU//T/AQAGAAAAAACU//X/AQAHAAIAAACV/+v/AQAHAAIAAACV/+z/AQAHAAIAAACV/+3/AQAHAAIAAACV/+7/AQAHAAIAAACV/+//AQAHAAIAAACV//D/AQAHAAIAAACV//H/AQAHAAIAAACV//L/AQAGAAAAAACV//P/AQAHAAIAAACV//T/AQAHAAIAAACV//X/AQAHAAIAAACS//T/AQAHAAIAAACS//X/AQAGAAAAAACT//T/AQAHAAIAAACT//X/AQAHAAIAAACS/+7/AQAHAAIAAACS/+//AQAGAAAAAACT/+7/AQAHAAIAAACT/+//AQAHAAIAAAB//+//AQAHAAIAAACA/+//AQAGAAAAAACF/+//AQAHAAIAAACG/+//AQAHAAIAAACL/+//AQAGAAAAAACM/+//AQAGAAAAAAB///X/AQAHAAIAAACA//X/AQAGAAAAAACF//X/AQAHAAIAAACG//X/AQAHAAIAAACL//X/AQAGAAAAAACM//X/AQAHAAIAAAB9//f/AQAGAAAAAAB+//f/AQAHAAIAAAB///f/AQAGAAAAAACA//f/AQAGAAAAAACB//f/AQAGAAAAAACC//f/AQAHAAIAAACD//f/AQAGAAAAAACE//f/AQAHAAIAAACF//f/AQAGAAAAAACG//f/AQAGAAAAAACH//f/AQAGAAAAAACI//f/AQAGAAAAAACJ//f/AQAGAAAAAACK//f/AQAHAAIAAACL//f/AQAGAAAAAACM//f/AQAGAAAAAACN//f/AQAHAAIAAACO//f/AQAHAAIAAACP//f/AQAHAAIAAACQ//f/AQAHAAIAAACR//f/AQAHAAIAAACS//f/AQAHAAIAAACT//f/AQAHAAIAAACU//f/AQAHAAIAAACV//f/AQAHAAIAAACW//f/AQAHAAIAAACV//n/AQAHAAIAAACQ//n/AQAHAAIAAACP//j/AQAGAAAAAACQ//j/AQAHAAIAAACR//j/AQAHAAIAAACS//j/AQAGAAAAAACT//j/AQAHAAIAAACU//j/AQAHAAIAAACV//j/AQAGAAAAAACW//j/AQAGAAAAAACW//n/AQAGAAAAAACW//r/AQAGAAAAAACW//v/AQAGAAAAAACW//z/AQAHAAIAAACV//r/AQAHAAIAAACV//v/AQAGAAAAAACV//z/AQAGAAAAAACQ//r/AQAHAAIAAACQ//v/AQAGAAAAAACQ//z/AQAHAAIAAACP//n/AQAGAAAAAACP//r/AQAHAAIAAACP//v/AQAHAAIAAACP//z/AQAHAAIAAACH//n/AQAHAAAAAQCH//r/AQAHAAAAAQCH//v/AQAHAAAAAQCH//z/AQAHAAAAAQCH//3/AQAHAAAAAQCI//n/AQAHAAAAAQCI//r/AQAHAAAAAQCI//v/AQAHAAAAAQCI//z/AQAHAAAAAQCI//3/AQAHAAAAAQCJ//n/AQAHAAAAAQCJ//r/AQAHAAAAAQCJ//v/AQAHAAAAAQCJ//z/AQAHAAAAAQCJ//3/AQAHAAAAAQCK//n/AQAHAAAAAQCK//r/AQAHAAAAAQCK//v/AQAHAAAAAQCK//z/AQAHAAAAAQCK//3/AQAHAAAAAQCL//n/AQAHAAAAAQCL//r/AQAHAAAAAQCL//v/AQAHAAAAAQCL//z/AQAHAAAAAQCL//3/AQAHAAAAAQCM//n/AQAHAAAAAQCM//r/AQAHAAAAAQCM//v/AQAHAAAAAQCM//z/AQAHAAAAAQCM//3/AQAHAAAAAQB///n/AQAHAAAAAQB///r/AQAHAAAAAQB///v/AQAHAAAAAQB///z/AQAHAAAAAQB///3/AQAHAAAAAQCA//n/AQAHAAAAAQCA//r/AQAHAAAAAQCA//v/AQAHAAAAAQCA//z/AQAHAAAAAQCA//3/AQAHAAAAAQCB//n/AQAHAAAAAQCB//r/AQAHAAAAAQCB//v/AQAHAAAAAQCB//z/AQAHAAAAAQCB//3/AQAHAAAAAQCC//n/AQAHAAAAAQCC//r/AQAHAAAAAQCC//v/AQAHAAAAAQCC//z/AQAHAAAAAQCC//3/AQAHAAAAAQCD//n/AQAHAAAAAQCD//r/AQAHAAAAAQCD//v/AQAHAAAAAQCD//z/AQAHAAAAAQCD//3/AQAHAAAAAQCE//n/AQAHAAAAAQCE//r/AQAHAAAAAQCE//v/AQAHAAAAAQCE//z/AQAHAAAAAQCE//3/AQAHAAAAAQCL//L/AQAHAAAAAQCL//P/AQAHAAAAAQCM//L/AQAHAAAAAQCM//P/AQAHAAAAAQCS//L/AQAHAAAAAQCT//L/AQAHAAAAAQCS/+z/AQAHAAAAAQCT/+z/AQAHAAAAAQCL/+z/AQAHAAAAAQCL/+3/AQAHAAAAAQCM/+z/AQAHAAAAAQCM/+3/AQAHAAAAAQCF/+z/AQAHAAAAAQCF/+3/AQAHAAAAAQCG/+z/AQAHAAAAAQCG/+3/AQAHAAAAAQB//+z/AQAHAAAAAQB//+3/AQAHAAAAAQCA/+z/AQAHAAAAAQCA/+3/AQAHAAAAAQB///L/AQAHAAAAAQB///P/AQAHAAAAAQCA//L/AQAHAAAAAQCA//P/AQAHAAAAAQCF//L/AQAHAAAAAQCF//P/AQAHAAAAAQCG//L/AQAHAAAAAQCG//P/AQAHAAAAAQCS//r/AQAHAAAAAQCS//v/AQAHAAAAAQCS//z/AQAHAAAAAQCT//r/AQAHAAAAAQCT//v/AQAHAAAAAQCT//z/AQAHAAAAAQA=")
+material = SubResource("ShaderMaterial_x5ril")
+tile_map_data = PackedByteArray("AACW//X/AQAGAAAAAACW//T/AQAFAAAAAACW//P/AQAGAAAAAACW//L/AQAFAAAAAACW//H/AQAGAAAAAACW/+//AQAGAAAAAACW/+7/AQAFAAAAAACW/+3/AQAGAAAAAACW/+z/AQAFAAAAAACW/+v/AQAGAAAAAAB9/+z/AQAGAAAAAAB9/+3/AQAFAAAAAAB9/+7/AQAGAAAAAAB9/+//AQAFAAAAAAB9//D/AQAGAAAAAAB9//H/AQAFAAAAAAB9//L/AQAGAAAAAAB9//P/AQAFAAAAAAB9//T/AQAGAAAAAAB9//X/AQAFAAAAAAB+/+v/AQAGAAAAAAB+/+z/AQAFAAAAAAB+/+3/AQAGAAAAAAB+/+7/AQAFAAAAAAB+/+//AQAGAAAAAAB+//D/AQAFAAAAAAB+//H/AQAGAAAAAAB+//L/AQAFAAAAAAB+//P/AQAGAAAAAAB+//T/AQAFAAAAAAB+//X/AQAGAAAAAACB/+v/AQAFAAAAAACB/+z/AQAGAAAAAACB/+3/AQAFAAAAAACB/+7/AQAGAAAAAACB/+//AQAFAAAAAACB//D/AQAGAAAAAACB//H/AQAFAAAAAACB//L/AQAGAAAAAACB//P/AQAFAAAAAACB//T/AQAGAAAAAACB//X/AQAFAAAAAACC/+v/AQAGAAAAAACC/+z/AQAFAAAAAACC/+3/AQAGAAAAAACC/+7/AQAFAAAAAACC/+//AQAGAAAAAACC//D/AQAFAAAAAACC//H/AQAGAAAAAACC//L/AQAFAAAAAACC//P/AQAGAAAAAACC//T/AQAFAAAAAACC//X/AQAGAAAAAACD/+v/AQAFAAAAAACD/+z/AQAGAAAAAACD/+3/AQAFAAAAAACD/+7/AQAGAAAAAACD/+//AQAFAAAAAACD//D/AQAGAAAAAACD//H/AQAFAAAAAACD//L/AQAGAAAAAACD//P/AQAFAAAAAACD//T/AQAGAAAAAACD//X/AQAFAAAAAACE/+v/AQAGAAAAAACE/+z/AQAFAAAAAACE/+3/AQAGAAAAAACE/+7/AQAFAAAAAACE/+//AQAGAAAAAACE//D/AQAFAAAAAACE//H/AQAGAAAAAACE//L/AQAFAAAAAACE//P/AQAGAAAAAACE//T/AQAFAAAAAACE//X/AQAGAAAAAACH/+v/AQAFAAAAAACH/+z/AQAGAAAAAACH/+3/AQAFAAAAAACH/+7/AQAGAAAAAACH/+//AQAFAAAAAACH//D/AQAGAAAAAACH//H/AQAFAAAAAACH//L/AQAGAAAAAACH//P/AQAFAAAAAACH//T/AQAGAAAAAACH//X/AQAFAAAAAACI/+v/AQAGAAAAAACI/+z/AQAFAAAAAACI/+3/AQAGAAAAAACI/+7/AQAFAAAAAACI/+//AQAGAAAAAACI//D/AQAFAAAAAACI//H/AQAGAAAAAACI//L/AQAFAAAAAACI//P/AQAGAAAAAACI//T/AQAFAAAAAACI//X/AQAGAAAAAACJ/+v/AQAFAAAAAACJ/+z/AQAGAAAAAACJ/+3/AQAFAAAAAACJ/+7/AQAGAAAAAACJ/+//AQAFAAAAAACJ//D/AQAGAAAAAACJ//H/AQAFAAAAAACJ//L/AQAGAAAAAACJ//P/AQAFAAAAAACJ//T/AQAGAAAAAACJ//X/AQAFAAAAAACK/+v/AQAGAAAAAACK/+z/AQAFAAAAAACK/+3/AQAGAAAAAACK/+7/AQAFAAAAAACK/+//AQAGAAAAAACK//D/AQAFAAAAAACK//H/AQAGAAAAAACK//L/AQAFAAAAAACK//P/AQAGAAAAAACK//T/AQAFAAAAAACK//X/AQAGAAAAAACN/+v/AQAFAAAAAACN/+z/AQAGAAAAAACN/+3/AQAFAAAAAACN/+7/AQAGAAAAAACN/+//AQAFAAAAAACN//D/AQAGAAAAAACN//H/AQAFAAAAAACN//L/AQAGAAAAAACN//P/AQAFAAAAAACN//T/AQAGAAAAAACN//X/AQAFAAAAAACO/+v/AQAGAAAAAACO/+z/AQAFAAAAAACO/+3/AQAGAAAAAACO/+7/AQAFAAAAAACO/+//AQAGAAAAAACO//D/AQAFAAAAAACO//H/AQAGAAAAAACO//L/AQAFAAAAAACO//P/AQAGAAAAAACO//T/AQAFAAAAAACO//X/AQAGAAAAAACP/+v/AQAFAAAAAACP/+z/AQAGAAAAAACP/+3/AQAFAAAAAACP/+7/AQAGAAAAAACP/+//AQAFAAAAAACP//D/AQAGAAAAAACP//H/AQAFAAAAAACP//L/AQAGAAAAAACP//P/AQAFAAAAAACP//T/AQAGAAAAAACP//X/AQAFAAAAAACQ/+v/AQAGAAAAAACQ/+z/AQAFAAAAAACQ/+3/AQAGAAAAAACQ/+7/AQAFAAAAAACQ/+//AQAGAAAAAACQ//D/AQAFAAAAAACQ//H/AQAGAAAAAACQ//L/AQAFAAAAAACQ//P/AQAGAAAAAACQ//T/AQAFAAAAAACQ//X/AQAGAAAAAACR/+v/AQAFAAAAAACR/+z/AQAGAAAAAACR/+3/AQAGAAAAAACR/+7/AQAGAAAAAACR/+//AQAFAAAAAACR//D/AQAGAAAAAACR//H/AQAFAAAAAACR//L/AQAGAAAAAACR//P/AQAFAAAAAACR//T/AQAGAAAAAACR//X/AQAFAAAAAACU/+v/AQAGAAAAAACU/+z/AQAFAAAAAACU/+3/AQAGAAAAAACU/+7/AQAFAAAAAACU/+//AQAGAAAAAACU//D/AQAFAAAAAACU//H/AQAGAAAAAACU//L/AQAFAAAAAACU//P/AQAGAAAAAACU//T/AQAFAAAAAACU//X/AQAGAAAAAACV/+v/AQAFAAAAAACV/+z/AQAGAAAAAACV/+3/AQAFAAAAAACV/+7/AQAGAAAAAACV/+//AQAFAAAAAACV//D/AQAGAAAAAACV//H/AQAFAAAAAACV//L/AQAGAAAAAACV//P/AQAFAAAAAACV//T/AQAGAAAAAACV//X/AQAFAAAAAACS//T/AQAFAAAAAACS//X/AQAGAAAAAACT//T/AQAGAAAAAACT//X/AQAFAAAAAACS/+7/AQAFAAAAAACS/+//AQAGAAAAAACT/+7/AQAGAAAAAACT/+//AQAFAAAAAAB//+//AQAFAAAAAACA/+//AQAGAAAAAACF/+//AQAFAAAAAACG/+//AQAGAAAAAACL/+//AQAFAAAAAACM/+//AQAGAAAAAAB///X/AQAFAAAAAACA//X/AQAGAAAAAACF//X/AQAFAAAAAACG//X/AQAGAAAAAACL//X/AQAFAAAAAACM//X/AQAGAAAAAAB9//f/AQAGAAAAAAB+//f/AQAHAAIAAAB///f/AQAGAAAAAACA//f/AQAGAAAAAACB//f/AQAGAAAAAACC//f/AQAHAAIAAACD//f/AQAGAAAAAACE//f/AQAHAAIAAACF//f/AQAGAAAAAACG//f/AQAGAAAAAACH//f/AQAGAAAAAACI//f/AQAGAAAAAACJ//f/AQAGAAAAAACK//f/AQAHAAIAAACL//f/AQAGAAAAAACM//f/AQAGAAAAAACN//f/AQAHAAIAAACO//f/AQAHAAIAAACP//f/AQAHAAIAAACQ//f/AQAHAAIAAACR//f/AQAHAAIAAACS//f/AQAHAAIAAACT//f/AQAHAAIAAACU//f/AQAHAAIAAACV//f/AQAHAAIAAACW//f/AQAHAAIAAACV//n/AQAHAAIAAACQ//n/AQAHAAIAAACP//j/AQAGAAAAAACQ//j/AQAHAAIAAACR//j/AQAHAAIAAACS//j/AQAGAAAAAACT//j/AQAHAAIAAACU//j/AQAHAAIAAACV//j/AQAGAAAAAACW//j/AQAGAAAAAACW//n/AQAGAAAAAACW//r/AQAGAAAAAACW//v/AQAGAAAAAACW//z/AQAHAAIAAACV//r/AQAHAAIAAACV//v/AQAGAAAAAACV//z/AQAGAAAAAACQ//r/AQAHAAIAAACQ//v/AQAGAAAAAACQ//z/AQAHAAIAAACP//n/AQAGAAAAAACP//r/AQAHAAIAAACP//v/AQAHAAIAAACP//z/AQAHAAIAAAB9/+v/AQAFAAAAAAA=")
 tile_set = ExtResource("1_3n3y5")
 
 [node name="Bricks 1" type="TileMapLayer" parent="Building 1"]
 use_parent_material = true
-tile_map_data = PackedByteArray("AACH//r/AQADAAIAAACJ//3/AQAGAAQAAACJ//z/AQACAAMAAACJ//r/AQACAAMAAACJ//n/AQACAAIAAACJ//v/AQACAAIAAACI//r/AQAEAAIAAACM//3/AQACAAQAAACL//3/AQACAAQAAACK//3/AQACAAQAAACM//r/AQACAAQAAACL//r/AQACAAQAAACK//r/AQACAAQAAAB///r/AQADAAIAAACA//r/AQAEAAIAAACB//n/AQACAAIAAACB//r/AQACAAMAAACB//v/AQACAAIAAACB//z/AQACAAMAAACB//3/AQAGAAQAAACC//r/AQACAAQAAACC//3/AQACAAQAAACD//r/AQACAAQAAACD//3/AQACAAQAAACE//r/AQACAAQAAACE//3/AQACAAQAAACR//n/AQAHAAEAAACR//r/AQAGAAAAAACR//v/AQAGAAAAAACR//z/AQAGAAAAAACS//n/AQAHAAEAAACS//3/AQAEAAIAAACT//n/AQAHAAEAAACT//3/AQADAAIAAACU//n/AQAHAAEAAACU//3/AQAEAAIAAACR//3/AQADAAIAAACU//r/AQAGAAAAAACU//v/AQAGAAAAAACU//z/AQAGAAAAAACW//D/AQAAAAMAAACW//b/AQAAAAMAAACW//f/AQADAAMAAACW/+n/AQABAAQAAACW/+r/AQABAAQAAACW/+v/AQACAAQAAACW/+z/AQACAAQAAACW/+3/AQACAAQAAACW/+7/AQACAAQAAACW/+//AQACAAQAAACW//H/AQACAAQAAACW//L/AQACAAQAAACW//P/AQACAAQAAACW//T/AQACAAQAAACW//X/AQACAAQAAACW//j/AQABAAIAAAB9/+n/AQACAAIAAAB9/+r/AQACAAMAAAB9//D/AQAAAAMAAAB9//b/AQAAAAMAAAB+/+n/AQABAAQAAAB+/+r/AQABAAQAAAB+//D/AQABAAMAAAB+//b/AQABAAMAAAB//+n/AQACAAIAAAB//+r/AQACAAMAAAB//+v/AQAAAAMAAAB//+7/AQAAAAMAAAB///D/AQAAAAMAAAB///H/AQAAAAMAAAB///T/AQAAAAMAAAB///b/AQAAAAMAAACA/+n/AQABAAQAAACA/+r/AQABAAQAAACA/+v/AQABAAMAAACA/+7/AQABAAMAAACA//D/AQABAAMAAACA//H/AQABAAMAAACA//b/AQABAAMAAACB/+n/AQACAAIAAACB/+r/AQACAAMAAACB//D/AQAAAAMAAACB//b/AQAAAAMAAACC/+n/AQABAAQAAACC/+r/AQABAAQAAACC//D/AQABAAMAAACC//b/AQABAAMAAACD/+n/AQACAAIAAACD/+r/AQACAAMAAACD//D/AQAAAAMAAACD//b/AQAAAAMAAACE/+n/AQABAAQAAACE/+r/AQABAAQAAACE//D/AQABAAMAAACE//b/AQABAAMAAACF/+n/AQACAAIAAACF/+r/AQACAAMAAACF/+v/AQAAAAMAAACF/+7/AQAAAAMAAACF//D/AQAAAAMAAACF//H/AQAAAAMAAACF//b/AQAAAAMAAACG/+n/AQABAAQAAACG/+r/AQABAAQAAACG/+v/AQABAAMAAACG/+7/AQABAAMAAACG//D/AQABAAMAAACG//H/AQABAAMAAACG//b/AQABAAMAAACH/+n/AQACAAIAAACH/+r/AQACAAMAAACH//D/AQAAAAMAAACH//b/AQAAAAMAAACI/+n/AQABAAQAAACI/+r/AQABAAQAAACI//D/AQABAAMAAACI//b/AQABAAMAAACJ/+n/AQACAAIAAACJ/+r/AQACAAMAAACJ//D/AQAAAAMAAACJ//b/AQAAAAMAAACK/+n/AQABAAQAAACK/+r/AQABAAQAAACK//D/AQABAAMAAACK//b/AQABAAMAAACL/+n/AQACAAIAAACL/+r/AQACAAMAAACL/+v/AQAAAAMAAACL/+7/AQAAAAMAAACL//D/AQAAAAMAAACL//H/AQAAAAMAAACL//T/AQAAAAMAAACL//b/AQAAAAMAAACM/+n/AQABAAQAAACM/+r/AQABAAQAAACM/+v/AQABAAMAAACM/+7/AQABAAMAAACM//D/AQABAAMAAACM//H/AQABAAMAAACM//T/AQABAAMAAACM//b/AQABAAMAAACN/+n/AQACAAIAAACN/+r/AQACAAMAAACN//D/AQAAAAMAAACN//b/AQAAAAMAAACO/+n/AQABAAQAAACO/+r/AQABAAQAAACO//D/AQABAAMAAACO//b/AQABAAMAAACP/+n/AQACAAIAAACP/+r/AQACAAMAAACP//D/AQAAAAMAAACP//b/AQAAAAMAAACQ/+n/AQABAAQAAACQ/+r/AQABAAQAAACQ//D/AQAAAAMAAACQ//b/AQAAAAMAAACR/+n/AQACAAIAAACR/+r/AQACAAMAAACR//D/AQABAAMAAACR//b/AQABAAMAAACS/+n/AQABAAQAAACS/+r/AQABAAQAAACS/+v/AQAAAAMAAACS/+3/AQAAAAMAAACS//D/AQAAAAMAAACS//H/AQAAAAMAAACS//P/AQAAAAMAAACS//b/AQAAAAMAAACT/+n/AQACAAIAAACT/+r/AQACAAMAAACT/+v/AQABAAMAAACT/+3/AQABAAMAAACT//D/AQABAAMAAACT//H/AQABAAMAAACT//P/AQABAAMAAACT//b/AQABAAMAAACU/+n/AQABAAQAAACU/+r/AQABAAQAAACU//D/AQAAAAMAAACU//b/AQAAAAMAAACV/+n/AQACAAIAAACV/+r/AQACAAMAAACV//D/AQABAAMAAACV//b/AQABAAMAAACG//T/AQABAAMAAACA//T/AQABAAMAAACF//T/AQAAAAMAAACP//f/AQAAAAIAAACP//j/AQAAAAIAAACP//n/AQACAAIAAACP//r/AQACAAMAAACP//v/AQACAAIAAACP//z/AQACAAMAAACP//3/AQAAAAMAAACQ//j/AQADAAIAAACQ//n/AQADAAMAAACQ//r/AQADAAQAAACQ//v/AQADAAMAAACQ//z/AQADAAQAAACQ//3/AQABAAMAAACR//j/AQAEAAIAAACS//j/AQADAAIAAACT//j/AQAEAAIAAACU//j/AQADAAIAAACV//j/AQAEAAIAAACV//n/AQACAAIAAACV//r/AQACAAMAAACV//v/AQACAAIAAACV//z/AQACAAMAAACV//3/AQAAAAMAAACW//n/AQADAAMAAACW//r/AQADAAQAAACW//v/AQADAAMAAACW//z/AQADAAQAAACW//3/AQABAAMAAAB+/+v/AQABAAIAAAB+/+z/AQADAAMAAAB+/+3/AQADAAQAAAB+/+7/AQADAAMAAAB+/+//AQADAAQAAAB+//H/AQABAAIAAAB+//L/AQADAAMAAAB+//P/AQADAAQAAAB+//T/AQADAAMAAAB+//X/AQADAAQAAACB/+v/AQAAAAIAAACB/+z/AQACAAIAAACB/+3/AQACAAMAAACB/+7/AQACAAIAAACB/+//AQACAAMAAACB//H/AQAAAAIAAACB//L/AQACAAIAAACB//P/AQACAAMAAACB//T/AQACAAIAAACB//X/AQACAAMAAACE/+v/AQABAAIAAACE/+z/AQADAAMAAACE/+3/AQADAAQAAACE/+7/AQADAAMAAACE/+//AQADAAQAAACE//H/AQABAAIAAACE//L/AQADAAMAAACE//P/AQADAAQAAACE//T/AQADAAMAAACE//X/AQADAAQAAACH/+v/AQAAAAIAAACH/+z/AQACAAIAAACH/+3/AQACAAMAAACH/+7/AQACAAIAAACH/+//AQACAAMAAACH//H/AQAAAAIAAACH//L/AQACAAIAAACH//P/AQACAAMAAACH//T/AQACAAIAAACH//X/AQACAAMAAACK/+v/AQABAAIAAACK/+z/AQADAAMAAACK/+3/AQADAAQAAACK/+7/AQADAAMAAACK/+//AQADAAQAAACK//H/AQABAAIAAACK//L/AQADAAMAAACK//P/AQADAAQAAACK//T/AQADAAMAAACK//X/AQADAAQAAACN/+v/AQAAAAIAAACN/+z/AQACAAIAAACN/+3/AQACAAMAAACN/+7/AQACAAIAAACN/+//AQACAAMAAACN//H/AQAAAAIAAACN//L/AQACAAIAAACN//P/AQACAAMAAACN//T/AQACAAIAAACN//X/AQACAAMAAACR/+v/AQABAAIAAACR/+3/AQABAAIAAACR/+z/AQABAAIAAACU/+v/AQAAAAIAAACU/+z/AQAAAAIAAACU/+3/AQAAAAIAAACU/+7/AQACAAIAAACR/+7/AQADAAMAAACR/+//AQADAAQAAACU/+//AQACAAMAAACR//H/AQABAAIAAACR//L/AQABAAIAAACR//P/AQABAAIAAACR//T/AQADAAMAAACR//X/AQADAAQAAACU//H/AQAAAAIAAACU//L/AQAAAAIAAACU//P/AQAAAAIAAACU//T/AQACAAIAAACU//X/AQACAAMAAAA=")
+tile_map_data = PackedByteArray("AACH//r/AQADAAIAAACJ//3/AQAGAAQAAACJ//z/AQACAAMAAACJ//r/AQACAAMAAACJ//n/AQACAAIAAACJ//v/AQACAAIAAACI//r/AQAEAAIAAACM//3/AQACAAQAAACL//3/AQACAAQAAACK//3/AQACAAQAAACM//r/AQACAAQAAACL//r/AQACAAQAAACK//r/AQACAAQAAAB///r/AQADAAIAAACA//r/AQAEAAIAAACB//n/AQACAAIAAACB//r/AQACAAMAAACB//v/AQACAAIAAACB//z/AQACAAMAAACB//3/AQAGAAQAAACC//r/AQACAAQAAACC//3/AQACAAQAAACD//r/AQACAAQAAACD//3/AQACAAQAAACE//r/AQACAAQAAACE//3/AQACAAQAAACS//3/AQAEAAIAAACT//3/AQADAAIAAACU//3/AQAEAAIAAACR//3/AQADAAIAAACW//D/AQAAAAMAAACW//b/AQAAAAMAAACW//f/AQADAAMAAACW/+n/AQABAAQAAACW/+r/AQABAAQAAACW/+v/AQACAAQAAACW/+z/AQACAAQAAACW/+3/AQACAAQAAACW/+7/AQACAAQAAACW/+//AQACAAQAAACW//H/AQACAAQAAACW//L/AQACAAQAAACW//P/AQACAAQAAACW//T/AQACAAQAAACW//X/AQACAAQAAACW//j/AQABAAIAAAB9/+n/AQACAAIAAAB9/+r/AQACAAMAAAB9//D/AQAAAAMAAAB9//b/AQAAAAMAAAB+/+n/AQABAAQAAAB+/+r/AQABAAQAAAB+//D/AQABAAMAAAB+//b/AQABAAMAAAB//+n/AQACAAIAAAB//+r/AQACAAMAAAB//+v/AQAAAAMAAAB//+7/AQAAAAMAAAB///D/AQAAAAMAAAB///H/AQAAAAMAAAB///T/AQAAAAMAAAB///b/AQAAAAMAAACA/+n/AQABAAQAAACA/+r/AQABAAQAAACA/+v/AQABAAMAAACA/+7/AQABAAMAAACA//D/AQABAAMAAACA//H/AQABAAMAAACA//b/AQABAAMAAACB/+n/AQACAAIAAACB/+r/AQACAAMAAACB//D/AQAAAAMAAACB//b/AQAAAAMAAACC/+n/AQABAAQAAACC/+r/AQABAAQAAACC//D/AQABAAMAAACC//b/AQABAAMAAACD/+n/AQACAAIAAACD/+r/AQACAAMAAACD//D/AQAAAAMAAACD//b/AQAAAAMAAACE/+n/AQABAAQAAACE/+r/AQABAAQAAACE//D/AQABAAMAAACE//b/AQABAAMAAACF/+n/AQACAAIAAACF/+r/AQACAAMAAACF/+v/AQAAAAMAAACF/+7/AQAAAAMAAACF//D/AQAAAAMAAACF//H/AQAAAAMAAACF//b/AQAAAAMAAACG/+n/AQABAAQAAACG/+r/AQABAAQAAACG/+v/AQABAAMAAACG/+7/AQABAAMAAACG//D/AQABAAMAAACG//H/AQABAAMAAACG//b/AQABAAMAAACH/+n/AQACAAIAAACH/+r/AQACAAMAAACH//D/AQAAAAMAAACH//b/AQAAAAMAAACI/+n/AQABAAQAAACI/+r/AQABAAQAAACI//D/AQABAAMAAACI//b/AQABAAMAAACJ/+n/AQACAAIAAACJ/+r/AQACAAMAAACJ//D/AQAAAAMAAACJ//b/AQAAAAMAAACK/+n/AQABAAQAAACK/+r/AQABAAQAAACK//D/AQABAAMAAACK//b/AQABAAMAAACL/+n/AQACAAIAAACL/+r/AQACAAMAAACL/+v/AQAAAAMAAACL/+7/AQAAAAMAAACL//D/AQAAAAMAAACL//H/AQAAAAMAAACL//T/AQAAAAMAAACL//b/AQAAAAMAAACM/+n/AQABAAQAAACM/+r/AQABAAQAAACM/+v/AQABAAMAAACM/+7/AQABAAMAAACM//D/AQABAAMAAACM//H/AQABAAMAAACM//T/AQABAAMAAACM//b/AQABAAMAAACN/+n/AQACAAIAAACN/+r/AQACAAMAAACN//D/AQAAAAMAAACN//b/AQAAAAMAAACO/+n/AQABAAQAAACO/+r/AQABAAQAAACO//D/AQABAAMAAACO//b/AQABAAMAAACP/+n/AQACAAIAAACP/+r/AQACAAMAAACP//D/AQAAAAMAAACP//b/AQAAAAMAAACQ/+n/AQABAAQAAACQ/+r/AQABAAQAAACQ//D/AQAAAAMAAACQ//b/AQAAAAMAAACR/+n/AQACAAIAAACR/+r/AQACAAMAAACR//D/AQABAAMAAACR//b/AQABAAMAAACS/+n/AQABAAQAAACS/+r/AQABAAQAAACS/+v/AQAAAAMAAACS/+3/AQAAAAMAAACS//D/AQAAAAMAAACS//H/AQAAAAMAAACS//P/AQAAAAMAAACS//b/AQAAAAMAAACT/+n/AQACAAIAAACT/+r/AQACAAMAAACT/+v/AQABAAMAAACT/+3/AQABAAMAAACT//D/AQABAAMAAACT//H/AQABAAMAAACT//P/AQABAAMAAACT//b/AQABAAMAAACU/+n/AQABAAQAAACU/+r/AQABAAQAAACU//D/AQAAAAMAAACU//b/AQAAAAMAAACV/+n/AQACAAIAAACV/+r/AQACAAMAAACV//D/AQABAAMAAACV//b/AQABAAMAAACG//T/AQABAAMAAACA//T/AQABAAMAAACF//T/AQAAAAMAAACP//f/AQAAAAIAAACP//j/AQAAAAIAAACP//n/AQACAAIAAACP//r/AQACAAMAAACP//v/AQACAAIAAACP//z/AQACAAMAAACP//3/AQAAAAMAAACQ//j/AQADAAIAAACQ//n/AQADAAMAAACQ//r/AQADAAQAAACQ//v/AQADAAMAAACQ//z/AQADAAQAAACQ//3/AQABAAMAAACR//j/AQAEAAIAAACS//j/AQADAAIAAACT//j/AQAEAAIAAACU//j/AQADAAIAAACV//j/AQAEAAIAAACV//n/AQACAAIAAACV//r/AQACAAMAAACV//v/AQACAAIAAACV//z/AQACAAMAAACV//3/AQAAAAMAAACW//n/AQADAAMAAACW//r/AQADAAQAAACW//v/AQADAAMAAACW//z/AQADAAQAAACW//3/AQABAAMAAAB+/+v/AQABAAIAAAB+/+z/AQADAAMAAAB+/+3/AQADAAQAAAB+/+7/AQADAAMAAAB+/+//AQADAAQAAAB+//H/AQABAAIAAAB+//L/AQADAAMAAAB+//P/AQADAAQAAAB+//T/AQADAAMAAAB+//X/AQADAAQAAACB/+v/AQAAAAIAAACB/+z/AQACAAIAAACB/+3/AQACAAMAAACB/+7/AQACAAIAAACB/+//AQACAAMAAACB//H/AQAAAAIAAACB//L/AQACAAIAAACB//P/AQACAAMAAACB//T/AQACAAIAAACB//X/AQACAAMAAACE/+v/AQABAAIAAACE/+z/AQADAAMAAACE/+3/AQADAAQAAACE/+7/AQADAAMAAACE/+//AQADAAQAAACE//H/AQABAAIAAACE//L/AQADAAMAAACE//P/AQADAAQAAACE//T/AQADAAMAAACE//X/AQADAAQAAACH/+v/AQAAAAIAAACH/+z/AQACAAIAAACH/+3/AQACAAMAAACH/+7/AQACAAIAAACH/+//AQACAAMAAACH//H/AQAAAAIAAACH//L/AQACAAIAAACH//P/AQACAAMAAACH//T/AQACAAIAAACH//X/AQACAAMAAACK/+v/AQABAAIAAACK/+z/AQADAAMAAACK/+3/AQADAAQAAACK/+7/AQADAAMAAACK/+//AQADAAQAAACK//H/AQABAAIAAACK//L/AQADAAMAAACK//P/AQADAAQAAACK//T/AQADAAMAAACK//X/AQADAAQAAACN/+v/AQAAAAIAAACN/+z/AQACAAIAAACN/+3/AQACAAMAAACN/+7/AQACAAIAAACN/+//AQACAAMAAACN//H/AQAAAAIAAACN//L/AQACAAIAAACN//P/AQACAAMAAACN//T/AQACAAIAAACN//X/AQACAAMAAACR/+v/AQABAAIAAACR/+3/AQABAAIAAACR/+z/AQABAAIAAACU/+v/AQAAAAIAAACU/+z/AQAAAAIAAACU/+3/AQAAAAIAAACU/+7/AQACAAIAAACR/+7/AQADAAMAAACR/+//AQADAAQAAACU/+//AQACAAMAAACR//H/AQABAAIAAACR//L/AQABAAIAAACR//P/AQABAAIAAACR//T/AQADAAMAAACR//X/AQADAAQAAACU//H/AQAAAAIAAACU//L/AQAAAAIAAACU//P/AQAAAAIAAACU//T/AQACAAIAAACU//X/AQACAAMAAAB9//j/AQADAAYAAAB9//n/AQAAAAcAAAB9//r/AQAAAAcAAAB9//v/AQAAAAcAAAB9//z/AQAAAAcAAAB9//3/AQAAAAcAAAB+//j/AQACAAYAAAB+//n/AQABAAcAAAB+//r/AQABAAcAAAB+//v/AQABAAcAAAB+//z/AQABAAcAAAB+//3/AQABAAcAAAB///j/AQACAAYAAACA//j/AQACAAYAAACB//j/AQACAAYAAACC//j/AQACAAYAAACD//j/AQACAAYAAACE//j/AQACAAYAAACF//j/AQACAAYAAACF//n/AQAAAAcAAACF//r/AQAAAAcAAACF//v/AQAAAAcAAACF//z/AQAAAAcAAACF//3/AQAAAAcAAACG//j/AQACAAYAAACG//n/AQABAAcAAACG//r/AQABAAcAAACG//v/AQABAAcAAACG//z/AQABAAcAAACG//3/AQABAAcAAACH//j/AQACAAYAAACI//j/AQACAAYAAACJ//j/AQACAAYAAACK//j/AQACAAYAAACL//j/AQACAAYAAACM//j/AQACAAYAAACN//j/AQACAAYAAACN//n/AQAAAAcAAACN//r/AQAAAAcAAACN//v/AQAAAAcAAACN//z/AQAAAAcAAACN//3/AQAAAAcAAACO//j/AQAEAAYAAACO//n/AQABAAcAAACO//r/AQABAAcAAACO//v/AQABAAcAAACO//z/AQABAAcAAACO//3/AQABAAcAAAA=")
 tile_set = ExtResource("1_3n3y5")
 
 [node name="Bricks 2" type="TileMapLayer" parent="Building 1"]
@@ -1235,31 +1230,50 @@ position = Vector2(-16, 0)
 color = Color(0.180392, 0.0196078, 0.792157, 1)
 polygon = PackedVector2Array(-1760, -112, -1696, -112, -1696, -48, -1760, -48)
 
+[node name="fg" type="TileMapLayer" parent="."]
+use_parent_material = true
+tile_map_data = PackedByteArray("AAD///7/AAAAAAYACQD+//7/AAAAAAYACQD9//7/AAAAAAYACQD8//7/AAAAAAYACQD7//7/AAAAAAYACQD6//7/AAAAAAYACQD5//7/AAAAAAYACQD4//7/AAAAAAYACQD3//7/AAAAAAYACQD2//7/AAAAAAYACQD1//7/AAAAAAYACQD0//7/AAAAAAYACQDz//7/AAAAAAYACQDy//7/AAAAAAYACQDx//7/AAAAAAYACQDw//7/AAAAAAYACQDv//7/AAAAAAYACQDu//7/AAAAAAYACQDt//7/AAAAAAYACQDs//7/AAAAAAYACQDr//7/AAAAAAYACQD/////AAAAAAQABAD+////AAAAAAQABAD9////AAAAAAQABAD8////AAAAAAQABAD7////AAAAAAQABAD6////AAAAAAQABAD5////AAAAAAQABAD4////AAAAAAQABAD3////AAAAAAQABAD2////AAAAAAQABAD1////AAAAAAQABAD0////AAAAAAQABADz////AAAAAAQABADy////AAAAAAQABADx////AAAAAAQABADw////AAAAAAQABADv////AAAAAAQABADu////AAAAAAQABADt////AAAAAAQABADs////AAAAAAQABADr////AAAAAAQABAD3//3/AQAEAAAAAAD0//3/AQABAAAAAAD1//3/AQACAAAAAAD2//3/AQADAAAAAADq//7/AAAAAAYACQDp//7/AAAAAAYACQDo//7/AAAAAAYACQDn//7/AAAAAAYACQDm//7/AAAAAAYACQDl//7/AAAAAAYACQDk//7/AAAAAAYACQDj//7/AAAAAAYACQDi//7/AAAAAAYACQDh//7/AAAAAAYACQDg//7/AAAAAAYACQDf//7/AAAAAAYACQDe//7/AAAAAAYACQDq////AAAAAAQABADp////AAAAAAQABADo////AAAAAAQABADn////AAAAAAQABADm////AAAAAAQABADl////AAAAAAQABADk////AAAAAAQABADj////AAAAAAQABADi////AAAAAAQABADh////AAAAAAQABADg////AAAAAAQABADf////AAAAAAQABADe////AAAAAAQABADl//n/AQAEAAUAAQDl//r/AQAGAAUAAADl//v/AQAAAAUAAADl//z/AQAAAAUAAADl//3/AQABAAUAAADy//n/AQAEAAUAAQDy//r/AQAGAAUAAADy//v/AQAAAAUAAADy//z/AQAAAAUAAADy//3/AQABAAUAAADd//7/AAAAAAYACQDc//7/AAAAAAYACQDb//7/AAAAAAYACQDa//7/AAAAAAYACQDZ//7/AAAAAAYACQDY//7/AAAAAAYACQDX//7/AAAAAAYACQDW//7/AAAAAAYACQDV//7/AAAAAAYACQDU//7/AAAAAAYACQDT//7/AAAAAAYACQDS//7/AAAAAAYACQDR//7/AAAAAAYACQDQ//7/AAAAAAYACQDP//7/AAAAAAYACQDO//7/AAAAAAYACQDN//7/AAAAAAYACQDM//7/AAAAAAYACQDL//7/AAAAAAYACQDK//7/AAAAAAYACQDJ//7/AAAAAAYACQDI//7/AAAAAAYACQDH//7/AAAAAAYACQDG//7/AAAAAAYACQDF//7/AAAAAAYACQDE//7/AAAAAAYACQDD//7/AAAAAAYACQDC//7/AAAAAAYACQDB//7/AAAAAAYACQDA//7/AAAAAAYACQC///7/AAAAAAYACQC+//7/AAAAAAYACQC9//7/AAAAAAYACQC8//7/AAAAAAYACQC7//7/AAAAAAYACQC6//7/AAAAAAYACQC5//7/AAAAAAYACQC4//7/AAAAAAYACQC3//7/AAAAAAYACQC2//7/AAAAAAYACQC1//7/AAAAAAYACQC0//7/AAAAAAYACQCz//7/AAAAAAYACQCy//7/AAAAAAYACQCx//7/AAAAAAYACQCw//7/AAAAAAYACQCv//7/AAAAAAYACQCu//7/AAAAAAYACQCt//7/AAAAAAYACQCs//7/AAAAAAYACQCr//7/AAAAAAYACQCq//7/AAAAAAYACQDT//3/AQAEAAAAAADS//3/AQACAAAAAADR//3/AQACAAAAAADQ//3/AQACAAAAAACz//3/AQACAAAAAACy//3/AQACAAAAAACx//3/AQACAAAAAACw//3/AQABAAAAAACp//7/AAAAAAYACQCo//7/AAAAAAYACQCn//7/AAAAAAYACQCm//7/AAAAAAYACQCl//7/AAAAAAYACQCk//7/AAAAAAYACQCj//7/AAAAAAYACQCi//7/AAAAAAYACQCh//7/AAAAAAYACQCg//7/AAAAAAYACQCf//7/AAAAAAYACQCe//7/AAAAAAYACQCd//7/AAAAAAYACQCc//7/AAAAAAYACQCb//7/AAAAAAYACQCa//7/AAAAAAYACQCZ//7/AAAAAAYACQCY//7/AAAAAAYACQCX//7/AAAAAAYACQCW//7/AAAAAAYACQCV//7/AAAAAAYACQCU//7/AAAAAAYACQCT//7/AAAAAAYACQCS//7/AAAAAAYACQCR//7/AAAAAAYACQCQ//7/AAAAAAYACQCP//7/AAAAAAYACQCO//7/AAAAAAYACQCN//7/AAAAAAYACQCM//7/AAAAAAYACQCL//7/AAAAAAYACQCK//7/AAAAAAYACQCJ//7/AAAAAAYACQCI//7/AAAAAAYACQCH//7/AAAAAAYACQCG//7/AAAAAAYACQCF//7/AAAAAAYACQCE//7/AAAAAAYACQCD//7/AAAAAAYACQCC//7/AAAAAAYACQCB//7/AAAAAAYACQCA//7/AAAAAAYACQB///7/AAAAAAYACQB+//7/AAAAAAYACQA=")
+tile_set = ExtResource("1_3n3y5")
+
+[node name="fg decor" type="TileMapLayer" parent="."]
+z_index = 11
+use_parent_material = true
+tile_map_data = PackedByteArray("AAD4//7/AAAEAAIAAQD3//7/AQADAAEAAAD2//7/AQAAAAEAAAD1//7/AQAEAAEAAAD0//7/AQACAAEAAAD5//7/AAAEAAIAAQD6//7/AAAEAAIAAQD7//7/AAAFAAIAAQD8//7/AAAEAAIAAQD9//7/AAAFAAIAAQD+//7/AAAFAAIAAQD///7/AAAEAAIAAQD///3/AAAEAAEAAQD+//3/AAAFAAEAAQD9//3/AAAFAAEAAQD8//3/AAAFAAEAAQD7//3/AAAEAAEAAQD6//3/AAAEAAEAAQD5//3/AAAEAAEAAQD4//3/AAAEAAEAAQD3//3/AAAGAAEAAQDz//7/AQAFAAEAAADy//7/AQAGAAEAAADx//7/AQAGAAEAAADw//7/AQAGAAEAAADv//7/AQAGAAEAAADu//7/AQAFAAEAAADt//7/AQAFAAEAAADs//7/AQAGAAEAAADr//7/AQAGAAEAAADq//7/AQAGAAEAAADp//7/AQAGAAEAAADo//7/AQAGAAEAAADn//7/AQAFAAEAAADm//7/AQAGAAEAAADl//7/AQAGAAEAAADk//7/AQAFAAEAAADj//7/AQAFAAEAAADi//7/AQAGAAEAAADh//7/AQAGAAEAAADg//7/AQAGAAEAAADf//7/AQAFAAEAAADe//7/AQAFAAEAAADd//7/AQAFAAEAAADc//7/AQAGAAEAAADb//7/AQAGAAEAAADa//7/AQAFAAEAAADZ//7/AQAFAAEAAADY//7/AQAFAAEAAADX//7/AQAFAAEAAADW//7/AQAGAAEAAADV//7/AQAGAAEAAADU//7/AQAFAAEAAADT//7/AQAEAAEAAADS//7/AQACAAEAAADR//7/AQAAAAEAAADQ//7/AQACAAEAAACz//7/AQADAAEAAACy//7/AQADAAEAAACx//7/AQAEAAEAAACw//7/AQADAAEAAADP//7/AQAFAAEAAADO//7/AQAFAAEAAADN//7/AQAFAAEAAADM//7/AQAGAAEAAADL//7/AQAFAAEAAADK//7/AQAGAAEAAADJ//7/AQAGAAEAAADI//7/AQAFAAEAAADH//7/AQAGAAEAAADG//7/AQAGAAEAAADF//7/AQAGAAEAAADE//7/AQAFAAEAAADD//7/AQAFAAEAAADC//7/AQAGAAEAAADB//7/AQAGAAEAAADA//7/AQAGAAEAAAC///7/AQAFAAEAAAC+//7/AQAFAAEAAAC9//7/AQAGAAEAAAC8//7/AQAGAAEAAAC7//7/AQAGAAEAAAC6//7/AQAGAAEAAAC5//7/AQAGAAEAAAC4//7/AQAGAAEAAAC3//7/AQAGAAEAAAC2//7/AQAFAAEAAAC1//7/AQAFAAEAAAC0//7/AQAFAAEAAAA=")
+tile_set = ExtResource("1_3n3y5")
+
 [node name="BackBufferCopy" type="BackBufferCopy" parent="."]
-z_index = 1
+z_index = 2
 position = Vector2(-1866, -85)
 copy_mode = 2
 
-[node name="Shading" type="TileMapLayer" parent="."]
+[node name="Building 1 Shading" type="TileMapLayer" parent="."]
 modulate = Color(0.45098, 0.0862745, 0.65098, 1)
+z_index = 2
 material = SubResource("ShaderMaterial_4xvrk")
 tile_map_data = PackedByteArray("AAAg/+7/AAACAAAAAAAf/+7/AAACAAAAAAAh/+7/AAACAAAAAAAi/+7/AAACAAAAAAAj/+7/AAACAAAAAAAk/+7/AAACAAAAAAAl/+7/AAACAAAAAAAm/+7/AAACAAAAAAAn/+7/AAACAAAAAAAo/+7/AAACAAAAAAAp/+7/AAACAAAAAAAq/+7/AAACAAAAAAAr/+7/AAACAAAAAAAs/+7/AAACAAAAAAAg//L/AAACAAAAAAAr//L/AAACAAAAAAAd/+7/AAACAAAAAAAc/+7/AAACAAAAAAAb/+7/AAACAAAAAAAa/+7/AAACAAAAAAAZ/+7/AAACAAAAAAAY/+7/AAACAAAAAAAX/+7/AAACAAAAAAAW/+7/AAACAAAAAAAV/+7/AAACAAAAAAAU/+7/AAACAAAAAAAT/+7/AAACAAAAAAAS/+7/AAACAAAAAAAR/+7/AAACAAAAAAAQ/+7/AAACAAAAAAAP/+7/AAACAAAAAAAO/+7/AAACAAAAAAAN/+7/AAACAAAAAAAM/+7/AAACAAAAAAAL/+7/AAACAAAAAAAK/+7/AAACAAAAAAAJ/+7/AAACAAAAAAAI/+7/AAACAAAAAAAH/+7/AAACAAAAAAAG/+7/AAACAAAAAAAF/+7/AAACAAAAAAAE/+7/AAACAAAAAAAD/+7/AAACAAAAAAAC/+7/AAACAAAAAAAB/+7/AAACAAAAAAAA/+7/AAACAAAAAAD//u7/AAACAAAAAAD+/u7/AAACAAAAAAD9/u7/AAACAAAAAAD6/u7/AAACAAAAAAD7/u7/AAACAAAAAAD8/u7/AAACAAAAAAD+/ur/AAACAAAAAAD//ur/AAACAAAAAAAA/+r/AAACAAAAAAAB/+r/AAACAAAAAAAK/+r/AAACAAAAAAAL/+r/AAACAAAAAAAM/+r/AAACAAAAAAAN/+r/AAACAAAAAAAW/+r/AAACAAAAAAAX/+r/AAACAAAAAAAY/+r/AAACAAAAAAAZ/+r/AAACAAAAAAAm/+j/AAACAAAAAAAn/+j/AAACAAAAAAAl/+j/AAACAAAAAAAk/+j/AAACAAAAAAAs/+r/AAACAAAAAAAs/+j/AAACAAAAAAAs/+b/AAACAAAAAAAs/+T/AAACAAAAAAAs/+L/AAACAAAAAAAr/+L/AAACAAAAAAAq/+L/AAACAAAAAAAp/+L/AAACAAAAAAAi/+L/AAACAAAAAAAh/+L/AAACAAAAAAAg/+L/AAACAAAAAAAf/+L/AAACAAAAAAAe/+L/AAACAAAAAAAd/+L/AAACAAAAAAAc/+L/AAACAAAAAAAb/+L/AAACAAAAAAAU/+L/AAACAAAAAAAT/+L/AAACAAAAAAAS/+L/AAACAAAAAAAR/+L/AAACAAAAAAAQ/+L/AAACAAAAAAAP/+L/AAACAAAAAAAI/+L/AAACAAAAAAAH/+L/AAACAAAAAAAG/+L/AAACAAAAAAAF/+L/AAACAAAAAAAE/+L/AAACAAAAAAAD/+L/AAACAAAAAAD8/uL/AAACAAAAAAD7/uL/AAACAAAAAAD6/uL/AAACAAAAAAAs/97/AAACAAAAAAAs/9z/AAACAAAAAAAs/9r/AAACAAAAAAAs/9j/AAACAAAAAAAs/9b/AAACAAAAAAAr/9b/AAACAAAAAAAq/9b/AAACAAAAAAAp/9b/AAACAAAAAAAi/9b/AAACAAAAAAAh/9b/AAACAAAAAAAg/9b/AAACAAAAAAAf/9b/AAACAAAAAAAe/9b/AAACAAAAAAAd/9b/AAACAAAAAAAc/9b/AAACAAAAAAAb/9b/AAACAAAAAAAU/9b/AAACAAAAAAAT/9b/AAACAAAAAAAS/9b/AAACAAAAAAAR/9b/AAACAAAAAAAQ/9b/AAACAAAAAAAP/9b/AAACAAAAAAAI/9b/AAACAAAAAAAH/9b/AAACAAAAAAAG/9b/AAACAAAAAAAF/9b/AAACAAAAAAAE/9b/AAACAAAAAAAD/9b/AAACAAAAAAD8/tb/AAACAAAAAAD7/tb/AAACAAAAAAD6/tb/AAACAAAAAAD+/t7/AAACAAAAAAD//t7/AAACAAAAAAAA/97/AAACAAAAAAAB/97/AAACAAAAAAAK/97/AAACAAAAAAAL/97/AAACAAAAAAAM/97/AAACAAAAAAAN/97/AAACAAAAAAAX/97/AAACAAAAAAAW/97/AAACAAAAAAAY/97/AAACAAAAAAAZ/97/AAACAAAAAAAk/9z/AAACAAAAAAAl/9z/AAACAAAAAAAm/9z/AAACAAAAAAAn/9z/AAACAAAAAAAW/+T/AAACAAAAAAAX/+T/AAACAAAAAAAY/+T/AAACAAAAAAAZ/+T/AAACAAAAAAAD//b/AAACAAAAAAAE//b/AAACAAAAAAAF//b/AAACAAAAAAAG//b/AAACAAAAAAAH//b/AAACAAAAAAAI//b/AAACAAAAAAAJ//b/AAACAAAAAAAT//b/AAACAAAAAAAU//b/AAACAAAAAAAV//b/AAACAAAAAAAW//b/AAACAAAAAAAX//b/AAACAAAAAAAY//b/AAACAAAAAAAZ//b/AAACAAAAAAAZ//L/AAACAAAAAAAY//L/AAACAAAAAAAX//L/AAACAAAAAAAW//L/AAACAAAAAAAV//L/AAACAAAAAAAU//L/AAACAAAAAAAT//L/AAACAAAAAAAS//L/AAACAAAAAAAR//L/AAACAAAAAAAQ//L/AAACAAAAAAAP//L/AAACAAAAAAAO//L/AAACAAAAAAAJ//L/AAACAAAAAAAI//L/AAACAAAAAAAH//L/AAACAAAAAAAG//L/AAACAAAAAAAF//L/AAACAAAAAAAE//L/AAACAAAAAAAD//L/AAACAAAAAAAC//L/AAACAAAAAAAB//L/AAACAAAAAAAA//L/AAACAAAAAAD//vL/AAACAAAAAAD+/vL/AAACAAAAAAAn/+T/AAACAAAAAAAm/+T/AAACAAAAAAAl/+T/AAACAAAAAAAk/+T/AAACAAAAAAAn/9j/AAACAAAAAAAm/9j/AAACAAAAAAAl/9j/AAACAAAAAAAk/9j/AAACAAAAAAAZ/9j/AAACAAAAAAAY/9j/AAACAAAAAAAX/9j/AAACAAAAAAAW/9j/AAACAAAAAAAM/9j/AAACAAAAAAAL/9j/AAACAAAAAAAK/9j/AAACAAAAAAAN/9j/AAACAAAAAAAN/+T/AAACAAAAAAAM/+T/AAACAAAAAAAL/+T/AAACAAAAAAAK/+T/AAACAAAAAAD+/tj/AAACAAAAAAD//tj/AAACAAAAAAAA/9j/AAACAAAAAAAB/9j/AAACAAAAAAAB/+T/AAACAAAAAAAA/+T/AAACAAAAAAD//uT/AAACAAAAAAD+/uT/AAACAAAAAAD+/vb/AAACAAAAAAD//vb/AAACAAAAAAAA//b/AAACAAAAAAAB//b/AAACAAAAAAAO//b/AAACAAAAAAAP//b/AAACAAAAAAAQ//b/AAACAAAAAAAR//b/AAACAAAAAAA=")
 tile_set = ExtResource("16_rsfcx")
 
-[node name="Sign 1" type="Sprite2D" parent="."]
-z_index = 1
+[node name="Building 1 Sign 1" type="Sprite2D" parent="."]
+z_index = 2
 position = Vector2(-1888, -120)
 texture = ExtResource("83_agxbn")
 
-[node name="Sign 2" type="Sprite2D" parent="."]
-z_index = 1
+[node name="Building 1 Sign 2" type="Sprite2D" parent="."]
+z_index = 2
 position = Vector2(-2016, -120)
 texture = ExtResource("84_desgp")
+
+[node name="Gas Station Shading" type="TileMapLayer" parent="."]
+modulate = Color(0.72549, 0.168627, 0.701961, 1)
+z_index = 2
+material = SubResource("ShaderMaterial_s0j0x")
+tile_map_data = PackedByteArray("AABo/+7/AAACAAAAAABp/+7/AAACAAAAAABq/+7/AAACAAAAAABr/+7/AAACAAAAAABs/+7/AAACAAAAAABt/+7/AAACAAAAAABu/+7/AAACAAAAAABv/+7/AAACAAAAAABw/+7/AAACAAAAAABx/+7/AAACAAAAAABy/+7/AAACAAAAAABz/+7/AAACAAAAAAB0/+7/AAACAAAAAAB1/+7/AAACAAAAAAB2/+7/AAACAAAAAAB3/+7/AAACAAAAAAB4/+7/AAACAAAAAAB5/+7/AAACAAAAAAB6/+7/AAACAAAAAAB7/+7/AAACAAAAAAB8/+7/AAACAAAAAAB9/+7/AAACAAAAAAB+/+7/AAACAAAAAAB//+7/AAACAAAAAACA/+7/AAACAAAAAACB/+7/AAACAAAAAACC/+7/AAACAAAAAACD/+7/AAACAAAAAACE/+7/AAACAAAAAACF/+7/AAACAAAAAACG/+7/AAACAAAAAACH/+7/AAACAAAAAACI/+7/AAACAAAAAACJ/+7/AAACAAAAAACK/+7/AAACAAAAAACL/+7/AAACAAAAAACM/+7/AAACAAAAAACN/+7/AAACAAAAAACO/+7/AAACAAAAAACP/+7/AAACAAAAAACQ/+7/AAACAAAAAACR/+7/AAACAAAAAACS/+7/AAACAAAAAACT/+7/AAACAAAAAACU/+7/AAACAAAAAACV/+7/AAACAAAAAACW/+7/AAACAAAAAACX/+7/AAACAAAAAACY/+7/AAACAAAAAACZ/+7/AAACAAAAAACa/+7/AAACAAAAAACb/+7/AAACAAAAAACc/+7/AAACAAAAAACd/+7/AAACAAAAAACe/+7/AAACAAAAAACf/+7/AAACAAAAAAA=")
+tile_set = ExtResource("16_rsfcx")
 
 [node name="Mobs" type="Node2D" parent="."]
 
 [connection signal="body_entered" from="BG Upper/Grass BG 1/BG Trees 13/Area2D" to="BG Upper/Grass BG 1/BG Trees 13" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="BG Upper/Grass BG 1/BG Trees 13/Area2D" to="BG Upper/Grass BG 1/BG Trees 13" method="_on_area_2d_body_exited"]
-[connection signal="body_entered" from="fg2/Revealer" to="fg2" method="_on_revealer_body_entered"]
-[connection signal="body_exited" from="fg2/Revealer" to="fg2" method="_on_revealer_body_exited"]
-[connection signal="body_entered" from="Gas Station Store Objects/Countertop/lottery tickets/Lottery Ticket Trigger" to="Gas Station Store Objects/Countertop/lottery tickets" method="_on_lottery_ticket_trigger_body_entered"]
+[connection signal="body_entered" from="Gas Station Store/Gas Station Store Objects/Countertop/lottery tickets/Lottery Ticket Trigger" to="Gas Station Store/Gas Station Store Objects/Countertop/lottery tickets" method="_on_lottery_ticket_trigger_body_entered"]
+[connection signal="body_entered" from="Gas Station Store/Gas Station Outside/Revealer" to="Gas Station Store/Gas Station Outside" method="_on_revealer_body_entered"]
+[connection signal="body_exited" from="Gas Station Store/Gas Station Outside/Revealer" to="Gas Station Store/Gas Station Outside" method="_on_revealer_body_exited"]

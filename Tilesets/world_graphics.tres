@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=38 format=3 uid="uid://bbcmc4vabwnbb"]
+[gd_resource type="TileSet" load_steps=36 format=3 uid="uid://bbcmc4vabwnbb"]
 
 [ext_resource type="Shader" path="res://Tilesets/bg blend.gdshader" id="1_yy7te"]
 [ext_resource type="Shader" uid="uid://dkopu1grc0cvh" path="res://Tilesets/dirt.tres" id="2_ir5ov"]
@@ -7,7 +7,6 @@
 [ext_resource type="Shader" uid="uid://dudn24b4mmhpj" path="res://Tilesets/brown dirt edge.tres" id="5_v5v7l"]
 [ext_resource type="Shader" uid="uid://ltbitrfll2bm" path="res://Tilesets/dirt edge.tres" id="6_5qjcs"]
 [ext_resource type="Shader" uid="uid://c7g1bgs8h57ja" path="res://Tilesets/sand.tres" id="7_jey6n"]
-[ext_resource type="Shader" uid="uid://ch6j13ghbsxxy" path="res://Tilesets/grass.tres" id="8_1hn1q"]
 [ext_resource type="Texture2D" uid="uid://d0jtcc2bjs8gm" path="res://Tilesets/underground.png" id="9_msk8v"]
 [ext_resource type="Texture2D" uid="uid://c2ki1knxeide4" path="res://Tilesets/Above Ground.png" id="10_rtur7"]
 [ext_resource type="Texture2D" uid="uid://b360d323f0uju" path="res://Tilesets/building.png" id="13_41f02"]
@@ -77,9 +76,6 @@ shader = ExtResource("6_5qjcs")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_v7oh5"]
 shader = ExtResource("7_jey6n")
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_dimg4"]
-shader = ExtResource("8_1hn1q")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3m074"]
 texture = ExtResource("9_msk8v")
@@ -531,54 +527,6 @@ texture = ExtResource("9_msk8v")
 1:6/12/modulate = Color(1, 0.541176, 0.176471, 1)
 1:6/12/material = SubResource("ShaderMaterial_677sq")
 1:6/12/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-4:1/next_alternative_id = 2
-4:1/0 = 0
-4:1/1 = 1
-4:1/1/material = SubResource("ShaderMaterial_dimg4")
-5:1/next_alternative_id = 2
-5:1/0 = 0
-5:1/1 = 1
-5:1/1/material = SubResource("ShaderMaterial_dimg4")
-4:2/next_alternative_id = 2
-4:2/0 = 0
-4:2/1 = 1
-4:2/1/material = SubResource("ShaderMaterial_dimg4")
-5:2/next_alternative_id = 2
-5:2/0 = 0
-5:2/1 = 1
-5:2/1/material = SubResource("ShaderMaterial_dimg4")
-6:1/next_alternative_id = 2
-6:1/0 = 0
-6:1/1 = 1
-6:1/1/material = SubResource("ShaderMaterial_dimg4")
-7:1/next_alternative_id = 2
-7:1/0 = 0
-7:1/1 = 1
-7:1/1/material = SubResource("ShaderMaterial_dimg4")
-6:2/next_alternative_id = 2
-6:2/0 = 0
-6:2/1 = 1
-6:2/1/material = SubResource("ShaderMaterial_dimg4")
-7:2/next_alternative_id = 2
-7:2/0 = 0
-7:2/1 = 1
-7:2/1/material = SubResource("ShaderMaterial_dimg4")
-7:3/next_alternative_id = 2
-7:3/0 = 0
-7:3/1 = 1
-7:3/1/material = SubResource("ShaderMaterial_dimg4")
-6:3/next_alternative_id = 2
-6:3/0 = 0
-6:3/1 = 1
-6:3/1/material = SubResource("ShaderMaterial_dimg4")
-6:4/next_alternative_id = 2
-6:4/0 = 0
-6:4/1 = 1
-6:4/1/material = SubResource("ShaderMaterial_dimg4")
-7:4/next_alternative_id = 2
-7:4/0 = 0
-7:4/1 = 1
-7:4/1/material = SubResource("ShaderMaterial_dimg4")
 6:5/next_alternative_id = 3
 6:5/0 = 0
 6:5/1 = 1
@@ -715,35 +663,6 @@ texture = ExtResource("9_msk8v")
 7:7/2/flip_h = true
 7:7/2/material = SubResource("ShaderMaterial_v7oh5")
 7:7/2/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 8, -8, -8, 8, -8, 8, 8)
-0:8/next_alternative_id = 5
-0:8/0 = 0
-0:8/1 = 1
-0:8/1/material = SubResource("ShaderMaterial_dimg4")
-0:8/2 = 2
-0:8/2/flip_h = true
-0:8/2/material = SubResource("ShaderMaterial_dimg4")
-0:8/3 = 3
-0:8/3/flip_v = true
-0:8/3/material = SubResource("ShaderMaterial_dimg4")
-0:8/4 = 4
-0:8/4/flip_h = true
-0:8/4/flip_v = true
-0:8/4/material = SubResource("ShaderMaterial_dimg4")
-1:8/next_alternative_id = 5
-1:8/0 = 0
-1:8/1 = 1
-1:8/1/material = SubResource("ShaderMaterial_dimg4")
-1:8/2 = 2
-1:8/2/flip_h = true
-1:8/2/material = SubResource("ShaderMaterial_dimg4")
-1:8/3 = 3
-1:8/3/flip_v = true
-1:8/3/material = SubResource("ShaderMaterial_dimg4")
-1:8/4 = 4
-1:8/4/flip_h = true
-1:8/4/flip_v = true
-1:8/4/material = SubResource("ShaderMaterial_dimg4")
-2:8/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3b4qp"]
 texture = ExtResource("10_rtur7")
@@ -764,7 +683,9 @@ texture = ExtResource("10_rtur7")
 4:1/0 = 0
 5:1/0 = 0
 6:1/0 = 0
+5:0/next_alternative_id = 2
 5:0/0 = 0
+6:0/next_alternative_id = 2
 6:0/0 = 0
 7:1/0 = 0
 7:2/0 = 0
@@ -816,7 +737,7 @@ texture = ExtResource("10_rtur7")
 2:7/0 = 0
 1:7/0 = 0
 0:7/0 = 0
-7:0/next_alternative_id = 2
+7:0/next_alternative_id = 3
 7:0/0 = 0
 7:0/1 = 1
 7:0/1/modulate = Color(0.137255, 0.321569, 0.529412, 1)
