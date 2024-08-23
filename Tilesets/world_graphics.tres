@@ -1,6 +1,5 @@
-[gd_resource type="TileSet" load_steps=36 format=3 uid="uid://bbcmc4vabwnbb"]
+[gd_resource type="TileSet" load_steps=34 format=3 uid="uid://bbcmc4vabwnbb"]
 
-[ext_resource type="Shader" path="res://Tilesets/bg blend.gdshader" id="1_yy7te"]
 [ext_resource type="Shader" uid="uid://dkopu1grc0cvh" path="res://Tilesets/dirt.tres" id="2_ir5ov"]
 [ext_resource type="Shader" uid="uid://bii7mhhl3rcah" path="res://Tilesets/dirt solid.tres" id="3_41wff"]
 [ext_resource type="Shader" uid="uid://bdccqj6syxpgy" path="res://Tilesets/brown dirt.tres" id="4_b0j31"]
@@ -56,9 +55,6 @@ tile_data = PackedInt32Array(0, 458752, 131077, 1, 393216, 131077)
 [sub_resource type="TileMapPattern" id="TileMapPattern_juina"]
 tile_data = PackedInt32Array(0, 262144, 65542, 65536, 262144, 65543)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_bufin"]
-shader = ExtResource("1_yy7te")
-
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_hggpi"]
 shader = ExtResource("2_ir5ov")
 
@@ -85,63 +81,36 @@ texture = ExtResource("9_msk8v")
 0:1/1 = 1
 0:1/1/modulate = Color(0.501961, 0.180392, 0.113725, 1)
 0:1/1/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-0:1/2 = 2
-0:1/2/modulate = Color(0.113725, 0.0627451, 0.027451, 1)
-0:1/2/material = SubResource("ShaderMaterial_bufin")
 0:2/next_alternative_id = 3
 0:2/0 = 0
 0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 0:2/1 = 1
 0:2/1/modulate = Color(0.501961, 0.180392, 0.113725, 1)
 0:2/1/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-0:2/2 = 2
-0:2/2/modulate = Color(0.113725, 0.0627451, 0.027451, 1)
-0:2/2/material = SubResource("ShaderMaterial_bufin")
 0:3/next_alternative_id = 3
 0:3/0 = 0
 0:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-0:3/1 = 1
-0:3/1/modulate = Color(0.501961, 0.180392, 0.113725, 1)
-0:3/1/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-0:3/2 = 2
-0:3/2/modulate = Color(0.113725, 0.0627451, 0.027451, 1)
-0:3/2/material = SubResource("ShaderMaterial_bufin")
 1:3/next_alternative_id = 4
 1:3/0 = 0
 1:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-1:3/1 = 1
-1:3/1/modulate = Color(0.501961, 0.180392, 0.113725, 1)
-1:3/1/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-1:3/2 = 2
-1:3/2/modulate = Color(0.113725, 0.0627451, 0.027451, 1)
-1:3/2/material = SubResource("ShaderMaterial_bufin")
 1:2/next_alternative_id = 3
 1:2/0 = 0
 1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:2/1 = 1
 1:2/1/modulate = Color(0.501961, 0.180392, 0.113725, 1)
 1:2/1/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-1:2/2 = 2
-1:2/2/modulate = Color(0.113725, 0.0627451, 0.027451, 1)
-1:2/2/material = SubResource("ShaderMaterial_bufin")
 1:1/next_alternative_id = 3
 1:1/0 = 0
 1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:1/1 = 1
 1:1/1/modulate = Color(0.501961, 0.180392, 0.113725, 1)
 1:1/1/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-1:1/2 = 2
-1:1/2/modulate = Color(0.113725, 0.0627451, 0.027451, 1)
-1:1/2/material = SubResource("ShaderMaterial_bufin")
 1:0/next_alternative_id = 3
 1:0/0 = 0
 1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:0/1 = 1
 1:0/1/modulate = Color(0.501961, 0.180392, 0.113725, 1)
 1:0/1/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-1:0/2 = 2
-1:0/2/modulate = Color(0.113725, 0.0627451, 0.027451, 1)
-1:0/2/material = SubResource("ShaderMaterial_bufin")
 2:0/0 = 0
 2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, 8, -8, 8, 8, 0)
 3:0/0 = 0
@@ -214,45 +183,24 @@ texture = ExtResource("9_msk8v")
 2:5/1 = 1
 2:5/1/modulate = Color(0.501961, 0.180392, 0.113725, 1)
 2:5/1/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-2:5/2 = 2
-2:5/2/modulate = Color(0.113725, 0.0627451, 0.027451, 1)
-2:5/2/material = SubResource("ShaderMaterial_bufin")
 3:5/next_alternative_id = 3
 3:5/0 = 0
 3:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 3:5/1 = 1
 3:5/1/modulate = Color(0.501961, 0.180392, 0.113725, 1)
 3:5/1/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-3:5/2 = 2
-3:5/2/modulate = Color(0.113725, 0.0627451, 0.027451, 1)
-3:5/2/material = SubResource("ShaderMaterial_bufin")
 4:5/next_alternative_id = 3
 4:5/0 = 0
 4:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-4:5/1 = 1
-4:5/1/modulate = Color(0.501961, 0.180392, 0.113725, 1)
-4:5/1/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-4:5/2 = 2
-4:5/2/modulate = Color(0.113725, 0.0627451, 0.027451, 1)
-4:5/2/material = SubResource("ShaderMaterial_bufin")
 5:5/next_alternative_id = 3
 5:5/0 = 0
 5:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-5:5/1 = 1
-5:5/1/modulate = Color(0.501961, 0.180392, 0.113725, 1)
-5:5/1/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-5:5/2 = 2
-5:5/2/modulate = Color(0.113725, 0.0627451, 0.027451, 1)
-5:5/2/material = SubResource("ShaderMaterial_bufin")
 0:0/next_alternative_id = 3
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 0:0/1 = 1
 0:0/1/modulate = Color(0.501961, 0.180392, 0.113725, 1)
 0:0/1/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-0:0/2 = 2
-0:0/2/modulate = Color(0.113725, 0.0627451, 0.027451, 1)
-0:0/2/material = SubResource("ShaderMaterial_bufin")
 0:4/next_alternative_id = 5
 0:4/0 = 0
 0:4/1 = 1

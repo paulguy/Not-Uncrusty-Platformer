@@ -144,6 +144,11 @@ texture = ExtResource("2_exloc")
 3:0/4 = 4
 3:0/4/transpose = true
 3:0/4/material = SubResource("ShaderMaterial_wipco")
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+7:1/0 = 0
+6:1/0 = 0
 
 [resource]
 sources/0 = SubResource("TileSetAtlasSource_mx5to")
