@@ -1,8 +1,6 @@
-[gd_resource type="TileSet" load_steps=34 format=3 uid="uid://bbcmc4vabwnbb"]
+[gd_resource type="TileSet" load_steps=30 format=3 uid="uid://bbcmc4vabwnbb"]
 
-[ext_resource type="Shader" uid="uid://dkopu1grc0cvh" path="res://Tilesets/dirt.tres" id="2_ir5ov"]
 [ext_resource type="Shader" uid="uid://bii7mhhl3rcah" path="res://Tilesets/dirt solid.tres" id="3_41wff"]
-[ext_resource type="Shader" uid="uid://bdccqj6syxpgy" path="res://Tilesets/brown dirt.tres" id="4_b0j31"]
 [ext_resource type="Shader" uid="uid://dudn24b4mmhpj" path="res://Tilesets/brown dirt edge.tres" id="5_v5v7l"]
 [ext_resource type="Shader" uid="uid://ltbitrfll2bm" path="res://Tilesets/dirt edge.tres" id="6_5qjcs"]
 [ext_resource type="Shader" uid="uid://c7g1bgs8h57ja" path="res://Tilesets/sand.tres" id="7_jey6n"]
@@ -55,14 +53,8 @@ tile_data = PackedInt32Array(0, 458752, 131077, 1, 393216, 131077)
 [sub_resource type="TileMapPattern" id="TileMapPattern_juina"]
 tile_data = PackedInt32Array(0, 262144, 65542, 65536, 262144, 65543)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_hggpi"]
-shader = ExtResource("2_ir5ov")
-
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_jioqg"]
 shader = ExtResource("3_41wff")
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_yqfat"]
-shader = ExtResource("4_b0j31")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_677sq"]
 shader = ExtResource("5_v5v7l")
@@ -203,16 +195,10 @@ texture = ExtResource("9_msk8v")
 0:0/1/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 0:4/next_alternative_id = 5
 0:4/0 = 0
-0:4/1 = 1
-0:4/1/modulate = Color(1, 0, 0.478431, 1)
-0:4/1/material = SubResource("ShaderMaterial_hggpi")
 0:4/2 = 2
 0:4/2/modulate = Color(1, 0, 0.745098, 1)
 0:4/2/material = SubResource("ShaderMaterial_jioqg")
 0:4/2/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-0:4/3 = 3
-0:4/3/modulate = Color(1, 0.192157, 0.0235294, 1)
-0:4/3/material = SubResource("ShaderMaterial_yqfat")
 0:4/4 = 4
 0:4/4/modulate = Color(1, 0.541176, 0.176471, 1)
 0:4/4/material = SubResource("ShaderMaterial_677sq")
@@ -685,10 +671,12 @@ texture = ExtResource("10_rtur7")
 2:7/0 = 0
 1:7/0 = 0
 0:7/0 = 0
-7:0/next_alternative_id = 3
+7:0/next_alternative_id = 4
 7:0/0 = 0
 7:0/1 = 1
 7:0/1/modulate = Color(0.137255, 0.321569, 0.529412, 1)
+7:0/3 = 3
+7:0/3/modulate = Color(0, 0, 0, 1)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rkwx5"]
 texture = ExtResource("13_41f02")

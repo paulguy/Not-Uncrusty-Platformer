@@ -82,6 +82,8 @@ func _process(_delta):
 		sprite.texture.region.position.y = sprite.texture.region.size.y
 
 func _physics_process(delta):
+	var thrust_power : float = 0.0
+	var thrust_angle : float = 0.0
 	var deceleration : Vector2 = AIR_DECELERATION
 	var diff : Vector2 = Vector2.ZERO
 	var thrust : Vector2 = Vector2.ZERO
@@ -94,14 +96,15 @@ func _physics_process(delta):
 
 	# read thrust input (not yet normalized)
 	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
-		diff = mousepos - (get_viewport_rect().size / 2.0)
+		diff = (mousepos - (get_viewport_rect().size / 2.0)) / THRUST_MAX_DISTANCE
+		thrust_power = clamp(diff.length(), -1.0, 1.0)
+		thrust_angle = diff.angle()
 	else:
 		diff = Vector2(Input.get_axis("right_analog_left", "right_analog_right"),
-					   Input.get_axis("right_analog_up", "right_analog_down")) * THRUST_MAX_DISTANCE
-
-	# convert thrust to vector to angle and intended power
-	var thrust_angle = diff.angle()
-	var thrust_power = clamp(diff.length() / THRUST_MAX_DISTANCE, -1.0, 1.0)
+					   Input.get_axis("right_analog_up", "right_analog_down"))
+		if diff.length() > 0:
+			thrust_power = 1.0
+			thrust_angle = diff.angle()
 
 	# if thrusting, check if there's thrust remaining and apply intended thrust
 	# if there's inadequate thrust, apply thrust proportionate to what's remaining
@@ -115,14 +118,13 @@ func _physics_process(delta):
 				thrust_dec = thrust_power * THRUST_PER_SECOND * delta
 				thrust_remaining -= thrust_dec
 				if thrust_remaining < 0.0:
-					thrust_dec = -thrust_remaining
+					# if thrust ran out, enter depleted mode
+					# decrease thrust by ratio of thrust by remaining thrust
+					thrust_power *= (thrust_dec + thrust_remaining) / thrust_dec
 					thrust_remaining = 0.0
 					thrust_depleted = true
-				# get it in terms of a ratio of how much thrust could be available
-				thrust_dec /= thrust_power * THRUST_PER_SECOND * delta
 
-				thrust = Vector2.RIGHT.rotated(thrust_angle) * (THRUST * thrust_dec)
-
+				thrust = Vector2.RIGHT.rotated(thrust_angle) * thrust_power
 				thrusting = true
 		else:
 			thrust_remaining += THRUST_DEPLETED_RECHARGE_FACTOR * delta
@@ -147,7 +149,7 @@ func _physics_process(delta):
 	meter.set_thrust(thrust_remaining)
 	# update thrust visualization sprite
 	if thrust_dec > 0.0:
-		thrust_sprite.set_thrust(thrust_angle, thrust_dec / (THRUST_PER_SECOND * delta), THRUST_MAX_DISTANCE)
+		thrust_sprite.set_thrust(thrust_angle, thrust_power, THRUST_MAX_DISTANCE)
 	# if cheating, set thrust to full right away
 	if thrust_cheat:
 		thrust_remaining = 1.0
@@ -185,7 +187,7 @@ func _physics_process(delta):
 
 	# get gravity, thrust and movement acceleration together in to a final velocity
 	# also apply damping
-	acceleration = (gravity + thrust + movement)
+	acceleration = (gravity + (thrust * THRUST) + movement)
 
 	# apply deceleration, friction and acceleration factors
 	velocity += acceleration * delta
