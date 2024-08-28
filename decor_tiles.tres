@@ -1,7 +1,8 @@
-[gd_resource type="TileSet" load_steps=24 format=3 uid="uid://conevl8ogxlgu"]
+[gd_resource type="TileSet" load_steps=27 format=3 uid="uid://conevl8ogxlgu"]
 
 [ext_resource type="Shader" uid="uid://ch6j13ghbsxxy" path="res://Tilesets/grass.tres" id="1_mp3ec"]
 [ext_resource type="Texture2D" uid="uid://brwt0s4tpxund" path="res://Tilesets/decor.png" id="2_exloc"]
+[ext_resource type="Shader" uid="uid://dj3fy330okrdu" path="res://glow.tres" id="2_i3wtv"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_0e8ua"]
 shader = ExtResource("1_mp3ec")
@@ -62,6 +63,12 @@ shader = ExtResource("1_mp3ec")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_do3lq"]
 shader = ExtResource("1_mp3ec")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_oht5y"]
+shader = ExtResource("2_i3wtv")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_jvnxu"]
+shader = ExtResource("2_i3wtv")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mx5to"]
 texture = ExtResource("2_exloc")
@@ -149,6 +156,16 @@ texture = ExtResource("2_exloc")
 7:0/0 = 0
 7:1/0 = 0
 6:1/0 = 0
+6:2/next_alternative_id = 2
+6:2/0 = 0
+6:2/1 = 1
+6:2/1/modulate = Color(0.298039, 0.0392157, 0.0235294, 1)
+6:2/1/material = SubResource("ShaderMaterial_oht5y")
+7:2/next_alternative_id = 2
+7:2/0 = 0
+7:2/1 = 1
+7:2/1/modulate = Color(0.298039, 0.0392157, 0.0235294, 1)
+7:2/1/material = SubResource("ShaderMaterial_jvnxu")
 
 [resource]
 sources/0 = SubResource("TileSetAtlasSource_mx5to")
