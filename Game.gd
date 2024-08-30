@@ -193,9 +193,3 @@ func _ready():
 func _process(_delta : float):
 	update_active_maps()
 	screen.position = player.position
-
-func pause(paused : bool):
-	if paused:
-		player.process_mode = PROCESS_MODE_DISABLED
-	else:
-		player.process_mode = PROCESS_MODE_INHERIT
