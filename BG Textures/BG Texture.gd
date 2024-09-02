@@ -125,7 +125,7 @@ func _ready():
 					child_y_position[i][j] = pc_y_pos
 					pc.position.x = parent_pos.x + pc_bottom_center.x
 					pc.y_sort_enabled = true
-				j += 1
+					j += 1
 		i += 1
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -153,10 +153,11 @@ func _process(_delta):
 		p.polygon[1].y = p.polygon[2].y + center_dist_right * right_size[i]
 		var j = 0
 		for pc in p.get_children():
-			var y_offset = center_dist_left_pc + ((center_dist_right_pc-center_dist_left_pc) * child_offset[i][j].x)
-			pc.position.y = child_y_position[i][j] + (child_offset[i][j].y * y_offset)
-			# this stopped working with the dynamic scene loading so just disable it, it's unnecessary
-			#if pc.position.y + y_edge_overlap > child_y_position[i][j]:
-			#	pc.region_rect.size.y = max((child_y_size[i][j] * pc.scale.y) - (pc.position.y + y_edge_overlap - child_y_position[i][j]), 0.0)
-			j += 1
+			if pc is Sprite2D:
+				var y_offset = center_dist_left_pc + ((center_dist_right_pc-center_dist_left_pc) * child_offset[i][j].x)
+				pc.position.y = child_y_position[i][j] + (child_offset[i][j].y * y_offset)
+				# this stopped working with the dynamic scene loading so just disable it, it's unnecessary
+				#if pc.position.y + y_edge_overlap > child_y_position[i][j]:
+				#	pc.region_rect.size.y = max((child_y_size[i][j] * pc.scale.y) - (pc.position.y + y_edge_overlap - child_y_position[i][j]), 0.0)
+				j += 1
 		i += 1
