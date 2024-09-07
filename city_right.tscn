@@ -1,4 +1,4 @@
-[gd_scene load_steps=135 format=4 uid="uid://dq083vadn4wg6"]
+[gd_scene load_steps=144 format=4 uid="uid://dq083vadn4wg6"]
 
 [ext_resource type="TileSet" uid="uid://bbcmc4vabwnbb" path="res://Tilesets/world_graphics.tres" id="1_3n3y5"]
 [ext_resource type="Script" path="res://BG Textures/BG Texture.gd" id="3_5q7w5"]
@@ -119,6 +119,9 @@
 [ext_resource type="TileSet" uid="uid://conevl8ogxlgu" path="res://decor_tiles.tres" id="108_enwhh"]
 [ext_resource type="Texture2D" uid="uid://catcxfvg2cueq" path="res://Sprites/grocery-store-sign.png" id="110_oe6ra"]
 [ext_resource type="Texture2D" uid="uid://bhmu27p3oqqds" path="res://Sprites/hair-salon-sign.png" id="111_ym3fv"]
+[ext_resource type="Texture2D" uid="uid://bcwv5785u615" path="res://bg window.png" id="113_j6ynb"]
+[ext_resource type="Texture2D" uid="uid://ds3kkm040r316" path="res://Sprites/potted-sunflower.png" id="119_yrr4u"]
+[ext_resource type="Texture2D" uid="uid://ckis2au8jrhl4" path="res://cat-loaf-hanging-tail.png" id="120_nsksy"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_c08gj"]
 shader = ExtResource("3_rsdee")
@@ -142,6 +145,123 @@ b = Vector2(81, 0)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_kq2c5"]
 shader = ExtResource("85_r7hss")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lh5sk"]
+atlas = ExtResource("120_nsksy")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2nfuy"]
+atlas = ExtResource("120_nsksy")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d2hus"]
+atlas = ExtResource("120_nsksy")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dyi1g"]
+atlas = ExtResource("120_nsksy")
+region = Rect2(0, 96, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ihp5a"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lh5sk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2nfuy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d2hus")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2nfuy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lh5sk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2nfuy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d2hus")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2nfuy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lh5sk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2nfuy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d2hus")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2nfuy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lh5sk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2nfuy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d2hus")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2nfuy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lh5sk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2nfuy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d2hus")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2nfuy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lh5sk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2nfuy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d2hus")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2nfuy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lh5sk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2nfuy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d2hus")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2nfuy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lh5sk")
+}, {
+"duration": 6.0,
+"texture": SubResource("AtlasTexture_dyi1g")
+}],
+"loop": true,
+"name": &"cat",
+"speed": 3.0
+}]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_deaq8"]
+b = Vector2(704, 0)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_a80f3"]
 shader = ExtResource("85_r7hss")
@@ -1273,9 +1393,11 @@ position = Vector2(383, 36)
 texture = ExtResource("98_d8b4j")
 
 [node name="Building 1" type="Polygon2D" parent="City Right 1"]
+texture_repeat = 2
 position = Vector2(-1680, -32)
-color = Color(0.137255, 0.321569, 0.529412, 1)
+texture = ExtResource("113_j6ynb")
 polygon = PackedVector2Array(0, 0, -704, 0, -704, -368, 0, -368)
+uv = PackedVector2Array(0, 0, 704, 0, 704, 368, 0, 368)
 
 [node name="Backing" type="TileMapLayer" parent="City Right 1/Building 1"]
 tile_map_data = PackedByteArray("AADU/+v/AQAHAAEAAADU/+z/AQAHAAEAAADU/+3/AQAHAAEAAADU/+7/AQAHAAEAAADU/+//AQAHAAEAAADU//D/AQAHAAEAAADU//L/AQAHAAEAAADU//P/AQAHAAEAAADU//T/AQAHAAEAAADU//X/AQAHAAEAAADU//b/AQAHAAEAAADU//f/AQAHAAEAAADU//n/AQAHAAEAAADV//D/AQAHAAEAAADV//f/AQAHAAEAAADV//n/AQAHAAEAAADW//D/AQAHAAEAAADW//f/AQAHAAEAAADW//n/AQAHAAEAAADX//D/AQAHAAEAAADX//f/AQAHAAEAAADX//n/AQAHAAEAAADY//D/AQAHAAEAAADY//f/AQAHAAEAAADY//n/AQAHAAEAAADZ/+v/AQAHAAEAAADZ/+z/AQAHAAEAAADZ/+3/AQAHAAEAAADZ/+7/AQAHAAEAAADZ/+//AQAHAAEAAADZ//D/AQAHAAEAAADZ//L/AQAHAAEAAADZ//P/AQAHAAEAAADZ//T/AQAHAAEAAADZ//X/AQAHAAEAAADZ//b/AQAHAAEAAADZ//f/AQAHAAEAAADZ//n/AQAHAAEAAADa/+v/AQAHAAEAAADa/+z/AQAHAAEAAADa/+3/AQAHAAEAAADa/+7/AQAHAAEAAADa/+//AQAHAAEAAADa//D/AQAHAAEAAADa//L/AQAHAAEAAADa//P/AQAHAAEAAADa//T/AQAHAAEAAADa//X/AQAHAAEAAADa//b/AQAHAAEAAADa//f/AQAHAAEAAADa//n/AQAHAAEAAADb//D/AQAHAAEAAADb//f/AQAHAAEAAADb//n/AQAHAAEAAADc//D/AQAHAAEAAADc//f/AQAHAAEAAADc//n/AQAHAAEAAADd//D/AQAHAAEAAADd//f/AQAHAAEAAADd//n/AQAHAAEAAADe//D/AQAHAAEAAADe//f/AQAHAAEAAADe//n/AQAHAAEAAADf/+v/AQAHAAEAAADf/+z/AQAHAAEAAADf/+3/AQAHAAEAAADf/+7/AQAHAAEAAADf/+//AQAHAAEAAADf//D/AQAHAAEAAADf//L/AQAHAAEAAADf//P/AQAHAAEAAADf//T/AQAHAAEAAADf//X/AQAHAAEAAADf//b/AQAHAAEAAADf//f/AQAHAAEAAADf//n/AQAHAAEAAADg/+v/AQAHAAEAAADg/+z/AQAHAAEAAADg/+3/AQAHAAEAAADg/+7/AQAHAAEAAADg/+//AQAHAAEAAADg//D/AQAHAAEAAADg//L/AQAHAAEAAADg//P/AQAHAAEAAADg//T/AQAHAAEAAADg//X/AQAHAAEAAADg//b/AQAHAAEAAADg//f/AQAHAAEAAADg//n/AQAHAAEAAADh//D/AQAHAAEAAADh//f/AQAHAAEAAADh//n/AQAHAAEAAADi//D/AQAHAAEAAADi//f/AQAHAAEAAADi//n/AQAHAAEAAADj//D/AQAHAAEAAADj//f/AQAHAAEAAADj//n/AQAHAAEAAADk//D/AQAHAAEAAADk//f/AQAHAAEAAADk//n/AQAHAAEAAADl/+v/AQAHAAEAAADl/+z/AQAHAAEAAADl/+3/AQAHAAEAAADl/+7/AQAHAAEAAADl/+//AQAHAAEAAADl//D/AQAHAAEAAADl//L/AQAHAAEAAADl//P/AQAHAAEAAADl//T/AQAHAAEAAADl//X/AQAHAAEAAADl//b/AQAHAAEAAADl//f/AQAHAAEAAADl//n/AQAHAAEAAADm/+v/AQAHAAEAAADm/+z/AQAHAAEAAADm/+3/AQAHAAEAAADm/+7/AQAHAAEAAADm/+//AQAHAAEAAADm//D/AQAHAAEAAADm//L/AQAHAAEAAADm//P/AQAHAAEAAADm//T/AQAHAAEAAADm//X/AQAHAAEAAADm//b/AQAHAAEAAADm//f/AQAHAAEAAADm//n/AQAHAAEAAADn//D/AQAHAAEAAADn//f/AQAHAAEAAADn//n/AQAHAAEAAADo//D/AQAHAAEAAADo//f/AQAHAAEAAADo//n/AQAHAAEAAADp//D/AQAHAAEAAADp//f/AQAHAAEAAADp//n/AQAHAAEAAADq//D/AQAHAAEAAADq//f/AQAHAAEAAADq//n/AQAHAAEAAADr/+v/AQAHAAEAAADr/+z/AQAHAAEAAADr/+3/AQAHAAEAAADr/+7/AQAHAAEAAADr/+//AQAHAAEAAADr//D/AQAHAAEAAADr//L/AQAHAAEAAADr//P/AQAHAAEAAADr//T/AQAHAAEAAADr//X/AQAHAAEAAADr//b/AQAHAAEAAADr//f/AQAHAAEAAADr//n/AQAHAAEAAADs/+v/AQAHAAEAAADs/+z/AQAHAAEAAADs/+3/AQAHAAEAAADs/+7/AQAHAAEAAADs/+//AQAHAAEAAADs//D/AQAHAAEAAADs//L/AQAHAAEAAADs//P/AQAHAAEAAADs//T/AQAHAAEAAADs//X/AQAHAAEAAADs//b/AQAHAAEAAADs//f/AQAHAAEAAADs//n/AQAHAAEAAADt//D/AQAHAAEAAADt//f/AQAHAAEAAADt//n/AQAHAAEAAADu//D/AQAHAAEAAADu//f/AQAHAAEAAADu//n/AQAHAAEAAADv//D/AQAHAAEAAADv//f/AQAHAAEAAADv//n/AQAHAAEAAADw//D/AQAHAAEAAADw//f/AQAHAAEAAADw//n/AQAHAAEAAADx/+v/AQAHAAEAAADx/+z/AQAHAAEAAADx/+3/AQAHAAEAAADx/+7/AQAHAAEAAADx/+//AQAHAAEAAADx//D/AQAHAAEAAADx//L/AQAHAAEAAADx//P/AQAHAAEAAADx//T/AQAHAAEAAADx//X/AQAHAAEAAADx//b/AQAHAAEAAADx//f/AQAHAAEAAADx//n/AQAHAAEAAADy/+v/AQAHAAEAAADy/+z/AQAHAAEAAADy/+3/AQAHAAEAAADy/+7/AQAHAAEAAADy/+//AQAHAAEAAADy//D/AQAHAAEAAADy//L/AQAHAAEAAADy//P/AQAHAAEAAADy//T/AQAHAAEAAADy//X/AQAHAAEAAADy//b/AQAHAAEAAADy//f/AQAHAAEAAADy//n/AQAHAAEAAADz//D/AQAHAAEAAADz//f/AQAHAAEAAADz//n/AQAHAAEAAAD0//D/AQAHAAEAAAD0//f/AQAHAAEAAAD0//n/AQAHAAEAAAD1//D/AQAHAAEAAAD1//f/AQAHAAEAAAD1//n/AQAHAAEAAAD2//D/AQAHAAEAAAD2//f/AQAHAAEAAAD2//n/AQAHAAEAAAD3/+v/AQAHAAEAAAD3/+z/AQAHAAEAAAD3/+3/AQAHAAEAAAD3/+7/AQAHAAEAAAD3/+//AQAHAAEAAAD3//D/AQAHAAEAAAD3//L/AQAHAAEAAAD3//P/AQAHAAEAAAD3//T/AQAHAAEAAAD3//X/AQAHAAEAAAD3//b/AQAHAAEAAAD3//f/AQAHAAEAAAD3//n/AQAHAAEAAAD4/+v/AQAHAAEAAAD4/+z/AQAHAAEAAAD4/+3/AQAHAAEAAAD4/+7/AQAHAAEAAAD4/+//AQAHAAEAAAD4//D/AQAHAAEAAAD4//L/AQAHAAEAAAD4//P/AQAHAAEAAAD4//T/AQAHAAEAAAD4//X/AQAHAAEAAAD4//b/AQAHAAEAAAD4//f/AQAHAAEAAAD4//n/AQAHAAEAAAD4//r/AQAHAAEAAAD4//v/AQAHAAEAAAD4//z/AQAHAAEAAAD4//3/AQAHAAEAAAD4//7/AQAHAAEAAAD5/+v/AQAHAAEAAAD5/+z/AQAHAAEAAAD5/+3/AQAHAAEAAAD5/+7/AQAHAAEAAAD5/+//AQAHAAEAAAD5//D/AQAHAAEAAAD5//L/AQAHAAEAAAD5//P/AQAHAAEAAAD5//T/AQAHAAEAAAD5//X/AQAHAAEAAAD5//b/AQAHAAEAAAD5//f/AQAHAAEAAAD5//n/AQAHAAEAAAD5//r/AQAHAAEAAAD5//v/AQAHAAEAAAD5//z/AQAHAAEAAAD5//3/AQAHAAEAAAD5//7/AQAHAAEAAAD6/+v/AQAHAAEAAAD6/+z/AQAHAAEAAAD6/+3/AQAHAAEAAAD6/+7/AQAHAAEAAAD6/+//AQAHAAEAAAD6//D/AQAHAAEAAAD6//L/AQAHAAEAAAD6//P/AQAHAAEAAAD6//T/AQAHAAEAAAD6//X/AQAHAAEAAAD6//b/AQAHAAEAAAD6//f/AQAHAAEAAAD6//n/AQAHAAEAAAD6//r/AQAHAAEAAAD6//v/AQAHAAEAAAD6//z/AQAHAAEAAAD6//3/AQAHAAEAAAD6//7/AQAHAAEAAAD7/+7/AQAHAAEAAAD7/+//AQAHAAEAAAD7//D/AQAHAAEAAAD7//X/AQAHAAEAAAD7//b/AQAHAAEAAAD7//f/AQAHAAEAAAD7//n/AQAHAAEAAAD7//r/AQAHAAEAAAD8/+7/AQAHAAEAAAD8/+//AQAHAAEAAAD8//D/AQAHAAEAAAD8//X/AQAHAAEAAAD8//b/AQAHAAEAAAD8//f/AQAHAAEAAAD8//n/AQAHAAEAAAD8//r/AQAHAAEAAAD9/+v/AQAHAAEAAAD9/+z/AQAHAAEAAAD9/+3/AQAHAAEAAAD9/+7/AQAHAAEAAAD9/+//AQAHAAEAAAD9//D/AQAHAAEAAAD9//L/AQAHAAEAAAD9//P/AQAHAAEAAAD9//T/AQAHAAEAAAD9//X/AQAHAAEAAAD9//b/AQAHAAEAAAD9//f/AQAHAAEAAAD9//n/AQAHAAEAAAD9//r/AQAHAAEAAAD9//v/AQAHAAEAAAD9//z/AQAHAAEAAAD9//3/AQAHAAEAAAD9//7/AQAHAAEAAAD+/+v/AQAHAAEAAAD+/+z/AQAHAAEAAAD+/+3/AQAHAAEAAAD+/+7/AQAHAAEAAAD+/+//AQAHAAEAAAD+//D/AQAHAAEAAAD+//L/AQAHAAEAAAD+//P/AQAHAAEAAAD+//T/AQAHAAEAAAD+//X/AQAHAAEAAAD+//b/AQAHAAEAAAD+//f/AQAHAAEAAAD+//n/AQAHAAEAAAD+//r/AQAHAAEAAAD+//v/AQAHAAEAAAD+//z/AQAHAAEAAAD+//3/AQAHAAEAAAD+//7/AQAHAAEAAAD//+v/AQAHAAEAAAD//+z/AQAHAAEAAAD//+3/AQAHAAEAAAD//+7/AQAHAAEAAAD//+//AQAHAAEAAAD///D/AQAHAAEAAAD///L/AQAHAAEAAAD///P/AQAHAAEAAAD///T/AQAHAAEAAAD///X/AQAHAAEAAAD///b/AQAHAAEAAAD///f/AQAHAAEAAAD///n/AQAHAAEAAAD///r/AQAHAAEAAAD///v/AQAHAAEAAAD///z/AQAHAAEAAAD///3/AQAHAAEAAAD///7/AQAHAAEAAAA=")
@@ -1337,6 +1459,48 @@ texture = ExtResource("110_oe6ra")
 z_index = 2
 position = Vector2(-640, -88)
 texture = ExtResource("111_ym3fv")
+
+[node name="Plant 1" type="Sprite2D" parent="City Right 1/Building 1"]
+z_index = 2
+position = Vector2(-351, -168)
+texture = ExtResource("119_yrr4u")
+
+[node name="Open Window" type="Polygon2D" parent="City Right 1/Building 1"]
+position = Vector2(-296, -320)
+polygon = PackedVector2Array(0, 0, 8, 0, 8, 0, 9, 0, 9, 0, 48, 0, 48, 48, 9, 48, 9, 48, 8, 48, 8, 48, 0, 48)
+vertex_colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.75, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.75, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0, 1, 0, 0, 0, 1)
+polygons = [PackedInt32Array(0, 1, 10, 11), PackedInt32Array(2, 3, 8, 9), PackedInt32Array(4, 5, 6, 7)]
+
+[node name="Cat" type="AnimatedSprite2D" parent="City Right 1/Building 1/Open Window"]
+position = Vector2(30, 48)
+sprite_frames = SubResource("SpriteFrames_ihp5a")
+animation = &"cat"
+autoplay = "cat"
+frame_progress = 0.319729
+
+[node name="Floor 1 Ledge" type="StaticBody2D" parent="City Right 1/Building 1"]
+position = Vector2(-163, -128)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="City Right 1/Building 1/Floor 1 Ledge"]
+position = Vector2(-541, 0)
+shape = SubResource("SegmentShape2D_deaq8")
+one_way_collision = true
+
+[node name="Floor 2 Ledge" type="StaticBody2D" parent="City Right 1/Building 1"]
+position = Vector2(-163, -240)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="City Right 1/Building 1/Floor 2 Ledge"]
+position = Vector2(-541, 0)
+shape = SubResource("SegmentShape2D_deaq8")
+one_way_collision = true
+
+[node name="Roof Ledge" type="StaticBody2D" parent="City Right 1/Building 1"]
+position = Vector2(-163, -368)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="City Right 1/Building 1/Roof Ledge"]
+position = Vector2(-541, 0)
+shape = SubResource("SegmentShape2D_deaq8")
+one_way_collision = true
 
 [node name="Foreground" type="TileMapLayer" parent="City Right 1"]
 use_parent_material = true
