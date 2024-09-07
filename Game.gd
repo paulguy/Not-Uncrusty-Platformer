@@ -190,6 +190,20 @@ func _ready():
 	# put the player in place
 	add_child(player)
 
+# from <https://stackoverflow.com/questions/77586404/take-screenshots-in-godot-4-1-stable>
+func take_screenshot() -> void: # Function for taking screenshots and saving them
+	var date = Time.get_date_string_from_system().replace(".","_") 
+	var time :String = Time.get_time_string_from_system().replace(":","")
+	var screenshot_path = "user://" + "screenshot_" + date+ "_" + time + ".jpg" # the path for our screenshot.
+	var image : Image = get_viewport().get_texture().get_image() # We get what our player sees
+	image.resize(image.get_width() * 2,
+				 image.get_height() * 2,
+				 Image.Interpolation.INTERPOLATE_NEAREST)
+	image.save_png(screenshot_path)
+
 func _process(_delta : float):
+	if Input.is_action_just_pressed("screenshot"):
+		take_screenshot()
+
 	update_active_maps()
 	screen.position = player.position
