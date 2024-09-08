@@ -1,4 +1,4 @@
-[gd_scene load_steps=144 format=4 uid="uid://dq083vadn4wg6"]
+[gd_scene load_steps=145 format=4 uid="uid://dq083vadn4wg6"]
 
 [ext_resource type="TileSet" uid="uid://bbcmc4vabwnbb" path="res://Tilesets/world_graphics.tres" id="1_3n3y5"]
 [ext_resource type="Script" path="res://BG Textures/BG Texture.gd" id="3_5q7w5"]
@@ -120,6 +120,7 @@
 [ext_resource type="Texture2D" uid="uid://catcxfvg2cueq" path="res://Sprites/grocery-store-sign.png" id="110_oe6ra"]
 [ext_resource type="Texture2D" uid="uid://bhmu27p3oqqds" path="res://Sprites/hair-salon-sign.png" id="111_ym3fv"]
 [ext_resource type="Texture2D" uid="uid://bcwv5785u615" path="res://bg window.png" id="113_j6ynb"]
+[ext_resource type="TileSet" uid="uid://dw4lwyn168pp4" path="res://window_frames.tres" id="114_fp75q"]
 [ext_resource type="Texture2D" uid="uid://ds3kkm040r316" path="res://Sprites/potted-sunflower.png" id="119_yrr4u"]
 [ext_resource type="Texture2D" uid="uid://ckis2au8jrhl4" path="res://cat-loaf-hanging-tail.png" id="120_nsksy"]
 
@@ -1416,6 +1417,11 @@ tile_map_data = PackedByteArray("AADU/+n/AQADAAMAAADU/+r/AQADAAQAAADV/+n/AQACAAQ
 tile_set = ExtResource("1_3n3y5")
 collision_enabled = false
 
+[node name="Window Frames" type="TileMapLayer" parent="City Right 1/Building 1"]
+position = Vector2(8, 0)
+tile_map_data = PackedByteArray("AADz/+z/AAAAAAAAAADz/+3/AAADAAEAAADz/+7/AAAAAAQAAAD0/+7/AAABAAMAAAD1/+7/AAACAAQAAAD1/+3/AAAEAAEAAAD1/+z/AAACAAAAAAD0/+z/AAABAAAAAADu/+z/AAABAAAAAAD0/+3/AAADAAIAAADt/+z/AAAAAAAAAADv/+z/AAACAAAAAADv/+3/AAACAAMAAADu/+3/AAABAAMAAADt/+3/AAAAAAMAAADt/+7/AAABAAEAAgDu/+7/AAABAAEAAgDv/+7/AAABAAEAAgDn/+z/AAAAAAUAAADo/+z/AAABAAUAAADp/+z/AAACAAUAAADp/+3/AAACAAYAAADn/+3/AAAAAAYAAADn/+7/AAAAAAgAAADo/+7/AAABAAgAAADp/+7/AAACAAgAAADo/+3/AAABAAYAAAA=")
+tile_set = ExtResource("114_fp75q")
+
 [node name="Door Frame 1" type="Sprite2D" parent="City Right 1/Building 1"]
 position = Vector2(-64, -51)
 texture = ExtResource("14_sdm8q")
@@ -1465,18 +1471,19 @@ z_index = 2
 position = Vector2(-351, -168)
 texture = ExtResource("119_yrr4u")
 
-[node name="Open Window" type="Polygon2D" parent="City Right 1/Building 1"]
-position = Vector2(-296, -320)
-polygon = PackedVector2Array(0, 0, 8, 0, 8, 0, 9, 0, 9, 0, 48, 0, 48, 48, 9, 48, 9, 48, 8, 48, 8, 48, 0, 48)
-vertex_colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.75, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.75, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0, 1, 0, 0, 0, 1)
-polygons = [PackedInt32Array(0, 1, 10, 11), PackedInt32Array(2, 3, 8, 9), PackedInt32Array(4, 5, 6, 7)]
-
-[node name="Cat" type="AnimatedSprite2D" parent="City Right 1/Building 1/Open Window"]
-position = Vector2(30, 48)
+[node name="Cat" type="AnimatedSprite2D" parent="City Right 1/Building 1"]
+position = Vector2(-266, -272)
 sprite_frames = SubResource("SpriteFrames_ihp5a")
 animation = &"cat"
 autoplay = "cat"
 frame_progress = 0.319729
+
+[node name="Open Window" type="Polygon2D" parent="City Right 1/Building 1"]
+visible = false
+position = Vector2(-296, -320)
+polygon = PackedVector2Array(0, 0, 8, 0, 8, 0, 9, 0, 9, 0, 48, 0, 48, 48, 9, 48, 9, 48, 8, 48, 8, 48, 0, 48)
+vertex_colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.75, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.75, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0, 1, 0, 0, 0, 1)
+polygons = [PackedInt32Array(0, 1, 10, 11), PackedInt32Array(2, 3, 8, 9), PackedInt32Array(4, 5, 6, 7)]
 
 [node name="Floor 1 Ledge" type="StaticBody2D" parent="City Right 1/Building 1"]
 position = Vector2(-163, -128)
